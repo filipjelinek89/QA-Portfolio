@@ -90,6 +90,8 @@ Verify that:
 - The shopping cart badge remains unchanged.
 - No visual or functional issues occur after sorting.
 
+---
+
 ⬅️ **Back to Test Cases**
 
-[04_Test_Cases.md](04_Test_Cases.md)
+[04_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)
