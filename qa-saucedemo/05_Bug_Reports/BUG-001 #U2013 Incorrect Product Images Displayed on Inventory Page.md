@@ -94,9 +94,9 @@ Although product names, descriptions, prices, and buttons are correct, every pro
 
 ### Screenshot
 
-`BUG-001_Incorrect_Product_Images.png`
+`BUG-001_Incorrect_Product_Images.png` 
 
-> *Screenshot shows all products displaying the same image while product names and descriptions differ.*
+[BUG-001 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-001_Incorrect_Product_Images.png)
 
 ---
 
@@ -127,3 +127,7 @@ The defect is intentionally present in SauceDemo to simulate a real-world produc
 | **TC-008 – Verify Inventory Page Display** | ❌ Fail |
 
 ---
+
+⬅️ **Back to Bug Reports**
+
+[05_Bug_Reports.md]https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md
