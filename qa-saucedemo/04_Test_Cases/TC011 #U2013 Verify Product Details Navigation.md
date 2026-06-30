@@ -81,6 +81,8 @@ Verify that:
 - The **Back to Products** button returns the user to the Inventory page without errors.
 - No unexpected page refresh or visual issues occur during navigation.
 
+---
+
 ⬅️ **Back to Test Cases**
 
-[04_Test_Cases.md](04_Test_Cases.md)
+[04_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)
