@@ -11,6 +11,7 @@
 - [Testing Scope](#Testing-Scope)
 - [Project Status](#Project-Status)
 - [Author](#Author)
+- [Author](#Author)
 
 ---
 
@@ -152,6 +153,21 @@ Current Progress:
 Junior Manual QA Engineer
 
 GitHub: https://github.com/filipjelinek89
+
+---
+
+# 📑 Project Navigation
+
+- 📋 [01. Test Plan](01_Test_Plan.md)
+- 📄 [02. Requirements Analysis](02_Requirements_Analysis.md)
+- 📝 [03. Test Scenarios](03_Test_Scenarios.md)
+- 🧪 [04. Test Cases](04_Test_Cases.md)
+- 🐞 [05. Bug Reports](05_Bug_Reports.md)
+- ▶️ [06. Test Execution](06_Test_Execution.md)
+- 📊 [07. Test Summary](07_Test_Summary.md)
+- 🗂️ [08. Test Data](08_Test_Data.md)
+- 📷 [09. Screenshots](09_Screenshots.md)
+- 🔗 [10. Traceability Matrix](10_Traceability_Matrix.md)
 
 ---
 
