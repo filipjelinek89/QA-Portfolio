@@ -8,7 +8,7 @@
 - 📄 [CV](#cv)
 - 🛠️ [Skills](#%EF%B8%8F-skills)
 - 📂 [Portfolio Projects](#-portfolio-projects)
-- 🧪 [Test Cases](#test-cases)
+- 🧪 [Test Cases](#-test-cases)
 - 🐞 [Bug Reports](#bug-reports)
 - 🔌 [API Testing](#api-testing)
 - 🗄️ [SQL Practice](#sql-practice)
@@ -92,7 +92,7 @@ I am currently seeking a Junior Manual QA or Entry-Level Software QA position wh
 ---
 
 ## 📂 Portfolio Projects
-# 🛒 SauceDemo – E-commerce Website Testing¨
+## 🛒 SauceDemo – E-commerce Website Testing¨
 
 A complete manual testing project focused on an e-commerce application.
 
