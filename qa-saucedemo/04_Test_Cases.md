@@ -32,12 +32,13 @@ The test cases are organized by functional area and linked to their individual M
 
 # In-page Navigation
 
-* [Login](#-login)
-* [Inventory](#-inventory)
-* [Product Details](#-product-details)
-* [Shopping Cart](#-shopping-cart)
-* [Checkout](#-checkout)
-* [Navigation & Session](#-navigation--session)
+* [Login](#login)
+* [Inventory](#inventory)
+* [Product Details](#product-details)
+* [Shopping Cart](#shopping-cart)
+* [Checkout](#checkout)
+* [Navigation & Session](#navigation--session)
+* [Test Execution Status](#test-execution-status)
 
 ---
 
