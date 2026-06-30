@@ -83,6 +83,8 @@ Verify that:
 - The shopping cart badge matches the number of products in the cart.
 - No layout or formatting issues are present.
 
+---
+
 ⬅️ **Back to Test Cases**
 
-[04_Test_Cases.md](04_Test_Cases.md)
+[04_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)
