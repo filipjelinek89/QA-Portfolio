@@ -244,7 +244,6 @@ The certifications complement the practical projects presented in this portfolio
 | Software Testing Fundamentals | [Certificate](https://www.linkedin.com/learning/certificates/9d0b3a4670d8666bd45787a4b312e31a2aae10bc9f7a66b36a162a72cd3bb3e7)
 | API Testing Foundations | [Certificate](https://www.linkedin.com/learning/certificates/6c9d50836da2f6931206f2218ff7727843f670425328706824b133016c62361a)
 | Atlassian Certificate of Completion | [Certificate](https://www.linkedin.com/learning/certificates/62247d766c26f59cbcc743cbc54e16a03830feeedb0a72fe73f39c0fa08f672f)
-|-------------|----------|:------:|
 
 ### Learning history [inLearning](https://www.linkedin.com/learning)
 
@@ -267,7 +266,6 @@ The certifications complement the practical projects presented in this portfolio
 | Software Testing Tips Weekly | Complete 
 | Software Testing Foundations: Test Preparation | Complete 
 | Predict questions, prepare answers | Complete 
-|-------------|----------|:------:|
 
 ---
 
