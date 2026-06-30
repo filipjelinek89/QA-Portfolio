@@ -109,7 +109,7 @@ All bug reports were documented using the following environment.
 | BUG-006 | FR-005 | TC029 | [Checkout Allows User to Continue Without Required Last Name](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-006%20%23U2013%20Checkout%20Allows%20Progress%20Without%20Required%20Last%20Name.md) | 🔴 Critical | P1 | Open |
 | BUG-007 | FR-005 | TC032 | [Finish Button Is Not Clickable on Checkout Overview Page](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-007%20%23U2013%20Finish%20Button%20Does%20Not%20Complete%20Order.md) | 🔴 Critical | P1 | Open |
 | BUG-008 | FR-006 | TC037 | [Product Sorting by Price (Low to High) Displays Error Page](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-008%20%23U2013%20Product%20Sorting%20by%20Price%20(Low%20to%20High)%20Triggers%20JavaScript%20Error.md) | 🟠 High | P2 | Open |
-| BUG-009 | FR-007 | TC041 | [About Link Returns 404 Page Not Found]([BUG-009_About_Link_Returns_404_Page_Not_Found.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-009%20%23U2013%20About%20Link%20Redirects%20to%20404%20Page.md) | 🟡 Medium | P3 | Open |
+| BUG-009 | FR-007 | TC041 | [About Link Returns 404 Page Not Found](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-009%20%23U2013%20About%20Link%20Redirects%20to%20404%20Page.md) | 🟡 Medium | P3 | Open |
 
 ---
 
