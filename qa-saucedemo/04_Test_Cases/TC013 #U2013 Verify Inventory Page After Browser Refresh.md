@@ -84,6 +84,8 @@ Verify that:
 - Product information is displayed correctly after the refresh.
 - No duplicate items are added to the cart as a result of refreshing the page.
 
+---
+
 ⬅️ **Back to Test Cases**
 
-[04_Test_Cases.md](04_Test_Cases.md)
+[04_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)
