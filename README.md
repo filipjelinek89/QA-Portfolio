@@ -14,7 +14,7 @@
 - 🗄️ [SQL Practice IN PROGRESS](#sql-practice)
 - 🤖 [Automation (Playwright) IN PROGRESS](#automation-playwright)
 - 🎓 [Certificates](#-certificates)
-- 📫 [Contact](#contact)
+- 📫 [Contact](#-contact)
 
 ---
 
