@@ -4,27 +4,20 @@
 
 # In-page Navigation
 
-- 👨‍💻[About me](#-about-me)
+# In-page Navigation
 
-- 📄[CV](#-cv)
+* 👨‍💻 [About me](#-about-me)
+* 📄 [CV](#-cv)
+* 🛠️ [Skills](#-skills)
+* 📂 [Portfolio Projects](#-portfolio-projects)
+* 🧪 [Test Cases](#-test-cases)
+* 🐞 [Bug Reports](#-bug-reports)
+* 🔌 [API Testing](#-api-testing)
+* 🗄️ [SQL Practice](#-sql-practice)
+* 🤖 [Automation (Playwright)](#-automation-playwright)
+* 🎓 [Certificates](#-certificates)
+* 📫 [Contact](#-contact)
 
-- 🛠️[Skills](#-skills)
-
-- 📂[Portfolio Projects](#Portfolio-Projects)
-
-- 🧪[Test Cases](#Test-Cases)
-
-- 🐞[Bug Reports](#[Bug-Reports)
-
-- 🔌[API Testing](#API-Testing])
-
-- 🗄️[SQL Practice](#SQL-Practice)
-
-- 🤖[Automation (Playwright)](#Automation-(Playwright))
-
-- 🎓[Certificates](#Certificates)
-
-- 📫[Contact](#Contact)
 
 ---
 
@@ -222,10 +215,3 @@ This section contains examples of structured manual test cases created for diffe
 
 
 Note :
-Message 1: TC001–TC007 (Login)
-Message 2: TC008–TC013 (Inventory)
-Message 3: TC014–TC017 (Product Details)
-Message 4: TC018–TC025 (Shopping Cart)
-Message 5: TC026–TC035 (Checkout)
-Message 6: TC036–TC039 (Sorting)
-Message 7: TC040–TC042 (Navigation & Logout)
