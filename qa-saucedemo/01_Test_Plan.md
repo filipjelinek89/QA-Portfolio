@@ -220,3 +220,9 @@ This project assumes that:
 # 14. Approval
 
 This document was prepared as part of a personal QA portfolio project to demonstrate manual software testing skills and professional documentation practices.
+
+---
+
+⬅️ **Back to Saucedemo**
+
+[qa-saucedemo-README.md](../qa-saucedemo-README.md)
