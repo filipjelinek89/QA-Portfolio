@@ -86,7 +86,7 @@ Mandatory input validation is not enforced, allowing incomplete customer informa
 
 **Screenshot:**
 
-`BUG-006_Checkout_Allows_Empty_Last_Name.png`
+[BUG-006 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-006_Checkout_Allows_Empty_Last_Name.png)
 
 ---
 
@@ -102,3 +102,9 @@ The defect is consistently reproducible using the **error_user** account. The ap
 - Test User: **error_user**
 - Result: **Fail**
 - Reproducibility: **100% (5/5 attempts)**
+
+---
+
+⬅️ **Back to Bug Reports**
+
+[05_Bug_Reports.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)
