@@ -140,7 +140,7 @@ Manual testing of a banking application covering user registration, login, accou
 
 A collection of API requests, environments, and automated checks created while learning API testing.
 
-# Project includes:
+## Project includes:
 
 - REST API Requests
 - Collections
