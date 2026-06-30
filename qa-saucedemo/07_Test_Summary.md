@@ -54,28 +54,28 @@ The following functional areas were included in testing:
 
 # Execution Summary
 
-| Metric           | Result |
-| ---------------- | -----: |
-| Total Test Cases |     42 |
-| Executed         |     42 |
-| Passed           |     27 |
-| Failed           |     15 |
-| Blocked          |      0 |
-| Not Executed     |      0 |
-| Pass Rate        |  64.3% |
-| Fail Rate        |  35.7% |
+| Metric | Result |
+|--------|------:|
+| Total Test Cases | 42 |
+| Executed | 42 |
+| Passed | 33 |
+| Failed | 9 |
+| Blocked | 0 |
+| Not Executed | 0 |
+| Pass Rate | 78.6% |
+| Fail Rate | 21.4% |
 
 ---
 
 # Defect Summary
 
-| Severity          |  Count |
-| ----------------- | -----: |
-| 🔴 Critical       |      1 |
-| 🟠 High           |      4 |
-| 🟡 Medium         |      6 |
-| 🟢 Low            |      4 |
-| **Total Defects** | **15** |
+| Severity | Count |
+|-----------|------:|
+| 🔴 Critical | 3 |
+| 🟠 High | 5 |
+| 🟡 Medium | 1 |
+| 🟢 Low | 0 |
+| **Total Defects** | **9** |
 
 ---
 
@@ -96,30 +96,33 @@ The following functional areas were included in testing:
 
 # Key Findings
 
-The testing identified several issues across different functional areas of the application.
+Manual functional testing identified **9 unique defects** affecting several core areas of the SauceDemo application.
 
 The most significant findings include:
 
-- Input validation weaknesses in checkout forms.
-- Session management inconsistencies after logout.
-- Shopping cart synchronization issues.
-- Minor usability and accessibility improvements.
-- Browser navigation and UI state management issues.
+- Product images displayed incorrectly on the Inventory page.
+- Missing product information for selected products.
+- "Add to Cart" and "Remove" buttons not functioning for specific products.
+- Checkout validation issues, including an unresponsive Last Name field and the ability to continue without entering a required last name.
+- The **Finish** button was not clickable, preventing successful order completion.
+- Product sorting by **Price (Low to High)** resulted in an application error.
+- The **About** link redirected users to a **404 Page Not Found**.
 
-No application crashes or blocking defects preventing basic application usage were identified during the testing activities.
+No unexpected application crashes were encountered during testing. All identified defects were successfully reproduced, documented, and linked to their corresponding test cases and bug reports, providing complete traceability throughout the testing process.
 
 ---
 
 # Recommendations
 
-Based on the executed test cases and reported defects, the following improvements are recommended:
+Based on the executed test cases and the identified defects, the following improvements are recommended:
 
-- Improve input validation for all required form fields.
-- Review session management during user logout.
-- Ensure UI components update immediately after user actions.
-- Improve keyboard accessibility and screen reader compatibility.
-- Preserve user-selected interface settings during navigation.
-- Perform regression testing after defect fixes.
+- Correct the Inventory page so that each product displays its corresponding image and complete product information.
+- Fix the functionality of the **Add to Cart** and **Remove** buttons for affected products.
+- Improve checkout form validation by ensuring all required fields accept valid input and prevent users from continuing with incomplete information.
+- Resolve the issue preventing the **Finish** button from completing the checkout process.
+- Fix the product sorting functionality to prevent application errors when sorting by **Price (Low to High)**.
+- Update the **About** link to redirect users to the correct destination instead of returning a **404 Page Not Found**.
+- Perform comprehensive regression testing after implementing the fixes to verify that resolved defects do not introduce new issues.
 
 ---
 
@@ -127,12 +130,12 @@ Based on the executed test cases and reported defects, the following improvement
 
 A total of **42 manual test cases** were successfully executed during this testing cycle.
 
-The application demonstrated stable core functionality; however, **15 defects** of varying severity were identified. Most issues relate to input validation, usability, session handling, and user experience rather than critical application failures.
+The testing identified **9 unique defects** affecting several core functional areas, including the Inventory page, Product Details, Shopping Cart, Checkout process, and Navigation. While the majority of the application functionality performed as expected, the reported issues highlight areas requiring improvement to ensure a consistent and reliable user experience.
 
-Overall, the application is considered functionally stable for demonstration purposes, with several opportunities for improvement identified through structured manual testing.
+Overall, the SauceDemo application demonstrates stable core functionality suitable for demonstration and learning purposes. The executed testing activities successfully identified and documented reproducible defects using structured manual testing techniques, providing complete traceability between **Requirements (FR)**, **Test Cases (TC)**, and **Bug Reports (BUG)**. The portfolio demonstrates a systematic approach to test planning, execution, defect reporting, and documentation in accordance with common QA best practices.
 
 ---
 
 ⬅️ **Back to Saucedemo**
 
-[qa-saucedemo-README.md](../qa-saucedemo-README.md)
+[qa-saucedemo-README.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/qa-saucedemo-README.md)
