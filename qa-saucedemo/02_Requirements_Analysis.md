@@ -9,12 +9,12 @@
 ---
 
 # In-page Navigation
-- [1. Purpose](#1.-Purpose)
-- [2. Application Overview](#2.-Application-Overview)
-- [3. Functional Requirements](#3.-Functional-Requirements)
-- [4. Non-Functional Observations](#4.-Non-Functional-Observations)
-- [5. Requirement Coverage](#5.-Requirement-Coverage)
-- [6. Conclusion](#6.-Conclusion)
+- [1. Purpose](#1-purpose)
+- [2. Application Overview](#2-application-overview)
+- [3. Functional Requirements](#3-functional-requirements)
+- [4. Non-Functional Observations](#4-non-functional-observations)
+- [5. Requirement Coverage](#5-requirement-coverage)
+- [6. Conclusion](#6-conclusion)
 
 ---
 
