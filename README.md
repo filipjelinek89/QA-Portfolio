@@ -203,7 +203,7 @@ This section contains examples of structured manual test cases created for diffe
 - Transfer Funds
 - Bill Payment
 
-🔗 **[View Test Cases](https://github.com/filipjelinek89/qa-parabank/tree/main/Test%20Cases)**
+🔗 **[View Test Cases] IN PROGRESS**
 
 
 # 🐞 Bug Reports
