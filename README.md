@@ -9,7 +9,7 @@
 - 🛠️ [Skills](#%EF%B8%8F-skills)
 - 📂 [Portfolio Projects](#-portfolio-projects)
 - 🧪 [Test Cases](#-test-cases)
-- 🐞 [Bug Reports](#bug-reports)
+- 🐞 [Bug Reports](#-bug-reports)
 - 🔌 [API Testing](#api-testing)
 - 🗄️ [SQL Practice](#sql-practice)
 - 🤖 [Automation (Playwright)](#automation-playwright)
