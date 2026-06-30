@@ -102,10 +102,6 @@ The displayed information does not correspond to the actual product.
 
 ### Screenshot
 
-`BUG-002_Incorrect_Product_Information.png`
-
-> Screenshot showing invalid product name, incorrect description, wrong price, and incorrect product image.
-
 [BUG-002 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-002_Incorrect_Product_Information_Product_Details_Page.png)
 
 ---
