@@ -94,8 +94,6 @@ Although product names, descriptions, prices, and buttons are correct, every pro
 
 ### Screenshot
 
-`BUG-001_Incorrect_Product_Images.png` 
-
 [BUG-001 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-001_Incorrect_Product_Images.png)
 
 ---
