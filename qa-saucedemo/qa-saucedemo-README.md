@@ -62,19 +62,19 @@ The main objectives of this project are to:
 ## Repository Structure
 
 
-• qa-saucedemo
-• │
-• ├── qa-saucedeme-README.md
-• ├── 01_Test_Plan
-• ├── 02_Requirements_Analysis
-• ├── 03_Test_Scenarios
-• ├── 04_Test_Cases
-• ├── 05_Bug_Reports
-• ├── 06_Test_Execution
-• ├── 07_Test_Summary
-• ├── 08_Test_Data
-• ├── 09_Screenshots
-• └── 10_Traceability_Matrix
+- qa-saucedemo
+- │
+- ├── qa-saucedeme-README.md
+- ├── 01_Test_Plan
+- ├── 02_Requirements_Analysis
+- ├── 03_Test_Scenarios
+- ├── 04_Test_Cases
+- ├── 05_Bug_Reports
+- ├── 06_Test_Execution
+- ├── 07_Test_Summary
+- ├── 08_Test_Data
+- ├── 09_Screenshots
+- └── 10_Traceability_Matrix
 
 ---
 
