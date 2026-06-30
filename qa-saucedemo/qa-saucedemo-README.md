@@ -160,7 +160,7 @@ GitHub: https://github.com/filipjelinek89
 
 - 📋 [01. Test Plan](01_Test_Plan.md)
 - 📄 [02. Requirements Analysis](02_Requirements_Analysis.md)
-- 📝 [03. Test Scenarios]([03_Test_Scenarios.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/03_Test%20Scenarios.md)
+- 📝 [03. Test Scenarios](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/03_Test%20Scenarios.md)
 - 🧪 [04. Test Cases](04_Test_Cases.md)
 - 🐞 [05. Bug Reports](05_Bug_Reports.md)
 - ▶️ [06. Test Execution](06_Test_Execution.md)
