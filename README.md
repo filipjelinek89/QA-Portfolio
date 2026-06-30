@@ -7,7 +7,7 @@
 - 👨‍💻 [About me](#%E2%80%8D-about-me)
 - 📄 [CV](#cv)
 - 🛠️ [Skills](#%EF%B8%8F-skills)
-- 📂 [Portfolio Projects](#portfolio-projects)
+- 📂 [Portfolio Projects](#-portfolio-projects)
 - 🧪 [Test Cases](#test-cases)
 - 🐞 [Bug Reports](#bug-reports)
 - 🔌 [API Testing](#api-testing)
