@@ -188,5 +188,5 @@ This Requirements Analysis establishes the functional baseline for the SauceDemo
 
 ⬅️ **Back to Saucedemo**
 
-[qa-saucedemo-README.md](../qa-saucedemo-README.md)
+[qa-saucedemo-README.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/qa-saucedemo-README.md)
 
