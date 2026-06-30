@@ -11,19 +11,19 @@
 ---
 
 # In-page Navigation
-- [1. Introduction](#1.-Introduction)
-- [2. Objectives](#2.-Objectives)
-- [3. Application Under Test](#3.-Application-Under-Test)
-- [4. Scope](#4.-Scope)
-- [5. Test Strategy](#5.-Test-Strategy)
-- [6. Test Environment](#6.-Test-Environment)
-- [7. Test Data](#7.-Test-Data)
-- [8. Entry Criteria](#8.-Entry-Criteria)
-- [9. Exit Criteria](#9.-Exit-Criteria)
-- [10. Deliverables](#10.-Deliverables)
-- [11. Risks](#11.-Risks)
-- [12. Assumptions](#12.-Assumptions)
-- [13. Test Schedule](#13.-Test-Schedule)
+- [1. Introduction](#1-introduction)
+- [2. Objectives](#2-objectives)
+- [3. Application Under Test](#3-application-under-test)
+- [4. Scope](#4-scope)
+- [5. Test Strategy](#5-test-strategy)
+- [6. Test Environment](#6-test-environment)
+- [7. Test Data](#7-test-data)
+- [8. Entry Criteria](#8-entry-criteria)
+- [9. Exit Criteria](#9-exit-criteria)
+- [10. Deliverables](#10-deliverables)
+- [11. Risks](#11-risks)
+- [12. Assumptions](#12-assumptions)
+- [13. Test Schedule]#13-test-schedule)
 - [14. Approval](#14.-Approval)
 
 ---
