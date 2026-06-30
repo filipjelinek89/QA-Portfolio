@@ -84,8 +84,7 @@ Each executed test case records the final execution status together with referen
 | TC024 | Verify Empty Shopping Cart After Removing All Products | Shopping Cart | ✅ Pass | — |
 | TC025 | Verify Shopping Cart Persistence After Browser Refresh | Shopping Cart | ✅ Pass | — |
 | TC026 | Verify Checkout: Your Information Page | Checkout | ✅ Pass | — |
-| TC027 | Complete Checkout Information with Valid Data | Checkout | ❌ Fail | [BUG-005](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-005%20%23U2013%20Last%20Name%20Field%20Does%20Not%20Accept%20Input%20During%20Checkout.md
-) |
+| TC027 | Complete Checkout Information with Valid Data | Checkout | ❌ Fail | [BUG-005](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-005%20%23U2013%20Last%20Name%20Field%20Does%20Not%20Accept%20Input%20During%20Checkout.md) |
 | TC028 | Verify Checkout with Empty First Name | Checkout | ✅ Pass | — |
 | TC029 | Verify Checkout with Empty Last Name | Checkout | ❌ Fail | [BUG-006](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-006%20%23U2013%20Checkout%20Allows%20Progress%20Without%20Required%20Last%20Name.md) |
 | TC030 | Verify Checkout with Empty Postal Code | Checkout | ✅ Pass | — |
