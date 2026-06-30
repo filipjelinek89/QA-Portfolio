@@ -35,8 +35,8 @@ Each executed test case records the final execution status together with referen
 
 - **Total Test Cases:** 42
 - **Executed:** 42
-- **Passed:** 27
-- **Failed:** 15
+- **Passed:** 33
+- **Failed:** 9
 - **Blocked:** 0
 - **Not Executed:** 0
 
@@ -56,61 +56,58 @@ Each executed test case records the final execution status together with referen
 
 # Test Execution Results
 
-
-| TC ID  | Test Case                                                | Module             | Status | Bug Report                                                                                                  |
-| ------ | -------------------------------------------------------- | ------------------ | :----: | ----------------------------------------------------------------------------------------------------------- |
-| TC-001 | Verify Login with Empty Credentials                      | Login              | ❌ Fail | [BUG-001](../05_Bug_Reports/BUG-001_Login_With_Empty_Credentials.md)                                        |
-| TC-002 | Verify Login with Invalid Username                       | Login              | ✅ Pass | —                                                                                                           |
-| TC-003 | Verify Login with Invalid Password                       | Login              | ✅ Pass | —                                                                                                           |
-| TC-004 | Verify Login with Leading Whitespace in Username         | Login              | ❌ Fail | [BUG-002](../05_Bug_Reports/BUG-002_Username_Field_Allows_Leading_Spaces.md)                                |
-| TC-005 | Verify Login with Locked Out User                        | Login              | ✅ Pass | —                                                                                                           |
-| TC-006 | Verify Login with Valid Credentials After Failed Attempt | Login              | ❌ Fail | [BUG-010](../05_Bug_Reports/BUG-010_Error_Message_Remains_Visible_After_Successful_Login.md)                |
-| TC-007 | Verify Logout Functionality                              | Login              | ✅ Pass | —                                                                                                           |
-| TC-008 | Verify Access Without Authentication                     | Login              | ✅ Pass | —                                                                                                           |
-| TC-009 | Verify Display of Product Inventory                      | Inventory          | ✅ Pass | —                                                                                                           |
-| TC-010 | Verify Product Details Page                              | Inventory          | ✅ Pass | —                                                                                                           |
-| TC-011 | Verify Product Name Navigation                           | Inventory          | ✅ Pass | —                                                                                                           |
-| TC-012 | Verify Add Single Product to Cart                        | Inventory          | ✅ Pass | —                                                                                                           |
-| TC-013 | Verify Add Multiple Products to Cart                     | Inventory          | ✅ Pass | —                                                                                                           |
-| TC-014 | Verify Remove Product from Inventory Page                | Inventory          | ✅ Pass | —                                                                                                           |
-| TC-015 | Verify Navigation Menu Accessibility                     | Navigation         | ❌ Fail | [BUG-013](../05_Bug_Reports/BUG-013_Burger_Menu_Is_Not_Fully_Keyboard_Accessible.md)                        |
-| TC-016 | Verify Navigation to Product Details                     | Inventory          | ❌ Fail | [BUG-007](../05_Bug_Reports/BUG-007_Product_Image_Is_Not_Clickable.md)                                      |
-| TC-017 | Verify Product Sorting Functionality                     | Inventory          | ❌ Fail | [BUG-015](../05_Bug_Reports/BUG-015_Product_Sorting_Resets_After_Browser_Back_Navigation.md)                |
-| TC-018 | Verify Product Image Accessibility                       | Inventory          | ❌ Fail | [BUG-011](../05_Bug_Reports/BUG-011_Product_Images_Missing_Alternative_Text.md)                             |
-| TC-019 | Verify Sort Products by Name (A–Z)                       | Inventory          | ✅ Pass | —                                                                                                           |
-| TC-020 | Verify Sort Products by Price (Low to High)              | Inventory          | ✅ Pass | —                                                                                                           |
-| TC-021 | Verify Removing Products from Shopping Cart              | Shopping Cart      | ❌ Fail | [BUG-003](../05_Bug_Reports/BUG-003_Shopping_Cart_Badge_Not_Updated_After_Removing_Item.md)                 |
-| TC-022 | Verify Continue Shopping from Cart                       | Shopping Cart      | ✅ Pass | —                                                                                                           |
-| TC-023 | Verify Shopping Cart Badge Count                         | Shopping Cart      | ✅ Pass | —                                                                                                           |
-| TC-024 | Verify Empty Shopping Cart                               | Shopping Cart      | ✅ Pass | —                                                                                                           |
-| TC-025 | Verify Checkout Button Availability                      | Shopping Cart      | ✅ Pass | —                                                                                                           |
-| TC-026 | Verify Cart Item Information                             | Shopping Cart      | ✅ Pass | —                                                                                                           |
-| TC-027 | Verify Cancel Checkout                                   | Checkout           | ✅ Pass | —                                                                                                           |
-| TC-028 | Verify Checkout with Valid Customer Information          | Checkout           | ✅ Pass | —                                                                                                           |
-| TC-029 | Verify Shopping Cart Behavior After Logout               | Session Management | ❌ Fail | [BUG-009](../05_Bug_Reports/BUG-009_Shopping_Cart_Persists_After_Logout.md)                                 |
-| TC-030 | Verify Checkout with Empty First Name                    | Checkout           | ✅ Pass | —                                                                                                           |
-| TC-031 | Verify Checkout with Empty Last Name                     | Checkout           | ✅ Pass | —                                                                                                           |
-| TC-032 | Verify Checkout with Empty ZIP Code                      | Checkout           | ✅ Pass | —                                                                                                           |
-| TC-033 | Verify Checkout with Whitespace in First Name            | Checkout           | ❌ Fail | [BUG-004](../05_Bug_Reports/BUG-004_Checkout_Allows_Whitespace_in_First_Name.md)                            |
-| TC-034 | Verify Checkout with Whitespace in Last Name             | Checkout           | ❌ Fail | [BUG-005](../05_Bug_Reports/BUG-005_Last_Name_Field_Accepts_Only_Spaces.md)                                 |
-| TC-035 | Verify Checkout with Numeric First Name                  | Checkout           | ✅ Pass | —                                                                                                           |
-| TC-036 | Verify Checkout with Alphabetic ZIP Code                 | Checkout           | ❌ Fail | [BUG-006](../05_Bug_Reports/BUG-006_ZIP_Code_Field_Accepts_Alphabetic_Characters.md)                        |
-| TC-037 | Verify Order Completion                                  | Checkout           | ✅ Pass | —                                                                                                           |
-| TC-038 | Verify Return to Products After Checkout                 | Checkout           | ✅ Pass | —                                                                                                           |
-| TC-039 | Verify Checkout Overview Information                     | Checkout           | ✅ Pass | —                                                                                                           |
-| TC-040 | Verify Browser Back Navigation After Checkout Completion | Checkout           | ❌ Fail | [BUG-008](../05_Bug_Reports/BUG-008_Browser_Back_Button_Returns_User_to_Checkout_After_Order_Completion.md) |
-| TC-041 | Verify Multiple Click Handling During Checkout           | Checkout           | ❌ Fail | [BUG-014](../05_Bug_Reports/BUG-014_Double_Click_on_Checkout_Button_Creates_Duplicate_Submission.md)        |
-| TC-042 | Verify External Footer Links                             | Footer             | ❌ Fail | [BUG-012](../05_Bug_Reports/BUG-012_Footer_Link_Uses_HTTP_Instead_of_HTTPS.md)                              |
-
-
+| TC ID | Test Case | Module | Status | Related Bug Report |
+|-------|-----------|--------|:------:|--------------------|
+| TC001 | Successful Login | Login | ✅ Pass | — |
+| TC002 | Login with Invalid Password | Login | ✅ Pass | — |
+| TC003 | Login with Invalid Username | Login | ✅ Pass | — |
+| TC004 | Login with Empty Username | Login | ✅ Pass | — |
+| TC005 | Login with Empty Password | Login | ✅ Pass | — |
+| TC006 | Login with Empty Credentials | Login | ✅ Pass | — |
+| TC007 | Login with Locked User | Login | ✅ Pass | — |
+| TC008 | Verify Inventory Page Display | Inventory | ❌ Fail | [BUG-001](../05_Bug_Reports/BUG-001_All_Product_Images_Display_the_Same_Image_on_Inventory_Page.md) |
+| TC009 | Verify Product Information | Inventory | ❌ Fail | [BUG-002](../05_Bug_Reports/BUG-002_Product_Information_Is_Missing_on_Inventory_Page.md) |
+| TC010 | Verify "Add to Cart" Button Functionality | Inventory | ❌ Fail | [BUG-003](../05_Bug_Reports/BUG-003_Add_to_Cart_and_Remove_Buttons_Do_Not_Work_for_Specific_Products.md) |
+| TC011 | Verify Product Details Navigation | Inventory | ✅ Pass | — |
+| TC012 | Verify Shopping Cart Badge Update | Inventory | ✅ Pass | — |
+| TC013 | Verify Inventory Page After Browser Refresh | Inventory | ✅ Pass | — |
+| TC014 | Verify Product Information on Product Details Page | Product Details | ✅ Pass | — |
+| TC015 | Verify "Add to Cart" Button on Product Details Page | Product Details | ✅ Pass | — |
+| TC016 | Verify "Remove" Button on Product Details Page | Product Details | ❌ Fail | [BUG-004](../05_Bug_Reports/BUG-004_Remove_Button_Does_Not_Work_on_Product_Details_Page.md) |
+| TC017 | Verify "Back to Products" Navigation | Product Details | ✅ Pass | — |
+| TC018 | Verify Shopping Cart Page | Shopping Cart | ✅ Pass | — |
+| TC019 | Verify Single Product in Shopping Cart | Shopping Cart | ✅ Pass | — |
+| TC020 | Verify Multiple Products in Shopping Cart | Shopping Cart | ✅ Pass | — |
+| TC021 | Verify Remove Product from Shopping Cart | Shopping Cart | ✅ Pass | — |
+| TC022 | Verify "Continue Shopping" Button | Shopping Cart | ✅ Pass | — |
+| TC023 | Verify Checkout Button | Shopping Cart | ✅ Pass | — |
+| TC024 | Verify Empty Shopping Cart After Removing All Products | Shopping Cart | ✅ Pass | — |
+| TC025 | Verify Shopping Cart Persistence After Browser Refresh | Shopping Cart | ✅ Pass | — |
+| TC026 | Verify Checkout: Your Information Page | Checkout | ✅ Pass | — |
+| TC027 | Complete Checkout Information with Valid Data | Checkout | ❌ Fail | [BUG-005](../05_Bug_Reports/BUG-005_Last_Name_Field_Does_Not_Accept_Input_During_Checkout.md) |
+| TC028 | Verify Checkout with Empty First Name | Checkout | ✅ Pass | — |
+| TC029 | Verify Checkout with Empty Last Name | Checkout | ❌ Fail | [BUG-006](../05_Bug_Reports/BUG-006_Checkout_Allows_User_to_Continue_Without_Required_Last_Name.md) |
+| TC030 | Verify Checkout with Empty Postal Code | Checkout | ✅ Pass | — |
+| TC031 | Verify Checkout: Overview Page | Checkout | ✅ Pass | — |
+| TC032 | Verify Successful Order Completion | Checkout | ❌ Fail | [BUG-007](../05_Bug_Reports/BUG-007_Finish_Button_Is_Not_Clickable_on_Checkout_Overview_Page.md) |
+| TC033 | Verify Cancel Checkout from Checkout: Overview | Checkout | ✅ Pass | — |
+| TC034 | Verify Order Confirmation Page | Checkout | ✅ Pass | — |
+| TC035 | Verify "Back Home" Button After Order Completion | Checkout | ✅ Pass | — |
+| TC036 | Verify Product Sorting by Name (A–Z) | Navigation & Session | ✅ Pass | — |
+| TC037 | Verify Product Sorting by Price (Low to High) | Navigation & Session | ❌ Fail | [BUG-008](../05_Bug_Reports/BUG-008_Product_Sorting_by_Price_Low_to_High_Displays_Error_Page.md) |
+| TC038 | Verify Burger Menu Opens | Navigation & Session | ✅ Pass | — |
+| TC039 | Verify User Logout | Navigation & Session | ✅ Pass | — |
+| TC040 | Verify Reset App State | Navigation & Session | ✅ Pass | — |
+| TC041 | Verify About Link | Navigation & Session | ❌ Fail | [BUG-009](../05_Bug_Reports/BUG-009_About_Link_Returns_404_Page_Not_Found.md) |
+| TC042 | Verify Direct Access to Inventory Without Authentication | Navigation & Session | ✅ Pass | — |
 ---
 
 # Execution Statistics
 
 | Status          | Count |
 | --------------- | ----: |
-| ✅ Passed        |    27 |
-| ❌ Failed        |    15 |
+| ✅ Passed        |    33 |
+| ❌ Failed        |    9 |
 | ⛔ Blocked       |     0 |
 | ⏸️ Not Executed |     0 |
 
@@ -120,13 +117,13 @@ Each executed test case records the final execution status together with referen
 
 # Defect Summary
 
-| Severity    | Count |
-| ----------- | ----: |
-| 🔴 Critical |     1 |
-| 🟠 High     |     4 |
-| 🟡 Medium   |     6 |
-| 🟢 Low      |     4 |
-
+| Severity | Count |
+|-----------|------:|
+| 🔴 Critical | 3 |
+| 🟠 High | 5 |
+| 🟡 Medium | 1 |
+| 🟢 Low | 0 |
+| **Total Defects** | **9** |
 ---
 
 ⬅️ **Back to Saucedemo**
