@@ -4,8 +4,6 @@
 
 # In-page Navigation
 
-# In-page Navigation
-
 * 👨‍💻 [About me](#-about-me)
 * 📄 [CV](#-cv)
 * 🛠️ [Skills](#-skills)
