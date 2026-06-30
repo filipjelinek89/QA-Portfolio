@@ -167,7 +167,7 @@ GitHub: https://github.com/filipjelinek89
 - 📊 [07. Test Summary](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/07_Test_Summary.md)
 - 🗂️ [08. Test Data](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/08_Test_Data.md)
 - 📷 [09. Screenshots](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots.md)
-- 🔗 [10. Traceability Matrix](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/10_Traceability_Matrix.md))
+- 🔗 [10. Traceability Matrix](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/10_Traceability_Matrix.md)
 
 ---
 
