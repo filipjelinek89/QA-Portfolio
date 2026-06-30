@@ -85,6 +85,8 @@ Verify that:
 - The navigation menu remains functional.
 - No visual or layout issues occur after returning to the Inventory page.
 
+---
+
 ⬅️ **Back to Test Cases**
 
-[04_Test_Cases.md](04_Test_Cases.md)
+[04_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)
