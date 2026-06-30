@@ -80,7 +80,7 @@ Users cannot access the About page through the application's navigation menu. Th
 
 **Screenshot:**
 
-[BUG-004 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-009_About_Link_Redirects_To_404_Page.png)
+[BUG-009 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-009_About_Link_Redirects_To_404_Page.png)
 
 ---
 
