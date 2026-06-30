@@ -225,4 +225,4 @@ This document was prepared as part of a personal QA portfolio project to demonst
 
 ⬅️ **Back to Saucedemo**
 
-[qa-saucedemo-README.md](../qa-saucedemo-README.md)
+[qa-saucedemo-README.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/qa-saucedemo-README.md)
