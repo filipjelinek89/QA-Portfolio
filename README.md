@@ -250,7 +250,7 @@ The certifications complement the practical projects presented in this portfolio
 ### Learning history inLearning
 
 |-------------|----------|
-| API Testing Foundations | Complete |
+| API Testing Foundations | Complete 
 |Software Testing Foundations: Test Planning | Complete 
 | Understanding Manual Testing | Complete 
 | Software Testing Foundations: Test Techniques | Complete 
