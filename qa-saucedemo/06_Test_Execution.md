@@ -89,7 +89,7 @@ Each executed test case records the final execution status together with referen
 | TC029 | Verify Checkout with Empty Last Name | Checkout | ❌ Fail | [BUG-006](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-006_Checkout_Allows_Empty_Last_Name.png) |
 | TC030 | Verify Checkout with Empty Postal Code | Checkout | ✅ Pass | — |
 | TC031 | Verify Checkout: Overview Page | Checkout | ✅ Pass | — |
-| TC032 | Verify Successful Order Completion | Checkout | ❌ Fail | [BUG-007](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-007_Finish_Button_Not_Working_Checkout_Overview.png
+| TC032 | Verify Successful Order Completion | Checkout | ❌ Fail | [BUG-007](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-007_Finish_Button_Not_Working_Checkout_Overview.png)
 ) |
 | TC033 | Verify Cancel Checkout from Checkout: Overview | Checkout | ✅ Pass | — |
 | TC034 | Verify Order Confirmation Page | Checkout | ✅ Pass | — |
