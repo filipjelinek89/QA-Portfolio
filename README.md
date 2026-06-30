@@ -270,7 +270,18 @@ The certifications complement the practical projects presented in this portfolio
 | Predict questions, prepare answers | Complete 
 |-------------|----------|:------:|
 
-
 ---
 
-Note :
+## 📫 Contact
+
+Thank you for taking the time to review my QA Portfolio.
+
+I'm actively seeking **remote Junior Manual QA Tester opportunities**, internships, and freelance software testing projects. I welcome opportunities to connect with recruiters, QA professionals, and development teams.
+
+Feel free to reach out:
+
+- 📧 **Email:** filip.jelinek89@gmail.com
+- 💼 **LinkedIn:** https://www.linkedin.com/in/filip-jelínek-a6143b342
+- 🐙 **GitHub:** https://github.com/filipjelinek89
+
+I appreciate your feedback and would be happy to discuss my projects or future collaboration.
