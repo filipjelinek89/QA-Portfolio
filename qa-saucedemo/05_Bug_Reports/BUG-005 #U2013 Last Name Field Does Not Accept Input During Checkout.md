@@ -106,4 +106,4 @@ The issue is consistently reproducible using the **error_user** account. The def
 
 ⬅️ **Back to Bug Reports**
 
-[05_Bug_Reports.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md
+[05_Bug_Reports.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)
