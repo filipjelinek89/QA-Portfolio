@@ -206,7 +206,21 @@ This section contains examples of structured manual test cases created for diffe
 🔗 **[View Test Cases](https://github.com/filipjelinek89/qa-parabank/tree/main/Test%20Cases)**
 
 
+# 🐞 Bug Reports
 
+This section contains bug reports created during manual functional testing of the SauceDemo web application. Each report documents a real defect discovered during testing and includes reproduction steps, severity, priority, expected and actual results, and supporting evidence.
+
+## Featured Bug Categories
+
+🛒 **SauceDemo**
+
+- Inventory
+- Product Details
+- Shopping Cart
+- Checkout
+- Navigation
+
+🔗 **[View Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)**
 
 
 
