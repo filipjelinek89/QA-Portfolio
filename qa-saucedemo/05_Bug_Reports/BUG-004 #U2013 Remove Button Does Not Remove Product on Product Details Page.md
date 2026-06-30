@@ -83,7 +83,7 @@ Users cannot remove products directly from the Product Details page, forcing the
 
 **Screenshot:**
 
-`BUG-003_Remove_Button_Not_Working_Product_Details_Page.png`
+[BUG-004 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-004_Remove_Button_Not_Working_Product_Details_Page.png)
 
 ---
 
@@ -99,3 +99,10 @@ The defect is consistently reproducible using the **error_user** account. The re
 - Test User: **error_user**
 - Result: **Fail**
 - Reproducibility: **100% (5/5 attempts)**
+
+  
+---
+
+⬅️ **Back to Bug Reports**
+
+[05_Bug_Reports.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)
