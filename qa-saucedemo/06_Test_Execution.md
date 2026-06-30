@@ -124,8 +124,9 @@ Each executed test case records the final execution status together with referen
 | 🟡 Medium | 1 |
 | 🟢 Low | 0 |
 | **Total Defects** | **9** |
+
 ---
 
 ⬅️ **Back to Saucedemo**
 
-[qa-saucedemo-README.md](../qa-saucedemo-README.md)
+[qa-saucedemo-README.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/qa-saucedemo-README.md)
