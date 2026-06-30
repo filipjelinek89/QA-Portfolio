@@ -134,7 +134,7 @@ Manual testing of a banking application covering user registration, login, accou
 - Boundary Value Analysis
 - API Testing
 
-➡️ **[View Project](https://github.com/filipjelinek89/qa-parabank)**
+🔗 **View Bug Reports** *(In Progress)*
 
 ## 🔌 API Testing – Postman Collection
 
@@ -147,7 +147,7 @@ A collection of API requests, environments, and automated checks created while l
 - Environment Variables
 - Response Validation
 
-➡️ **[View Project](https://github.com/filipjelinek89/api-testing-postman)**
+🔗 **View Bug Reports** *(In Progress)*
 
 ## 💾 SQL Practice
 
@@ -161,7 +161,7 @@ A collection of SQL exercises demonstrating database querying and data validatio
 - Aggregate Functions
 - Filtering & Sorting
 
-➡️ **[View Project](https://github.com/filipjelinek89/sql-practice)**
+🔗 **View Bug Reports** *(In Progress)*
 
 ## 🤖 Playwright Automation
 
@@ -175,7 +175,7 @@ Automation testing exercises created while learning Playwright.
 - Page Object Model (later)
 - Test Execution
 
-➡️ **[View Project](https://github.com/filipjelinek89/playwright-automation)**
+🔗 **View Bug Reports** *(In Progress)*
 
 ---
 
