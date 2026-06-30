@@ -45,7 +45,7 @@ The test cases are organized by functional area and linked to their individual M
 
 | ID                                             | Test Case                    | Priority | Requirement | Status         |
 | ---------------------------------------------- | ---------------------------- | -------- | ----------- | -------------- |
-| [TC001]([TC001_Successful_Login.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases/TC001%20%23U2013%20Successful%20Login.md)             | Successful Login             | High     | FR-001      | ✅ Passed     |
+| [TC001](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases/TC001%20%23U2013%20Successful%20Login.md)             | Successful Login             | High     | FR-001      | ✅ Passed     |
 | [TC002](TC002_Login_with_Invalid_Password.md)  | Login with Invalid Password  | High     | FR-001      | ✅ Passed |
 | [TC003](TC003_Login_with_Invalid_Username.md)  | Login with Invalid Username  | High     | FR-001      | ✅ Passed |
 | [TC004](TC004_Login_with_Empty_Username.md)    | Login with Empty Username    | Medium   | FR-001      | ✅ Passed |
