@@ -203,7 +203,7 @@ This section contains examples of structured manual test cases created for diffe
 - Transfer Funds
 - Bill Payment
 
-🔗 **[View Test Cases] IN PROGRESS**
+🔗 **View Bug Reports** *(In Progress)*
 
 
 # 🐞 Bug Reports
@@ -222,7 +222,15 @@ This section contains bug reports created during manual functional testing of th
 
 🔗 **[View Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)**
 
+🏦 **ParaBank**
 
+- User Registration
+- Login
+- Open New Account
+- Transfer Funds
+- Bill Payment
+
+🔗 **View Bug Reports** *(In Progress)*
 
 
 Note :
