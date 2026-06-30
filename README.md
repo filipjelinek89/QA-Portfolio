@@ -277,8 +277,8 @@ I'm actively seeking **remote Junior Manual QA Tester opportunities**, internshi
 
 Feel free to reach out:
 
-- 📧 **Email:** [Email](filip.jelinek89@gmail.com)
+- 📧 **Email:** filip.jelinek89@gmail.com
 - 💼 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/filip-jelínek-a6143b342)
 - 🐙 **GitHub:** [GitHub](https://github.com/filipjelinek89)
-- 
+  
 I appreciate your feedback and would be happy to discuss my projects or future collaboration.
