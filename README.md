@@ -13,7 +13,7 @@
 - 🔌 [API Testing IN PROGRESS](#api-testing)
 - 🗄️ [SQL Practice IN PROGRESS](#sql-practice)
 - 🤖 [Automation (Playwright) IN PROGRESS](#automation-playwright)
-- 🎓 [Certificates](#certificates)
+- 🎓 [Certificates](#-certificates)
 - 📫 [Contact](#contact)
 
 ---
