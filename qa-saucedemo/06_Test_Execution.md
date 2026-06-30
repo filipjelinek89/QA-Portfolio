@@ -65,15 +65,15 @@ Each executed test case records the final execution status together with referen
 | TC005 | Login with Empty Password | Login | ✅ Pass | — |
 | TC006 | Login with Empty Credentials | Login | ✅ Pass | — |
 | TC007 | Login with Locked User | Login | ✅ Pass | — |
-| TC008 | Verify Inventory Page Display | Inventory | ❌ Fail | [BUG-001](../05_Bug_Reports/BUG-001_All_Product_Images_Display_the_Same_Image_on_Inventory_Page.md) |
-| TC009 | Verify Product Information | Inventory | ❌ Fail | [BUG-002](../05_Bug_Reports/BUG-002_Product_Information_Is_Missing_on_Inventory_Page.md) |
-| TC010 | Verify "Add to Cart" Button Functionality | Inventory | ❌ Fail | [BUG-003](../05_Bug_Reports/BUG-003_Add_to_Cart_and_Remove_Buttons_Do_Not_Work_for_Specific_Products.md) |
+| TC008 | Verify Inventory Page Display | Inventory | ❌ Fail | [BUG-001](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-001_Incorrect_Product_Images.png) |
+| TC009 | Verify Product Information | Inventory | ❌ Fail | [BUG-002](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-002_Incorrect_Product_Information_Product_Details_Page.png) |
+| TC010 | Verify "Add to Cart" Button Functionality | Inventory | ❌ Fail | [BUG-003](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-003_Add_To_Cart_Button_Not_Working_Specific_Products.png) |
 | TC011 | Verify Product Details Navigation | Inventory | ✅ Pass | — |
 | TC012 | Verify Shopping Cart Badge Update | Inventory | ✅ Pass | — |
 | TC013 | Verify Inventory Page After Browser Refresh | Inventory | ✅ Pass | — |
 | TC014 | Verify Product Information on Product Details Page | Product Details | ✅ Pass | — |
 | TC015 | Verify "Add to Cart" Button on Product Details Page | Product Details | ✅ Pass | — |
-| TC016 | Verify "Remove" Button on Product Details Page | Product Details | ❌ Fail | [BUG-004](../05_Bug_Reports/BUG-004_Remove_Button_Does_Not_Work_on_Product_Details_Page.md) |
+| TC016 | Verify "Remove" Button on Product Details Page | Product Details | ❌ Fail | [BUG-004](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-004_Remove_Button_Not_Working_Product_Details_Page.png) |
 | TC017 | Verify "Back to Products" Navigation | Product Details | ✅ Pass | — |
 | TC018 | Verify Shopping Cart Page | Shopping Cart | ✅ Pass | — |
 | TC019 | Verify Single Product in Shopping Cart | Shopping Cart | ✅ Pass | — |
@@ -84,21 +84,22 @@ Each executed test case records the final execution status together with referen
 | TC024 | Verify Empty Shopping Cart After Removing All Products | Shopping Cart | ✅ Pass | — |
 | TC025 | Verify Shopping Cart Persistence After Browser Refresh | Shopping Cart | ✅ Pass | — |
 | TC026 | Verify Checkout: Your Information Page | Checkout | ✅ Pass | — |
-| TC027 | Complete Checkout Information with Valid Data | Checkout | ❌ Fail | [BUG-005](../05_Bug_Reports/BUG-005_Last_Name_Field_Does_Not_Accept_Input_During_Checkout.md) |
+| TC027 | Complete Checkout Information with Valid Data | Checkout | ❌ Fail | [BUG-005](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-005_Last_Name_Field_Does_Not_Accept_Input_Checkout.png) |
 | TC028 | Verify Checkout with Empty First Name | Checkout | ✅ Pass | — |
-| TC029 | Verify Checkout with Empty Last Name | Checkout | ❌ Fail | [BUG-006](../05_Bug_Reports/BUG-006_Checkout_Allows_User_to_Continue_Without_Required_Last_Name.md) |
+| TC029 | Verify Checkout with Empty Last Name | Checkout | ❌ Fail | [BUG-006](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-006_Checkout_Allows_Empty_Last_Name.png) |
 | TC030 | Verify Checkout with Empty Postal Code | Checkout | ✅ Pass | — |
 | TC031 | Verify Checkout: Overview Page | Checkout | ✅ Pass | — |
-| TC032 | Verify Successful Order Completion | Checkout | ❌ Fail | [BUG-007](../05_Bug_Reports/BUG-007_Finish_Button_Is_Not_Clickable_on_Checkout_Overview_Page.md) |
+| TC032 | Verify Successful Order Completion | Checkout | ❌ Fail | [BUG-007](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-007_Finish_Button_Not_Working_Checkout_Overview.png
+) |
 | TC033 | Verify Cancel Checkout from Checkout: Overview | Checkout | ✅ Pass | — |
 | TC034 | Verify Order Confirmation Page | Checkout | ✅ Pass | — |
 | TC035 | Verify "Back Home" Button After Order Completion | Checkout | ✅ Pass | — |
 | TC036 | Verify Product Sorting by Name (A–Z) | Navigation & Session | ✅ Pass | — |
-| TC037 | Verify Product Sorting by Price (Low to High) | Navigation & Session | ❌ Fail | [BUG-008](../05_Bug_Reports/BUG-008_Product_Sorting_by_Price_Low_to_High_Displays_Error_Page.md) |
+| TC037 | Verify Product Sorting by Price (Low to High) | Navigation & Session | ❌ Fail | [BUG-008](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-008_Product_Sorting_Low_To_High_JavaScript_Error.png) |
 | TC038 | Verify Burger Menu Opens | Navigation & Session | ✅ Pass | — |
 | TC039 | Verify User Logout | Navigation & Session | ✅ Pass | — |
 | TC040 | Verify Reset App State | Navigation & Session | ✅ Pass | — |
-| TC041 | Verify About Link | Navigation & Session | ❌ Fail | [BUG-009](../05_Bug_Reports/BUG-009_About_Link_Returns_404_Page_Not_Found.md) |
+| TC041 | Verify About Link | Navigation & Session | ❌ Fail | [BUG-009](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-009_About_Link_Redirects_To_404_Page.png) |
 | TC042 | Verify Direct Access to Inventory Without Authentication | Navigation & Session | ✅ Pass | — |
 ---
 
