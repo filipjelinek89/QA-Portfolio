@@ -106,6 +106,8 @@ The displayed information does not correspond to the actual product.
 
 > Screenshot showing invalid product name, incorrect description, wrong price, and incorrect product image.
 
+[BUG-002 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-002_Incorrect_Product_Information_Product_Details_Page.png)
+
 ---
 
 # Notes
@@ -135,3 +137,7 @@ The defect affects the accuracy of product information displayed to users.
 | **TC-009 – Verify Product Information** | ❌ Fail |
 
 ---
+
+⬅️ **Back to Bug Reports**
+
+[05_Bug_Reports.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)
