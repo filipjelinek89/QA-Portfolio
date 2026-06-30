@@ -11,7 +11,7 @@
 - [Testing Scope](#Testing-Scope)
 - [Project Status](#Project-Status)
 - [Author](#Author)
-- [Author](#Author)
+- [Project Navigation](#-project-navigation)
 
 ---
 
@@ -130,7 +130,7 @@ This project includes:
 
 ## Project Status
 
-🟡 In Progress
+✅ Completed
 
 Current Progress:
 
