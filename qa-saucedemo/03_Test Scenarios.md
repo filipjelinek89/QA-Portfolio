@@ -99,5 +99,5 @@ This ensures that every functional requirement is validated through structured a
 
 ⬅️ **Back to Saucedemo**
 
-[qa-saucedemo-README.md](../qa-saucedemo-README.md)
+[qa-saucedemo-README.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/qa-saucedemo-README.md)
 
