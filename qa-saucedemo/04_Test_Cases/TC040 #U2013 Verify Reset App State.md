@@ -87,6 +87,8 @@ Verify that:
 - The Reset App State option does not redirect the user to another page.
 - No visual or functional issues occur after resetting the application state.
 
+---
+
 ⬅️ **Back to Test Cases**
 
-[04_Test_Cases.md](04_Test_Cases.md)
+[04_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)
