@@ -4,18 +4,17 @@
 
 # In-page Navigation
 
-* 👨‍💻 [About me](#-about-me)
-* 📄 [CV](#-cv)
-* 🛠️ [Skills](#-skills)
-* 📂 [Portfolio Projects](#-portfolio-projects)
-* 🧪 [Test Cases](#-test-cases)
-* 🐞 [Bug Reports](#-bug-reports)
-* 🔌 [API Testing](#-api-testing)
-* 🗄️ [SQL Practice](#-sql-practice)
-* 🤖 [Automation (Playwright)](#-automation-playwright)
-* 🎓 [Certificates](#-certificates)
-* 📫 [Contact](#-contact)
-
+- 👨‍💻 [About me](#about-me)
+- 📄 [CV](#cv)
+- 🛠️ [Skills](#skills)
+- 📂 [Portfolio Projects](#portfolio-projects)
+- 🧪 [Test Cases](#test-cases)
+- 🐞 [Bug Reports](#bug-reports)
+- 🔌 [API Testing](#api-testing)
+- 🗄️ [SQL Practice](#sql-practice)
+- 🤖 [Automation (Playwright)](#automation-playwright)
+- 🎓 [Certificates](#certificates)
+- 📫 [Contact](#contact)
 
 ---
 
