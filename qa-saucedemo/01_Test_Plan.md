@@ -23,8 +23,8 @@
 - [10. Deliverables](#10-deliverables)
 - [11. Risks](#11-risks)
 - [12. Assumptions](#12-assumptions)
-- [13. Test Schedule]#13-test-schedule)
-- [14. Approval](#14.-Approval)
+- [13. Test Schedule](#13-test-schedule)
+- [14. Approval](#14-approval)
 
 ---
 
