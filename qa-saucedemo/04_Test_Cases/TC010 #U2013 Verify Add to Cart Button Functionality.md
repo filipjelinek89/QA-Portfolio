@@ -81,6 +81,8 @@ Verify that:
 - The **Remove** button is displayed only for the added product.
 - No page refresh occurs after clicking **Add to Cart**.
 
+---
+
 ⬅️ **Back to Test Cases**
 
-[04_Test_Cases.md](04_Test_Cases.md)
+[04_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)
