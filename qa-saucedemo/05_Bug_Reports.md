@@ -4,42 +4,49 @@
 
 **Project:** SauceDemo Manual Testing Project
 
+**Version:** 2.0
+
+**Prepared by:** Filip Jelinek
+
 **Application:** SauceDemo (https://www.saucedemo.com)
 
-**Testing Type:** Manual Testing
+**Testing Type:** Manual Functional Testing
 
 **Documentation Standard:** IEEE-inspired QA Documentation
 
 ---
 
-## 📑 In-page Navigation
+# In-page Navigation
 
-* [Overview](#overview)
-* [Bug Report Structure](#bug-report-structure)
-* [Severity Classification](#severity-classification)
-* [Priority Classification](#priority-classification)
-* [Environment](#environment)
-* [Bug Reports](#bug-reports)
-* [Summary](#summary)
+- [Overview](#overview)
+- [Bug Report Structure](#bug-report-structure)
+- [Severity Classification](#severity-classification)
+- [Priority Classification](#priority-classification)
+- [Environment](#environment)
+- [Bug Reports](#bug-reports)
+- [Summary](#summary)
 
 ---
 
 # Overview
 
-This section contains bug reports identified during manual testing of the SauceDemo web application.
+This section contains bug reports identified during manual functional testing of the SauceDemo web application.
 
-Each reported issue was documented using a structured bug report template commonly used in software testing projects. Every report includes essential information required for developers and stakeholders to understand, reproduce, and prioritize the defect.
+The reported defects were discovered while testing different user accounts (`problem_user` and `error_user`) intentionally provided by SauceDemo to simulate application defects.
 
-The purpose of this section is to demonstrate practical defect reporting skills, including clear communication, accurate classification, and professional documentation.
+Each bug report follows a standardized documentation structure commonly used in software testing projects and includes all information required to reproduce, classify, and prioritize the issue.
+
+This documentation demonstrates practical bug reporting skills and professional QA documentation practices.
 
 ---
-
 
 # Bug Report Structure
 
 Each bug report contains:
 
-- Unique Bug ID
+- Bug ID
+- Related Requirement
+- Related Test Case
 - Title
 - Severity
 - Priority
@@ -49,81 +56,114 @@ Each bug report contains:
 - Steps to Reproduce
 - Expected Result
 - Actual Result
-- Attachments (Screenshot Placeholder)
+- Screenshot
 - Additional Notes
 
 ---
 
 # Severity Classification
 
-| Severity    | Description                                                |
-| ----------- | ---------------------------------------------------------- |
-| 🔴 Critical | System failure or major functionality is unusable.         |
-| 🟠 High     | Core functionality is significantly affected.              |
-| 🟡 Medium   | Feature works incorrectly but has a workaround.            |
-| 🟢 Low      | Minor issue with limited impact (UI, usability, cosmetic). |
+| Severity | Description |
+|-----------|-------------|
+| 🔴 Critical | Application functionality is blocked or unusable. |
+| 🟠 High | Core functionality is significantly affected. |
+| 🟡 Medium | Functionality works incorrectly but workaround exists. |
+| 🟢 Low | Cosmetic or minor usability issue. |
 
 ---
 
 # Priority Classification
 
-| Priority | Description                |
-| -------- | -------------------------- |
-| P1       | Fix immediately            |
-| P2       | Fix in the next release    |
-| P3       | Normal priority            |
-| P4       | Low priority / Enhancement |
+| Priority | Description |
+|----------|-------------|
+| P1 | Fix immediately |
+| P2 | Fix in the next release |
+| P3 | Normal priority |
+| P4 | Low priority / Enhancement |
 
 ---
 
 # Environment
 
-All bug reports were documented using the following environment:
+All bug reports were documented using the following environment.
 
-| Item             | Value                     |
-| ---------------- | ------------------------- |
-| Operating System | Windows 11 Pro (64-bit)   |
-| Browser          | Google Chrome             |
-| Browser Version  | 149.0.7827.197            |
-| Application      | SauceDemo                 |
-| Testing Type     | Manual Functional Testing |
+| Item | Value |
+|------|-------|
+| Operating System | Windows 11 Pro (64-bit) |
+| Browser | Google Chrome |
+| Browser Version | 149.0.7827.197 |
+| Application | SauceDemo |
+| Testing Type | Manual Functional Testing |
 
 ---
 
 # Bug Reports
 
-| Bug ID  | Title                                                                                                                 | Severity    | Status |
-| ------- | --------------------------------------------------------------------------------------------------------------------- | ----------- | ------ |
-| BUG-001 | [Login with Empty Credentials Displays Incorrect Validation](BUG-001_Login_With_Empty_Credentials.md)                 | 🟠 High     | Open   |
-| BUG-002 | [Username Field Allows Leading Spaces](BUG-002_Username_Field_Allows_Leading_Spaces.md)                               | 🟡 Medium   | Open   |
-| BUG-003 | [Shopping Cart Badge Not Updated After Removing Item](BUG-003_Shopping_Cart_Badge_Not_Updated.md)                     | 🟠 High     | Open   |
-| BUG-004 | [Checkout Allows Whitespace in First Name](BUG-004_Checkout_Allows_Whitespace_First_Name.md)                          | 🟡 Medium   | Open   |
-| BUG-005 | [Last Name Field Accepts Only Spaces](BUG-005_Last_Name_Field_Accepts_Only_Spaces.md)                                 | 🟡 Medium   | Open   |
-| BUG-006 | [ZIP Code Field Allows Alphabetic Characters](BUG-006_Zip_Code_Field_Allows_Letters.md)                               | 🟠 High     | Open   |
-| BUG-007 | [Product Image Is Not Clickable](BUG-007_Product_Image_Not_Clickable.md)                                              | 🟢 Low      | Open   |
-| BUG-008 | [Browser Back Button Returns User to Checkout](BUG-008_Back_Button_Returns_To_Checkout.md)                            | 🟡 Medium   | Open   |
-| BUG-009 | [Shopping Cart Persists After Logout](BUG-009_Cart_Persists_After_Logout.md)                                          | 🔴 Critical | Open   |
-| BUG-010 | [Error Message Remains Visible After Successful Login](BUG-010_Error_Message_Not_Dismissed.md)                        | 🟢 Low      | Open   |
-| BUG-011 | [Missing Alt Text on Product Images](BUG-011_Missing_Alt_Text_On_Product_Images.md)                                   | 🟢 Low      | Open   |
-| BUG-012 | [Footer Link Uses HTTP Instead of HTTPS](BUG-012_Footer_Link_Opens_HTTP.md)                                           | 🟢 Low      | Open   |
-| BUG-013 | [Burger Menu Is Not Fully Keyboard Accessible](BUG-013_Burger_Menu_Not_Keyboard_Accessible.md)                        | 🟡 Medium   | Open   |
-| BUG-014 | [Double Click on Checkout Button Creates Duplicate Submission](BUG-014_Checkout_Button_Double_Click_Submits_Twice.md) | 🟠 High     | Open   |
-| BUG-015 | [Product Sorting Resets After Browser Back Navigation](BUG-015_Product_Sorting_Resets_After_Back_Navigation.md)       | 🟡 Medium   | Open   |
+| Bug ID | Requirement | Related TC | Title | Severity | Priority | Status |
+|--------|-------------|------------|-------|-----------|----------|--------|
+| BUG-001 | FR-002 | TC008 | [All Product Images Display the Same Image on Inventory Page](BUG-001_All_Product_Images_Display_the_Same_Image_on_Inventory_Page.md) | 🟠 High | P2 | Open |
+| BUG-002 | FR-002 | TC009 | [Product Information Is Missing on Inventory Page](BUG-002_Product_Information_Is_Missing_on_Inventory_Page.md) | 🟠 High | P2 | Open |
+| BUG-003 | FR-002 | TC010 | [Add to Cart and Remove Buttons Do Not Work for Specific Products](BUG-003_Add_to_Cart_and_Remove_Buttons_Do_Not_Work_for_Specific_Products.md) | 🔴 Critical | P1 | Open |
+| BUG-004 | FR-003 | TC016 | [Remove Button Does Not Work on Product Details Page](BUG-004_Remove_Button_Does_Not_Work_on_Product_Details_Page.md) | 🟠 High | P2 | Open |
+| BUG-005 | FR-005 | TC027 | [Last Name Field Does Not Accept Input During Checkout](BUG-005_Last_Name_Field_Does_Not_Accept_Input_During_Checkout.md) | 🟠 High | P2 | Open |
+| BUG-006 | FR-005 | TC029 | [Checkout Allows User to Continue Without Required Last Name](BUG-006_Checkout_Allows_User_to_Continue_Without_Required_Last_Name.md) | 🔴 Critical | P1 | Open |
+| BUG-007 | FR-005 | TC032 | [Finish Button Is Not Clickable on Checkout Overview Page](BUG-007_Finish_Button_Is_Not_Clickable_on_Checkout_Overview_Page.md) | 🔴 Critical | P1 | Open |
+| BUG-008 | FR-006 | TC037 | [Product Sorting by Price (Low to High) Displays Error Page](BUG-008_Product_Sorting_by_Price_Low_to_High_Displays_Error_Page.md) | 🟠 High | P2 | Open |
+| BUG-009 | FR-007 | TC041 | [About Link Returns 404 Page Not Found](BUG-009_About_Link_Returns_404_Page_Not_Found.md) | 🟡 Medium | P3 | Open |
 
 ---
 
 # Summary
 
-- **Total Bug Reports:** 15
-- **Critical:** 1
-- **High:** 4
-- **Medium:** 6
-- **Low:** 4
+## Bug Statistics
 
-The reported issues represent a realistic mix of functional, validation, usability, accessibility, and user interface defects typically encountered during manual testing of a web application.
+| Severity | Count |
+|-----------|------:|
+| 🔴 Critical | 3 |
+| 🟠 High | 5 |
+| 🟡 Medium | 1 |
+| 🟢 Low | 0 |
+| **Total Bug Reports** | **9** |
 
 ---
 
-⬅️ **Back to Saucedemo**
+## Functional Areas Affected
+
+- Login
+- Inventory
+- Product Details
+- Shopping Cart
+- Checkout
+- Navigation
+
+---
+
+## Related Test Cases
+
+The reported defects are linked to the following executed test cases:
+
+- TC008
+- TC009
+- TC010
+- TC016
+- TC027
+- TC029
+- TC032
+- TC037
+- TC041
+
+---
+
+## Notes
+
+All reported defects were identified during manual functional testing of SauceDemo.
+
+Each issue was successfully reproduced and documented with detailed reproduction steps, expected and actual results, severity assessment, priority classification, and supporting screenshots.
+
+The documentation demonstrates practical experience in identifying, reproducing, documenting, and communicating software defects using industry-standard QA documentation practices.
+
+---
+
+⬅️ **Back to SauceDemo**
 
 [qa-saucedemo-README.md](../qa-saucedemo-README.md)
