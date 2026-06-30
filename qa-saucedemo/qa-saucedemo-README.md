@@ -158,16 +158,16 @@ GitHub: https://github.com/filipjelinek89
 
 # 📑 Project Navigation
 
-- 📋 [01. Test Plan](01_Test_Plan.md)
-- 📄 [02. Requirements Analysis](02_Requirements_Analysis.md)
+- 📋 [01. Test Plan](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/01_Test_Plan.md)
+- 📄 [02. Requirements Analysis](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/02_Requirements_Analysis.md)
 - 📝 [03. Test Scenarios](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/03_Test%20Scenarios.md)
-- 🧪 [04. Test Cases](04_Test_Cases.md)
-- 🐞 [05. Bug Reports](05_Bug_Reports.md)
-- ▶️ [06. Test Execution](06_Test_Execution.md)
-- 📊 [07. Test Summary](07_Test_Summary.md)
-- 🗂️ [08. Test Data](08_Test_Data.md)
-- 📷 [09. Screenshots](09_Screenshots.md)
-- 🔗 [10. Traceability Matrix](10_Traceability_Matrix.md)
+- 🧪 [04. Test Cases](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)
+- 🐞 [05. Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)
+- ▶️ [06. Test Execution](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/06_Test_Execution.md)
+- 📊 [07. Test Summary](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/07_Test_Summary.md)
+- 🗂️ [08. Test Data](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/08_Test_Data.md)
+- 📷 [09. Screenshots](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots.md)
+- 🔗 [10. Traceability Matrix]([10_Traceability_Matrix.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/10_Traceability_Matrix.md))
 
 ---
 
