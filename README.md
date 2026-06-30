@@ -250,23 +250,23 @@ The certifications complement the practical projects presented in this portfolio
 ### Learning history inLearning
 
 |-------------|----------|
-| API Testing Foundations |
-|Software Testing Foundations: Test Planning |
-| Understanding Manual Testing |
-| Software Testing Foundations: Test Techniques |
-| TestMu AI Software Testing Professional Certificate |
-| Programming Foundations: Software Testing/QA |
-| Atlassian Agile Project Management Professional Certificate |
-| Mistakes to Avoid in Agile Project Management |
-| Agile Project Management with Jira Cloud: 3 Advanced Topics |
-| Agile Project Management with Jira Cloud: 2 Lean and Agile Processes |
-| Agile Project Management with Jira Cloud: 1 Projects, Boards, and Issues |
-| Scrum: The Basics |
-| Agile Foundations |
-| Agile Testing |
-| Software Testing Tips Weekly |
-| Software Testing Foundations: Test Preparation |
-| Predict questions, prepare answers |
+| API Testing Foundations | Complete |
+|Software Testing Foundations: Test Planning | Complete |
+| Understanding Manual Testing | Complete |
+| Software Testing Foundations: Test Techniques | Complete |
+| TestMu AI Software Testing Professional Certificate | Complete |
+| Programming Foundations: Software Testing/QA | Complete |
+| Atlassian Agile Project Management Professional Certificate | Complete |
+| Mistakes to Avoid in Agile Project Management | Complete |
+| Agile Project Management with Jira Cloud: 3 Advanced Topics | Complete |
+| Agile Project Management with Jira Cloud: 2 Lean and Agile Processes | Complete |
+| Agile Project Management with Jira Cloud: 1 Projects, Boards, and Issues | Complete |
+| Scrum: The Basics | Complete |
+| Agile Foundations | Complete |
+| Agile Testing | Complete |
+| Software Testing Tips Weekly | Complete |
+| Software Testing Foundations: Test Preparation | Complete |
+| Predict questions, prepare answers | Complete |
 |-------------|----------|
 
 
