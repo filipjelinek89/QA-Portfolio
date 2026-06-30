@@ -111,7 +111,7 @@ Each executed test case records the final execution status together with referen
 | ⛔ Blocked       |     0 |
 | ⏸️ Not Executed |     0 |
 
-**Execution Success Rate:** **64.3%**
+**Execution Success Rate:** **78.6%**
 
 ---
 
