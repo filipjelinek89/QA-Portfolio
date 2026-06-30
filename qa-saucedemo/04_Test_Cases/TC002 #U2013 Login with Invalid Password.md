@@ -84,6 +84,8 @@ Verify that:
 - The password field remains masked.
 - No sensitive information is displayed in the error message.
 
+---
+
 ⬅️ **Back to Test Cases**
 
-[04_Test_Cases.md](04_Test_Cases.md)
+[04_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)
