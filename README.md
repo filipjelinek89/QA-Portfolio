@@ -18,7 +18,7 @@
 
 ---
 
-## 👨‍💻 About me
+# 👨‍💻 About me
 
 Hello! I'm Filip, an aspiring Software QA Engineer with a professional background in industrial quality assurance, engineering project management, and safety-critical operations.
 
@@ -34,14 +34,14 @@ I am currently seeking a Junior Manual QA or Entry-Level Software QA position wh
 
 ---
 
-## 📄 CV
+# 📄 CV
 [View my CV](CV/Filip_Jelinek_CV.pdf)
 
 ---
 
-## 🛠️ Skills
+# 🛠️ Skills
 
-# Manual Testing
+## Manual Testing
 - Functional Testing
 - Regression Testing
 - Exploratory Testing
@@ -50,7 +50,7 @@ I am currently seeking a Junior Manual QA or Entry-Level Software QA position wh
 - Cross-Browser Testing
 - Mobile Testing Android
 
-# Test Documentation
+## Test Documentation
 - Test Planning
 - Test Case Design
 - Test Scenarios
@@ -58,14 +58,14 @@ I am currently seeking a Junior Manual QA or Entry-Level Software QA position wh
 - Test Execution
 - Test Summary Reports
 
-# QA Methodologies
+## QA Methodologies
 - Software Development Life Cycle (SDLC)
 - Software Testing Life Cycle (STLC)
 - Defect Life Cycle
 - Risk-Based Testing
 - Agile Fundamentals
 
-# Tools & Technologies
+## Tools & Technologies
 - Git & GitHub
 - Postman
 - Jira
@@ -73,13 +73,13 @@ I am currently seeking a Junior Manual QA or Entry-Level Software QA position wh
 - Chrome DevTools
 - Visual Studio Code
 
-# Technical Skills
+## Technical Skills
 - SQL (Basic)
 - HTML & CSS (Basic)
 - JavaScript (Learning)
 - Playwright (Learning)
 
-# Professional Skills
+## Professional Skills
 - Analytical Thinking
 - Attention to Detail
 - Problem Solving
@@ -91,12 +91,12 @@ I am currently seeking a Junior Manual QA or Entry-Level Software QA position wh
 
 ---
 
-## 📂 Portfolio Projects
+# 📂 Portfolio Projects
 ## 🛒 SauceDemo – E-commerce Website Testing¨
 
 A complete manual testing project focused on an e-commerce application.
 
-# Project includes:
+## Project includes:
 
 - Test Plan
 - Test Cases
@@ -104,7 +104,7 @@ A complete manual testing project focused on an e-commerce application.
 - Test Summary Report
 - Screenshots / Video
 
-# Skills demonstrated:
+## Skills demonstrated:
 
 - Functional Testing
 - Regression Testing
@@ -113,11 +113,11 @@ A complete manual testing project focused on an e-commerce application.
 
 ➡️ **[View Project](https://github.com/filipjelinek89/qa-saucedemo)**
 
-# 🏦 ParaBank – Online Banking Testing
+## 🏦 ParaBank – Online Banking Testing
 
 Manual testing of a banking application covering user registration, login, account management, and money transfers.
 
-# Project includes:
+## Project includes:
 
 - Test Plan
 - Exploratory Testing
@@ -127,7 +127,7 @@ Manual testing of a banking application covering user registration, login, accou
 - Exploratory Testing
 - Test Summary Report
 
-# Skills demonstrated:
+## Skills demonstrated:
 
 - Functional Testing
 - Exploratory Testing
@@ -136,7 +136,7 @@ Manual testing of a banking application covering user registration, login, accou
 
 ➡️ **[View Project](https://github.com/filipjelinek89/qa-parabank)**
 
-# 🔌 API Testing – Postman Collection
+## 🔌 API Testing – Postman Collection
 
 A collection of API requests, environments, and automated checks created while learning API testing.
 
@@ -149,11 +149,11 @@ A collection of API requests, environments, and automated checks created while l
 
 ➡️ **[View Project](https://github.com/filipjelinek89/api-testing-postman)**
 
-# 💾 SQL Practice
+## 💾 SQL Practice
 
 A collection of SQL exercises demonstrating database querying and data validation.
 
-# Project includes:
+## Project includes:
 
 - SELECT Queries
 - JOIN Operations
@@ -163,11 +163,11 @@ A collection of SQL exercises demonstrating database querying and data validatio
 
 ➡️ **[View Project](https://github.com/filipjelinek89/sql-practice)**
 
-# 🤖 Playwright Automation
+## 🤖 Playwright Automation
 
 Automation testing exercises created while learning Playwright.
 
-# Project includes:
+## Project includes:
 
 - Login Tests
 - Assertions
@@ -179,7 +179,7 @@ Automation testing exercises created while learning Playwright.
 
 ---
 
-## 🧪 Test Cases
+# 🧪 Test Cases
 
 This section contains examples of structured manual test cases created for different web applications. Each project demonstrates a systematic testing approach, including preconditions, test steps, expected results, and execution status.
 
