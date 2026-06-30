@@ -81,8 +81,6 @@ Users cannot add certain products to the shopping cart, preventing them from pur
 
 **Screenshot:**
 
-`BUG-003_Add_To_Cart_Button_Not_Working_Specific_Products.png`
-
 [BUG-003 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-003_Add_To_Cart_Button_Not_Working_Specific_Products.png)
 
 ---
