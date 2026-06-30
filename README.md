@@ -111,7 +111,7 @@ A complete manual testing project focused on an e-commerce application.
 - UI Testing
 - Bug Reporting
 
-➡️ **[View Project](https://github.com/filipjelinek89/qa-saucedemo)**
+➡️ **[View Project](https://github.com/filipjelinek89/QA-Portfolio/tree/main/qa-saucedemo/qa-saucedemo-README.md)**
 
 ## 🏦 ParaBank – Online Banking Testing
 
