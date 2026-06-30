@@ -4,11 +4,11 @@
 
 # In-page Navigation
 
-- 👨‍💻[About me](#about-me)
+- 👨‍💻[About me](#-about-me)
 
-- 📄[CV](#cv)
+- 📄[CV](#-cv)
 
-- 🛠️[Skills](#skills)
+- 🛠️[Skills](#-skills)
 
 - 📂[Portfolio Projects](#Portfolio-Projects)
 
