@@ -51,10 +51,15 @@ The screenshots included in this portfolio serve the following purposes:
 09_Screenshots
 │
 ├── Bug_Reports
-│   ├── BUG-001.png
-│   ├── BUG-002.png
-│   ├── ...
-│   └── BUG-015.png
+│   ├── BUG-001_Incorrect_Product_Images.png
+│   ├── BUG-002_Incorrect_Product_Information_Product_Details_Page.png
+│   ├── BUG-003_Add_To_Cart_Button_Not_Working_Specific_Products.png
+│   ├── BUG-004_Remove_Button_Not_Working_Product_Details_Page.png
+│   ├── BUG-005_Last_Name_Field_Does_Not_Accept_Input_Checkout.png
+│   ├── BUG-006_Checkout_Allows_Empty_Last_Name.png
+│   ├── BUG-007_Finish_Button_Not_Working_Checkout_Overview.png
+│   ├── BUG-008_Product_Sorting_Low_To_High_JavaScript_Error.png
+│   └── BUG-009_About_Link_Redirects_To_404_Page.png
 │
 └── Supporting_Evidence
     ├── Login_Page.png
@@ -122,6 +127,6 @@ Organizing screenshots separately from the documentation keeps the repository st
 
 ---
 
-⬅️ **Back to Portfolio**
+⬅️ **Back to Saucedemo**
 
-[qa-saucedemo-README.md](qa-saucedemo-README.md)
+[qa-saucedemo-README.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/qa-saucedemo-README.md)
