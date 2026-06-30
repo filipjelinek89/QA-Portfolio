@@ -10,9 +10,9 @@
 - 📂 [Portfolio Projects](#-portfolio-projects)
 - 🧪 [Test Cases](#-test-cases)
 - 🐞 [Bug Reports](#-bug-reports)
-- 🔌 [API Testing](#api-testing)
-- 🗄️ [SQL Practice](#sql-practice)
-- 🤖 [Automation (Playwright)](#automation-playwright)
+- 🔌 [API Testing IN PROGRESS](#api-testing)
+- 🗄️ [SQL Practice IN PROGRESS](#sql-practice)
+- 🤖 [Automation (Playwright) IN PROGRESS](#automation-playwright)
 - 🎓 [Certificates](#certificates)
 - 📫 [Contact](#contact)
 
