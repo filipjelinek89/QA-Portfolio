@@ -10,9 +10,9 @@
 - 📂 [Portfolio Projects](#-portfolio-projects)
 - 🧪 [Test Cases](#-test-cases)
 - 🐞 [Bug Reports](#-bug-reports)
-- 🔌 [API Testing IN PROGRESS](#api-testing)
-- 🗄️ [SQL Practice IN PROGRESS](#sql-practice)
-- 🤖 [Automation (Playwright) IN PROGRESS](#automation-playwright)
+- 🔌 [API Testing Coming Soon](#api-testing)
+- 🗄️ [SQL Practice Coming Soon](#sql-practice)
+- 🤖 [Automation (Playwright) Coming Soon](#automation-playwright)
 - 🎓 [Certificates](#-certificates)
 - 📫 [Contact](#-contact)
 
@@ -92,7 +92,7 @@ I am currently seeking a Junior Manual QA or Entry-Level Software QA position wh
 ---
 
 # 📂 Portfolio Projects
-## 🛒 SauceDemo – E-commerce Website Testing¨
+## 🛒 SauceDemo – E-commerce Website Testing
 
 A complete manual testing project focused on an e-commerce application.
 
@@ -124,7 +124,6 @@ Manual testing of a banking application covering user registration, login, accou
 - Test Cases
 - Bug Reports
 - Screenshots / Video
-- Exploratory Testing
 - Test Summary Report
 
 ## Skills demonstrated:
@@ -134,7 +133,7 @@ Manual testing of a banking application covering user registration, login, accou
 - Boundary Value Analysis
 - API Testing
 
-🔗 **View Bug Reports** *(In Progress)*
+🔗 **View Bug Reports** *(Coming Soon)*
 
 ## 🔌 API Testing – Postman Collection
 
@@ -147,7 +146,7 @@ A collection of API requests, environments, and automated checks created while l
 - Environment Variables
 - Response Validation
 
-🔗 **View Bug Reports** *(In Progress)*
+🔗 **View Bug Reports** *(Coming Soon)*
 
 ## 💾 SQL Practice
 
@@ -161,7 +160,7 @@ A collection of SQL exercises demonstrating database querying and data validatio
 - Aggregate Functions
 - Filtering & Sorting
 
-🔗 **View Bug Reports** *(In Progress)*
+🔗 **View Bug Reports** *(Coming Soon)*
 
 ## 🤖 Playwright Automation
 
@@ -175,7 +174,7 @@ Automation testing exercises created while learning Playwright.
 - Page Object Model (later)
 - Test Execution
 
-🔗 **View Bug Reports** *(In Progress)*
+🔗 **View Bug Reports** *(Coming Soon)*
 
 ---
 
@@ -203,7 +202,7 @@ This section contains examples of structured manual test cases created for diffe
 - Transfer Funds
 - Bill Payment
 
-🔗 **View Bug Reports** *(In Progress)*
+🔗 **View Bug Reports** *(Coming Soon)*
 
 
 # 🐞 Bug Reports
@@ -230,7 +229,7 @@ This section contains bug reports created during manual functional testing of th
 - Transfer Funds
 - Bill Payment
 
-🔗 **View Bug Reports** *(In Progress)*
+🔗 **View Bug Reports** *(Coming Soon)*
 
 ## 🎓 Certificates
 
