@@ -247,7 +247,7 @@ The certifications complement the practical projects presented in this portfolio
 | Atlassian Certificate of Completion | [Certificate](https://www.linkedin.com/learning/certificates/62247d766c26f59cbcc743cbc54e16a03830feeedb0a72fe73f39c0fa08f672f)
 |-------------|----------|:------:|
 
-### Learning history inLearning
+### Learning history [inLearning](https://www.linkedin.com/learning)
 
 |Course|Status|
 |-------------|----------|
