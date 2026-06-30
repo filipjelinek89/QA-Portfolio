@@ -5,7 +5,7 @@
 - [Application Under Test](#Application-Under-Test)
 - [Project Objectives](#Project-Objectives)
 - [Features Tested](#Features-Tested)
-- [Repository Structure](#FRepository-Structure)
+- [Repository Structure](#repository-structure)
 - [TestingDeliverables](#TestingDeliverables)
 - [Tools Used](#Tools-Used)
 - [Testing Scope](#Testing-Scope)
