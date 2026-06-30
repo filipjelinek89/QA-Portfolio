@@ -86,7 +86,7 @@ Users cannot complete purchases because the checkout process cannot be finalized
 
 **Screenshot:**
 
-`BUG-007_Finish_Button_Not_Working_Checkout_Overview.png`
+[BUG-007 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-007_Finish_Button_Not_Working_Checkout_Overview.png)
 
 ---
 
@@ -102,3 +102,9 @@ The defect is consistently reproducible using the **error_user** account. Althou
 - Test User: **error_user**
 - Result: **Fail**
 - Reproducibility: **100% (5/5 attempts)**
+
+---
+
+⬅️ **Back to Bug Reports**
+
+[05_Bug_Reports.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)
