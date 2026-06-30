@@ -101,15 +101,15 @@ All bug reports were documented using the following environment.
 
 | Bug ID | Requirement | Related TC | Title | Severity | Priority | Status |
 |--------|-------------|------------|-------|-----------|----------|--------|
-| BUG-001 | FR-002 | TC008 | [All Product Images Display the Same Image on Inventory Page](BUG-001_All_Product_Images_Display_the_Same_Image_on_Inventory_Page.md) | 🟠 High | P2 | Open |
-| BUG-002 | FR-002 | TC009 | [Product Information Is Missing on Inventory Page](BUG-002_Product_Information_Is_Missing_on_Inventory_Page.md) | 🟠 High | P2 | Open |
-| BUG-003 | FR-002 | TC010 | [Add to Cart and Remove Buttons Do Not Work for Specific Products](BUG-003_Add_to_Cart_and_Remove_Buttons_Do_Not_Work_for_Specific_Products.md) | 🔴 Critical | P1 | Open |
-| BUG-004 | FR-003 | TC016 | [Remove Button Does Not Work on Product Details Page](BUG-004_Remove_Button_Does_Not_Work_on_Product_Details_Page.md) | 🟠 High | P2 | Open |
-| BUG-005 | FR-005 | TC027 | [Last Name Field Does Not Accept Input During Checkout](BUG-005_Last_Name_Field_Does_Not_Accept_Input_During_Checkout.md) | 🟠 High | P2 | Open |
-| BUG-006 | FR-005 | TC029 | [Checkout Allows User to Continue Without Required Last Name](BUG-006_Checkout_Allows_User_to_Continue_Without_Required_Last_Name.md) | 🔴 Critical | P1 | Open |
-| BUG-007 | FR-005 | TC032 | [Finish Button Is Not Clickable on Checkout Overview Page](BUG-007_Finish_Button_Is_Not_Clickable_on_Checkout_Overview_Page.md) | 🔴 Critical | P1 | Open |
-| BUG-008 | FR-006 | TC037 | [Product Sorting by Price (Low to High) Displays Error Page](BUG-008_Product_Sorting_by_Price_Low_to_High_Displays_Error_Page.md) | 🟠 High | P2 | Open |
-| BUG-009 | FR-007 | TC041 | [About Link Returns 404 Page Not Found](BUG-009_About_Link_Returns_404_Page_Not_Found.md) | 🟡 Medium | P3 | Open |
+| BUG-001 | FR-002 | TC008 | [All Product Images Display the Same Image on Inventory Page](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-001%20%23U2013%20Incorrect%20Product%20Images%20Displayed%20on%20Inventory%20Page.md) | 🟠 High | P2 | Open |
+| BUG-002 | FR-002 | TC009 | [Product Information Is Missing on Inventory Page](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-002_Incorrect_Product_Information.md) | 🟠 High | P2 | Open |
+| BUG-003 | FR-002 | TC010 | [Add to Cart and Remove Buttons Do Not Work for Specific Products](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-003%20%23U2013%20Add%20to%20Cart%20Button%20Does%20Not%20Work%20for%20Specific%20Products.md) | 🔴 Critical | P1 | Open |
+| BUG-004 | FR-003 | TC016 | [Remove Button Does Not Work on Product Details Page](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-004%20%23U2013%20Remove%20Button%20Does%20Not%20Remove%20Product%20on%20Product%20Details%20Page.md) | 🟠 High | P2 | Open |
+| BUG-005 | FR-005 | TC027 | [Last Name Field Does Not Accept Input During Checkout](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-005%20%23U2013%20Last%20Name%20Field%20Does%20Not%20Accept%20Input%20During%20Checkout.md) | 🟠 High | P2 | Open |
+| BUG-006 | FR-005 | TC029 | [Checkout Allows User to Continue Without Required Last Name](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-006%20%23U2013%20Checkout%20Allows%20Progress%20Without%20Required%20Last%20Name.md) | 🔴 Critical | P1 | Open |
+| BUG-007 | FR-005 | TC032 | [Finish Button Is Not Clickable on Checkout Overview Page](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-007%20%23U2013%20Finish%20Button%20Does%20Not%20Complete%20Order.md) | 🔴 Critical | P1 | Open |
+| BUG-008 | FR-006 | TC037 | [Product Sorting by Price (Low to High) Displays Error Page](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-008%20%23U2013%20Product%20Sorting%20by%20Price%20(Low%20to%20High)%20Triggers%20JavaScript%20Error.md) | 🟠 High | P2 | Open |
+| BUG-009 | FR-007 | TC041 | [About Link Returns 404 Page Not Found]([BUG-009_About_Link_Returns_404_Page_Not_Found.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports/BUG-009%20%23U2013%20About%20Link%20Redirects%20to%20404%20Page.md)) | 🟡 Medium | P3 | Open |
 
 ---
 
