@@ -9,11 +9,11 @@
 ---
 
 # In-page Navigation
-- [1. Purpose](#1.-Purpose)
-- [2. Test Scenarios](#2.-Test-Scenarios)
-- [3. Scenario Coverage](#3.-Scenario-Coverage)
-- [4. Traceability](#4.-Traceability)
-- [5.Next Phase](#5.-Next-Phase)
+- [1. Purpose](#1-purpose)
+- [2. Test Scenarios](#2-test-scenarios)
+- [3. Scenario Coverage](#3-scenario-coverage)
+- [4. Traceability](#4-traceability)
+- [5.Next Phase](#5-next-phase)
 
 ---
 
