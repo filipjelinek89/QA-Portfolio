@@ -232,5 +232,42 @@ This section contains bug reports created during manual functional testing of th
 
 🔗 **View Bug Reports** *(In Progress)*
 
+## 🎓 Certificates
+
+This section contains professional certifications and completed courses that support my continuous learning in Quality Assurance, software testing, and related IT technologies.
+
+The certifications complement the practical projects presented in this portfolio and demonstrate my commitment to developing industry-relevant skills.
+
+### Current Certificates
+
+| Certificate | Provider | Status |
+|-------------|----------|:------:|
+| Software Testing Fundamentals | [Certificate](https://www.linkedin.com/learning/certificates/9d0b3a4670d8666bd45787a4b312e31a2aae10bc9f7a66b36a162a72cd3bb3e7)
+| API Testing Foundations | [Certificate](https://www.linkedin.com/learning/certificates/6c9d50836da2f6931206f2218ff7727843f670425328706824b133016c62361a)
+| Atlassian Certificate of Completion | [Certificate](https://www.linkedin.com/learning/certificates/62247d766c26f59cbcc743cbc54e16a03830feeedb0a72fe73f39c0fa08f672f)
+|-------------|----------|:------:|
+
+### Learning history inLearning
+
+|-------------|----------|:------:|
+| API Testing Foundations |
+|Software Testing Foundations: Test Planning |
+| Understanding Manual Testing |
+| Software Testing Foundations: Test Techniques |
+| TestMu AI Software Testing Professional Certificate |
+| Programming Foundations: Software Testing/QA |
+| Atlassian Agile Project Management Professional Certificate |
+| Mistakes to Avoid in Agile Project Management |
+| Agile Project Management with Jira Cloud: 3 Advanced Topics |
+| Agile Project Management with Jira Cloud: 2 Lean and Agile Processes |
+| Agile Project Management with Jira Cloud: 1 Projects, Boards, and Issues |
+| Scrum: The Basics |
+| Agile Foundations |
+| Agile Testing |
+| Software Testing Tips Weekly |
+| Software Testing Foundations: Test Preparation |
+| Predict questions, prepare answers |
+
+---
 
 Note :
