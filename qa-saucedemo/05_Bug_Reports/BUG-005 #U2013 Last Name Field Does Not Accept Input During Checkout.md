@@ -85,7 +85,7 @@ Users cannot complete the mandatory checkout information because the required **
 
 **Screenshot:**
 
-`BUG-005_Last_Name_Field_Does_Not_Accept_Input_Checkout.png`
+[BUG-005 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-005_Last_Name_Field_Does_Not_Accept_Input_Checkout.png)
 
 ---
 
@@ -101,4 +101,9 @@ The issue is consistently reproducible using the **error_user** account. The def
 - Test User: **error_user**
 - Result: **Fail**
 - Reproducibility: **100% (5/5 attempts)**
-```
+
+---
+
+⬅️ **Back to Bug Reports**
+
+[05_Bug_Reports.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md
