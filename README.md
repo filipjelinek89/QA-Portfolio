@@ -192,7 +192,7 @@ This section contains examples of structured manual test cases created for diffe
 - Checkout
 - Product Sorting
 
-🔗 **[View Test Cases](https://github.com/filipjelinek89/qa-saucedemo/tree/main/Test%20Cases)**
+🔗 **[View Test Cases](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)**
 
 ---
 
