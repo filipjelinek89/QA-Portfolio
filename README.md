@@ -249,7 +249,7 @@ The certifications complement the practical projects presented in this portfolio
 
 ### Learning history inLearning
 
-|-----------------------|
+|-------------|----------|
 | API Testing Foundations |
 |Software Testing Foundations: Test Planning |
 | Understanding Manual Testing |
@@ -267,7 +267,7 @@ The certifications complement the practical projects presented in this portfolio
 | Software Testing Tips Weekly |
 | Software Testing Foundations: Test Preparation |
 | Predict questions, prepare answers |
-|-----------------------|
+|-------------|----------|
 
 
 ---
