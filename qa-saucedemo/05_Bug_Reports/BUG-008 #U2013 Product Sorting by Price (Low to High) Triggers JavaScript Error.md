@@ -81,7 +81,7 @@ Users cannot sort products by price, making it more difficult to browse products
 
 **Screenshot:**
 
-`BUG-008_Product_Sorting_Low_To_High_JavaScript_Error.png`
+[BUG-004 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/09_Screenshots/BUG-008_Product_Sorting_Low_To_High_JavaScript_Error.png)
 
 ---
 
@@ -97,3 +97,9 @@ The defect is consistently reproducible using the **error_user** account. Select
 - Test User: **error_user**
 - Result: **Fail**
 - Reproducibility: **100% (5/5 attempts)**
+
+---
+
+⬅️ **Back to Bug Reports**
+
+[05_Bug_Reports.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)
