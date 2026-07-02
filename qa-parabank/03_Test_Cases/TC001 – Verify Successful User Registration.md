@@ -1,30 +1,32 @@
-## TC001 – Verify Successful User Registration
-
-**Requirement ID:** FR-001
+# TC001 – Verify Successful User Registration
 
 **Module:** User Registration
 
+**Requirement ID:** FR-001
+
 **Priority:** High
 
-**Type:** Functional Testing
+**Severity:** Critical
+
+**Type:** Positive Test
 
 ---
 
-### Objective
+## Objective
 
-Verify that a new customer can successfully register using valid information.
-
----
-
-### Preconditions
-
-- User is not registered.
-- ParaBank application is accessible.
-- User is on the Registration page.
+Verify that a new user can successfully register with valid information and automatically gain access to the application.
 
 ---
 
-### Test Data
+## Preconditions
+
+- User is on the ParaBank home page.
+- The username has not been previously registered.
+- Internet connection is available.
+
+---
+
+## Test Data
 
 | Field | Value |
 |------|------|
@@ -42,33 +44,42 @@ Verify that a new customer can successfully register using valid information.
 
 ---
 
-### Test Steps
+## Test Steps
 
-1. Open https://parabank.parasoft.com/.
-2. Click **Register**.
-3. Enter valid information into all required fields.
-4. Click **Register**.
+| Step | Action |
+|------|--------|
+| 1 | Open https://parabank.parasoft.com/ |
+| 2 | Click **Register**. |
+| 3 | Enter valid information into all required fields. |
+| 4 | Click **Register**. |
 
 ---
 
-### Expected Result
+## Expected Result
 
-- Registration completes successfully.
-- A welcome message is displayed.
+- Registration is completed successfully.
+- A new customer account is created.
 - The user is automatically logged in.
-- The Account Overview page is displayed.
+- A welcome message is displayed.
+- The **Accounts Overview** page opens.
 
 ---
 
-### Actual Result
+## Actual Result
 
-_To be completed during execution._
+*To be completed during test execution.*
 
 ---
 
-### Status
+## Status
 
-Not Executed
+**Not Executed**
+
+---
+
+## Notes
+
+No additional notes.
 
 ---
 
