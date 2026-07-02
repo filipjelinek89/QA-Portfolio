@@ -74,4 +74,4 @@ Not Executed
 
 ⬅️ Back to 03 Test Cases
 
-[03_Test_Cases.md](qa-parabank/03_Test_Cases.md)
+[03_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases.md)
