@@ -188,3 +188,21 @@
 | TC070 | Verify multiple browser tabs with the same session | Medium   | Not Executed |
 
 [⬆ Back to Top](#in-page-navigation)
+
+---
+
+# Test Execution Status
+
+## Current Progress
+
+| Status | Count |
+|---------|------:|
+| ✅ Passed | 0 |
+| ❌ Failed | 0 |
+| 🚫 Blocked | 0 |
+| ⏳ Not Executed | 70 |
+| **Total** | **70** |
+
+---
+
+
