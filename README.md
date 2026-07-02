@@ -133,7 +133,7 @@ Manual testing of a banking application covering user registration, login, accou
 - Boundary Value Analysis
 - API Testing
 
-🔗 **View Bug Reports** *(Coming Soon)*
+➡️ **[View Project](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/qa-parabank-README.md)** *(Still in progress)*
 
 ## 🔌 API Testing – Postman Collection
 
