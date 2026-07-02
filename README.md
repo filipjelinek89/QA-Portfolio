@@ -146,7 +146,7 @@ A collection of API requests, environments, and automated checks created while l
 - Environment Variables
 - Response Validation
 
-🔗 **View Bug Reports** *(Coming Soon)*
+🔗 **View API Testing** *(Coming Soon)*
 
 ## 💾 SQL Practice
 
@@ -160,7 +160,7 @@ A collection of SQL exercises demonstrating database querying and data validatio
 - Aggregate Functions
 - Filtering & Sorting
 
-🔗 **View Bug Reports** *(Coming Soon)*
+🔗 **View SQL Practice** *(Coming Soon)*
 
 ## 🤖 Playwright Automation
 
@@ -174,7 +174,7 @@ Automation testing exercises created while learning Playwright.
 - Page Object Model (later)
 - Test Execution
 
-🔗 **View Bug Reports** *(Coming Soon)*
+🔗 **View Playwright Automation** *(Coming Soon)*
 
 ---
 
@@ -202,7 +202,7 @@ This section contains examples of structured manual test cases created for diffe
 - Transfer Funds
 - Bill Payment
 
-🔗 **View Bug Reports** *(Coming Soon)*
+🔗 **[View Test Cases](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases.md)** *(Still in progress)*
 
 
 # 🐞 Bug Reports
@@ -229,7 +229,7 @@ This section contains bug reports created during manual functional testing of th
 - Transfer Funds
 - Bill Payment
 
-🔗 **View Bug Reports** *(Coming Soon)*
+🔗 **[View Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/04_Bug_Reports.md)** *(Still in progress)*
 
 ## 🎓 Certificates
 
