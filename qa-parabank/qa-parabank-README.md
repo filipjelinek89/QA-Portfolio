@@ -188,4 +188,4 @@ https://github.com/filipjelinek89
 
 ⬅️ Back to Portfolio
 
-README.md
+[README.md](../README.md)
