@@ -1,0 +1,126 @@
+# BUGXXX – Bug template
+
+**Project:** ParaBank Manual Testing Project
+
+**Version:** 1.0
+
+**Reported by:** Filip Jelinek
+
+---
+
+## Bug Information
+
+| Field                 | Value                             |
+| --------------------- | --------------------------------- |
+| **Bug ID**            | BUGXXX                            |
+| **Title**             | *Short description of the defect* |
+| **Related Test Case** | TCXXX                             |
+| **Module**            | Example: User Registration        |
+| **Severity**          | Critical / High / Medium / Low    |
+| **Priority**          | High / Medium / Low               |
+| **Status**            | New                               |
+| **Reported On**       | YYYY-MM-DD                        |
+
+---
+
+## Environment
+
+| Item             | Value                              |
+| ---------------- | ---------------------------------- |
+| Application      | ParaBank                           |
+| URL              | https://parabank.parasoft.com/     |
+| Browser          | Google Chrome                      |
+| Browser Version  | *(To be completed during testing)* |
+| Operating System | Windows 11                         |
+| Testing Type     | Manual Testing                     |
+
+---
+
+## Preconditions
+
+* User is logged in (if applicable).
+* Required test data exists.
+* Application is accessible.
+
+---
+
+## Steps to Reproduce
+
+| Step | Action |
+| ---- | ------ |
+| 1    |        |
+| 2    |        |
+| 3    |        |
+| 4    |        |
+
+---
+
+## Expected Result
+
+Describe what should happen according to the application requirements.
+
+---
+
+## Actual Result
+
+Describe what actually happened during testing.
+
+---
+
+## Impact
+
+Describe how this defect affects the user or application.
+
+Examples:
+
+* Prevents user registration.
+* Incorrect account balance displayed.
+* User cannot complete money transfer.
+* Cosmetic issue with no functional impact.
+
+---
+
+## Attachments
+
+### Screenshots
+
+*(Attach screenshots here.)*
+
+---
+
+### Video
+
+*(Attach screen recording here, if available.)*
+
+---
+
+## QA Assessment
+
+Provide your assessment of the defect.
+
+Example:
+
+> The defect is consistently reproducible and affects the normal user workflow. The issue should be investigated before production release.
+
+---
+
+## Test Evidence
+
+| Item            | Value                                    |
+| --------------- | ---------------------------------------- |
+| Test Case       | TCXXX                                    |
+| Test Data       | TDXXX (if applicable)                    |
+| Reproducibility | Always / Sometimes / Unable to Reproduce |
+| Frequency       | 100% / Intermittent                      |
+
+---
+
+## Notes
+
+Add any additional observations or relevant information.
+
+---
+
+⬅️ Back to Bug Reports
+
+[04_Bug_Reports.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/04_Bug_Reports.md)
