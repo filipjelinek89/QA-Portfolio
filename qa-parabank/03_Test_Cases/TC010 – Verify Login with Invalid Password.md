@@ -58,13 +58,13 @@ Verify that the application prevents login when a registered user enters an inco
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to log in using invalid username and password credentials. The application rejected the login attempt and displayed an error message informing the user that the username and password could not be verified. The user was not logged into the application and access to the account was denied.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
