@@ -39,7 +39,7 @@ Verify that the application prevents registration when a username that already e
 | ZIP Code | 90001 |
 | Phone | 9876543210 |
 | SSN | 987-65-4321 |
-| Username | ExistingUsername (johndoe002)|
+| Username | johndoe002 |
 | Password | Password123 |
 | Confirm Password | Password123 |
 
@@ -68,13 +68,13 @@ Verify that the application prevents registration when a username that already e
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user completed the registration form using valid customer information but entered an existing username "johndoe002". After submitting the registration form, the system prevented the creation of a duplicate account and displayed a validation message informing the user that the selected username already exists. The registration was not completed, and no new customer account was created.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
