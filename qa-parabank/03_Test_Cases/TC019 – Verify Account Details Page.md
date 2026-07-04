@@ -31,9 +31,9 @@ Verify that selecting an account from the **Accounts Overview** page opens the c
 
 | Field | Value |
 |------|------|
-| Username | Existing registered username |
-| Password | Valid password |
-| Account | Any available account |
+| Username | johnsmith001 |
+| Password | Password123 |
+| Account | John Smith |
 
 ---
 
@@ -61,13 +61,13 @@ Verify that selecting an account from the **Accounts Overview** page opens the c
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully opened the Account Details page by selecting an existing account from the Accounts Overview page. The application displayed the correct account information, including account number, account type, current balance, available balance, and related account details. All displayed information matched the selected customer account.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
