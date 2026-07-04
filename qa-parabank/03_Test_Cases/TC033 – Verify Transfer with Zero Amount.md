@@ -62,13 +62,13 @@ Verify that the application prevents a fund transfer when the transfer amount is
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Transfer Funds page and entered $0.00 as the transfer amount. After selecting valid source and destination accounts, the transfer request was submitted successfully. The application processed the transaction and displayed a confirmation message showing that $0.00 was transferred between accounts. No validation message was displayed to prevent a zero-value transfer.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
