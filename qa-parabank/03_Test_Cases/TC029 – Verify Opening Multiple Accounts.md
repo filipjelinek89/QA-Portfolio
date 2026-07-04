@@ -61,13 +61,13 @@ Verify that a logged-in user can successfully open multiple bank accounts and th
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully created multiple new accounts using the Open New Account functionality. Each account was created successfully and received a unique account number. All newly created accounts were displayed correctly in the Accounts Overview page with their corresponding balances and available amounts. The application allowed multiple accounts to be associated with the same customer profile without any issues.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
