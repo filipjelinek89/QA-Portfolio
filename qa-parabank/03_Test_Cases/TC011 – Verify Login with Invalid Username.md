@@ -30,8 +30,8 @@ Verify that the application prevents login when an unregistered or invalid usern
 
 | Field | Value |
 |------|------|
-| Username | Invalid or non-existent username |
-| Password | Valid password |
+| Username | johnsmith001aaa |
+| Password | Password123 |
 
 ---
 
