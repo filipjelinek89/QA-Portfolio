@@ -70,13 +70,13 @@ Verify that a user can successfully submit a bill payment using valid payee info
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully completed the bill payment process by entering valid payee information, payment amount, and selecting a funding account. After submitting the payment request, the application processed the transaction successfully and displayed a confirmation message with the payee name, payment amount, and source account information. The bill payment was completed without any errors.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
