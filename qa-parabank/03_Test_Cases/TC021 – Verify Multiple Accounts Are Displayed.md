@@ -62,13 +62,13 @@ Verify that all bank accounts associated with the logged-in user are displayed c
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully accessed the Accounts Overview page after logging into the ParaBank application. The application displayed all customer accounts associated with the user profile. Multiple accounts were visible with their correct account numbers, balances, and available amounts. The account information was displayed clearly and was accessible to the user.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
