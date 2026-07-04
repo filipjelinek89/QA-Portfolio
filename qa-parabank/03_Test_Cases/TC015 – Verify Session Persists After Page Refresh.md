@@ -59,13 +59,13 @@ Verify that the user's authenticated session remains active after refreshing the
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully logged into the application and accessed the account area. After refreshing the browser page, the user session remained active, and the application continued displaying the authenticated user content. The user was not logged out, and no additional login was required after the page refresh.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
