@@ -66,13 +66,13 @@ Verify that the application prevents a bill payment from being submitted when th
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Bill Pay page and completed all required payee information fields but left the Amount field empty. After submitting the payment form, the application prevented the bill payment from being processed and displayed a validation message indicating that the payment amount is required. No payment transaction was created, and the account balance remained unchanged.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
