@@ -61,13 +61,13 @@ Verify that a newly created bank account is automatically displayed in the **Acc
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully created a new account using the Open New Account functionality. After navigating to the Accounts Overview page, the newly created account was displayed correctly in the account list. The account number, balance, and available amount were visible, confirming that the new account was successfully added to the user's account overview.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
