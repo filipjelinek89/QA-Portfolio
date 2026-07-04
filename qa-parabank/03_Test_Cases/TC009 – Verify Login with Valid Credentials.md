@@ -59,7 +59,7 @@ Verify that a registered user can successfully log in using valid credentials an
 
 ## Actual Result
 
-The user successfully completed the registration process and was redirected to the Accounts Overview page. The application displayed the newly created customer account with the account number, current balance, and available amount information. The account details were visible and correctly presented to the user.
+The user entered valid login credentials and submitted the login form. The authentication process was completed successfully, and the user was redirected to the Accounts Overview page. The account information was displayed correctly, including the account number, balance, and available amount. The user was successfully logged into the application.
 
 ---
 
