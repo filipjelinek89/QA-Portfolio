@@ -37,7 +37,7 @@ Verify that a new user can successfully register by completing all required regi
 | City | Los Angeles |
 | State | CA |
 | ZIP Code | 90001 |
-| Phone | *empty* |
+| Phone |  |
 | SSN | 987-65-4321 |
 | Username | johndoe002 |
 | Password | Password123 |
@@ -69,13 +69,13 @@ Verify that a new user can successfully register by completing all required regi
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user completed the registration form using only the required fields and left the optional Phone Number field empty. The registration was processed successfully, a new customer account was created, and the user was automatically logged into the application. A welcome message was displayed, and the Accounts Overview page opened successfully.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
