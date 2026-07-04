@@ -61,13 +61,13 @@ Verify that the application correctly handles a transfer request with a very lar
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Transfer Funds page and entered an extremely large transfer amount exceeding the available account balance. After selecting valid source and destination accounts, the transfer request was submitted successfully. The application processed the transaction, transferred the full amount to the destination account, and caused the source account balance to become negative. No validation message was displayed to prevent an insufficient funds transaction.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
