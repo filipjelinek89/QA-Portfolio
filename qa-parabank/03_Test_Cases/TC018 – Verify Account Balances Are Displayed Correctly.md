@@ -31,8 +31,8 @@ Verify that the account balance information is displayed accurately for all avai
 
 | Field | Value |
 |------|------|
-| Username | Existing registered username |
-| Password | Valid password |
+| Username | johnsmith001 |
+| Password | Password123 |
 
 ---
 
@@ -59,13 +59,13 @@ Verify that the account balance information is displayed accurately for all avai
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully opened the Accounts Overview page after logging into the ParaBank application. The account balance and available amount were displayed correctly for the customer account. The total balance calculation matched the displayed account information, and all financial values were shown in the correct format.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
