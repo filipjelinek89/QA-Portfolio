@@ -52,7 +52,7 @@ Verify that a new user can successfully register by completing all required regi
 | 1 | Open https://parabank.parasoft.com/ |
 | 2 | Click **Register**. |
 | 3 | Complete all required registration fields with valid data. |
-| 4 | Leave any optional fields empty (if available). |
+| 4 | Leave any optional fields empty (Phone). |
 | 5 | Click **Register**. |
 
 ---
