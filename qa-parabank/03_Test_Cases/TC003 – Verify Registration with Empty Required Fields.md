@@ -67,13 +67,13 @@ Verify that the application prevents user registration when required fields are 
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to complete the registration process without entering any required information. The system prevented the account creation and displayed validation messages for all mandatory fields. Each required field was highlighted with a specific error message informing the user which information must be provided. The registration was not completed, and no customer account was created.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
