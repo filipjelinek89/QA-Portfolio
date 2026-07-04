@@ -30,8 +30,8 @@ Verify that the application prevents login when a registered user enters an inco
 
 | Field | Value |
 |------|------|
-| Username | Existing registered username |
-| Password | Incorrect password |
+| Username | johnsmith001 |
+| Password | Password123aaa |
 
 ---
 
