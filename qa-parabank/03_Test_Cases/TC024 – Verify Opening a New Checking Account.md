@@ -59,13 +59,13 @@ Verify that a logged-in user can successfully open a new checking account.
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully accessed the Open New Account page and selected the Checking account type. After submitting the request, the application successfully created a new checking account. A confirmation message was displayed, and the new account number became available. The newly created checking account was visible in the Accounts Overview page with the correct account information.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
