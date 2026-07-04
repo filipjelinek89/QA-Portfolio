@@ -62,13 +62,13 @@ Verify that the application displays a confirmation message after a successful t
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully completed a valid transfer between two accounts. After submitting the transfer request, the application displayed a confirmation message indicating that the transfer was completed successfully. The confirmation message included the transferred amount and the source and destination account numbers, providing clear feedback about the completed transaction.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
