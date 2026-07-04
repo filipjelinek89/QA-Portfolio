@@ -69,13 +69,13 @@ Verify that account balances are updated correctly after a successful transfer b
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully completed a transfer between two accounts using the Transfer Funds functionality. After the transaction was processed, the source account balance was decreased by the transferred amount, and the destination account balance was increased by the same amount. The updated balances were displayed correctly in the Accounts Overview page and matched the completed transaction.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
