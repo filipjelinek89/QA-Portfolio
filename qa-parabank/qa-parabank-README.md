@@ -26,15 +26,15 @@ This project simulates the work of a Junior QA Engineer testing a real banking s
 
 ## 📁 Project Documents
 
-- [01 - Test Plan](./01_Test_Plan)
-- [02 - Exploratory Testing](./02_Exploratory_Testing)
-- [03 - Test Cases](./03_Test_Cases)
-- [04 - Bug Reports](./04_Bug_Reports)
-- [05 - API Testing](./05_API_Testing)
-- [06 - Test Execution](./06_Test_Execution)
-- [07 - Test Summary](./07_Test_Summary)
-- [08 - Screenshots](./08_Screenshots)
-- [09 - Video](./09_Video)
+- [01 - Test Plan](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/01_Test_Plan.md)
+- [02 - Exploratory Testing](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/02_Exploratory_Testing.md)
+- [03 - Test Cases](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases.md)
+- [04 - Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/04_Bug_Reports.md)
+- [05 - API Testing](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API_Testing.md)
+- [06 - Test Execution](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/06_Test_Execution.md)
+- [07 - Test Summary](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/07_Test_Summary.md)
+- [08 - Screenshots](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots.md)
+- [09 - Video](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/09_Video.md)
 
 ---
 
