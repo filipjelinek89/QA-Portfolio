@@ -31,8 +31,8 @@ Verify that a registered user can successfully log in using valid credentials an
 
 | Field | Value |
 |------|------|
-| Username | Existing registered username |
-| Password | Valid password |
+| Username | johnsmith001 |
+| Password | Password123 |
 
 ---
 
@@ -59,13 +59,13 @@ Verify that a registered user can successfully log in using valid credentials an
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully completed the registration process and was redirected to the Accounts Overview page. The application displayed the newly created customer account with the account number, current balance, and available amount information. The account details were visible and correctly presented to the user.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
