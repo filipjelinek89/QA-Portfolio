@@ -67,13 +67,19 @@ Verify that the registration form correctly accepts or validates input values en
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to verify registration behavior with maximum length input values. The application accepted long input values without displaying any character limit validation. However, the test could not be fully completed because the registration process was blocked by a username validation issue. The system incorrectly displayed "This username already exists" even when a new unique username was entered.
 
 ---
 
 ## Status
 
-**Not Executed**
+⏸️ BLOCKED
+
+---
+
+## Result
+
+BLOCKED, because another defect prevents completing the test.
 
 ---
 
