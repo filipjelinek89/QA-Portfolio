@@ -71,13 +71,13 @@ In either case:
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Transfer Funds page and selected the same account as both the source and destination account. After entering a valid transfer amount and submitting the request, the application processed the transfer successfully. The account balance remained unchanged, and the transaction history recorded both the outgoing and incoming transaction entries correctly. No errors or unexpected behavior occurred.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
