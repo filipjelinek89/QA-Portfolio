@@ -62,13 +62,13 @@ Verify that the application prevents a fund transfer when the **Amount** field i
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Transfer Funds page and submitted the transfer form without entering any amount value. The application did not process the transfer; however, instead of displaying a user-friendly validation message, the system returned a generic internal error message stating that an internal error occurred and was logged. No clear information was provided to the user explaining that the transfer amount field is required.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
