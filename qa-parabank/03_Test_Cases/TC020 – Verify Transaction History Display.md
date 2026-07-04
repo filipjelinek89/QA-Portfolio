@@ -31,9 +31,9 @@ Verify that the transaction history for the selected account is displayed correc
 
 | Field | Value |
 |------|------|
-| Username | Existing registered username |
-| Password | Valid password |
-| Account | Any available account with transaction history |
+| Username | johnsmith001 |
+| Password | Password123 |
+| Account | John Smith |
 
 ---
 
@@ -61,13 +61,13 @@ Verify that the transaction history for the selected account is displayed correc
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully opened the Account Details page and accessed the transaction history section. The application displayed the account transaction information correctly, including transaction details such as date, description, transaction type, and amount. All available transactions were visible and properly formatted for the selected account.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
