@@ -58,7 +58,7 @@ Verify that the application prevents login when an unregistered or invalid usern
 
 ## Actual Result
 
-The user attempted to log in without entering username and password credentials. The application rejected the login attempt and displayed an error message informing the user that the username and password could not be verified. The user remained on the login page and access to the account was not granted.
+The user attempted to log in using an invalid username with a valid password. The application rejected the login attempt and displayed an error message informing the user that the username and password could not be verified. The user was not logged into the application and access to the account was denied.
 
 ---
 
