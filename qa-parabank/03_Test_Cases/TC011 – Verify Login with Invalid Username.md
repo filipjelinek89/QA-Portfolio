@@ -58,13 +58,13 @@ Verify that the application prevents login when an unregistered or invalid usern
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to log in without entering username and password credentials. The application rejected the login attempt and displayed an error message informing the user that the username and password could not be verified. The user remained on the login page and access to the account was not granted.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
