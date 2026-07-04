@@ -68,13 +68,13 @@ Verify that the application correctly validates the **ZIP Code** field and preve
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user completed the registration form using numeric values in text-based customer information fields. The application accepted the invalid input without displaying any validation messages or restrictions. The registration process was completed successfully, a new customer account was created, and the user was automatically logged into the application even though invalid customer data was provided.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
