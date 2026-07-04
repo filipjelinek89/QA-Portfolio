@@ -61,13 +61,13 @@ Verify that a user can successfully create a new account by selecting different 
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully created a new account by selecting a different existing account as the funding source. The application processed the account creation correctly, transferred the required opening deposit from the selected funding account, and generated a new account number. The newly created account appeared in the Accounts Overview page, and all account balances were updated correctly according to the completed transaction.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
