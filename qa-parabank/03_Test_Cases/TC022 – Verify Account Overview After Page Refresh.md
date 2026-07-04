@@ -31,9 +31,9 @@ Verify that refreshing the **Accounts Overview** page does not affect the user's
 
 | Field | Value |
 |------|------|
-| Username | Valid registered user |
-| Password | Valid password |
-| Account | Existing account |
+| Username | johnsmith001 |
+| Password | Password123 |
+| Account | John Smith |
 
 ---
 
@@ -61,13 +61,13 @@ Verify that refreshing the **Accounts Overview** page does not affect the user's
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully accessed the Accounts Overview page and refreshed the browser page. After the refresh was completed, the user session remained active, and the Accounts Overview page loaded correctly. All customer account information, including account numbers, balances, available amounts, and total balance, remained visible and unchanged.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
