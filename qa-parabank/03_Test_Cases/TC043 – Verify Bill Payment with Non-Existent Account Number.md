@@ -70,13 +70,13 @@ Verify that the application prevents a bill payment when a non-existent account 
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Bill Pay page and entered valid payee information but used a non-existent account number for the payment destination. After submitting the payment request, the application processed the bill payment successfully and displayed a confirmation message. No validation message was displayed to inform the user that the destination account number does not exist.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
