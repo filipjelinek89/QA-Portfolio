@@ -63,13 +63,13 @@ Verify that a user can successfully transfer funds between two of their own bank
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully accessed the Transfer Funds page and entered a valid transfer amount. After selecting the source and destination accounts, the transfer request was submitted successfully. The application displayed a transfer confirmation message, the money was moved between the selected accounts, and both account balances were updated correctly according to the completed transaction.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
