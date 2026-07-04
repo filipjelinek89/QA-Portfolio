@@ -39,7 +39,7 @@ Verify that the application prevents registration when a username that already e
 | ZIP Code | 90001 |
 | Phone | 9876543210 |
 | SSN | 987-65-4321 |
-| Username | ExistingUsername |
+| Username | ExistingUsername (johndoe002)|
 | Password | Password123 |
 | Confirm Password | Password123 |
 
