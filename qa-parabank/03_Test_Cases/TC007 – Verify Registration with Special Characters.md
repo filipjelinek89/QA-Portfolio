@@ -68,13 +68,13 @@ Verify that the registration form correctly handles special characters entered i
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user completed the registration form using special characters in the input fields. The application accepted the entered values without displaying any validation message or input restriction. The account was created successfully, and the user was automatically logged into the application even though invalid characters were used during registration.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
