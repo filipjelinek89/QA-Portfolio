@@ -69,13 +69,13 @@ Verify that the application successfully processes a bill payment when a valid d
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Bill Pay page and completed all required payee information. A valid decimal payment amount was entered and the payment request was submitted successfully. The application processed the decimal amount correctly, displayed a bill payment confirmation message, updated the account balance, and recorded the transaction using the correct currency format.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
