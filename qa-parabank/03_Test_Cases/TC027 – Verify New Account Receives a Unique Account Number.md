@@ -42,7 +42,7 @@ Verify that each newly created bank account is assigned a unique account number 
 | 1 | Log in to ParaBank. |
 | 2 | Navigate to **Open New Account**. |
 | 3 | Select an account type. |
-| 4 | Select a funding account. |
+| 4 | Select a Savings account. |
 | 5 | Click **Open New Account**. |
 | 6 | Record the newly assigned account number. |
 | 7 | Compare the new account number with the user's existing account numbers. |
@@ -60,13 +60,13 @@ Verify that each newly created bank account is assigned a unique account number 
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully created a new account using the Open New Account functionality. After the account creation process was completed, the application generated a unique account number for the new account. The new account number was different from existing customer account numbers and was correctly displayed in the Accounts Overview page.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
