@@ -32,9 +32,9 @@ Verify that all bank accounts associated with the logged-in user are displayed c
 
 | Field | Value |
 |------|------|
-| Username | Existing registered username |
-| Password | Valid password |
-| User Account | Two or more bank accounts |
+| Username | johnsmith001 |
+| Password | Password123 |
+| User Account | John Smith |
 
 ---
 
