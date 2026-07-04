@@ -57,7 +57,7 @@ Verify that the application prevents login when both the **Username** and **Pass
 
 ## Actual Result
 
-The user attempted to log in without entering all required authentication information. The application validated the login request and displayed an error message informing the user that both username and password are required. The login process was not completed, and the user remained unauthenticated on the login page.
+The user attempted to log in while leaving both the Username and Password fields empty. The application prevented the login process and displayed a validation error message informing the user that both username and password are required. The user was not authenticated and remained on the login page.
 
 ---
 
