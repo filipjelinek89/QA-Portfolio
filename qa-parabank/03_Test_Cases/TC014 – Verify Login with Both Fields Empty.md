@@ -57,13 +57,13 @@ Verify that the application prevents login when both the **Username** and **Pass
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to log in without entering all required authentication information. The application validated the login request and displayed an error message informing the user that both username and password are required. The login process was not completed, and the user remained unauthenticated on the login page.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
