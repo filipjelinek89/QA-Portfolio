@@ -58,13 +58,13 @@ Verify that a newly created bank account displays an empty transaction history b
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully opened the transaction history for a newly created account. The application displayed the transaction history page correctly. No previous transactions were shown because the account was newly created, and the account details remained accurate and available to the user.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
