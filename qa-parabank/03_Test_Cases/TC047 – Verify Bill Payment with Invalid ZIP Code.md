@@ -69,13 +69,13 @@ Verify that the application correctly validates the ZIP Code field during bill p
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Bill Pay page and entered invalid ZIP Code data in the payee information form. After completing all other required fields and submitting the payment request, the application accepted the invalid ZIP Code without displaying any validation message. The bill payment was processed successfully, and a confirmation message was displayed even though the payee address information contained invalid data.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
