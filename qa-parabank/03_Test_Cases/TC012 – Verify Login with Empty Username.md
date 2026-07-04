@@ -58,13 +58,13 @@ Verify that the application prevents login when the **Username** field is left e
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to log in without providing any username or password values. The application prevented the login attempt and displayed a validation error message informing the user that a username and password are required. The user was not authenticated and remained on the login page.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
