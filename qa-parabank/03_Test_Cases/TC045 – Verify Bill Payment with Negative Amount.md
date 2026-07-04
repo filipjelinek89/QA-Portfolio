@@ -69,13 +69,13 @@ Verify that the application prevents a bill payment when a negative payment amou
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Bill Pay page and entered a negative amount value for the payment. After completing all required payee information and submitting the request, the application accepted the negative amount and displayed a successful bill payment confirmation message. The account balance remained unchanged; however, no validation message was displayed to prevent the invalid payment amount.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
