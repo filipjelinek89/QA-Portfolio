@@ -64,13 +64,13 @@ Verify that the application correctly processes a fund transfer using a valid de
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully accessed the Transfer Funds page and entered a valid decimal amount for the transaction. After selecting the source and destination accounts, the transfer request was submitted successfully. The application processed the decimal amount correctly, displayed a confirmation message, updated both account balances, and recorded the transaction with the correct currency format.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
