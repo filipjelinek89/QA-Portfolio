@@ -60,13 +60,13 @@ Verify that a logged-in user can successfully open a new savings account.
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully accessed the Open New Account page and selected the Savings account type. After submitting the request, the application successfully created a new savings account. A confirmation message was displayed with the new account number. The newly created savings account appeared in the Accounts Overview page and displayed the correct account details.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
