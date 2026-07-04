@@ -59,7 +59,7 @@ Verify that the application prevents login when the **Password** field is left e
 
 ## Actual Result
 
-The user attempted to log in without providing all required login information. The application prevented the authentication process and displayed a validation error message informing the user that a username and password are required. The user was not logged into the application and remained on the login page.
+The user attempted to log in by entering a valid username while leaving the password field empty. The application prevented the login attempt and displayed a validation error message informing the user that both username and password are required. The user was not authenticated and remained on the login page.
 
 ---
 
