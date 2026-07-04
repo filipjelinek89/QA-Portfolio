@@ -30,8 +30,8 @@ Verify that the **Accounts Overview** page is displayed correctly after a succes
 
 | Field | Value |
 |------|------|
-| Username | Existing registered username |
-| Password | Valid password |
+| Username | johnsmith001 |
+| Password | Password123 |
 
 ---
 
@@ -58,13 +58,13 @@ Verify that the **Accounts Overview** page is displayed correctly after a succes
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully accessed the Accounts Overview page after logging into the ParaBank application. The page loaded correctly and displayed all expected account information, including the account number, account balance, available amount, and total balance. All account details were visible, properly formatted, and accessible to the user.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
