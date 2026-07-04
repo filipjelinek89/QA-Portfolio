@@ -8,6 +8,36 @@ This project simulates the work of a Junior QA Engineer testing a real banking s
 
 ---
 
+## 📑 Navigation Menu
+
+- [📋 Project Information](#-project-information)
+- [📂 Project Structure](#-project-structure)
+- [🎯 Project Objectives](#-project-objectives)
+- [🔍 Testing Scope](#-testing-scope)
+- [🛠 Testing Techniques Used](#-testing-techniques-used)
+- [📄 Project Documentation](#-project-documentation)
+- [🧰 Tools Used](#-tools-used)
+- [💡 Skills Demonstrated](#-skills-demonstrated)
+- [📈 Expected Deliverables](#-expected-deliverables)
+- [🚀 Learning Outcomes](#-learning-outcomes)
+- [📬 Contact](#-contact)
+
+---
+
+## 📁 Project Documents
+
+- [01 - Test Plan](./01_Test_Plan)
+- [02 - Exploratory Testing](./02_Exploratory_Testing)
+- [03 - Test Cases](./03_Test_Cases)
+- [04 - Bug Reports](./04_Bug_Reports)
+- [05 - API Testing](./05_API_Testing)
+- [06 - Test Execution](./06_Test_Execution)
+- [07 - Test Summary](./07_Test_Summary)
+- [08 - Screenshots](./08_Screenshots)
+- [09 - Video](./09_Video)
+
+---
+
 # 📋 Project Information
 
 **Application:** ParaBank
