@@ -70,13 +70,13 @@ Verify that the application prevents user registration when the **Password** and
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user completed the registration form using valid customer information but entered different values in the Password and Confirm Password fields. After submitting the registration form, the system prevented the account creation and displayed a validation message informing the user that the passwords did not match. The registration was not completed, and no new customer account was created.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
