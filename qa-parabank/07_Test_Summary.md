@@ -122,3 +122,9 @@ This report will be updated upon completion of the testing cycle to include:
 | Version | Date       | Author        | Changes         |
 | ------- | ---------- | ------------- | --------------- |
 | 1.0     | YYYY-MM-DD | Filip Jelinek | Initial version |
+
+---
+
+⬅️ Back to QA ParaBank README
+
+[QA-ParaBank-README.md](qa-parabank-README.md)
