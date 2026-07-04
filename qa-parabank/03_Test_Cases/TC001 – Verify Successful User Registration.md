@@ -67,13 +67,13 @@ Verify that a new user can successfully register with valid information and auto
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully completed the registration process by entering all required customer information. A new customer account was created successfully, and the user was automatically logged into the application. After registration, a welcome message was displayed, and the user was redirected to the Accounts Overview page where the newly created account was visible.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
