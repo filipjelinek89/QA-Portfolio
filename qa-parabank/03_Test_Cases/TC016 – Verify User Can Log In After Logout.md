@@ -30,8 +30,8 @@ Verify that a user can successfully log in again after logging out of the applic
 
 | Field | Value |
 |------|------|
-| Username | Existing registered username |
-| Password | Valid password |
+| Username | johnsmith001 |
+| Password | Password123 |
 
 ---
 
@@ -60,13 +60,13 @@ Verify that a user can successfully log in again after logging out of the applic
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully logged out from the ParaBank application and was redirected to the login page. After entering valid login credentials again, the user was able to log back into the application successfully. The Accounts Overview page opened, and the user's account information was displayed correctly after the new login session was created.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
