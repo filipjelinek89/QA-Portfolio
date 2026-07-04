@@ -31,7 +31,7 @@ Verify that the application prevents login when the **Username** field is left e
 | Field | Value |
 |------|------|
 | Username | *(Empty)* |
-| Password | Valid password |
+| Password | Password123 |
 
 ---
 
