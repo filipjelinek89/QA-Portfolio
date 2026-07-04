@@ -37,7 +37,7 @@ Verify that a new user can successfully register by completing all required regi
 | City | Los Angeles |
 | State | CA |
 | ZIP Code | 90001 |
-| Phone | 9876543210 |
+| Phone | *empty* |
 | SSN | 987-65-4321 |
 | Username | johndoe002 |
 | Password | Password123 |
