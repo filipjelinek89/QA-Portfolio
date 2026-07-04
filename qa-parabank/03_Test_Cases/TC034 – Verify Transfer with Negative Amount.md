@@ -62,13 +62,13 @@ Verify that the application prevents users from transferring a negative amount b
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Transfer Funds page and entered a negative amount value for the transfer. After selecting valid source and destination accounts, the transfer request was submitted successfully. The application processed the transaction and displayed a confirmation message showing that a negative amount was transferred between accounts. No validation message was displayed to prevent the invalid transaction.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
