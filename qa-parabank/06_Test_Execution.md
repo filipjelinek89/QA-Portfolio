@@ -85,3 +85,9 @@ The execution status will be updated throughout the testing process, and all fai
 | Version | Date       | Author        | Changes         |
 | ------- | ---------- | ------------- | --------------- |
 | 1.0     | YYYY-MM-DD | Filip Jelinek | Initial version |
+
+---
+
+⬅️ Back to QA ParaBank README
+
+[QA-ParaBank-README.md](qa-parabank-README.md)
