@@ -67,13 +67,13 @@ Verify that the application prevents bill payment submission when one or more re
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Bill Pay page and attempted to submit the payment form without entering required payee and payment information. The application prevented the bill payment from being processed and displayed validation messages for the mandatory fields. No payment transaction was created, and the user was informed that the required information must be provided before completing the payment.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
