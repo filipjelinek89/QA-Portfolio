@@ -95,7 +95,7 @@ Impact:
 
 ### Screenshots
 
-BUG003_TC008_Registration_Numeric_Values_Accepted.png
+[BUG-003 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG003_TC008_Registration_Numeric_Values_Accepted.png)
 
 ---
 
