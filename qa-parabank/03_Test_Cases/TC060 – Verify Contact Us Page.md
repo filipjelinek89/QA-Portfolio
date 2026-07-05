@@ -52,7 +52,7 @@ N/A
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully navigated to the Contact Us page using the ParaBank navigation menu. The Contact Us page loaded correctly and displayed the expected contact form and related information. All required page elements were visible, the page functionality was accessible, and no errors occurred during navigation.
 
 ---
 
