@@ -62,13 +62,13 @@ Verify that the application prevents a loan request when the requested loan amou
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to verify loan request validation with a zero loan amount. However, the test could not be completed because the Loan Request functionality returned a generic internal error during submission. The application displayed "An internal error has occurred and has been logged", preventing verification of zero amount validation behavior.
 
 ---
 
 ## Status
 
-**Not Executed**
+⏸️ BLOCKED
 
 ---
 
@@ -80,6 +80,13 @@ Verify that:
 - No loan approval page is shown.
 - No new loan account is created.
 - The selected account balance remains unchanged.
+
+---
+
+## Execution update:
+TC051 – Verify Loan Request with Zero Amount
+Status: ⏸️ BLOCKED
+Blocked by: BUG012
 
 ---
 
