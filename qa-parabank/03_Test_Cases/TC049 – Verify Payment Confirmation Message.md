@@ -69,13 +69,13 @@ Verify that the application displays a confirmation message after a successful b
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully completed a bill payment using valid payee information, account details, and payment amount. After submitting the payment request, the application displayed a confirmation message indicating that the bill payment was completed successfully. The confirmation included relevant payment information such as the payee name, payment amount, and source account number, providing clear feedback to the user.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
