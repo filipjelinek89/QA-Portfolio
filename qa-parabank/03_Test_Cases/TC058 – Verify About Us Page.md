@@ -53,13 +53,13 @@ Not applicable.
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully navigated to the About Us page using the application navigation menu. The About Us page loaded correctly and displayed the expected company information and page content. No errors occurred, all elements were visible, and the page was accessible to the user.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
