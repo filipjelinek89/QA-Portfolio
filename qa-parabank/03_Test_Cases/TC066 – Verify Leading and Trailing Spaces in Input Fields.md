@@ -59,13 +59,13 @@ Verify that the application correctly handles leading and trailing spaces entere
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user entered valid login credentials containing leading and trailing spaces into the username and password fields. After submitting the login form, the application handled the input safely and displayed a validation message stating "The username and password could not be verified." No application error, crash, or unexpected behavior occurred, and the application remained stable.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
