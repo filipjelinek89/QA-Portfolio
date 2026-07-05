@@ -62,13 +62,13 @@ Verify that the application correctly maintains the user session when the applic
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user opened the ParaBank application in multiple browser tabs using the same authenticated session. After logging out from the first tab, the user refreshed the second tab. Instead of redirecting the user to the login page or displaying a proper session expiration message, the application displayed a generic internal error message: "An internal error has occurred and has been logged." The application did not handle the expired session correctly.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
