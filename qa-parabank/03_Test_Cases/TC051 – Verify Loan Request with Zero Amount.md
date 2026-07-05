@@ -84,6 +84,7 @@ Verify that:
 ---
 
 ## Execution update:
+
 - TC051 – Verify Loan Request with Zero Amount
 - Status: ⏸️ BLOCKED
 - Blocked by: BUG012
