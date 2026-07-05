@@ -63,13 +63,13 @@ Verify that a logged-in user can successfully submit a valid loan request and re
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Request Loan page and submitted a loan request using valid loan information. After submitting the request, the application failed to process the loan application and displayed a generic error message stating that an internal error occurred and was logged. No loan approval, denial, or detailed user feedback was provided.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
