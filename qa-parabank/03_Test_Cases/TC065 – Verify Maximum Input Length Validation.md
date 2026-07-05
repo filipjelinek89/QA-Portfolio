@@ -93,6 +93,8 @@ Verify that:
 - Status: ❌ FAIL
 - Linked Defect: BUG003 (same issue as TC006)
 
+---
+
 ⬅️ Back to 03 Test Cases
 
 [03_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases.md)
