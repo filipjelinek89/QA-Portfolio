@@ -97,7 +97,7 @@ Impact:
 
 ### Screenshots
 
-BUG004_TC033_Transfer_Zero_Amount_Accepted.png
+[BUG-004 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG004_TC033_Transfer_Zero_Amount_Accepted.png)
 
 ---
 
