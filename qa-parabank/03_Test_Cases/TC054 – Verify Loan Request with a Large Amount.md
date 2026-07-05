@@ -61,13 +61,13 @@ Verify that the application correctly processes or validates a loan request when
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to verify loan request behavior using a large loan amount value. However, the test could not be completed because the Loan Request functionality failed during submission. The application displayed a generic internal error message: "An internal error has occurred and has been logged." This issue prevents verification of large loan amount validation and business rule handling.
 
 ---
 
 ## Status
 
-**Not Executed**
+⏸️ BLOCKED
 
 ---
 
@@ -78,6 +78,14 @@ Verify that:
 - Appropriate validation or business-rule messages are displayed when applicable.
 - The application does not crash or become unresponsive.
 - No incorrect loan approval or data corruption occurs.
+
+---
+
+## Execution update:
+
+- TC051 – Verify Loan Request with Zero Amount
+- Status: ⏸️ BLOCKED
+- Blocked by: BUG012
 
 ---
 
