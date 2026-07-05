@@ -110,7 +110,7 @@ Impact:
 
 ### Screenshots
 
-BUG012_TC050_Loan_Request_Internal_Error.png
+[BUG-012 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG012_TC050_Loan_Request_Internal_Error.png)
 
 ---
 
