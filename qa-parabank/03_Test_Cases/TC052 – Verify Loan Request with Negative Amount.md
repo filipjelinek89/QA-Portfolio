@@ -83,6 +83,14 @@ Verify that:
 
 ---
 
+## Execution update:
+
+- TC051 – Verify Loan Request with Zero Amount
+- Status: ⏸️ BLOCKED
+- Blocked by: BUG012
+
+---
+
 ⬅️ Back to 03 Test Cases
 
 [03_Test_Cases.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases.md)
