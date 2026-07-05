@@ -47,13 +47,13 @@ Verify that a logged-in user can successfully log out of the application and tha
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully logged out from the ParaBank application by selecting the Logout option. The active user session was ended, and the application redirected the user to the login page. Account information and authenticated features were no longer accessible without logging in again.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
