@@ -64,9 +64,9 @@
 | [TC011](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC011%20%E2%80%93%20Verify%20Login%20with%20Invalid%20Username.md) | Verify login with invalid username | Negative | High |
 | [TC012](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC012%20%E2%80%93%20Verify%20Login%20with%20Empty%20Username.md) | Verify login with empty username | Validation | High |
 | [TC013](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC013%20%E2%80%93%20Verify%20Login%20with%20Empty%20Password.md)| Verify login with empty password | Validation | High |
-| TC014 | Verify login with both fields empty | Validation | High |
-| TC015 | Verify session persists after page refresh | Session | Medium |
-| TC016 | Verify user can log in after logout | Functional | Medium |
+| [TC014](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC014%20%E2%80%93%20Verify%20Login%20with%20Both%20Fields%20Empty.md) | Verify login with both fields empty | Validation | High |
+| [TC015](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC015%20%E2%80%93%20Verify%20Session%20Persists%20After%20Page%20Refresh.md) | Verify session persists after page refresh | Session | Medium |
+| [TC016](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC016%20%E2%80%93%20Verify%20User%20Can%20Log%20In%20After%20Logout.md) | Verify user can log in after logout | Functional | Medium |
 
 [⬆ Back to Top](#in-page-navigation)
 
