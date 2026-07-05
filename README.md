@@ -198,9 +198,13 @@ This section contains examples of structured manual test cases created for diffe
 #### 🏦 ParaBank
 - User Registration
 - Login
+- Account Overview
 - Open New Account
 - Transfer Funds
 - Bill Payment
+- Request Loan
+- Navigation & Logout
+- Validation & Negative Testing
 
 🔗 **[View Test Cases](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases.md)**
 
