@@ -42,7 +42,7 @@
 
 | ID | Test Case | Type | Priority |
 |---|---|---|---|
-| TC001 | Verify successful user registration | Functional | High |
+| [TC001](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC001%20%E2%80%93%20Verify%20Successful%20User%20Registration.md) | Verify successful user registration | Functional | High |
 | TC002 | Verify registration with required fields only | Functional | High |
 | TC003 | Verify registration with empty required fields | Negative | High |
 | TC004 | Verify registration with an existing username | Negative | High |
