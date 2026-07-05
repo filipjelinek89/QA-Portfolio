@@ -62,13 +62,13 @@ Verify that a user can successfully submit a loan request using different eligib
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to verify loan request functionality using different available accounts. However, the test could not be completed because the Loan Request functionality failed during submission. The application displayed a generic internal error message: "An internal error has occurred and has been logged." This issue prevents verification of loan processing behavior with different selected accounts.
 
 ---
 
 ## Status
 
-**Not Executed**
+⏸️ BLOCKED
 
 ---
 
@@ -79,6 +79,14 @@ Verify that:
 - The selected account is correctly used during the loan request.
 - The application behaves consistently regardless of which eligible account is selected.
 - No unexpected errors or inconsistencies occur.
+
+---
+
+## Execution update:
+
+- TC051 – Verify Loan Request with Zero Amount
+- Status: ⏸️ BLOCKED
+- Blocked by: BUG012
 
 ---
 
