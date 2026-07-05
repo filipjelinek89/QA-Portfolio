@@ -48,8 +48,8 @@
 | [TC004](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC004%20%E2%80%93%20Verify%20Registration%20with%20an%20Existing%20Username.md) | Verify registration with an existing username | Negative | High |
 | [TC005](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC005%20%E2%80%93%20Verify%20Password%20Confirmation%20Validation.md) | Verify password confirmation validation | Validation | High |
 | [TC006](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC006%20%E2%80%93%20Verify%20Registration%20with%20Maximum%20Field%20Lengths.md) | Verify registration with maximum field lengths | Boundary | Medium |
-| TC007 | Verify registration with special characters | Validation | Medium |
-| TC008 | Verify registration with invalid ZIP code | Negative | Medium |
+| [TC007](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC007%20%E2%80%93%20Verify%20Registration%20with%20Special%20Characters.md) | Verify registration with special characters | Validation | Medium |
+| [TC008](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC008%20%E2%80%93%20Verify%20Registration%20with%20Invalid%20ZIP%20Code.md) | Verify registration with invalid ZIP code | Negative | Medium |
 
 [⬆ Back to Top](#in-page-navigation)
 
