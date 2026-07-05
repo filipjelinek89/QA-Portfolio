@@ -62,13 +62,13 @@ Verify that the application displays the correct loan decision message after a l
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to verify that the Loan Request functionality displays the correct approval or rejection message after submitting a loan application. However, the test could not be completed because the Loan Request process failed during submission. The application displayed a generic internal error message: "An internal error has occurred and has been logged." This issue prevents verification of the expected loan decision message.
 
 ---
 
 ## Status
 
-**Not Executed**
+⏸️ BLOCKED
 
 ---
 
@@ -79,6 +79,14 @@ Verify that:
 - The displayed information matches the actual loan request result.
 - The application behaves consistently after refreshing the page.
 - No duplicate loan accounts are created after repeated submissions.
+
+---
+
+## Execution update:
+
+- TC051 – Verify Loan Request with Zero Amount
+- Status: ⏸️ BLOCKED
+- Blocked by: BUG012
 
 ---
 
