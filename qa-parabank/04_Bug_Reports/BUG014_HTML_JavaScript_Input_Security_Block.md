@@ -102,7 +102,7 @@ Impact:
 
 ### Screenshots
 
-BUG014_TC064_HTML_JavaScript_Input_Security_Block.png
+[BUG-014 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG014_TC064_HTML_JavaScript_Input_Security_Block.png)
 
 ---
 
