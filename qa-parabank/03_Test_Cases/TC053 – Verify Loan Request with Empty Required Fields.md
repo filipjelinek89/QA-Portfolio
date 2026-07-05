@@ -61,13 +61,13 @@ Verify that the application prevents a loan request from being submitted when on
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to verify Loan Request validation by submitting the form with empty required fields. However, the test could not be completed because the Loan Request functionality failed during submission. The application displayed a generic internal error message: "An internal error has occurred and has been logged." This issue prevents verification of required field validation behavior.
 
 ---
 
 ## Status
 
-**Not Executed**
+⏸️ BLOCKED
 
 ---
 
@@ -79,6 +79,14 @@ Verify that:
 - No loan request is processed.
 - No unexpected system errors occur.
 - Previously entered values (if any) are preserved after validation where appropriate.
+
+---
+
+## Execution update:
+
+- TC051 – Verify Loan Request with Zero Amount
+- Status: ⏸️ BLOCKED
+- Blocked by: BUG012
 
 ---
 
