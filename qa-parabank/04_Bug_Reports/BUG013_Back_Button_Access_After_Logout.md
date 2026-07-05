@@ -104,7 +104,7 @@ Not attached.
 
 ### Video
 
-BUG013_TC062_Back_Button_Access_After_Logout.mp4
+[BUG-013 Video](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/09_Video/BUG013_TC062_Back_Button_Access_After_Logout.mp4)
 
 ---
 
