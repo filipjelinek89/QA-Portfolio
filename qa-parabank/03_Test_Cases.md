@@ -76,13 +76,13 @@
 
 | ID | Test Case | Type | Priority |
 |---|---|---|---|
-| TC017 | Verify Account Overview page displays correctly | UI / Functional | High |
-| TC018 | Verify account balances are displayed | Functional | High |
-| TC019 | Verify account details page | Functional | High |
-| TC020 | Verify transaction history | Functional | High |
-| TC021 | Verify multiple accounts are displayed | Functional | Medium |
-| TC022 | Verify account overview after refresh | Session | Medium |
-| TC023 | Verify transaction history for a new account | Functional | Medium |
+| [TC017](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC017%20%E2%80%93%20Verify%20Account%20Overview%20Page%20Displays%20Correctly.md) | Verify Account Overview page displays correctly | UI / Functional | High |
+| [TC018](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC018%20%E2%80%93%20Verify%20Account%20Balances%20Are%20Displayed%20Correctly.md) | Verify account balances are displayed | Functional | High |
+| [TC019](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC019%20%E2%80%93%20Verify%20Account%20Details%20Page.md) | Verify account details page | Functional | High |
+| [TC020](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC020%20%E2%80%93%20Verify%20Transaction%20History%20Display.md) | Verify transaction history | Functional | High |
+| [TC021](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC021%20%E2%80%93%20Verify%20Multiple%20Accounts%20Are%20Displayed.md) | Verify multiple accounts are displayed | Functional | Medium |
+| [TC022](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC022%20%E2%80%93%20Verify%20Account%20Overview%20After%20Page%20Refresh.md) | Verify account overview after refresh | Session | Medium |
+| [TC023](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC023%20%E2%80%93%20Verify%20Transaction%20History%20for%20a%20New%20Account.md) | Verify transaction history for a new account | Functional | Medium |
 
 [⬆ Back to Top](#in-page-navigation)
 
@@ -92,13 +92,13 @@
 
 | ID | Test Case | Type | Priority |
 |---|---|---|---|
-| TC024 | Verify opening a new checking account | Functional | High |
-| TC025 | Verify opening a new savings account | Functional | High |
-| TC026 | Verify newly created account appears in Account Overview | Functional | High |
-| TC027 | Verify unique account number is generated | Functional | Medium |
-| TC028 | Verify initial account balance | Functional | Medium |
-| TC029 | Verify opening multiple accounts | Functional | Medium |
-| TC030 | Verify account creation using different funding accounts | Functional | Medium |
+| [TC024](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC024%20%E2%80%93%20Verify%20Opening%20a%20New%20Checking%20Account.md) | Verify opening a new checking account | Functional | High |
+| [TC025](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC025%20%E2%80%93%20Verify%20Opening%20a%20New%20Savings%20Account.md) | Verify opening a new savings account | Functional | High |
+| [TC026](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC026%20%E2%80%93%20Verify%20Newly%20Created%20Account%20Appears%20in%20Account%20Overview.md) | Verify newly created account appears in Account Overview | Functional | High |
+| [TC027](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC027%20%E2%80%93%20Verify%20New%20Account%20Receives%20a%20Unique%20Account%20Number.md) | Verify unique account number is generated | Functional | Medium |
+| [TC028](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC028%20%E2%80%93%20Verify%20Initial%20Account%20Balance.md) | Verify initial account balance | Functional | Medium |
+| [TC029](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC029%20%E2%80%93%20Verify%20Opening%20Multiple%20Accounts.md) | Verify opening multiple accounts | Functional | Medium |
+| [TC030](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC030%20%E2%80%93%20Verify%20Account%20Creation%20Using%20Different%20Funding%20Accounts.md) | Verify account creation using different funding accounts | Functional | Medium |
 
 [⬆ Back to Top](#in-page-navigation)
 
