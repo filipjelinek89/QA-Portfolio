@@ -104,7 +104,7 @@ Impact:
 
 ### Screenshots
 
-[BUG-001 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG009_TC045_Bill_Payment_Negative_Amount_Accepted.png)
+[BUG-009 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG009_TC045_Bill_Payment_Negative_Amount_Accepted.png)
 
 ---
 
