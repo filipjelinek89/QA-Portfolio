@@ -69,13 +69,13 @@ Verify that the application validates the **Phone** field and prevents bill paym
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user accessed the Bill Pay page and entered an invalid phone number format in the payee information form. After completing all other required fields and submitting the payment request, the application accepted the invalid phone number without displaying any validation message. The bill payment was processed successfully, and a confirmation message was displayed even though the payee contact information contained invalid data.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
