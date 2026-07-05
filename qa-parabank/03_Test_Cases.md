@@ -145,13 +145,13 @@
 
 | ID | Test Case | Type | Priority |
 |---|---|---|---|
-| TC050 | Verify successful loan request | Functional | High |
-| TC051 | Verify loan request with zero amount | Negative | High |
-| TC052 | Verify loan request with negative amount | Negative | High |
-| TC053 | Verify loan request with empty required fields | Validation | High |
-| TC054 | Verify loan request with large amount | Boundary | Medium |
-| TC055 | Verify loan request using different accounts | Functional | Medium |
-| TC056 | Verify loan approval or rejection message | Functional | High |
+| [TC050](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC050%20%E2%80%93%20Verify%20Successful%20Loan%20Request.md) | Verify successful loan request | Functional | High |
+| [TC051](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC051%20%E2%80%93%20Verify%20Loan%20Request%20with%20Zero%20Amount.md) | Verify loan request with zero amount | Negative | High |
+| [TC052](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC052%20%E2%80%93%20Verify%20Loan%20Request%20with%20Negative%20Amount.md) | Verify loan request with negative amount | Negative | High |
+| [TC053](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC053%20%E2%80%93%20Verify%20Loan%20Request%20with%20Empty%20Required%20Fields.md) | Verify loan request with empty required fields | Validation | High |
+| [TC054](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC054%20%E2%80%93%20Verify%20Loan%20Request%20with%20a%20Large%20Amount.md) | Verify loan request with large amount | Boundary | Medium |
+| [TC055](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC055%20%E2%80%93%20Verify%20Loan%20Request%20Using%20Different%20Accounts.md) | Verify loan request using different accounts | Functional | Medium |
+| [TC056](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC056%20%E2%80%93%20Verify%20Loan%20Approval%20or%20Rejection%20Message.md) | Verify loan approval or rejection message | Functional | High |
 
 [⬆ Back to Top](#in-page-navigation)
 
@@ -161,12 +161,12 @@
 
 | ID | Test Case | Type | Priority |
 |---|---|---|---|
-| TC057 | Verify Home navigation link | UI / Navigation | Low |
-| TC058 | Verify About Us page | UI / Navigation | Low |
-| TC059 | Verify Services page | UI / Navigation | Low |
-| TC060 | Verify Contact page | UI / Navigation | Low |
-| TC061 | Verify successful logout | Functional | High |
-| TC062 | Verify browser Back button after logout | Security / Session | High |
+| [TC057](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC057%20%E2%80%93%20Verify%20Home%20Page%20Navigation.md) | Verify Home navigation link | UI / Navigation | Low |
+| [TC058](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC058%20%E2%80%93%20Verify%20About%20Us%20Page.md) | Verify About Us page | UI / Navigation | Low |
+| [TC059](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC059%20%E2%80%93%20Verify%20Services%20Page%20Navigation.md) | Verify Services page | UI / Navigation | Low |
+| [TC060](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC060%20%E2%80%93%20Verify%20Contact%20Us%20Page.md) | Verify Contact page | UI / Navigation | Low |
+| [TC061](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC061%20%E2%80%93%20Verify%20Successful%20Logout.md) | Verify successful logout | Functional | High |
+| [TC062](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC062%20%E2%80%93%20Verify%20Browser%20Back%20Button%20After%20Logout.md) | Verify browser Back button after logout | Security / Session | High |
 
 [⬆ Back to Top](#in-page-navigation)
 
@@ -176,14 +176,14 @@
 
 | ID | Test Case | Type | Priority |
 |---|---|---|---|
-| TC063 | Verify SQL injection-like input is handled safely | Security | High |
-| TC064 | Verify HTML/script input is handled safely | Security | High |
-| TC065 | Verify maximum input length validation | Boundary | Medium |
-| TC066 | Verify leading and trailing spaces in input fields | Validation | Medium |
-| TC067 | Verify Unicode characters in text fields | Validation | Low |
-| TC068 | Verify browser refresh during form submission | Session / Functional | Medium |
-| TC069 | Verify double-clicking the Submit button | Negative / Usability | Medium |
-| TC070 | Verify multiple browser tabs with the same session | Security / Session | Medium |
+| [TC063](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC063%20%E2%80%93%20Verify%20SQL-Like%20Input%20Handling%20During%20User%20Registration.md) | Verify SQL injection-like input is handled safely | Security | High |
+| [TC064](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC064%20%E2%80%93%20Verify%20HTML%20JavaScript%20Input%20is%20Handled%20Safely.md) | Verify HTML/script input is handled safely | Security | High |
+| [TC065](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC065%20%E2%80%93%20Verify%20Maximum%20Input%20Length%20Validation.md) | Verify maximum input length validation | Boundary | Medium |
+| [TC066](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC066%20%E2%80%93%20Verify%20Leading%20and%20Trailing%20Spaces%20in%20Input%20Fields.md) | Verify leading and trailing spaces in input fields | Validation | Medium |
+| [TC067](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC067%20%E2%80%93%20Verify%20Unicode%20Characters%20in%20Text%20Fields.md) | Verify Unicode characters in text fields | Validation | Low |
+| [TC068](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC068%20%E2%80%93%20Verify%20Browser%20Refresh%20During%20Form%20Submission.md) | Verify browser refresh during form submission | Session / Functional | Medium |
+| [TC069](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC069%20%E2%80%93%20Verify%20Double-Clicking%20the%20Submit%20Button.md) | Verify double-clicking the Submit button | Negative / Usability | Medium |
+| [TC070](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC070%20%E2%80%93%20Verify%20Multiple%20Browser%20Tabs%20with%20the%20Same%20Session.md) | Verify multiple browser tabs with the same session | Security / Session | Medium |
 
 [⬆ Back to Top](#in-page-navigation)
 
