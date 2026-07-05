@@ -92,7 +92,7 @@ Impact:
 
 ### Screenshots
 
-BUG002_TC007_Registration_Special_Characters_Accepted.png
+[BUG-002 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG002_TC007_Registration_Special_Characters_Accepted.png.png)
 
 ---
 
