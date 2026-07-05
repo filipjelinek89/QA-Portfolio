@@ -67,13 +67,13 @@ Verify that input fields correctly enforce or validate the maximum allowed numbe
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user entered values exceeding the expected maximum character length into the registration form fields. The application did not validate the maximum input length and allowed oversized values to be submitted. Instead of displaying field length validation messages, the application returned a username availability message: "This username already exists." The maximum length validation issue was already identified in a previous registration test case.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
@@ -86,6 +86,12 @@ Verify that:
 - The application does not truncate data silently without informing the user.
 
 ---
+
+## Execution update:
+
+- TC065 – Verify Maximum Input Length Validation
+- Status: ❌ FAIL
+- Linked Defect: BUG003 (same issue as TC006)
 
 ⬅️ Back to 03 Test Cases
 
