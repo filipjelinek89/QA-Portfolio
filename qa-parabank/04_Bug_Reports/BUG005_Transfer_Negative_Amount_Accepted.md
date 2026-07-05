@@ -98,7 +98,8 @@ Impact:
 
 ### Screenshots
 
-BUG005_TC034_Transfer_Negative_Amount_Accepted.png
+[BUG-005 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG005_TC034_Transfer_Negative_Amount_Accepted.png)
+
 
 ---
 
