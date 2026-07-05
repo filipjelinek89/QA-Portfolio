@@ -56,13 +56,13 @@ Verify that clicking the **Home** navigation link redirects the user to the Para
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully accessed the ParaBank Home page using the navigation menu. The Home page loaded correctly and displayed the expected content without any errors. All page elements were visible, and the navigation functionality worked as expected, allowing the user to access the Home section successfully.
 
 ---
 
 ## Status
 
-**Not Executed**
+✅ PASS
 
 ---
 
