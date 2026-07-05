@@ -104,7 +104,7 @@ Impact:
 
 ### Screenshots
 
-BUG010_TC047_Bill_Payment_Invalid_ZIP_Code_Accepted.png
+[BUG-010 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG010_TC047_Bill_Payment_Invalid_ZIP_Code_Accepted.png)
 
 ---
 
