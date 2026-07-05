@@ -128,7 +128,7 @@ Impact:
 
 ### Screenshots
 
-BUG015_TC067_Unicode_Characters_Display_Incorrectly.png
+[BUG-015 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG015_TC067_Unicode_Characters_Display_Incorrectly.png)
 
 ---
 
