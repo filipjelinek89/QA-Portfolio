@@ -63,13 +63,13 @@ Verify that the application correctly handles Unicode characters entered into te
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user entered Unicode characters containing Czech accents into the registration form fields. After submitting the registration request, the application did not correctly handle or display the Unicode characters. Special characters were converted into incorrect symbols and HTML entity codes, causing data corruption. No validation message was displayed informing the user that Unicode characters are not supported.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
