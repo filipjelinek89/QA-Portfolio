@@ -93,7 +93,7 @@ Impact:
 
 ### Screenshots
 
-BUG001_TC006_Registration_Unique_Username_Error.png
+[BUG-001 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG001_TC006_Registration_Unique_Username_Error.png)
 
 ---
 
