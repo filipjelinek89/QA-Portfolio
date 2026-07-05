@@ -111,7 +111,7 @@ Impact:
 
 ### Screenshots
 
-BUG016_TC070_Multiple_Tabs_Session_Internal_Error.png
+[BUG-016 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG016_TC070_Multiple_Tabs_Session_Internal_Error.png)
 
 ---
 
