@@ -105,7 +105,7 @@ Impact:
 
 ### Screenshots
 
-BUG006_TC036_Transfer_Exceeding_Balance_Accepted.png
+[BUG-006 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG006_TC036_Transfer_Exceeding_Balance_Accepted.png)
 
 ---
 
