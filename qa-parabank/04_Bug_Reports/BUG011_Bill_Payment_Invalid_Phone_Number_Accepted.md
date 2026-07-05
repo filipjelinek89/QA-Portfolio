@@ -104,7 +104,7 @@ Impact:
 
 ### Screenshots
 
-BUG011_TC048_Bill_Payment_Invalid_Phone_Number_Accepted.png
+[BUG-011 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG011_TC048_Bill_Payment_Invalid_Phone_Number_Accepted.png)
 
 ---
 
