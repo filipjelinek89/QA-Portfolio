@@ -62,13 +62,13 @@ Verify that the application prevents a loan request when a negative loan amount 
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user attempted to verify loan request validation using a negative loan amount. However, the test could not be completed because the Loan Request functionality failed during submission. The application displayed a generic internal error message: "An internal error has occurred and has been logged." This issue prevents verification of how the application handles negative loan amount values.
 
 ---
 
 ## Status
 
-**Not Executed**
+⏸️ BLOCKED
 
 ---
 
