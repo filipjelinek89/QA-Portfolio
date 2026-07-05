@@ -106,7 +106,7 @@ Impact:
 
 ### Screenshots
 
-BUG008_TC043_Bill_Payment_Non_Existent_Account_Accepted.png
+[BUG-008 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG008_TC043_Bill_Payment_Non_Existent_Account_Accepted.png)
 
 ---
 
