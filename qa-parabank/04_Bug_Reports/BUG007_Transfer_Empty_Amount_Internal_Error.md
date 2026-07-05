@@ -106,7 +106,7 @@ Impact:
 
 ### Screenshots
 
-BUG007_TC038_Transfer_Empty_Amount_Internal_Error.png
+[BUG-007 Screenshot](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/08_Screenshots/BUG007_TC038_Transfer_Empty_Amount_Internal_Error.png)
 
 ---
 
