@@ -108,16 +108,16 @@
 
 | ID | Test Case | Type | Priority |
 |---|---|---|---|
-| TC031 | Verify successful transfer between accounts | Functional | Critical |
-| TC032 | Verify transfer of entire account balance | Functional | High |
-| TC033 | Verify transfer with zero amount | Negative | High |
-| TC034 | Verify transfer with negative amount | Negative | High |
-| TC035 | Verify transfer with decimal amount | Functional | Medium |
-| TC036 | Verify transfer with a large amount | Boundary | Medium |
-| TC037 | Verify transfer between the same account | Negative | Medium |
-| TC038 | Verify transfer with empty amount | Validation | High |
-| TC039 | Verify account balances update after transfer | Functional | Critical |
-| TC040 | Verify transfer confirmation message | Functional | High |
+| [TC031](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC031%20%E2%80%93%20Verify%20Successful%20Transfer%20Between%20Accounts.md) | Verify successful transfer between accounts | Functional | Critical |
+| [TC032](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC032%20%E2%80%93%20Verify%20Transfer%20of%20Entire%20Account%20Balance.md) | Verify transfer of entire account balance | Functional | High |
+| [TC033](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC033%20%E2%80%93%20Verify%20Transfer%20with%20Zero%20Amount.md) | Verify transfer with zero amount | Negative | High |
+| [TC034](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC034%20%E2%80%93%20Verify%20Transfer%20with%20Negative%20Amount.md) | Verify transfer with negative amount | Negative | High |
+| [TC035](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC035%20%E2%80%93%20Verify%20Transfer%20with%20Decimal%20Amount.md) | Verify transfer with decimal amount | Functional | Medium |
+| [TC036](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC036%20%E2%80%93%20Verify%20Transfer%20with%20a%20Large%20Amount.md) | Verify transfer with a large amount | Boundary | Medium |
+| [TC037](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC037%20%E2%80%93%20Verify%20Transfer%20Between%20the%20Same%20Account.md) | Verify transfer between the same account | Negative | Medium |
+| [TC038](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC038%20%E2%80%93%20Verify%20Transfer%20with%20Empty%20Amount.md) | Verify transfer with empty amount | Validation | High |
+| [TC039](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC039%20%E2%80%93%20Verify%20Account%20Balances%20Update%20After%20Transfer.md) | Verify account balances update after transfer | Functional | Critical |
+| [TC040](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC040%20%E2%80%93%20Verify%20Transfer%20Confirmation%20Message.md) | Verify transfer confirmation message | Functional | High |
 
 [⬆ Back to Top](#in-page-navigation)
 
@@ -127,15 +127,15 @@
 
 | ID | Test Case | Type | Priority |
 |---|---|---|---|
-| TC041 | Verify successful bill payment | Functional | Critical |
-| TC042 | Verify bill payment with empty required fields | Validation | High |
-| TC043 | Verify bill payment with invalid account number | Negative | High |
-| TC044 | Verify bill payment with empty amount | Validation | High |
-| TC045 | Verify bill payment with negative amount | Negative | High |
-| TC046 | Verify bill payment with decimal amount | Functional | Medium |
-| TC047 | Verify bill payment with invalid ZIP code | Negative | Medium |
-| TC048 | Verify bill payment with invalid phone number | Validation | Medium |
-| TC049 | Verify payment confirmation message | Functional | High |
+| [TC041](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC041%20%E2%80%93%20Verify%20Successful%20Bill%20Payment.md) | Verify successful bill payment | Functional | Critical |
+| [TC042](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC042%20%E2%80%93%20Verify%20Bill%20Payment%20with%20Empty%20Required%20Fields.md) | Verify bill payment with empty required fields | Validation | High |
+| [TC043](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC043%20%E2%80%93%20Verify%20Bill%20Payment%20with%20Non-Existent%20Account%20Number.md) | Verify bill payment with invalid account number | Negative | High |
+| [TC044](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC044%20%E2%80%93%20Verify%20Bill%20Payment%20with%20Empty%20Amount.md) | Verify bill payment with empty amount | Validation | High |
+| [TC045](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC045%20%E2%80%93%20Verify%20Bill%20Payment%20with%20Negative%20Amount.md)| Verify bill payment with negative amount | Negative | High |
+| [TC046](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC046%20%E2%80%93%20Verify%20Bill%20Payment%20with%20Decimal%20Amount.md) | Verify bill payment with decimal amount | Functional | Medium |
+| [TC047](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC047%20%E2%80%93%20Verify%20Bill%20Payment%20with%20Invalid%20ZIP%20Code.md) | Verify bill payment with invalid ZIP code | Negative | Medium |
+| [TC048](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC048%20%E2%80%93%20Verify%20Bill%20Payment%20with%20Invalid%20Phone%20Number.md) | Verify bill payment with invalid phone number | Validation | Medium |
+| [TC049](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases/TC049%20%E2%80%93%20Verify%20Payment%20Confirmation%20Message.md) | Verify payment confirmation message | Functional | High |
 
 [⬆ Back to Top](#in-page-navigation)
 
