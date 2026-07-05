@@ -68,13 +68,13 @@ Verify that the application safely handles HTML and JavaScript input entered int
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user entered HTML and JavaScript input values into the registration form fields and submitted the registration request. The request triggered the security protection system and the user was redirected to a blocking page stating "Sorry, you have been blocked". The application did not display a normal validation message and the user was prevented from continuing to use the application.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
