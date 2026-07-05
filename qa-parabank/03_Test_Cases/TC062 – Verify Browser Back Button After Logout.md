@@ -50,13 +50,13 @@ Verify that the user cannot access authenticated pages by using the browser's **
 
 ## Actual Result
 
-*To be completed during test execution.*
+The user successfully logged out from the ParaBank application and was redirected to the login page. After clicking the browser Back button, the previously authenticated page was displayed again. The application allowed access to account-related information after logout instead of requiring the user to authenticate again.
 
 ---
 
 ## Status
 
-**Not Executed**
+❌ FAIL
 
 ---
 
