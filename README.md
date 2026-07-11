@@ -5,7 +5,7 @@
 # In-page Navigation
 
 - 👨‍💻 [About me](#%E2%80%8D-about-me)
-- 📄 [CV](#cv)
+- 📄 [CV](#-cv)
 - 🛠️ [Skills](#%EF%B8%8F-skills)
 - 📂 [Portfolio Projects](#-portfolio-projects)
 - 🧪 [Test Cases](#-test-cases)
