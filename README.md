@@ -139,6 +139,8 @@ Manual testing of a banking application covering user registration, login, accou
 
 A collection of API requests, environments, and automated checks created while learning API testing.
 
+## 🏦 ParaBank – API Testing Online Banking
+
 ## Project includes:
 
 - REST API Requests
@@ -147,6 +149,32 @@ A collection of API requests, environments, and automated checks created while l
 - Response Validation
 
 🔗 **[View API Testing ParaBank](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API_Testing.md)** 
+
+## 🏨 API Testing – Restful Booker
+
+A comprehensive API testing project created using **Postman** and the **Restful Booker REST API**, focused on manual API testing, automated response validation, negative testing, and command-line test execution.
+
+### Project includes:
+
+* REST API testing with **GET, POST, PUT, PATCH, and DELETE**
+* Postman collections and environment variables
+* Token and Basic Authentication testing
+* Positive and negative API test scenarios
+* Request headers, path parameters, and query parameter validation
+* Request body and data type validation
+* HTTP status code validation
+* Response body and response header validation
+* Automated Postman test scripts and assertions
+* JSON Schema validation
+* Resource creation, update, deletion, and data persistence verification
+* Newman command-line test execution
+* HTML test report generation
+* CI/CD API test execution with GitHub Actions
+* Test execution documentation and defect reporting
+
+**Tools & Technologies:** Postman · REST API · JSON · JavaScript · Newman · Node.js · GitHub Actions · Git
+
+🔗 **[View API Testing – Restful Booker](https://github.com/filipjelinek89/QA-Portfolio/blob/main/api-restful-booker/api-restful-booker-README.md)** *(In progress)*
 
 ## 💾 SQL Practice
 
