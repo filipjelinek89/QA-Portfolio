@@ -143,9 +143,9 @@ Manual testing of a banking application covering user registration, login, accou
 
 ➡️ **[View Project](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/qa-parabank-README.md)**
 
-## 🔌 API Testing – Postman Collection
+#🔌 API Testing Projects
 
-A collection of API requests, environments, and automated checks created while learning API testing.
+Practical API testing projects focused on REST API validation, request and response analysis, Postman workflows, automated assertions, negative testing, and structured API test documentation.
 
 ## 🏦 ParaBank – API Testing Online Banking
 
