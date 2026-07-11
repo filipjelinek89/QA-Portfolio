@@ -50,8 +50,8 @@ The project covers the complete API testing lifecycle, including API analysis, t
 | 🔍 API Analysis          | [Endpoint Inventory](02_API_Analysis/Endpoint_Inventory.md)               |
 | 🧪 Test Design           | [API Test Scenarios](03_Test_Scenarios/API_Test_Scenarios.md)             |
 | 📝 Test Cases            | [API Test Cases](04_Test_Cases/API_Test_Cases.md)                         |
-| 📮 Postman               | [Postman Collection](05_Postman/Collection/)                              |
-| 🌍 Postman               | [Postman Environment](05_Postman/Environment/)                            |
+| 📮 Postman               | [Postman Collection](05_Postman/Collection.md/)                              |
+| 🌍 Postman               | [Postman Environment](05_Postman/Environment.md/)                            |
 | 📊 Test Execution        | [API Test Execution](06_Test_Execution/API_Test_Execution.md)             |
 | 🐞 Defects               | [Bug Reports](07_Bug_Reports/)                                            |
 | 📐 Schema Validation     | [JSON Schemas](08_JSON_Schema/)                                           |
