@@ -1,16 +1,17 @@
 # 🏨 Restful Booker API Testing Project
 
-A comprehensive REST API testing project focused on validating the functionality, reliability, data integrity, and API contract of a hotel booking system.
+A structured REST API testing portfolio project focused on validating the functionality, reliability, data integrity, and API contract of a hotel booking system.
 
-The objective of this project is to demonstrate professional API testing techniques using **Postman**, **JavaScript**, **JSON Schema validation**, **Newman**, and **GitHub Actions**.
+The project is being developed progressively to demonstrate a complete API testing workflow using **Postman**, **JavaScript assertions**, **JSON Schema validation**, **Newman**, and **GitHub Actions**.
 
-The project covers the complete API testing lifecycle, including API analysis, test planning, test scenario design, test case creation, manual API execution, automated response validation, negative testing, boundary value testing, authentication testing, CRUD operations, request chaining, schema validation, command-line test execution, and CI/CD integration.
+The current project stage focuses on **API analysis, test planning, test scenario design, and detailed API test case creation**. Postman implementation, automated response validation, request chaining, schema validation, test execution, Newman CLI execution, and CI/CD integration will be added progressively as the project moves through its implementation and execution stages.
 
 **API Under Test:** Restful Booker API
 **API Type:** REST API
 **Data Format:** JSON
 **Project Type:** API Testing Portfolio Project
 **Testing Approach:** Manual and Automated API Testing
+**Project Status:** In Progress
 **Prepared by:** Filip Jelinek
 
 ---
