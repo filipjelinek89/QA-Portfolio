@@ -96,6 +96,10 @@ I am currently seeking a Junior Manual QA or Entry-Level Software QA position wh
 
 A complete manual testing project focused on an e-commerce application.
 
+🟢 COMPLETED
+42 test cases executed
+15 defects documented
+
 ## Project includes:
 
 - Test Plan
@@ -116,6 +120,10 @@ A complete manual testing project focused on an e-commerce application.
 ## 🏦 ParaBank – Online Banking Testing
 
 Manual testing of a banking application covering user registration, login, account management, and money transfers.
+
+🟢 COMPLETED
+70 test cases executed
+16 defects documented
 
 ## Project includes:
 
@@ -156,7 +164,9 @@ An API testing portfolio project focused on designing and executing a structured
 
 ### Current project status:
 
-🟡 **In Progress – Test Design Completed / Postman Implementation Next**
+🟡 IN PROGRESS
+153 API test cases designed
+Postman implementation in progress
 
 ### Completed:
 
