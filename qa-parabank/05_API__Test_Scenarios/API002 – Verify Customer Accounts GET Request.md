@@ -95,4 +95,4 @@ This authentication behavior will be verified separately in **API003 – Verify 
 
 ⬅️ Back to API Testing
 
-[05_API_Testing.md](qa-parabank/05_API_Testing.md)
+[05_API_Testing.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API_Testing.md)
