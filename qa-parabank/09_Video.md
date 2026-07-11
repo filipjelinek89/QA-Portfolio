@@ -10,11 +10,11 @@
 
 # In-page Navigation
 
-* [1. Purpose](#1-purpose)
-* [2. Recording Guidelines](#2-recording-guidelines)
-* [3. Video Index](#3-video-index)
-* [4. Naming Convention](#4-naming-convention)
-* [5. Folder Structure](#5-folder-structure)
+- [1. Purpose](#1-purpose)
+- [2. Recording Guidelines](#2-recording-guidelines)
+- [3. Video Index](#3-video-index)
+- [4. Naming Convention](#4-naming-convention)
+- [5. Folder Structure](#5-folder-structure)
 
 ---
 
@@ -22,64 +22,65 @@
 
 This document provides an index of screen recordings captured during manual testing of the ParaBank application.
 
-Video recordings provide additional evidence for:
+Video recordings supplement screenshots by providing clear evidence of application behavior during test execution and bug reproduction.
 
-* Bug reproduction
-* Test execution
-* Validation of expected behavior
-* Demonstrating complete user workflows
+Videos are especially useful for:
+
+- Demonstrating defects that require multiple reproduction steps.
+- Capturing dynamic UI or browser behavior.
+- Supporting bug reports with reproducible evidence.
+- Showing complete user workflows when screenshots are insufficient.
 
 ---
 
 # 2. Recording Guidelines
 
-Record videos when:
+Videos should be recorded when:
 
-* A defect is difficult to explain using screenshots alone.
-* Multiple steps are required to reproduce an issue.
-* Dynamic UI behavior needs to be demonstrated.
-* A complete workflow should be documented.
+- A defect cannot be clearly explained using screenshots alone.
+- Multiple steps are required to reproduce an issue.
+- Browser or session behavior changes over time.
+- Dynamic application behavior needs to be demonstrated.
 
-Examples include:
+All recordings should:
 
-* User Registration
-* User Login
-* Transfer Funds
-* Bill Payment
-* Loan Request
-* Session Management
-* Bug Reproduction
+- Start from a known application state.
+- Clearly demonstrate each reproduction step.
+- Show the complete defect from start to finish.
+- Avoid including any sensitive or personal information.
+- Be saved in MP4 format.
 
 ---
 
 # 3. Video Index
 
-| Video ID | Description                    | Related Test Case | Related Bug | Status  |
-| -------- | ------------------------------ | ----------------- | ----------- | ------- |
-| VID001   | To be completed during testing | —                 | —           | Planned |
-| VID002   | To be completed during testing | —                 | —           | Planned |
-| VID003   | To be completed during testing | —                 | —           | Planned |
+| Video ID | Description | Related Test Case | Related Bug | Status |
+|----------|-------------|-------------------|-------------|--------|
+| VID001 | Browser Back Button allows access after logout | TC068 | BUG013 | ✅ Recorded |
 
-> Add new rows as videos are recorded during test execution.
+> Additional recordings may be added if future testing identifies defects that benefit from video evidence.
 
 ---
 
 # 4. Naming Convention
 
-Use the following naming convention for video files:
+Video files follow the naming convention:
 
 ```text
-VID001_Successful_Registration.mp4
-VID002_Transfer_Funds.mp4
-VID003_BUG001_Invalid_Transfer.mp4
-VID004_BUG002_Login_Error.mp4
+BUGXXX_TCXXX_Short_Description.mp4
+```
+
+Example:
+
+```text
+BUG013_TC068_Back_Button_Access_After_Logout.mp4
 ```
 
 Benefits:
 
-* Consistent naming.
-* Easy traceability.
-* Simple mapping to test cases and bug reports.
+- Easy traceability between videos, test cases, and bug reports.
+- Consistent naming across the project.
+- Simplified navigation within the repository.
 
 ---
 
@@ -89,34 +90,28 @@ Benefits:
 09_Video/
 │
 ├── 09_Video.md
-│
-├── Successful_Workflows/
-│
-├── Bug_Reproduction/
-│
-└── Archive/
+└── BUG013_TC068_Back_Button_Access_After_Logout.mp4
 ```
 
 ---
 
 # Notes
 
-* Record videos only when they provide meaningful testing evidence.
-* Keep recordings focused on the tested functionality.
-* Begin each recording from a known application state.
-* Avoid including sensitive or personal information in recordings.
-* Use MP4 format for broad compatibility.
+- Videos are recorded only when they provide meaningful evidence beyond screenshots.
+- Screenshots remain the primary source of visual documentation throughout the project.
+- Video recordings are used to demonstrate complex or dynamic application behavior.
+- All recordings are stored in MP4 format for maximum compatibility.
 
 ---
 
 # Document Version History
 
-| Version | Date       | Author        | Changes         |
-| ------- | ---------- | ------------- | --------------- |
-| 1.0     | YYYY-MM-DD | Filip Jelinek | Initial version |
+| Version | Date | Author | Changes |
+|---------|------------|---------------|-----------------------------|
+| 1.0 | 2026-07 | Filip Jelinek | Initial completed version |
 
 ---
 
-⬅️ Back to QA ParaBank README
+⬅️ **Back to QA ParaBank README**
 
 [QA-ParaBank-README.md](qa-parabank-README.md)
