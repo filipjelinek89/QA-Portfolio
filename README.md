@@ -11,8 +11,8 @@
 - 🧪 [Test Cases](#-test-cases)
 - 🐞 [Bug Reports](#-bug-reports)
 - 🔌 [API Testing](#-api-testing--postman-collection)
-- 🗄️ [SQL Practice Coming Soon](#-sql-practice)
-- 🤖 [Automation (Playwright) Coming Soon](#-playwright-automation)
+- 🗄️ [SQL Practice *(Planned)*](#-sql-practice)
+- 🤖 [Automation (Playwright) *(Planned)*](#-playwright-automation)
 - 🎓 [Certificates](#-certificates)
 - 📫 [Contact](#-contact)
 
