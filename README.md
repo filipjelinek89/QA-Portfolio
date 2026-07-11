@@ -148,35 +148,43 @@ A collection of API requests, environments, and automated checks created while l
 - Environment Variables
 - Response Validation
 
-🔗 **[View API Testing ParaBank](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API_Testing.md)** 
+➡️ **[View API Testing ParaBank](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API_Testing.md)** 
 
 ## 🏨 API Testing – Restful Booker
 
-A comprehensive API testing project created using **Postman** and the **Restful Booker REST API**, focused on manual API testing, automated response validation, negative testing, and command-line test execution.
+An API testing portfolio project focused on designing and executing a structured REST API testing workflow using **Postman** and the **Restful Booker API**.
 
-### Project includes:
+### Current project status:
 
-* REST API testing with **GET, POST, PUT, PATCH, and DELETE**
-* Postman collections and environment variables
-* Token and Basic Authentication testing
-* Positive and negative API test scenarios
-* Request headers, path parameters, and query parameter validation
-* Request body and data type validation
-* HTTP status code validation
-* Response body and response header validation
-* Automated Postman test scripts and assertions
+🟡 **In Progress – Test Design Completed / Postman Implementation Next**
+
+### Completed:
+
+* API requirements analysis
+* Endpoint inventory and API contract analysis
+* API test plan and test strategy
+* 86 high-level API test scenarios
+* 153 detailed API test cases
+* Positive, negative, and boundary test design
+* Authentication and authorization test design
+* CRUD workflow test coverage
+* End-to-end API workflow design
+* Test execution and defect reporting structure
+
+### Next implementation stages:
+
+* Postman collection implementation
+* Environment and dynamic variable configuration
+* Automated JavaScript assertions
+* Request chaining using runtime booking IDs and authentication tokens
 * JSON Schema validation
-* Resource creation, update, deletion, and data persistence verification
-* Newman command-line test execution
-* HTML test report generation
-* CI/CD API test execution with GitHub Actions
-* Test execution documentation and defect reporting
+* API test execution and defect reporting
+* Newman CLI execution
+* GitHub Actions CI/CD integration
 
-**Tools & Technologies:** Postman · REST API · JSON · JavaScript · Newman · Node.js · GitHub Actions · Git
+➡️ **[View Restful Booker API Testing Project](https://github.com/filipjelinek89/QA-Portfolio/blob/main/api-restful-booker/api-restful-booker-README.md)** *(In progress)*
 
-🔗 **[View API Testing – Restful Booker](https://github.com/filipjelinek89/QA-Portfolio/blob/main/api-restful-booker/api-restful-booker-README.md)** *(In progress)*
-
-## 💾 SQL Practice
+## 💾 SQL Practice *(In progress)*
 
 A collection of SQL exercises demonstrating database querying and data validation.
 
