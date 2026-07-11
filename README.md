@@ -1,4 +1,4 @@
-# Filip Jelinek – Manual QA Engineer Portfolio
+# Filip Jelinek – Junior QA Engineer Portfolio
 
 ---
 
