@@ -2,7 +2,7 @@
 
 ⬅️ **Back to Bug Reports**
 
-[05_Bug_Reports.md](05_Bug_Reports.md)
+[05_Bug_Reports.md](qa-saucedemo/05_Bug_Reports/05_Bug_Reports.md)
 
 ---
 
