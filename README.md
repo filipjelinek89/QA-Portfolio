@@ -20,7 +20,7 @@
 
 # 👨‍💻 About me
 
-Hello! I'm Filip, an aspiring Software QA Engineer with a professional background in industrial quality assurance, engineering project management, and safety-critical operations.
+Hello! I'm Filip, an aspiring Junior QA Engineer with a professional background in industrial quality assurance, engineering project management, and safety-critical operations.
 
 For many years, I worked in quality-focused engineering roles where precision, process compliance, documentation, and attention to detail were essential. Later, as a Project Manager, I coordinated engineering projects while ensuring that quality standards, timelines, and customer requirements were consistently met.
 
@@ -28,9 +28,9 @@ Today, I work as a PADI Diving Instructor, a profession where safety, risk asses
 
 My passion for problem-solving and continuous improvement inspired me to transition into software testing. I enjoy exploring applications, identifying defects, analyzing system behavior, and documenting issues in a clear and reproducible way.
 
-This portfolio represents my learning journey and demonstrates my commitment to becoming a professional Software QA Engineer through practical projects, structured testing, and continuous skill development.
+This portfolio represents my learning journey and demonstrates my commitment to developing practical QA skills through structured testing projects and continuous learning.
 
-I am currently seeking a Junior Manual QA or Entry-Level Software QA position where I can contribute my quality-focused mindset while continuing to grow within a professional software development team.
+I am currently seeking a Junior QA Engineer or Junior Manual QA position where I can contribute my quality-focused mindset while continuing to develop my technical testing skills within a professional software development team.
 
 ---
 
@@ -103,10 +103,15 @@ A complete manual testing project focused on an e-commerce application.
 ## Project includes:
 
 - Test Plan
-- Test Cases
-- Bug Reports
+- Requirements Analysis
+- Test Scenarios
+- 42 Executed Test Cases
+- 15 Bug Reports
+- Test Execution Report
 - Test Summary Report
-- Screenshots / Video
+- Test Data
+- Screenshots / Evidence
+- Traceability Matrix
 
 ## Skills demonstrated:
 
@@ -129,10 +134,13 @@ Manual testing of a banking application covering user registration, login, accou
 
 - Test Plan
 - Exploratory Testing
-- Test Cases
-- Bug Reports
-- Screenshots / Video
+- 70 Executed Test Cases
+- 16 Bug Reports
+- REST API Testing
+- Test Execution Report
 - Test Summary Report
+- Screenshots / Evidence
+- Bug Reproduction Videos
 
 ## Skills demonstrated:
 
