@@ -153,7 +153,7 @@ Manual testing of a banking application covering user registration, login, accou
 
 ---
 
-#🔌 API Testing Projects
+# 🔌 API Testing Projects
 
 Practical API testing projects focused on REST API validation, request and response analysis, Postman workflows, automated assertions, negative testing, and structured API test documentation.
 
