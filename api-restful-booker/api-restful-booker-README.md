@@ -697,8 +697,8 @@ api-restful-booker/
 │   └── API_Test_Cases.md
 │
 ├── 05_Postman/
-│   ├── Collection/
-│   └── Environment/
+│   ├── Collection
+│   └── Environment
 │
 ├── 06_Test_Execution/
 │   └── API_Test_Execution.md
