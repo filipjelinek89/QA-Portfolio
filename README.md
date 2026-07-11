@@ -10,7 +10,7 @@
 - 📂 [Portfolio Projects](#-portfolio-projects)
 - 🧪 [Test Cases](#-test-cases)
 - 🐞 [Bug Reports](#-bug-reports)
-- 🔌 [API Testing Coming Soon](#api-testing)
+- 🔌 [API Testing Coming Soon](#-api-testing--postman-collection)
 - 🗄️ [SQL Practice Coming Soon](#sql-practice)
 - 🤖 [Automation (Playwright) Coming Soon](#automation-playwright)
 - 🎓 [Certificates](#-certificates)
