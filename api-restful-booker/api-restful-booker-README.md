@@ -1,184 +1,252 @@
 # 🏨 Restful Booker API Testing Project
 
-A comprehensive API testing project focused on validating a RESTful hotel booking API.
+A comprehensive REST API testing project focused on validating the functionality, reliability, data integrity, and error handling of a hotel booking API.
 
-The objective of this project is to demonstrate practical API testing skills using **Postman**, **JavaScript**, and structured QA documentation while testing authentication, booking management, CRUD operations, request and response validation, negative scenarios, boundary conditions, and end-to-end API workflows.
+The objective of this project is to demonstrate professional API testing techniques using **Postman**, **JavaScript assertions**, **JSON Schema validation**, **Newman CLI**, and **GitHub Actions**.
 
-This project is designed as a hands-on API testing portfolio project where test documentation, automated assertions, execution results, and defect reports are created based on actual API behaviour observed during testing.
-
----
-
-## 📋 Project Information
-
-**Application:** Restful Booker API
-**API Type:** REST API
-**Domain:** Hotel Booking
-**Project Type:** API Testing Portfolio Project
-**Testing Approach:** Manual API Testing and Automated API Assertions
-**API Documentation:** Restful Booker API Documentation
+The project covers the complete API testing lifecycle, including API analysis, test planning, test design, manual request execution, automated response validation, negative testing, boundary testing, CRUD operations, authentication testing, end-to-end API workflows, defect reporting, and CI/CD test execution.
 
 ---
 
-## 🎯 Project Objectives
+# 📑 In-page Navigation
 
-The main objectives of this project are to:
-
-* Analyse REST API documentation and available endpoints
-* Understand API resources, methods, parameters, headers, and request bodies
-* Design structured API test scenarios and test cases
-* Validate HTTP methods including GET, POST, PUT, PATCH, and DELETE
-* Test authentication and protected API operations
-* Validate HTTP status codes and response behaviour
-* Verify JSON response data and data types
-* Validate response headers and Content-Type
-* Perform positive and negative API testing
-* Apply boundary value analysis to API input data
-* Test invalid, missing, null, and malformed request data
-* Use Postman environment variables for reusable test data
-* Extract dynamic values from API responses
-* Chain API requests using dynamically generated data
-* Create automated API assertions using JavaScript
-* Perform JSON Schema validation
-* Execute API collections from the command line using Newman
-* Integrate automated API test execution into a CI/CD workflow
-* Document actual test execution results and identified defects
+* [1. Project Information](#1-project-information)
+* [2. Project Objectives](#2-project-objectives)
+* [3. Application Under Test](#3-application-under-test)
+* [4. Testing Scope](#4-testing-scope)
+* [5. API Operations Covered](#5-api-operations-covered)
+* [6. Testing Types](#6-testing-types)
+* [7. Tools and Technologies](#7-tools-and-technologies)
+* [8. Project Structure](#8-project-structure)
+* [9. API Test Workflow](#9-api-test-workflow)
+* [10. Automated API Validation](#10-automated-api-validation)
+* [11. Project Documentation Navigation](#11-project-documentation-navigation)
+* [12. Test Execution Status](#12-test-execution-status)
+* [13. Skills Demonstrated](#13-skills-demonstrated)
+* [14. Project Status](#14-project-status)
+* [15. Author](#15-author)
 
 ---
 
-## 🧪 Testing Scope
+# 1. Project Information
 
-The project focuses on the following API testing areas:
+| Item                    | Details                            |
+| ----------------------- | ---------------------------------- |
+| **Project Name**        | Restful Booker API Testing Project |
+| **Application**         | Restful Booker                     |
+| **Project Type**        | REST API Testing                   |
+| **Testing Approach**    | Manual and Automated API Testing   |
+| **API Architecture**    | REST                               |
+| **Data Format**         | JSON                               |
+| **Primary Tool**        | Postman                            |
+| **Automation Language** | JavaScript                         |
+| **CLI Test Runner**     | Newman                             |
+| **CI/CD Platform**      | GitHub Actions                     |
+| **Repository**          | api-restful-booker                 |
+| **Project Status**      | In Progress                        |
 
-### Functional API Testing
+---
 
-Validation of documented API functionality and expected endpoint behaviour.
+# 2. Project Objectives
 
-### CRUD Testing
+The main objective of this project is to demonstrate practical REST API testing skills through structured analysis, test design, execution, automation, and reporting.
 
-Testing the complete booking resource lifecycle:
+The project focuses on:
 
-* Create a booking
-* Retrieve a booking
-* Update a complete booking
-* Partially update a booking
-* Delete a booking
-* Verify the deleted resource
+* Understanding REST API architecture and HTTP communication
+* Analysing API documentation and endpoint behaviour
+* Designing API test scenarios and detailed test cases
+* Testing CRUD operations
+* Validating authentication and authorization behaviour
+* Testing request headers, parameters, and JSON payloads
+* Validating HTTP status codes
+* Validating response bodies and returned data
+* Performing positive and negative API testing
+* Applying Boundary Value Analysis
+* Applying Equivalence Partitioning
+* Testing invalid and malformed requests
+* Creating automated Postman assertions using JavaScript
+* Using dynamic variables and request chaining
+* Validating API responses against JSON Schemas
+* Executing automated collections using Newman CLI
+* Integrating API test execution into GitHub Actions
+* Reporting actual defects discovered during testing
+* Maintaining structured QA documentation and test evidence
 
-### Authentication Testing
+The project is designed to simulate the responsibilities of a **Junior QA Engineer performing API testing on a REST-based backend system**.
 
-Validation of authentication behaviour including:
+---
 
-* Valid credentials
-* Invalid username
-* Invalid password
-* Empty credentials
-* Missing authentication data
-* Invalid authentication token
-* Missing authentication token
-* Protected endpoint access
+# 3. Application Under Test
 
-### Positive Testing
+**Restful Booker** is a REST API designed for API testing practice.
 
-Validation of API behaviour using valid requests and supported input data.
+The API provides hotel booking functionality and supports authentication and booking management operations.
 
-### Negative Testing
+The main API resources covered by this project are:
 
-Validation of API behaviour using:
+* Health Check
+* Authentication
+* Booking Retrieval
+* Booking Creation
+* Full Booking Update
+* Partial Booking Update
+* Booking Deletion
 
-* Invalid values
-* Missing fields
-* Null values
-* Empty values
-* Incorrect data types
-* Malformed JSON
-* Invalid resource identifiers
-* Unsupported request data
+The API communicates primarily using JSON request and response payloads.
 
-### Boundary Value Testing
-
-Testing input values at and around identified boundaries, including:
-
-* Numeric values
-* String lengths
-* Date values
-* Large input values
-* Zero and negative values
-
-### Response Validation
-
-Validation of:
-
-* HTTP status codes
-* Response body
-* JSON structure
-* Response values
-* Data types
-* Response headers
-* Content-Type
-* Response time
-
-### JSON Schema Validation
-
-Validation of API responses against defined JSON Schemas to verify the expected response structure and data types.
-
-### End-to-End API Workflow Testing
-
-Validation of complete API workflows using chained requests and dynamically stored variables.
-
-Example workflow:
+### Base URL
 
 ```text
-Authenticate
-    ↓
-Create Booking
-    ↓
-Extract Booking ID
-    ↓
-Retrieve Booking
-    ↓
-Update Booking
-    ↓
-Partially Update Booking
-    ↓
-Delete Booking
-    ↓
-Verify Booking Deletion
+https://restful-booker.herokuapp.com
+```
+
+### Main Resources
+
+```text
+/ping
+/auth
+/booking
+/booking/{id}
 ```
 
 ---
 
-## 🔗 API Methods Covered
+# 4. Testing Scope
 
-| HTTP Method | Purpose                               |
-| ----------- | ------------------------------------- |
-| GET         | Retrieve API resources                |
-| POST        | Create resources and authenticate     |
-| PUT         | Fully update an existing resource     |
-| PATCH       | Partially update an existing resource |
-| DELETE      | Remove an existing resource           |
+The project covers the following API areas:
+
+### Health Check
+
+Validation of API availability and health check behaviour.
+
+### Authentication
+
+Validation of token creation using valid and invalid authentication data.
+
+### Booking Retrieval
+
+Testing booking ID retrieval, individual booking retrieval, and query parameter filtering.
+
+### Booking Creation
+
+Testing valid and invalid booking creation requests.
+
+### Full Booking Update
+
+Testing complete booking resource updates using the PUT HTTP method.
+
+### Partial Booking Update
+
+Testing individual and multiple field updates using the PATCH HTTP method.
+
+### Booking Deletion
+
+Testing booking deletion and post-deletion resource validation.
+
+### Negative Testing
+
+Testing invalid requests, unsupported data, malformed payloads, missing fields, and invalid authentication.
+
+### Boundary Testing
+
+Testing numerical limits, string lengths, date values, and other input boundaries.
+
+### End-to-End API Workflows
+
+Testing complete booking lifecycles using dynamically generated booking IDs and authentication tokens.
 
 ---
 
-## 🛠️ Tools and Technologies
+# 5. API Operations Covered
 
-| Tool / Technology | Purpose                                        |
-| ----------------- | ---------------------------------------------- |
-| Postman           | API request execution and test automation      |
-| JavaScript        | Automated API assertions and dynamic scripting |
-| JSON              | Request and response data validation           |
-| JSON Schema       | API response structure validation              |
-| Newman            | Command-line Postman collection execution      |
-| GitHub            | Version control and project documentation      |
-| GitHub Actions    | Automated API test execution in CI/CD          |
+The following HTTP methods are included in the project:
+
+| HTTP Method | Purpose                                       |
+| ----------- | --------------------------------------------- |
+| **GET**     | Retrieve API resources and booking data       |
+| **POST**    | Create authentication tokens and new bookings |
+| **PUT**     | Fully update an existing booking              |
+| **PATCH**   | Partially update an existing booking          |
+| **DELETE**  | Delete an existing booking                    |
+
+The project also validates:
+
+* Base URLs
+* API endpoints
+* Path parameters
+* Query parameters
+* Request headers
+* Content-Type
+* Accept headers
+* Authentication tokens
+* Cookies
+* Request bodies
+* Response bodies
+* HTTP status codes
+* Response times
+* JSON data types
 
 ---
 
-## 📁 Project Structure
+# 6. Testing Types
+
+The following testing techniques and API testing approaches are used:
+
+* Functional API Testing
+* REST API Testing
+* CRUD Testing
+* Authentication Testing
+* Authorization Testing
+* Positive Testing
+* Negative Testing
+* Boundary Value Analysis
+* Equivalence Partitioning
+* Data Validation
+* Response Body Validation
+* HTTP Status Code Validation
+* Header Validation
+* Content-Type Validation
+* Query Parameter Testing
+* Path Parameter Testing
+* JSON Payload Validation
+* JSON Schema Validation
+* Data Type Validation
+* Error Handling Validation
+* Basic Response Time Validation
+* Request Chaining
+* Dynamic Variable Testing
+* End-to-End API Workflow Testing
+* Automated API Testing
+* Regression Test Execution
+* CI/CD API Test Execution
+
+---
+
+# 7. Tools and Technologies
+
+| Tool / Technology  | Purpose                                       |
+| ------------------ | --------------------------------------------- |
+| **Postman**        | API request execution and test automation     |
+| **JavaScript**     | Automated Postman assertions and scripting    |
+| **JSON**           | API request and response data                 |
+| **JSON Schema**    | API response structure validation             |
+| **Newman**         | Command-line Postman collection execution     |
+| **Node.js / npm**  | Newman installation and execution environment |
+| **GitHub**         | Version control and project documentation     |
+| **GitHub Actions** | Automated CI/CD API test execution            |
+| **Markdown**       | QA documentation                              |
+| **REST**           | API architecture under test                   |
+| **HTTP / HTTPS**   | Client-server communication                   |
+
+---
+
+# 8. Project Structure
 
 ```text
 api-restful-booker/
 │
-├── README.md
+├── api-restful-booker-README.md
 │
 ├── 01_Project_Documentation/
 │   ├── API_Test_Plan.md
@@ -186,7 +254,8 @@ api-restful-booker/
 │
 ├── 02_API_Analysis/
 │   ├── API_Requirements_Analysis.md
-│   └── Endpoint_Inventory.md
+│   ├── Endpoint_Inventory.md
+│   └── HTTP_Status_Code_Analysis.md
 │
 ├── 03_Test_Scenarios/
 │   └── API_Test_Scenarios.md
@@ -219,58 +288,92 @@ api-restful-booker/
 └── 11_CI_CD/
 ```
 
----
-
-## 🌐 API Endpoints
-
-The project covers the main Restful Booker API resources.
-
-| Resource       | Method | Endpoint        | Purpose                          |
-| -------------- | ------ | --------------- | -------------------------------- |
-| Health Check   | GET    | `/ping`         | Verify API availability          |
-| Authentication | POST   | `/auth`         | Generate an authentication token |
-| Booking        | GET    | `/booking`      | Retrieve booking IDs             |
-| Booking        | GET    | `/booking/{id}` | Retrieve a booking by ID         |
-| Booking        | POST   | `/booking`      | Create a new booking             |
-| Booking        | PUT    | `/booking/{id}` | Fully update a booking           |
-| Booking        | PATCH  | `/booking/{id}` | Partially update a booking       |
-| Booking        | DELETE | `/booking/{id}` | Delete a booking                 |
+The project structure separates API analysis, test design, Postman assets, execution results, defect reports, schemas, automated execution, test evidence, and CI/CD configuration.
 
 ---
 
-## 🔐 Authentication
+# 9. API Test Workflow
 
-The API provides token-based authentication for protected booking operations.
-
-The authentication workflow tested in this project is:
+The project follows a structured API testing workflow:
 
 ```text
-Send Authentication Request
+API Documentation Review
         ↓
-Receive Authentication Token
+API Requirements Analysis
         ↓
-Extract Token from JSON Response
+Endpoint Identification
         ↓
-Store Token in Postman Environment
+HTTP Method Analysis
         ↓
-Reuse Token in Protected Requests
+Test Scenario Design
+        ↓
+Test Case Design
+        ↓
+Postman Request Creation
+        ↓
+Manual API Execution
+        ↓
+Response Analysis
+        ↓
+JavaScript Assertion Creation
+        ↓
+Negative and Boundary Testing
+        ↓
+Defect Identification
+        ↓
+Bug Reporting
+        ↓
+JSON Schema Validation
+        ↓
+End-to-End Workflow Testing
+        ↓
+Newman CLI Execution
+        ↓
+GitHub Actions Integration
+        ↓
+Final Test Execution Summary
 ```
 
-The authentication token is dynamically extracted using a Postman post-response script and stored as an environment variable.
+Actual test results are documented only after requests are executed against the API.
 
-Example variable:
-
-```text
-{{authToken}}
-```
+Defects are reported based on reproducible API behaviour discovered during test execution.
 
 ---
 
-## 🔄 Dynamic Variables and Request Chaining
+# 10. Automated API Validation
 
-Postman environment variables are used to store and reuse dynamic API data.
+Postman test scripts are used to automatically validate API responses.
 
-Planned variables include:
+The automated validation scope includes:
+
+* HTTP status codes
+* Response time
+* Response headers
+* Content-Type
+* JSON response structure
+* Required response properties
+* Response values
+* JSON data types
+* Authentication token presence
+* Booking ID generation
+* Request and response data consistency
+* JSON Schema compliance
+* Deleted resource behaviour
+
+Example validation areas:
+
+```text
+Status Code Validation
+Response Time Validation
+Content-Type Validation
+Response Body Validation
+Data Type Validation
+Required Property Validation
+Dynamic Variable Extraction
+JSON Schema Validation
+```
+
+Dynamic Postman variables are used to store runtime data such as:
 
 ```text
 {{baseUrl}}
@@ -280,227 +383,253 @@ Planned variables include:
 {{lastname}}
 ```
 
-For example, after creating a booking:
+This allows API requests to be dynamically chained into complete end-to-end workflows.
+
+Example workflow:
 
 ```text
-POST /booking
+Create Authentication Token
         ↓
-API returns bookingId
+Create Booking
         ↓
-JavaScript extracts bookingId
+Extract Booking ID
         ↓
-bookingId stored as environment variable
+Retrieve Created Booking
         ↓
-GET /booking/{{bookingId}}
+Update Booking
+        ↓
+Partially Update Booking
+        ↓
+Delete Booking
+        ↓
+Verify Booking Is Deleted
 ```
-
-This allows API requests to be dynamically chained without manually copying resource identifiers between requests.
 
 ---
 
-## 🤖 Automated API Assertions
+# 11. Project Documentation Navigation
 
-Postman JavaScript test scripts are used to automatically validate API responses.
+The following documentation files provide detailed information about each stage of the API testing process.
 
-The project covers assertions for:
+## 01 — Project Documentation
 
+* [API Test Plan](01_Project_Documentation/API_Test_Plan.md)
+* [API Test Strategy](01_Project_Documentation/API_Test_Strategy.md)
+
+## 02 — API Analysis
+
+* [API Requirements Analysis](02_API_Analysis/API_Requirements_Analysis.md)
+* [Endpoint Inventory](02_API_Analysis/Endpoint_Inventory.md)
+* [HTTP Status Code Analysis](02_API_Analysis/HTTP_Status_Code_Analysis.md)
+
+## 03 — Test Scenarios
+
+* [API Test Scenarios](03_Test_Scenarios/API_Test_Scenarios.md)
+
+## 04 — Test Cases
+
+* [API Test Cases](04_Test_Cases/API_Test_Cases.md)
+
+## 05 — Postman
+
+The Postman directory contains exported API testing assets.
+
+* Postman Collection
+* Postman Environment
+
+```text
+05_Postman/
+├── Collection/
+└── Environment/
+```
+
+## 06 — Test Execution
+
+* [API Test Execution](06_Test_Execution/API_Test_Execution.md)
+
+## 07 — Bug Reports
+
+The Bug Reports directory contains defects identified during actual API test execution.
+
+```text
+07_Bug_Reports/
+```
+
+Bug reports are created only for reproducible defects discovered during testing.
+
+## 08 — JSON Schema
+
+The JSON Schema directory contains schemas used for automated API response structure validation.
+
+```text
+08_JSON_Schema/
+```
+
+## 09 — Newman
+
+The Newman directory contains command-line API test execution results and reports.
+
+```text
+09_Newman/
+```
+
+## 10 — Test Evidence
+
+The Test Evidence directory contains execution evidence organised by API operation and testing area.
+
+```text
+10_Test_Evidence/
+├── Authentication/
+├── GET/
+├── POST/
+├── PUT/
+├── PATCH/
+├── DELETE/
+└── Negative_Testing/
+```
+
+## 11 — CI/CD
+
+The CI/CD directory contains configuration and documentation related to automated API test execution using GitHub Actions.
+
+```text
+11_CI_CD/
+```
+
+---
+
+# 12. Test Execution Status
+
+> 🚧 **API testing is currently in progress.**
+
+Test execution statistics will be updated after the planned API test cases have been designed and executed.
+
+| Metric              | Result |
+| ------------------- | ------ |
+| Total Test Cases    | TBD    |
+| Executed Test Cases | TBD    |
+| Passed              | TBD    |
+| Failed              | TBD    |
+| Blocked             | TBD    |
+| Not Executed        | TBD    |
+
+### Defect Status
+
+| Metric                  | Result |
+| ----------------------- | ------ |
+| Total Defects Reported  | TBD    |
+| Critical Defects        | TBD    |
+| High Severity Defects   | TBD    |
+| Medium Severity Defects | TBD    |
+| Low Severity Defects    | TBD    |
+
+No artificial or fictional defects are included in the project.
+
+All reported defects must be based on actual, reproducible API behaviour observed during test execution.
+
+---
+
+# 13. Skills Demonstrated
+
+This project demonstrates practical knowledge of:
+
+### API Testing
+
+* REST API architecture
+* HTTP methods
+* API endpoints
+* Request and response structure
+* JSON payloads
 * HTTP status codes
-* Response time
-* Response headers
-* Content-Type
-* JSON response structure
-* Response values
-* Data types
-* Required properties
-* Authentication tokens
-* Dynamically generated booking IDs
-* Request and response data consistency
-* JSON Schema compliance
-
-Example assertion:
-
-```javascript
-pm.test("Status code is 200", function () {
-    pm.response.to.have.status(200);
-});
-```
-
-Example data type validation:
-
-```javascript
-pm.test("Total price is a number", function () {
-    const response = pm.response.json();
-
-    pm.expect(response.totalprice).to.be.a("number");
-});
-```
-
----
-
-## 📐 Test Design Techniques
-
-The following test design techniques are applied during API test design:
-
-* Equivalence Partitioning
-* Boundary Value Analysis
-* Positive Testing
-* Negative Testing
-* Error Guessing
-* State Transition Testing
-* End-to-End Workflow Testing
-
-Test cases are created based on API documentation, endpoint behaviour, input parameters, authentication requirements, and actual observations during test execution.
-
----
-
-## ⚠️ Defect Reporting
-
-Defects identified during API testing are documented based on actual reproducible API behaviour.
-
-Each defect report may include:
-
-* Bug ID
-* Title
-* Severity
-* Priority
-* Environment
-* Related endpoint
-* HTTP method
-* Preconditions
-* Request URL
 * Request headers
-* Request body
-* Steps to reproduce
-* Expected result
-* Actual result
-* HTTP status code
-* Response body
-* Reproducibility
-* Test evidence
+* Path parameters
+* Query parameters
 
-No fictional defects are intentionally added to the project.
+### Test Design
 
-Differences between documented API behaviour and actual observed behaviour may also be documented as API documentation inconsistencies where applicable.
+* Test scenario creation
+* Test case design
+* Positive testing
+* Negative testing
+* Boundary Value Analysis
+* Equivalence Partitioning
+* Error handling validation
 
----
+### Postman
 
-## 📊 Test Execution
-
-API test execution results will be documented after the designed test cases are executed.
-
-The execution report will include:
-
-* Total test cases
-* Executed test cases
-* Passed test cases
-* Failed test cases
-* Blocked test cases
-* Pass rate
-* Fail rate
-* Defect references
-
-All execution results are based on actual API test runs.
-
----
-
-## 🖥️ Newman CLI Execution
-
-The Postman collection will be executed from the command line using Newman.
-
-This allows the API test suite to run without manually executing requests through the Postman graphical interface.
-
-The Newman execution will include:
-
-* Postman collection execution
+* Collection organisation
 * Environment configuration
-* Automated assertion execution
-* Command-line test results
-* Test execution reporting
+* Environment variables
+* Dynamic variables
+* JavaScript test scripts
+* Automated assertions
+* Request chaining
+* Token extraction
+* Booking ID extraction
+* Response validation
+
+### API Automation
+
+* JavaScript assertions
+* JSON Schema validation
+* Automated collection execution
+* Newman CLI
+* Regression execution
+
+### CI/CD
+
+* GitHub Actions
+* Automated API test execution
+* Pipeline-based test validation
+
+### QA Documentation
+
+* API Test Plan
+* API Test Strategy
+* API Requirements Analysis
+* Endpoint Inventory
+* HTTP Status Code Analysis
+* Test Scenarios
+* Test Cases
+* Test Execution
+* Bug Reports
+* Test Evidence
 
 ---
 
-## 🔁 CI/CD Integration
+# 14. Project Status
 
-Automated API test execution will be integrated with GitHub Actions.
-
-The planned workflow is:
-
-```text
-Code Push / Workflow Trigger
-            ↓
-GitHub Actions Starts
-            ↓
-Node.js Environment Setup
-            ↓
-Newman Installation
-            ↓
-Postman Collection Execution
-            ↓
-Automated Assertions Executed
-            ↓
-Workflow Pass / Fail Result
-```
-
-This demonstrates basic CI/CD integration of automated API tests.
-
----
-
-## 📸 Test Evidence
-
-Test evidence is organised by API operation and testing area.
-
-Evidence may include:
-
-* Postman request screenshots
-* API response screenshots
-* Authentication results
-* Positive test results
-* Negative test results
-* Validation failures
-* Error responses
-* Schema validation results
-* Newman execution results
-* CI/CD execution results
-
-Evidence is collected from actual test execution.
-
----
-
-## 🚧 Project Status
-
-**Status:** In Progress
+🚧 **In Progress**
 
 The project is being developed and executed incrementally.
 
-Current and planned project phases:
+Current planned project phases:
 
-1. Project setup and documentation
-2. API documentation analysis
-3. Endpoint inventory
-4. Test scenario design
-5. API test case design
-6. Postman collection development
-7. Functional and CRUD testing
-8. Authentication testing
-9. Negative and boundary testing
-10. Automated Postman assertions
-11. JSON Schema validation
-12. End-to-end workflow testing
-13. Test execution documentation
-14. Defect reporting
-15. Newman CLI execution
-16. GitHub Actions CI/CD integration
-17. Final test summary and project review
+```text
+Phase 1  — Project Setup
+Phase 2  — API Analysis
+Phase 3  — Test Planning
+Phase 4  — Test Scenario Design
+Phase 5  — Test Case Design
+Phase 6  — Postman Request Creation
+Phase 7  — Functional API Testing
+Phase 8  — Negative and Boundary Testing
+Phase 9  — Automated Postman Assertions
+Phase 10 — JSON Schema Validation
+Phase 11 — End-to-End API Workflows
+Phase 12 — Newman CLI Execution
+Phase 13 — GitHub Actions Integration
+Phase 14 — Final Test Execution Summary
+```
 
-The repository will be updated as testing progresses.
+The repository will be updated as API testing progresses and actual test execution results become available.
 
 ---
 
-## 👤 Author
+# 15. Author
 
 **Filip Jelinek**
 
-QA Tester focused on manual and API testing, with practical portfolio experience in structured test documentation, test case design, defect reporting, API validation, and QA processes.
+Junior QA / Manual Software Tester focused on practical software testing, API testing, structured QA documentation, and continuous development of test automation skills.
 
-This project is part of my QA testing portfolio and demonstrates my ongoing development in API testing and test automation.
-
+This project is part of my QA portfolio and demonstrates my practical approach to REST API testing, test design, defect investigation, and automated API validation.
