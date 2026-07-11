@@ -194,7 +194,7 @@ An API testing portfolio project focused on designing and executing a structured
 
 ➡️ **[View Restful Booker API Testing Project](https://github.com/filipjelinek89/QA-Portfolio/blob/main/api-restful-booker/api-restful-booker-README.md)** *(In progress)*
 
-## 💾 SQL Practice *(In progress)*
+## 💾 SQL Practice *(Planned)*
 
 A collection of SQL exercises demonstrating database querying and data validation.
 
@@ -206,9 +206,9 @@ A collection of SQL exercises demonstrating database querying and data validatio
 - Aggregate Functions
 - Filtering & Sorting
 
-🔗 **View SQL Practice** *(Coming Soon)*
+🔗 **View SQL Practice** *(Planned)*
 
-## 🤖 Playwright Automation
+## 🤖 Playwright Automation *(Planned)*
 
 Automation testing exercises created while learning Playwright.
 
@@ -220,7 +220,7 @@ Automation testing exercises created while learning Playwright.
 - Page Object Model (later)
 - Test Execution
 
-🔗 **View Playwright Automation** *(Coming Soon)*
+🔗 **View Playwright Automation** *(Planned)*
 
 ---
 
