@@ -4,7 +4,7 @@
 
 **Priority:** High
 
-**Severity:** High
+**Severity:** Critical
 
 **Type:** Functional API Test
 
@@ -12,15 +12,15 @@
 
 ## Objective
 
-Verify that the API successfully processes a valid GET request and returns the expected HTTP status code and response payload.
+Verify that a valid user can successfully authenticate using the ParaBank login endpoint and that the server returns a successful response with an authenticated session.
 
 ---
 
 ## Preconditions
 
-- The ParaBank application is accessible.
-- The required API endpoint is available.
-- Valid authentication is provided (if required).
+- ParaBank application is available.
+- Valid user credentials exist.
+- Postman is installed.
 
 ---
 
@@ -28,10 +28,9 @@ Verify that the API successfully processes a valid GET request and returns the e
 
 | Field | Value |
 |------|------|
-| HTTP Method | GET |
-| Endpoint | *To be identified during API analysis* |
-| Headers | *To be completed* |
-| Authentication | *To be completed* |
+| HTTP Method | POST |
+| Endpoint | *To be identified* |
+| Authentication | None (credentials sent in request) |
 
 ---
 
@@ -40,19 +39,20 @@ Verify that the API successfully processes a valid GET request and returns the e
 | Step | Action |
 |------|--------|
 | 1 | Open Postman. |
-| 2 | Configure the GET request using the identified endpoint. |
-| 3 | Add required headers or authentication if applicable. |
-| 4 | Send the request. |
-| 5 | Review the response. |
+| 2 | Create a POST request. |
+| 3 | Enter the login endpoint URL. |
+| 4 | Enter a valid username and password. |
+| 5 | Send the request. |
+| 6 | Verify the response. |
 
 ---
 
 ## Expected Result
 
-- HTTP response status is **200 OK**.
-- Response is returned successfully.
-- Response body matches the expected data structure.
-- No unexpected errors are returned.
+- HTTP Status **200 OK**
+- Login succeeds.
+- Session cookie (JSESSIONID) is returned.
+- No errors are displayed.
 
 ---
 
@@ -64,23 +64,4 @@ Verify that the API successfully processes a valid GET request and returns the e
 
 ## Status
 
-**Not Executed**
-
----
-
-## Notes
-
-Verify:
-
-- HTTP status code
-- Response time
-- Response headers
-- Response body format
-- JSON validity
-- Returned data consistency
-
----
-
-⬅️ Back to API Testing
-
-[05_API_Testing.md](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API_Testing.md)
+Not Executed
