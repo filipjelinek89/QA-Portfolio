@@ -110,16 +110,16 @@ This approach allowed the API endpoints to be identified from actual application
 
 | API ID | Scenario | Type | Tool | Status |
 |--------|----------|------|------|--------|
-| [API001](05_API_Test_Scenarios/API001%20%E2%80%93%20Discover%20Customer%20Accounts%20API%20Endpoint.md) | Discover Customer Accounts API Endpoint | API Discovery | Chrome DevTools | PASS |
-| [API002](05_API_Test_Scenarios/API002%20%E2%80%93%20Verify%20Customer%20Accounts%20GET%20Request.md) | Verify Customer Accounts GET Request | Functional | Postman | PASS |
-| [API003](05_API_Test_Scenarios/API003%20%E2%80%93%20Verify%20Invalid%20Authentication.md) | Verify Invalid Authentication | Negative | Postman | PASS |
-| [API004](05_API_Test_Scenarios/API004%20%E2%80%93%20Verify%20Customer%20Information%20Endpoint.md) | Verify Customer Information Endpoint | Functional | Postman | PASS |
-| [API005](05_API_Test_Scenarios/API005%20%E2%80%93%20Verify%20Account%20Details%20Endpoint.md) | Verify Account Details Endpoint | Functional | Postman | Tested |
-| [API006](05_API_Test_Scenarios/API006%20%E2%80%93%20Verify%20Open%20New%20Account%20Request.md) | Verify Open New Account Request | Functional | DevTools / Postman | Tested |
-| [API007](05_API_Test_Scenarios/API007%20%E2%80%93%20Verify%20Transfer%20Funds%20Request.md) | Verify Transfer Funds Request | Functional | DevTools / Postman | Tested |
-| [API008](05_API_Test_Scenarios/API008%20%E2%80%93%20Verify%20Bill%20Payment%20Request.md) | Verify Bill Payment Request | Functional | DevTools / Postman | Tested |
-| [API009](05_API_Test_Scenarios/API009%20%E2%80%93%20Verify%20Loan%20Request%20Endpoint.md) | Verify Loan Request Endpoint | Functional | Postman | PASS |
-| [API010](05_API_Test_Scenarios/API010%20%E2%80%93%20Verify%20Invalid%20Customer%20ID%20Handling.md) | Verify Invalid Customer ID Handling | Negative | Postman | PASS |
+| [API001](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API001%20%E2%80%93%20Discover%20Customer%20Accounts%20API%20Endpoint.md) | Discover Customer Accounts API Endpoint | API Discovery | Chrome DevTools | PASS |
+| [API002](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API002%20%E2%80%93%20Verify%20Customer%20Accounts%20GET%20Request.md) | Verify Customer Accounts GET Request | Functional | Postman | PASS |
+| [API003](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API003%20%E2%80%93%20Verify%20Invalid%20Authentication.md) | Verify Invalid Authentication | Negative | Postman | PASS |
+| [API004](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API004%20%E2%80%93%20Verify%20Customer%20Information%20Endpoint.md) | Verify Customer Information Endpoint | Functional | Postman | PASS |
+| [API005](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API005%20%E2%80%93%20Verify%20Account%20Details%20Endpoint.md) | Verify Account Details Endpoint | Functional | Postman | Tested |
+| [API006](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API006%20%E2%80%93%20Verify%20Open%20New%20Account%20Request.md) | Verify Open New Account Request | Functional | DevTools / Postman | Tested |
+| [API007](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API007%20%E2%80%93%20Verify%20Transfer%20Funds%20Request.md) | Verify Transfer Funds Request | Functional | DevTools / Postman | Tested |
+| [API008](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API008%20%E2%80%93%20Verify%20Bill%20Payment%20Request.md) | Verify Bill Payment Request | Functional | DevTools / Postman | Tested |
+| [API009](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API009%20%E2%80%93%20Verify%20Loan%20Request%20Endpoint.md) | Verify Loan Request Endpoint | Functional | Postman | PASS |
+| [API010](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API__Test_Scenarios/API010%20%E2%80%93%20Verify%20Invalid%20Customer%20ID%20Handling.md) | Verify Invalid Customer ID Handling | Negative | Postman | PASS |
 
 ---
 
