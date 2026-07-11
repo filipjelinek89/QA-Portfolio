@@ -48,7 +48,7 @@ I am currently seeking a Junior Manual QA or Entry-Level Software QA position wh
 - Smoke Testing
 - User Interface (UI) Testing
 - Cross-Browser Testing
-- Mobile Testing Android
+- Basic Mobile Testing (Android)
 
 ## Test Documentation
 - Test Planning
