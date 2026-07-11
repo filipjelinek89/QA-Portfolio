@@ -1,10 +1,10 @@
-# API001 – Verify Successful Login Request
+# API001 – Verify Successful GET Request
 
 **Module:** API Testing
 
 **Priority:** High
 
-**Severity:** Critical
+**Severity:** High
 
 **Type:** Functional API Test
 
@@ -12,15 +12,15 @@
 
 ## Objective
 
-Verify that a valid user can successfully authenticate using the ParaBank login endpoint and that the server returns a successful response with an authenticated session.
+Verify that the customer accounts endpoint successfully processes a valid GET request and returns the expected account information.
 
 ---
 
 ## Preconditions
 
-- ParaBank application is available.
-- Valid user credentials exist.
-- Postman is installed.
+- ParaBank application is running.
+- User is authenticated.
+- Customer account exists.
 
 ---
 
@@ -28,9 +28,10 @@ Verify that a valid user can successfully authenticate using the ParaBank login 
 
 | Field | Value |
 |------|------|
-| HTTP Method | POST |
-| Endpoint | *To be identified* |
-| Authentication | None (credentials sent in request) |
+| HTTP Method | GET |
+| Endpoint | https://parabank.parasoft.com/parabank/services_proxy/bank/customers/13655/accounts |
+| Headers | Accept: */* |
+| Authentication | Session Cookie (JSESSIONID) |
 
 ---
 
@@ -38,30 +39,47 @@ Verify that a valid user can successfully authenticate using the ParaBank login 
 
 | Step | Action |
 |------|--------|
-| 1 | Open Postman. |
-| 2 | Create a POST request. |
-| 3 | Enter the login endpoint URL. |
-| 4 | Enter a valid username and password. |
-| 5 | Send the request. |
-| 6 | Verify the response. |
+| 1 | Open the ParaBank application. |
+| 2 | Log in with valid credentials. |
+| 3 | Open Chrome Developer Tools (F12). |
+| 4 | Navigate to the Network tab and filter by Fetch/XHR. |
+| 5 | Open **Accounts Overview**. |
+| 6 | Locate the GET request to the customer accounts endpoint. |
+| 7 | Verify the request and response. |
 
 ---
 
 ## Expected Result
 
-- HTTP Status **200 OK**
-- Login succeeds.
-- Session cookie (JSESSIONID) is returned.
-- No errors are displayed.
+- HTTP Status Code is **200 OK**.
+- Response is returned successfully.
+- Response body contains valid JSON.
+- Customer account information is displayed.
+- No unexpected errors are returned.
 
 ---
 
 ## Actual Result
 
-*To be completed during execution.*
+The request returned **HTTP 200 OK**.
+
+The response contained valid JSON with the customer's account information.
+
+No errors were observed during execution.
 
 ---
 
 ## Status
 
-Not Executed
+**PASS**
+
+---
+
+## Notes
+
+Verified:
+
+- HTTP Status Code: 200 OK
+- Response Format: JSON
+- Content-Type: application/json
+- Endpoint responded successfully.
