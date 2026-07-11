@@ -151,6 +151,8 @@ Manual testing of a banking application covering user registration, login, accou
 
 ➡️ **[View Project](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/qa-parabank-README.md)**
 
+---
+
 #🔌 API Testing Projects
 
 Practical API testing projects focused on REST API validation, request and response analysis, Postman workflows, automated assertions, negative testing, and structured API test documentation.
@@ -165,6 +167,7 @@ Practical API testing projects focused on REST API validation, request and respo
 - Response Validation
 
 ➡️ **[View API Testing ParaBank](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API_Testing.md)** 
+
 
 ## 🏨 API Testing – Restful Booker
 
@@ -202,6 +205,8 @@ An API testing portfolio project focused on designing and executing a structured
 
 ➡️ **[View Restful Booker API Testing Project](https://github.com/filipjelinek89/QA-Portfolio/blob/main/api-restful-booker/api-restful-booker-README.md)** *(In progress)*
 
+---
+
 ## 💾 SQL Practice *(Planned)*
 
 A collection of SQL exercises demonstrating database querying and data validation.
@@ -215,6 +220,8 @@ A collection of SQL exercises demonstrating database querying and data validatio
 - Filtering & Sorting
 
 🔗 **View SQL Practice** *(Planned)*
+
+---
 
 ## 🤖 Playwright Automation *(Planned)*
 
@@ -247,7 +254,6 @@ This section contains examples of structured manual test cases created for diffe
 
 🔗 **[View Test Cases](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)**
 
----
 
 #### 🏦 ParaBank
 - User Registration
@@ -262,6 +268,7 @@ This section contains examples of structured manual test cases created for diffe
 
 🔗 **[View Test Cases](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases.md)**
 
+---
 
 # 🐞 Bug Reports
 
@@ -288,6 +295,8 @@ This section contains bug reports created during manual functional testing of th
 - Bill Payment
 
 🔗 **[View Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/04_Bug_Reports.md)**
+
+---
 
 ## 🎓 Certificates
 
