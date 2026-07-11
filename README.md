@@ -146,7 +146,7 @@ A collection of API requests, environments, and automated checks created while l
 - Environment Variables
 - Response Validation
 
-➡️ **View API Testing ParaBank (https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/qa-parabank-README.md)** 
+🔗 **[View API Testing ParaBank](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/qa-parabank-README.md)** 
 
 ## 💾 SQL Practice
 
@@ -233,7 +233,7 @@ This section contains bug reports created during manual functional testing of th
 - Transfer Funds
 - Bill Payment
 
-🔗 **[View Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/04_Bug_Reports.md)** *(Still in progress)*
+🔗 **[View Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/04_Bug_Reports.md)**
 
 ## 🎓 Certificates
 
