@@ -146,7 +146,7 @@ A collection of API requests, environments, and automated checks created while l
 - Environment Variables
 - Response Validation
 
-🔗 **[View API Testing ParaBank](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/qa-parabank-README.md)** 
+🔗 **[View API Testing ParaBank](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API_Testing.md)** 
 
 ## 💾 SQL Practice
 
