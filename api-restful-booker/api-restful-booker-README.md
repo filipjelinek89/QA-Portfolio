@@ -822,6 +822,21 @@ Test execution statistics and defect metrics will be added after the API test su
 
 ---
 
+## Progress
+
+| Endpoint | Status |
+|----------|--------|
+| GET /ping | ✅ Completed |
+| POST /auth | ⬜ Planned |
+| GET /booking | ⬜ Planned |
+| GET /booking/{id} | ⬜ Planned |
+| POST /booking | ⬜ Planned |
+| PUT /booking/{id} | ⬜ Planned |
+| PATCH /booking/{id} | ⬜ Planned |
+| DELETE /booking/{id} | ⬜ Planned |
+
+---
+
 ## Author
 
 **Filip Jelinek**
