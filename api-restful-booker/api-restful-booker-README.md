@@ -38,6 +38,7 @@ The current project stage focuses on **API analysis, test planning, test scenari
 * [18. Project Structure](#18-project-structure)
 * [19. Skills Demonstrated](#19-skills-demonstrated)
 * [20. Project Status](#20-project-status)
+* [21. Progress](#21-Progress)
 
 ---
 
@@ -822,7 +823,7 @@ Test execution statistics and defect metrics will be added after the API test su
 
 ---
 
-## Progress
+# 21. Progress
 
 | Endpoint | Status |
 |----------|--------|
