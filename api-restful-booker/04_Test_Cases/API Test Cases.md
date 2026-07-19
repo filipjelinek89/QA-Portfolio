@@ -1,14 +1,10 @@
 # API Test Cases
 
-**Project:** Restful Booker API Testing Project
-
-**Document Type:** API Test Cases
-
-**Version:** 1.0
-
-**Prepared by:** Filip Jelinek
-
-**Project Status:** Sprint 1 – Health Check
+**Project:** Restful Booker API Testing Project  
+**Document Type:** API Test Cases  
+**Version:** 2.0  
+**Prepared by:** Filip Jelinek  
+**Project Status:** Sprint 1 – Health Check (Completed)
 
 ---
 
@@ -24,13 +20,18 @@
 
 # 1. Purpose
 
-This document contains detailed API test cases created for the Restful Booker API Testing Project.
+This document contains detailed API Test Cases created for the Restful Booker API Testing Project.
 
-Test cases are implemented incrementally using a sprint-based approach.
+The project is developed incrementally using a sprint-based approach.
 
-Each test case is linked to a corresponding test scenario and provides detailed execution instructions for manual API testing.
+Each Test Case is linked to its corresponding Test Scenario and describes how the API functionality is verified using Postman.
 
-Execution results are documented separately in **API_Test_Execution.md**.
+Execution results are documented separately in:
+
+```text
+05_Test_Execution/
+└── API_Test_Execution.md
+```
 
 ---
 
@@ -38,7 +39,7 @@ Execution results are documented separately in **API_Test_Execution.md**.
 
 | Sprint | Module | Status |
 |---------|---------|--------|
-| Sprint 1 | Health Check | 🟡 In Progress |
+| Sprint 1 | Health Check | ✅ Completed |
 | Sprint 2 | Authentication | ⏳ Planned |
 | Sprint 3 | Retrieve Booking IDs | ⏳ Planned |
 | Sprint 4 | Retrieve Booking by ID | ⏳ Planned |
@@ -54,10 +55,9 @@ Execution results are documented separately in **API_Test_Execution.md**.
 
 | Test Case ID | Scenario ID | Title | Priority | Status |
 |---------------|-------------|-------|----------|--------|
-| TC-PING-001 | TS-PING-001 | Verify API Health Check endpoint responds successfully | High | ⏳ Planned |
-| TC-PING-002 | TS-PING-002 | Verify Health Check response contract | High | ⏳ Planned |
-| TC-PING-003 | TS-PING-003 | Verify unsupported HTTP methods | Medium | ⏳ Planned |
-| TC-PING-004 | TS-PING-004 | Verify Health Check response performance | Medium | ⏳ Planned |
+| TC-PING-001 | TS-PING-001 | Verify successful Health Check request (GET) | High | ✅ Completed |
+| TC-PING-002 | TS-PING-002 | Verify Health Check response headers and response body | High | ✅ Completed |
+| TC-PING-003 | TS-PING-003 | Verify unsupported HTTP methods are rejected | Medium | ✅ Completed |
 
 ---
 
@@ -65,13 +65,14 @@ Execution results are documented separately in **API_Test_Execution.md**.
 
 ---
 
-## TC-PING-001 – Verify API Health Check endpoint responds successfully
+## TC-PING-001 – Verify successful Health Check request (GET)
 
 | Field | Value |
 |------|-------|
 | Scenario ID | TS-PING-001 |
 | Module | Health Check |
 | Endpoint | GET /ping |
+| HTTP Method | GET |
 | Test Type | Positive |
 | Priority | High |
 
@@ -83,119 +84,128 @@ Execution results are documented separately in **API_Test_Execution.md**.
 
 ### Test Data
 
-```
+```http
 GET {{baseUrl}}/ping
 ```
 
 ### Test Steps
 
-1. Open the Health Check request.
+1. Open the **GET - Health Check** request.
 2. Verify the HTTP method is **GET**.
 3. Send the request.
 4. Review the response.
+5. Verify the automated Postman assertions.
 
 ### Expected Result
 
 - HTTP Status Code = **201 Created**
 - Response Body = **Created**
-- API responds successfully.
+- Content-Type contains **text/plain**
+- Response time is below the project threshold.
+- All Postman tests pass.
+
+### Related Postman Request
+
+```
+GET - Health Check
+```
 
 ---
 
-## TC-PING-002 – Verify Health Check response contract
+## TC-PING-002 – Verify Health Check response headers and response body
 
 | Field | Value |
 |------|-------|
 | Scenario ID | TS-PING-002 |
 | Module | Health Check |
 | Endpoint | GET /ping |
+| HTTP Method | GET |
 | Test Type | Contract |
 | Priority | High |
 
 ### Preconditions
 
 - API is available.
+- GET Health Check request is configured.
 
 ### Test Steps
 
-1. Send GET request to `/ping`.
-2. Review status code.
-3. Review response body.
-4. Review response headers.
+1. Execute the GET request.
+2. Verify the HTTP Status Code.
+3. Verify the Response Body.
+4. Verify the Content-Type header.
+5. Verify the response matches the documented API contract.
 
 ### Expected Result
 
-- Status code equals **201**
-- Response body equals **Created**
-- Content-Type header exists
-- Server returns valid HTTP response
+- Status Code = **201**
+- Response Body = **Created**
+- Content-Type contains **text/plain**
+- Response format matches the documented API contract.
+
+### Related Postman Request
+
+```
+GET - Health Check
+```
 
 ---
 
-## TC-PING-003 – Verify unsupported HTTP methods
+## TC-PING-003 – Verify unsupported HTTP methods are rejected
 
 | Field | Value |
 |------|-------|
 | Scenario ID | TS-PING-003 |
 | Module | Health Check |
 | Endpoint | /ping |
+| HTTP Methods | POST, PUT, PATCH, DELETE |
 | Test Type | Negative |
 | Priority | Medium |
 
 ### Preconditions
 
 - API is available.
+- Negative requests are configured.
 
 ### Test Data
 
 Execute:
 
-- POST /ping
-- PUT /ping
-- PATCH /ping
-- DELETE /ping
+```text
+POST {{baseUrl}}/ping
+
+PUT {{baseUrl}}/ping
+
+PATCH {{baseUrl}}/ping
+
+DELETE {{baseUrl}}/ping
+```
 
 ### Test Steps
 
-1. Change request method.
-2. Send request.
-3. Record response.
-4. Repeat for each unsupported method.
+1. Execute each unsupported HTTP method.
+2. Observe the server response.
+3. Verify that the request is rejected.
+4. Record the returned status code and response body.
 
 ### Expected Result
 
-- API does not process unsupported methods as a successful Health Check request.
-- Actual status codes and responses are recorded.
+- Unsupported HTTP methods are rejected.
+- The endpoint does not behave as a successful Health Check request.
+- The API returns the expected error response.
+- Results are documented in the Test Execution Report.
 
----
+### Related Postman Requests
 
-## TC-PING-004 – Verify Health Check response performance
+```text
+POST - Health Check (Negative)
 
-| Field | Value |
-|------|-------|
-| Scenario ID | TS-PING-004 |
-| Module | Health Check |
-| Endpoint | GET /ping |
-| Test Type | Performance |
-| Priority | Medium |
+PUT - Health Check (Negative)
 
-### Preconditions
+PATCH - Health Check (Negative)
 
-- Stable internet connection.
-- API available.
-
-### Test Steps
-
-1. Send GET request.
-2. Record response time.
-3. Repeat three times.
-4. Compare results.
-
-### Expected Result
-
-- Endpoint responds successfully.
-- Response time is consistent.
-- No abnormal response delays observed.
+DELETE - Health Check (Negative)
+```
 
 ---
 
@@ -203,12 +213,13 @@ Execute:
 
 | Sprint | Planned | Completed |
 |---------|---------|-----------|
-| Sprint 1 | 4 Test Cases | 0 / 4 |
+| Sprint 1 | 3 Test Cases | 3 / 3 |
 
 ---
 
-## Revision History
+# Revision History
 
-| Version | Description |
-|----------|-------------|
-| 1.0 | Initial Sprint 1 test cases |
+| Version | Date | Description |
+|----------|------|-------------|
+| 1.0 | Initial version | Sprint 1 Test Cases |
+| 2.0 | Sprint 1 completed | Updated traceability, merged performance validation into TC-PING-001, added HTTP Method, Postman mapping and completed Sprint 1 documentation |

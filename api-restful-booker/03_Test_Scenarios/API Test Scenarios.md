@@ -1,10 +1,10 @@
 # API Test Scenarios
 
-**Project:** Restful Booker API Testing Project
-**Document Type:** API Test Scenarios
-**Version:** 1.0
-**Prepared by:** Filip Jelinek
-**Project Status:** Sprint 1 In Progress
+**Project:** Restful Booker API Testing Project  
+**Document Type:** API Test Scenarios  
+**Version:** 2.0  
+**Prepared by:** Filip Jelinek  
+**Project Status:** Sprint 1 Completed
 
 ---
 
@@ -24,9 +24,14 @@ This document contains the high-level API Test Scenarios executed during the Res
 
 The project is developed incrementally using a sprint-based approach.
 
-Each sprint introduces new API functionality together with its associated test scenarios.
+Each sprint introduces a new API module together with its corresponding test scenarios.
 
-Detailed execution steps are documented separately in **API Test Cases.md**.
+Detailed execution steps are documented separately in:
+
+```
+04_Test_Cases/
+└── API_Test_Cases.md
+```
 
 ---
 
@@ -34,7 +39,7 @@ Detailed execution steps are documented separately in **API Test Cases.md**.
 
 | Sprint | Module | Status |
 |---------|---------|--------|
-| Sprint 1 | Health Check | 🟡 In Progress |
+| Sprint 1 | Health Check | ✅ Completed |
 | Sprint 2 | Authentication | ⏳ Planned |
 | Sprint 3 | Retrieve Booking IDs | ⏳ Planned |
 | Sprint 4 | Retrieve Booking by ID | ⏳ Planned |
@@ -50,10 +55,9 @@ Detailed execution steps are documented separately in **API Test Cases.md**.
 
 | Scenario ID | Title | Priority | Type | Status |
 |-------------|-------|----------|------|--------|
-| TS-PING-001 | Verify API Health Check endpoint responds successfully | High | Positive | ⏳ Planned |
-| TS-PING-002 | Verify Health Check response contract | High | Contract | ⏳ Planned |
-| TS-PING-003 | Verify unsupported HTTP methods | Medium | Negative | ⏳ Planned |
-| TS-PING-004 | Verify Health Check response performance | Medium | Performance | ⏳ Planned |
+| TS-PING-001 | Verify successful Health Check request (GET) | High | Positive | ✅ Completed |
+| TS-PING-002 | Verify Health Check response headers and response body | High | Contract | ✅ Completed |
+| TS-PING-003 | Verify unsupported HTTP methods are rejected | Medium | Negative | ✅ Completed |
 
 ---
 
@@ -61,12 +65,13 @@ Detailed execution steps are documented separately in **API Test Cases.md**.
 
 ---
 
-## TS-PING-001 – Verify API Health Check endpoint responds successfully
+## TS-PING-001 – Verify successful Health Check request (GET)
 
 | Field | Value |
 |------|-------|
 | Module | Health Check |
 | Endpoint | GET /ping |
+| HTTP Method | GET |
 | Priority | High |
 | Test Type | Positive |
 | Related Requirement | REQ-PING-001 |
@@ -75,60 +80,86 @@ Detailed execution steps are documented separately in **API Test Cases.md**.
 
 Verify that the Health Check endpoint is available and responds successfully to a valid GET request.
 
+### Validation Focus
+
+- Endpoint availability
+- HTTP Status Code (201 Created)
+- Response Time (within the project threshold)
+
+### Related Postman Request
+
+```
+GET - Health Check
+```
+
 ---
 
-## TS-PING-002 – Verify Health Check response contract
+## TS-PING-002 – Verify Health Check response headers and response body
 
 | Field | Value |
 |------|-------|
 | Module | Health Check |
 | Endpoint | GET /ping |
+| HTTP Method | GET |
 | Priority | High |
 | Test Type | Contract |
 | Related Requirement | REQ-PING-002 |
 
 ### Objective
 
-Verify that the endpoint returns the expected HTTP status code, response body and response headers according to the API documentation.
+Verify that the Health Check endpoint returns the expected response contract according to the API specification.
+
+### Validation Focus
+
+- Response Body
+- Content-Type Header
+- Response Format
+
+### Related Postman Request
+
+```
+GET - Health Check
+```
 
 ---
 
-## TS-PING-003 – Verify unsupported HTTP methods
+## TS-PING-003 – Verify unsupported HTTP methods are rejected
 
 | Field | Value |
 |------|-------|
 | Module | Health Check |
 | Endpoint | /ping |
+| HTTP Method | POST, PUT, PATCH, DELETE |
 | Priority | Medium |
 | Test Type | Negative |
 | Related Requirement | REQ-PING-003 |
 
 ### Objective
 
-Verify that unsupported HTTP methods are handled correctly and do not behave as a valid Health Check request.
+Verify that unsupported HTTP methods are rejected and do not behave as a valid Health Check request.
 
-Methods covered:
+### Methods Covered
 
 - POST
 - PUT
 - PATCH
 - DELETE
 
----
+### Expected Behaviour
 
-## TS-PING-004 – Verify Health Check response performance
+Unsupported HTTP methods should be rejected by the API and must not return the successful Health Check response.
 
-| Field | Value |
-|------|-------|
-| Module | Health Check |
-| Endpoint | GET /ping |
-| Priority | Medium |
-| Test Type | Performance |
-| Related Requirement | REQ-PING-004 |
+### Related Postman Requests
 
-### Objective
+```
+POST - Health Check (Negative)
 
-Verify that the Health Check endpoint responds within an acceptable response time under normal testing conditions.
+PUT - Health Check (Negative)
+
+PATCH - Health Check (Negative)
+
+DELETE - Health Check (Negative)
+```
 
 ---
 
@@ -136,12 +167,13 @@ Verify that the Health Check endpoint responds within an acceptable response tim
 
 | Sprint | Scenarios | Completed |
 |---------|-----------|-----------|
-| Sprint 1 | 4 | 0 / 4 |
+| Sprint 1 | 3 | 3 / 3 |
 
 ---
 
-## Revision History
+# Revision History
 
-| Version | Description |
-|----------|-------------|
-| 1.0 | Initial Sprint 1 scenarios |
+| Version | Date | Description |
+|----------|------|-------------|
+| 1.0 | Initial version | Sprint 1 Test Scenarios |
+| 2.0 | Sprint 1 completed | Updated scenario structure, improved traceability, added HTTP methods, validation focus, Postman request mapping and completed Sprint 1 status |

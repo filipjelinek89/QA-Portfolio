@@ -694,9 +694,11 @@ api-restful-booker/
 │
 ├── 03_Test_Scenarios/
 │   └── API_Test_Scenarios.md
+│   └── API_Test_Scenarios_Standard.md
 │
 ├── 04_Test_Cases/
 │   └── API_Test_Cases.md
+│   └── API_Test_Cases_Standard.md
 │
 ├── 05_Postman/
 │   ├── Collection
@@ -704,6 +706,7 @@ api-restful-booker/
 │
 ├── 06_Test_Execution/
 │   └── API_Test_Execution.md
+│   └── API_Test_Execution_Standard.md
 │
 ├── 07_Bug_Reports/
 │
@@ -720,7 +723,10 @@ api-restful-booker/
 │   ├── DELETE/
 │   └── Negative_Testing/
 │
-└── 11_CI_CD/
+├──  11_CI_CD/
+│
+└──  12_Project_Progress
+
 ```
 
 The repository structure separates test planning, API analysis, test design, implementation, execution, defects, evidence, and automation components.
@@ -826,16 +832,18 @@ Test execution statistics and defect metrics will be added after the API test su
 
 # 21. Progress
 
-| Endpoint | Status |
-|----------|--------|
-| GET /ping | ✅ Completed |
-| POST /auth | ⬜ Planned |
-| GET /booking | ⬜ Planned |
-| GET /booking/{id} | ⬜ Planned |
-| POST /booking | ⬜ Planned |
-| PUT /booking/{id} | ⬜ Planned |
-| PATCH /booking/{id} | ⬜ Planned |
-| DELETE /booking/{id} | ⬜ Planned |
+| Sprint | Module | Status |
+|---------|------------------------|--------|
+| Sprint 1 | Health Check | ✅ Completed |
+| Sprint 2 | Authentication | ⏳ Planned |
+| Sprint 3 | Retrieve Booking IDs | ⏳ Planned |
+| Sprint 4 | Retrieve Booking by ID | ⏳ Planned |
+| Sprint 5 | Create Booking | ⏳ Planned |
+| Sprint 6 | Create Booking | ⏳ Planned |
+| Sprint 7 | Update Booking | ⏳ Planned |
+| Sprint 8 | Partial Update Booking | ⏳ Planned |
+| Sprint 9 | Delete Booking | ⏳ Planned |
+| Sprint 10 | End-to-End Workflow | ⏳ Planned |
 
 ---
 

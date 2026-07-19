@@ -1,12 +1,10 @@
 # API Test Case Standard
 
-**Project:** Restful Booker API Testing Project
-
-**Document Type:** API Test Case Standard
-
-**Version:** 2.0
-
-**Prepared by:** Filip Jelinek
+**Project:** Restful Booker API Testing Project  
+**Document Type:** API Test Case Standard  
+**Version:** 2.1  
+**Prepared by:** Filip Jelinek  
+**Testing Type:** REST API Testing
 
 ---
 
@@ -14,33 +12,43 @@
 
 - [1. Purpose](#1-purpose)
 - [2. Scope](#2-scope)
-- [3. Test Case Design Principles](#3-test-case-design-principles)
-- [4. Sprint-Based Workflow](#4-sprint-based-workflow)
-- [5. Test Case ID Convention](#5-test-case-id-convention)
-- [6. Test Case Structure](#6-test-case-structure)
-- [7. Test Types](#7-test-types)
-- [8. Priority Classification](#8-priority-classification)
-- [9. Writing Guidelines](#9-writing-guidelines)
-- [10. Traceability](#10-traceability)
-- [11. Definition of Done](#11-definition-of-done)
-- [12. Document Maintenance](#12-document-maintenance)
-- [13. Revision History](#13-revision-history)
+- [3. Test Case Definition](#3-test-case-definition)
+- [4. Test Case Design Principles](#4-test-case-design-principles)
+- [5. Sprint-Based Workflow](#5-sprint-based-workflow)
+- [6. Test Case ID Convention](#6-test-case-id-convention)
+- [7. Test Case Structure](#7-test-case-structure)
+- [8. Test Types](#8-test-types)
+- [9. Priority Classification](#9-priority-classification)
+- [10. Writing Guidelines](#10-writing-guidelines)
+- [11. Traceability](#11-traceability)
+- [12. Definition of Done](#12-definition-of-done)
+- [13. Document Maintenance](#13-document-maintenance)
+- [14. Revision History](#14-revision-history)
 
 ---
 
 # 1. Purpose
 
-This document defines the standard used for designing API test cases within the Restful Booker API Testing Project.
+This document defines the project standard for designing API Test Cases within the Restful Booker API Testing Project.
 
-It establishes a consistent format, naming convention, traceability model and design principles for all API test cases.
+Its purpose is to ensure that every Test Case follows a consistent structure, naming convention, level of detail, and traceability throughout the project.
 
-Actual project test cases are maintained separately in **API_Test_Cases.md**.
+This document defines the testing standard only.
+
+Project-specific Test Cases are maintained separately in:
+
+```text
+04_Test_Cases/
+└── API_Test_Cases.md
+```
 
 ---
 
 # 2. Scope
 
-This standard applies to every API test case created during the project, including:
+This standard applies to every API Test Case created during the project.
+
+It covers all supported testing activities, including:
 
 - Positive Testing
 - Negative Testing
@@ -51,13 +59,46 @@ This standard applies to every API test case created during the project, includi
 - CRUD Testing
 - Integration Testing
 - End-to-End Testing
-- Performance Checks
+- Performance Validation
 
 ---
 
-# 3. Test Case Design Principles
+# 3. Test Case Definition
 
-Each test case should validate one primary test condition.
+A Test Case is a detailed description of **how a specific testing objective is executed**.
+
+Each Test Case defines:
+
+- Preconditions
+- Test Data
+- Execution Steps
+- Expected Results
+
+A Test Case implements one Test Scenario and can be executed manually or automated.
+
+Relationship:
+
+```text
+Requirement
+      ↓
+Test Scenario
+      ↓
+Test Case
+      ↓
+Postman Request
+      ↓
+Test Execution
+      ↓
+Evidence
+      ↓
+Bug Report
+```
+
+---
+
+# 4. Test Case Design Principles
+
+Each Test Case should verify one primary behaviour.
 
 General principles:
 
@@ -67,53 +108,59 @@ General principles:
 - Independent whenever practical
 - Traceable to a Test Scenario
 - Easy to automate
+- Easy to maintain
 
-Where possible, only one request parameter or condition should change from the valid baseline.
+Whenever possible, only one request parameter or testing condition should differ from the valid baseline.
 
 ---
 
-# 4. Sprint-Based Workflow
+# 5. Sprint-Based Workflow
 
-Test cases are developed incrementally.
+Test Cases are developed incrementally throughout the project.
 
-```
-Requirements
-      ↓
+Every sprint follows the same workflow:
+
+```text
+Requirements Analysis
+        ↓
+API Analysis
+        ↓
 Test Scenarios
-      ↓
+        ↓
 Test Cases
-      ↓
+        ↓
 Postman Requests
-      ↓
+        ↓
 Execution
-      ↓
-Evidence
-      ↓
-Bug Reports
+        ↓
+Evidence Collection
+        ↓
+Bug Reporting
 ```
 
 Each sprint introduces:
 
-- new requirements
-- new scenarios
-- new test cases
-- new execution records
+- New Requirements
+- New Test Scenarios
+- New Test Cases
+- New Postman Requests
+- New Execution Results
 
-Previously completed test cases remain unchanged unless requirements change.
+Completed Test Cases remain unchanged unless the underlying requirements change.
 
 ---
 
-# 5. Test Case ID Convention
+# 6. Test Case ID Convention
 
-Format:
+Test Case IDs use the following format:
 
-```
+```text
 TC-[MODULE]-###
 ```
 
 Examples:
 
-```
+```text
 TC-PING-001
 TC-AUTH-001
 TC-GETIDS-001
@@ -127,139 +174,159 @@ TC-E2E-001
 
 Numbering restarts for every functional module.
 
+Test Case IDs must never be reused.
+
 ---
 
-# 6. Test Case Structure
+# 7. Test Case Structure
 
-Each test case should contain the following fields.
+Every Test Case should contain the following fields.
 
 | Field | Description |
 |--------|-------------|
 | Test Case ID | Unique identifier |
-| Scenario ID | Related test scenario |
+| Related Scenario | Test Scenario ID |
 | Title | Test objective |
-| Module | Functional area |
+| Module | Functional module |
 | Endpoint | API endpoint |
 | HTTP Method | Request method |
-| Test Type | Testing category |
 | Priority | Execution priority |
+| Test Type | Testing category |
 | Preconditions | Required setup |
-| Test Data | Input values |
+| Test Data | Request data |
 | Test Steps | Execution procedure |
 | Expected Result | Expected API behaviour |
 
 ---
 
-# 7. Test Types
+# 8. Test Types
 
-The following categories may be used.
+A Test Case may belong to one or more testing categories.
 
 | Type | Purpose |
 |------|---------|
 | Positive | Verify expected behaviour |
 | Negative | Verify invalid requests |
 | Boundary | Verify limit values |
-| Contract | Verify API schema |
+| Contract | Verify response contract |
 | Authentication | Verify login/token creation |
-| Authorization | Verify access control |
-| Integration | Verify interaction between endpoints |
-| Performance | Verify response time |
+| Authorization | Verify access permissions |
+| Integration | Verify endpoint interaction |
+| Performance | Validate response time |
 | Exploratory | Investigate undocumented behaviour |
 | End-to-End | Validate complete workflow |
 
 ---
 
-# 8. Priority Classification
+# 9. Priority Classification
 
 | Priority | Description |
 |----------|-------------|
 | Critical | Business-critical functionality |
 | High | Core API functionality |
-| Medium | Secondary functionality |
+| Medium | Supporting functionality |
 | Low | Minor verification |
 
-Priority defines execution importance.
+Priority determines the recommended execution order.
 
-It does not represent defect severity.
-
----
-
-# 9. Writing Guidelines
-
-Each test case should:
-
-- have a descriptive title
-- define a single objective
-- include clear preconditions
-- specify required test data
-- contain reproducible execution steps
-- define measurable expected results
-
-Avoid combining multiple independent validations into a single test case.
+Priority is independent from defect severity.
 
 ---
 
-# 10. Traceability
+# 10. Writing Guidelines
 
-Every test case must be traceable.
+Every Test Case should:
 
-```
+- Have a descriptive title.
+- Verify one primary objective.
+- Include clear preconditions.
+- Define required test data.
+- Contain reproducible execution steps.
+- Define measurable expected results.
+- Avoid combining unrelated validations.
+
+Whenever possible, Expected Results should reference documented API behaviour rather than assumptions.
+
+---
+
+# 11. Traceability
+
+Every Test Case must provide complete traceability.
+
+```text
 Requirement
       ↓
-Scenario
+Test Scenario
       ↓
 Test Case
       ↓
 Postman Request
       ↓
-Execution
+Test Execution
       ↓
-Bug Report
+Evidence
+      ↓
+Bug Report (if applicable)
 ```
 
 Example:
 
-```
+```text
 REQ-PING-001
       ↓
 TS-PING-001
       ↓
 TC-PING-001
+      ↓
+GET - Health Check
+```
+
+Complete traceability simplifies maintenance and ensures full requirement coverage.
+
+---
+
+# 12. Definition of Done
+
+A Test Case is considered complete when:
+
+- Test Case ID assigned
+- Related Scenario linked
+- Objective defined
+- Endpoint specified
+- HTTP Method specified
+- Preconditions documented
+- Test Data prepared
+- Test Steps completed
+- Expected Result documented
+- Postman Request implemented
+- Execution completed
+- Evidence captured
+- Reviewed
+
+Execution status is documented separately within the Test Execution Report.
+
+---
+
+# 13. Document Maintenance
+
+This document defines the project testing standard.
+
+It should only be modified when the testing methodology or documentation standard changes.
+
+Routine sprint activities must not modify this document.
+
+Project Test Cases are maintained separately:
+
+```text
+04_Test_Cases/
+└── API_Test_Cases.md
 ```
 
 ---
 
-# 11. Definition of Done
+# 14. Revision History
 
-A test case is considered complete when:
-
-- ID assigned
-- linked to a scenario
-- execution steps documented
-- expected result defined
-- reviewed
-- ready for execution
-
-Execution status is recorded separately.
-
----
-
-# 12. Document Maintenance
-
-This document changes only when the project testing standard changes.
-
-Actual test cases are maintained in:
-
-```
-API_Test_Cases.md
-```
-
-New sprints extend the Test Cases document without modifying this standard.
-
----
-
-# 13. Revision History
-
-| Version | Description |
-|----------|-------------|
-| 2.0 | Redesigned standard using sprint-based methodology |
+| Version | Date | Description |
+|----------|------|-------------|
+| 2.0 | Initial version | Sprint-based redesign |
+| 2.1 | Documentation refinement | Improved traceability, workflow consistency, Definition of Done, and Test Case structure |

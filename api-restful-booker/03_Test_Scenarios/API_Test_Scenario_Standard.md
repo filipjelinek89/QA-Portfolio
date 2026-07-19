@@ -2,10 +2,10 @@
 
 **Project:** Restful Booker API Testing Project  
 **Document Type:** Standard  
-**Version:** 2.0  
+**Version:** 2.1  
 **Prepared by:** Filip Jelinek  
 **Testing Type:** REST API Testing  
-**Purpose:** Defines the standard used to create and maintain all API Test Scenarios throughout the project.
+**Purpose:** Defines the standard for creating, maintaining, and reviewing API Test Scenarios throughout the project.
 
 ---
 
@@ -29,36 +29,38 @@
 
 # 1. Purpose
 
-This document defines the standard used for creating API Test Scenarios within the Restful Booker API Testing Project.
+This document defines the standard for creating API Test Scenarios used throughout the Restful Booker API Testing Project.
 
-It ensures that every scenario follows the same structure, naming convention, level of detail, and traceability throughout the project.
+Its purpose is to ensure that every scenario follows a consistent structure, naming convention, level of detail, and traceability.
 
-This document is a project standard.
+This document defines the project standard only.
 
-It does **not** contain project-specific test scenarios.
+It does **not** contain sprint-specific test scenarios.
 
 Actual scenarios are maintained in:
 
-```
+```text
 03_Test_Scenarios/
-└── API Test Scenarios.md
+└── API_Test_Scenarios.md
 ```
 
 ---
 
 # 2. Scope
 
-This standard applies to every sprint completed during the project.
+This standard applies to every sprint completed within the project.
 
-Each sprint introduces new API functionality together with its corresponding:
+Each sprint introduces one functional API module together with its corresponding documentation:
 
 - API Analysis
 - Test Scenarios
 - Test Cases
-- Postman Requests
+- Postman Collection
 - Test Execution
 - Bug Reports
 - Test Evidence
+
+All sprint documentation must comply with this standard.
 
 ---
 
@@ -66,13 +68,13 @@ Each sprint introduces new API functionality together with its corresponding:
 
 A Test Scenario is a high-level description of **what should be tested**.
 
-A scenario does not contain detailed execution steps.
+It defines a testing objective without describing the detailed execution steps.
 
-Instead, it defines a testing objective that is later expanded into one or more Test Cases.
+Each Test Scenario is expanded into one or more Test Cases.
 
 Relationship:
 
-```
+```text
 Requirement
       ↓
 Test Scenario
@@ -81,26 +83,30 @@ Test Case
       ↓
 Postman Request
       ↓
-Execution
+Test Execution
       ↓
 Bug Report
 ```
+
+One Test Scenario may be covered by one or more Postman requests.
+
+Likewise, a single Postman request may satisfy multiple Test Scenarios when validating different requirements.
 
 ---
 
 # 4. Scenario Design Principles
 
-Every scenario should:
+Every Test Scenario should:
 
-- Verify one functional behaviour.
-- Have one clear testing objective.
+- Verify one business or functional objective.
+- Have one clear testing purpose.
 - Be independent whenever possible.
 - Be reusable.
 - Avoid implementation details.
-- Be understandable without reading the test cases.
-- Support traceability.
+- Be understandable without reading the Test Cases.
+- Support complete traceability.
 
-Scenarios describe **what** should be tested.
+Test Scenarios describe **what** is tested.
 
 Test Cases describe **how** it is tested.
 
@@ -108,57 +114,46 @@ Test Cases describe **how** it is tested.
 
 # 5. Sprint-Based Workflow
 
-Each sprint completes one functional module.
+Each sprint represents one functional API module.
 
-Example:
+Example roadmap:
 
+```text
 Sprint 1
-
-```
 Health Check
-```
 
 Sprint 2
-
-```
 Authentication
-```
 
 Sprint 3
-
-```
 Retrieve Booking IDs
-```
 
 Sprint 4
-
-```
 Retrieve Booking
-```
 
 Sprint 5
-
-```
 Create Booking
 ```
 
 Every sprint follows the same lifecycle:
 
-```
+```text
+Requirements Analysis
+        ↓
 API Analysis
-      ↓
+        ↓
 Test Scenarios
-      ↓
+        ↓
 Test Cases
-      ↓
+        ↓
 Postman Requests
-      ↓
-Execution
-      ↓
-Evidence
-      ↓
-Bug Reports
-      ↓
+        ↓
+Test Execution
+        ↓
+Evidence Collection
+        ↓
+Bug Reporting
+        ↓
 Sprint Completion
 ```
 
@@ -168,24 +163,22 @@ Sprint Completion
 
 Scenario IDs use the following format:
 
-```
+```text
 TS-[MODULE]-###
 ```
 
 Examples:
 
-```
+```text
 TS-PING-001
-
 TS-AUTH-001
-
 TS-CREATE-001
 ```
 
 Module prefixes:
 
 | Prefix | Module |
-|----------|------------------------|
+|----------|-------------------------|
 | PING | Health Check |
 | AUTH | Authentication |
 | GETIDS | Retrieve Booking IDs |
@@ -196,7 +189,7 @@ Module prefixes:
 | DELETE | Delete Booking |
 | E2E | End-to-End Workflow |
 
-Scenario numbering is independent for every module.
+Scenario numbering is independent for each module.
 
 Scenario IDs must never be reused.
 
@@ -206,12 +199,12 @@ Scenario IDs must never be reused.
 
 | Priority | Description |
 |-----------|-------------|
-| Critical | Core functionality |
-| High | Important functionality |
-| Medium | Secondary functionality |
+| Critical | Business-critical functionality |
+| High | Core functionality |
+| Medium | Important supporting functionality |
 | Low | Minor functionality |
 
-Priority determines execution order.
+Priority defines the recommended execution order.
 
 Priority is independent from defect severity.
 
@@ -219,9 +212,9 @@ Priority is independent from defect severity.
 
 # 8. Test Types
 
-Scenarios may belong to one or more testing categories.
+A Test Scenario may belong to one or more testing categories.
 
-Common types include:
+Examples include:
 
 - Positive Testing
 - Negative Testing
@@ -234,93 +227,106 @@ Common types include:
 - End-to-End Testing
 - Exploratory Testing
 - Regression Testing
+- Performance Validation
 
 ---
 
 # 9. Scenario Template
 
-Every scenario should contain:
+Every Test Scenario should contain the following information:
 
 | Field | Description |
 |---------|-------------|
 | Scenario ID | Unique identifier |
-| Title | High-level objective |
+| Title | High-level testing objective |
+| Module | Functional module |
 | Endpoint | API endpoint |
 | HTTP Method | Request method |
-| Module | Functional area |
 | Priority | Execution priority |
 | Test Type | Testing category |
 | Objective | Behaviour being verified |
-| Related Requirements | Requirement IDs |
+| Related Requirement(s) | Requirement ID(s) |
 
 Example:
 
 | Field | Example |
 |---------|---------|
 | Scenario ID | TS-PING-001 |
-| Title | Verify Health Check endpoint responds successfully |
+| Title | Verify successful Health Check request (GET) |
+| Module | Health Check |
 | Endpoint | GET /ping |
 | Priority | High |
 | Test Type | Positive |
-| Objective | Verify API availability |
+| Objective | Verify the Health Check endpoint responds successfully to a valid GET request |
+| Related Requirement | REQ-PING-001 |
 
 ---
 
 # 10. Traceability
 
-Every scenario should map to one or more requirements.
+Every Test Scenario must map to one or more requirements.
 
-```
+Complete traceability should follow this structure:
+
+```text
 Requirement
-        ↓
-Scenario
-        ↓
+      ↓
+Test Scenario
+      ↓
 Test Case
-        ↓
-Execution
+      ↓
+Postman Request
+      ↓
+Test Execution
+      ↓
+Evidence
+      ↓
+Bug Report (if applicable)
 ```
 
 Example:
 
-```
+```text
 REQ-PING-001
       ↓
 TS-PING-001
       ↓
 TC-PING-001
+      ↓
+GET - Health Check
 ```
 
-This ensures complete test coverage.
+This structure ensures complete requirement coverage and simplifies maintenance.
 
 ---
 
 # 11. Naming Conventions
 
-Scenario titles should:
+Scenario titles should always begin with:
 
-✅ Start with **Verify**
+**Verify**
 
 Examples:
 
-```
-Verify API availability
+```text
+Verify successful Health Check request (GET)
 
 Verify authentication using valid credentials
 
 Verify booking creation with valid data
 ```
 
-Avoid:
+Avoid generic titles such as:
 
-```
+```text
 Testing login
 
-Health check
+Health Check
 
-Booking test
+Booking Test
 ```
 
-Titles should clearly describe the expected behaviour.
+Titles should clearly describe the behaviour being verified rather than the implementation.
 
 ---
 
@@ -329,36 +335,41 @@ Titles should clearly describe the expected behaviour.
 A Test Scenario is considered complete when:
 
 - Scenario ID assigned
-- Objective defined
-- Endpoint identified
+- Title defined
+- Objective documented
+- Module identified
+- Endpoint specified
+- HTTP Method specified
 - Priority assigned
 - Test Type assigned
-- Requirement linked
+- Related Requirement linked
 - Test Cases created
+- Postman Request implemented
+- Execution completed
+- Evidence captured
 - Scenario reviewed
 
 ---
 
 # 13. Document Maintenance
 
-This document is maintained throughout the project.
+This document defines the project standard and should change only when the testing methodology or documentation standard evolves.
 
-Changes should only occur when the testing methodology changes.
+Routine sprint activities must **not** modify this document.
 
-Routine sprint work must not modify this document.
+Sprint-specific Test Scenarios are maintained separately:
 
-Sprint-specific scenarios are maintained separately in:
-
-```
+```text
 03_Test_Scenarios/
-└── API Test Scenarios.md
+└── API_Test_Scenarios.md
 ```
 
 ---
 
-## Revision History
+# Revision History
 
 | Version | Date | Description |
 |----------|------|-------------|
 | 1.0 | Initial version | Original standard |
-| 2.0 | Sprint-based redesign | Introduced sprint methodology and standardized scenario design |
+| 2.0 | Sprint methodology | Introduced sprint-based organization |
+| 2.1 | Documentation refinement | Improved traceability, workflow consistency, Definition of Done, and scenario structure |
