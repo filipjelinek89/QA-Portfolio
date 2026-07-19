@@ -60,6 +60,7 @@ The current project stage focuses on **API analysis, test planning, test scenari
 | ⚙️ CLI Execution         | [Newman](09_Newman/)                                                      |
 | 📸 Test Evidence         | [Test Evidence](10_Test_Evidence/)                                        |
 | 🔄 CI/CD                 | [GitHub Actions](11_CI_CD/)                                               |
+| 📈 Project Progress      | [Project Progress](12_Project_Progress/)                                               |
 
 > **Note:** Project documentation is developed progressively based on API analysis, test design, and actual test execution. Test results and defects are documented only after they are observed during testing.
 
