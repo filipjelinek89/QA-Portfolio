@@ -1,114 +1,236 @@
-# API Test Execution Report
+# API Test Execution
 
-**Project:** Restful Booker API Testing
+**Project:** Restful Booker API Testing Project
+
+**Document Type:** API Test Execution
 
 **Version:** 1.0
 
 **Prepared by:** Filip Jelinek
 
----
-
-# Purpose
-
-This document records the execution results of all manual API tests performed against the Restful Booker API.
-
-Execution results are updated after each completed sprint.
+**Project Status:** Sprint 1 – Health Check
 
 ---
 
-# Environment
+# In-page Navigation
 
-| Item | Value |
-|------|-------|
-| Tool | Postman |
-| Environment | Restful Booker Environment |
-| Tester | Filip Jelinek |
+- [1. Purpose](#1-purpose)
+- [2. Sprint Overview](#2-sprint-overview)
+- [3. Execution Summary](#3-execution-summary)
+- [4. Health Check Test Execution](#4-health-check-test-execution)
+- [5. Defect Summary](#5-defect-summary)
+- [6. Sprint Progress](#6-sprint-progress)
+- [7. Revision History](#7-revision-history)
 
 ---
 
-# Overall Execution Summary
+# 1. Purpose
+
+This document records the execution results of API test cases created for the Restful Booker API Testing Project.
+
+Execution is performed incrementally using a sprint-based approach.
+
+Detailed test case definitions are maintained in:
+
+```
+API_Test_Cases.md
+```
+
+---
+
+# 2. Sprint Overview
+
+| Sprint | Module | Status |
+|---------|---------|--------|
+| Sprint 1 | Health Check | ✅ Completed |
+| Sprint 2 | Authentication | ⏳ Planned |
+| Sprint 3 | Retrieve Booking IDs | ⏳ Planned |
+| Sprint 4 | Retrieve Booking by ID | ⏳ Planned |
+| Sprint 5 | Create Booking | ⏳ Planned |
+| Sprint 6 | Update Booking | ⏳ Planned |
+| Sprint 7 | Partial Update Booking | ⏳ Planned |
+| Sprint 8 | Delete Booking | ⏳ Planned |
+| Sprint 9 | End-to-End Workflow | ⏳ Planned |
+
+---
+
+# 3. Execution Summary
 
 | Metric | Value |
-|---------|-------|
-| Planned Test Cases | 1 |
-| Executed | 1 |
-| Passed | 1 |
+|---------|------:|
+| Planned Test Cases | 4 |
+| Executed Test Cases | 4 |
+| Passed | 4 |
 | Failed | 0 |
 | Blocked | 0 |
+| Not Executed | 0 |
 | Pass Rate | 100% |
 | Fail Rate | 0% |
 
 ---
 
-# Execution Results
+# 4. Health Check Test Execution
 
-| TC | Endpoint | Method | Result |
-|----|----------|--------|--------|
-| TC001 | GET /ping | GET | ✅ PASS |
+| Test Case ID | Status | Actual Result | Defect |
+|---------------|--------|---------------|--------|
+| TC-PING-001 | ✅ PASS | API responded successfully | — |
+| TC-PING-002 | ✅ PASS | Response matched expected contract | — |
+| TC-PING-003 | ✅ PASS | Unsupported methods handled correctly | — |
+| TC-PING-004 | ✅ PASS | Response time acceptable | — |
 
 ---
 
-# Detailed Execution
-
----
-
-## TC001 – Verify API Health Check
+## TC-PING-001 – Verify API Health Check endpoint responds successfully
 
 ### Execution Date
 
 19 July 2026
 
-### Endpoint
-
-GET /ping
-
 ### Expected Result
 
-- HTTP 201 Created
+- HTTP Status Code = 201 Created
 - Response Body = Created
-- Content-Type = text/plain
-- Response Time < 5000 ms
 
 ### Actual Result
 
-- HTTP 201 Created
+- HTTP Status Code = 201 Created
 - Response Body = Created
-- Content-Type = text/plain
-- Response Time = 273 ms
 
-### Result
+### Status
 
 ✅ PASS
 
 ### Evidence
 
-```text
+```
 10_Test_Evidence/
-└── GET/
-    └── TC001_GET_Ping_PASS.png
+└── Sprint_01/
+    └── TC-PING-001_PASS.png
 ```
 
 ---
 
-# Defect Summary
+## TC-PING-002 – Verify Health Check response contract
 
-No defects were identified during execution.
+### Execution Date
+
+19 July 2026
+
+### Expected Result
+
+- Status Code = 201
+- Response Body = Created
+- Content-Type present
+
+### Actual Result
+
+- Status Code = 201
+- Response Body = Created
+- Content-Type = text/plain
+
+### Status
+
+✅ PASS
+
+### Evidence
+
+```
+10_Test_Evidence/
+└── Sprint_01/
+    └── TC-PING-002_PASS.png
+```
 
 ---
 
-# Sprint History
+## TC-PING-003 – Verify unsupported HTTP methods
 
-| Sprint | Completed Work |
-|---------|----------------|
-| Sprint #1 | GET /ping |
+### Execution Date
+
+19 July 2026
+
+### Expected Result
+
+Unsupported methods are not processed as a successful Health Check request.
+
+### Actual Result
+
+POST, PUT, PATCH and DELETE requests did not behave as successful Health Check requests.
+
+Observed responses were recorded during execution.
+
+### Status
+
+✅ PASS
+
+### Evidence
+
+```
+10_Test_Evidence/
+└── Sprint_01/
+    └── TC-PING-003_PASS.png
+```
 
 ---
 
-# Overall Progress
+## TC-PING-004 – Verify Health Check response performance
 
-| Module | Status |
-|---------|--------|
-| Health Check | ✅ Completed |
-| Authentication | ⏳ Planned |
-| Booking | ⏳ Planned |
-| Negative Testing | ⏳ Planned |
+### Execution Date
+
+19 July 2026
+
+### Expected Result
+
+Response time is consistent and within an acceptable range.
+
+### Actual Result
+
+Average response time remained below one second during repeated executions.
+
+### Status
+
+✅ PASS
+
+### Evidence
+
+```
+10_Test_Evidence/
+└── Sprint_01/
+    └── TC-PING-004_PASS.png
+```
+
+---
+
+# 5. Defect Summary
+
+No defects were identified during Sprint 1 execution.
+
+| Severity | Count |
+|----------|------:|
+| Critical | 0 |
+| High | 0 |
+| Medium | 0 |
+| Low | 0 |
+
+---
+
+# 6. Sprint Progress
+
+| Sprint | Test Cases | Executed | Status |
+|---------|-----------:|---------:|--------|
+| Sprint 1 | 4 | 4 | ✅ Completed |
+| Sprint 2 | Planned | 0 | ⏳ Planned |
+| Sprint 3 | Planned | 0 | ⏳ Planned |
+| Sprint 4 | Planned | 0 | ⏳ Planned |
+| Sprint 5 | Planned | 0 | ⏳ Planned |
+| Sprint 6 | Planned | 0 | ⏳ Planned |
+| Sprint 7 | Planned | 0 | ⏳ Planned |
+| Sprint 8 | Planned | 0 | ⏳ Planned |
+| Sprint 9 | Planned | 0 | ⏳ Planned |
+
+---
+
+# 7. Revision History
+
+| Version | Description |
+|----------|-------------|
+| 1.0 | Initial Sprint 1 execution report |
