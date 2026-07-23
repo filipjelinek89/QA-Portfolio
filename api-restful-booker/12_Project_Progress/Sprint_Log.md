@@ -2,7 +2,7 @@
 
 **Project:** Restful Booker API Testing Project  
 **Document Type:** Project Progress  
-**Version:** 2.0  
+**Version:** 3.0  
 **Prepared by:** Filip Jelinek
 
 ---
@@ -34,7 +34,7 @@ The purpose is to provide a chronological overview of the project's evolution fr
 | Sprint | Module | Status | Progress |
 |---------|---------------------------|--------|----------|
 | Sprint 1 | Health Check | ✅ Completed | 100% |
-| Sprint 2 | Authentication | ⏳ Planned | 0% |
+| Sprint 2 | Authentication | ✅ Completed | 100% |
 | Sprint 3 | Retrieve Booking IDs | ⏳ Planned | 0% |
 | Sprint 4 | Retrieve Booking | ⏳ Planned | 0% |
 | Sprint 5 | Create Booking | ⏳ Planned | 0% |
@@ -56,6 +56,7 @@ The purpose is to provide a chronological overview of the project's evolution fr
 | Postman Collection | ✅ Completed |
 | Test Execution | ✅ Completed |
 | Test Evidence | ✅ Completed |
+| Authentication Testing | ✅ Completed |
 | Bug Reports | ⏳ Planned |
 | JSON Schema Validation | ⏳ Planned |
 | Newman CLI | ⏳ Planned |
@@ -68,7 +69,7 @@ The purpose is to provide a chronological overview of the project's evolution fr
 | Sprint | Main Topics | Documentation | Evidence | Git |
 |---------|-------------|---------------|----------|-----|
 | Sprint 1 | Health Check, REST Fundamentals, Postman, API Assertions | ✅ | ✅ | ✅ |
-| Sprint 2 | Authentication | ⏳ | ⏳ | ⏳ |
+| Sprint 2 | Authentication, Token Generation, Negative Testing, Input Validation | ✅ | ✅ | ✅ |
 | Sprint 3 | Retrieve Booking IDs | ⏳ | ⏳ | ⏳ |
 | Sprint 4 | Retrieve Booking | ⏳ | ⏳ | ⏳ |
 | Sprint 5 | Create Booking | ⏳ | ⏳ | ⏳ |
@@ -92,7 +93,11 @@ The purpose is to provide a chronological overview of the project's evolution fr
 | Environment Variables | ✅ |
 | API Contract Validation | ✅ |
 | Negative Testing | ✅ |
-| Authentication | ⏳ |
+| Authentication | ✅ |
+| Token Management | ✅ |
+| Input Validation Testing | ✅ |
+| Boundary Value Testing | ✅ |
+| Data Type Validation | ✅ |
 | CRUD Operations | ⏳ |
 | JSON Schema Validation | ⏳ |
 | Newman CLI | ⏳ |
@@ -104,7 +109,7 @@ The purpose is to provide a chronological overview of the project's evolution fr
 
 ---
 
-## Sprint 1 – Health Check
+# Sprint 1 – Health Check
 
 **Completion Date:** 19 July 2026
 
@@ -146,14 +151,14 @@ Build the foundation for the API testing project by learning Postman, REST API c
 - TC-PING-002
 - TC-PING-003
 
-Execution Result:
+Execution Result
 
 - Total Test Cases: **3**
 - Passed: **3**
 - Failed: **0**
 - Blocked: **0**
 
-Pass Rate:
+Pass Rate
 
 **100%**
 
@@ -197,28 +202,122 @@ Instead of validating only status codes, I learned to verify API contracts, docu
 
 ---
 
+# Sprint 2 – Authentication
+
+**Completion Date:** 23 July 2026
+
+### Goal
+
+Validate the Authentication endpoint by performing positive and extensive negative testing while implementing reusable Postman automation and environment management.
+
+---
+
+### Knowledge Gained
+
+- Authentication workflow
+- Token generation
+- Environment variables
+- Automatic token storage
+- Authentication request chaining
+- JSON request body validation
+- Data type validation
+- Boundary value analysis
+- Required field validation
+- Negative API testing
+- Defensive Postman scripting
+- Reusable test scripts
+
+---
+
+### Test Scenarios Completed
+
+- TS-AUTH-001 – Valid Authentication
+- TS-AUTH-002 – Invalid Credentials
+- TS-AUTH-003 – Required Fields Validation
+- TS-AUTH-004 – Data Type Validation
+- TS-AUTH-005 – Boundary Value Validation
+
+---
+
+### Test Cases Executed
+
+- TC-AUTH-001 through TC-AUTH-022
+
+Execution Result
+
+- Total Test Cases: **22**
+- Passed: **22**
+- Failed: **0**
+- Blocked: **0**
+
+Pass Rate
+
+**100%**
+
+---
+
+### Documentation Updated
+
+- API Test Scenarios
+- API Test Cases
+- API Test Execution
+- Authentication Documentation
+- Test Evidence
+- Sprint Progress
+- Project Progress
+
+---
+
+### Repository Updates
+
+- Created Authentication Postman Collection
+- Implemented reusable Postman test scripts
+- Configured automatic token management
+- Added execution screenshots
+- Updated repository documentation
+- Published Sprint 2 to GitHub
+
+---
+
+### Lessons Learned
+
+Sprint 2 introduced real-world authentication testing techniques.
+
+I learned how to validate positive and negative authentication flows, design reusable Postman scripts, manage authentication tokens through environment variables, perform boundary value analysis, validate different JSON data types, and create comprehensive API documentation while maintaining a structured QA workflow.
+
+---
+
+### Sprint Result
+
+✅ Sprint 2 successfully completed.
+
+---
+
 ### Next Sprint
 
-Sprint 2 – Authentication
+Sprint 3 – Retrieve Booking IDs
 
-Planned topics:
+Planned topics
 
-- Token generation
-- Authentication endpoint
-- Authorization headers
-- Environment variables
-- Request chaining
-- Secure API testing
+- GET requests
+- Query parameters
+- Response validation
+- JSON arrays
+- Filtering booking IDs
+- Collection assertions
 
 ---
 
 # 7. Next Milestones
 
-Upcoming work includes:
+Upcoming work includes
 
-- Authentication testing
-- Booking retrieval
-- CRUD operations
+- Retrieve Booking IDs
+- Retrieve Booking Details
+- Create Booking
+- Update Booking
+- Partial Update Booking
+- Delete Booking
 - JSON Schema validation
 - Newman CLI execution
 - GitHub Actions CI/CD
@@ -233,3 +332,4 @@ Upcoming work includes:
 |----------|------|-------------|
 | 1.0 | Initial version | Project progress tracking |
 | 2.0 | Sprint 1 completed | Redesigned project journal, updated roadmap, completed Sprint 1 documentation, added lessons learned and future milestones |
+| 3.0 | Sprint 2 completed | Added Authentication sprint, updated roadmap, progress tracking, acquired skills, execution statistics, documentation updates, repository changes, lessons learned and next milestones |
