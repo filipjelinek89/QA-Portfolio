@@ -4,7 +4,7 @@
 **Sprint:** Sprint 03 -- Retrieve Booking IDs\
 **Document Type:** API Test Execution\
 **Version:** 2.0\
-**Status:** In Progress
+**Status:** Completed
 
 ------------------------------------------------------------------------
 
