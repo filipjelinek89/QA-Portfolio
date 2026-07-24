@@ -35,8 +35,8 @@ The purpose is to provide a chronological overview of the project's evolution fr
 |---------|---------------------------|--------|----------|
 | Sprint 1 | Health Check | ✅ Completed | 100% |
 | Sprint 2 | Authentication | ✅ Completed | 100% |
-| Sprint 3 | Retrieve Booking IDs | ⏳ Planned | 0% |
-| Sprint 4 | Retrieve Booking | ⏳ Planned | 0% |
+| Sprint 3 | Retrieve Booking IDs | ✅ Completed | 100% |
+| Sprint 4 | Retrieve Booking | 🚧 In Progress | 0% |
 | Sprint 5 | Create Booking | ⏳ Planned | 0% |
 | Sprint 6 | Update Booking | ⏳ Planned | 0% |
 | Sprint 7 | Partial Update Booking | ⏳ Planned | 0% |
@@ -57,8 +57,8 @@ The purpose is to provide a chronological overview of the project's evolution fr
 | Test Execution | ✅ Completed |
 | Test Evidence | ✅ Completed |
 | Authentication Testing | ✅ Completed |
-| Bug Reports | ⏳ Planned |
-| JSON Schema Validation | ⏳ Planned |
+| Bug Reports | ✅ Completed |
+| JSON Schema Validation | ✅ Completed |
 | Newman CLI | ⏳ Planned |
 | CI/CD Pipeline | ⏳ Planned |
 
@@ -70,7 +70,7 @@ The purpose is to provide a chronological overview of the project's evolution fr
 |---------|-------------|---------------|----------|-----|
 | Sprint 1 | Health Check, REST Fundamentals, Postman, API Assertions | ✅ | ✅ | ✅ |
 | Sprint 2 | Authentication, Token Generation, Negative Testing, Input Validation | ✅ | ✅ | ✅ |
-| Sprint 3 | Retrieve Booking IDs | ⏳ | ⏳ | ⏳ |
+| Sprint 3 | Retrieve Booking IDs | ✅ | ✅ | ✅ |
 | Sprint 4 | Retrieve Booking | ⏳ | ⏳ | ⏳ |
 | Sprint 5 | Create Booking | ⏳ | ⏳ | ⏳ |
 | Sprint 6 | Update Booking | ⏳ | ⏳ | ⏳ |
@@ -295,16 +295,70 @@ I learned how to validate positive and negative authentication flows, design reu
 
 ### Next Sprint
 
-Sprint 3 – Retrieve Booking IDs
+Sprint 4 – Retrieve Booking
 
 Planned topics
 
-- GET requests
-- Query parameters
-- Response validation
-- JSON arrays
-- Filtering booking IDs
-- Collection assertions
+- Retrieve Booking by ID
+- Positive and negative retrieval testing
+- Path parameter validation
+- Error handling
+- JSON object validation
+- Advanced schema validation
+
+
+---
+# Sprint 3 – Retrieve Booking IDs
+
+**Completion Date:** 24 July 2026
+
+### Goal
+
+Validate the Retrieve Booking endpoints using positive and negative testing for query parameters, filters and booking identifiers.
+
+### Test Scenarios Completed
+
+- TS-BOOKING-001 through TS-BOOKING-010
+
+### Test Cases Executed
+
+- TC-GETIDS-001 through TC-GETIDS-032
+
+Execution Result
+
+- Total Test Cases: **32**
+- Passed: **30**
+- Failed: **2**
+- Blocked: **0**
+
+Pass Rate
+
+**93.75%**
+
+### Documentation Updated
+
+- API Test Scenarios
+- API Test Cases
+- API Test Execution
+- Bug Reports
+- Test Evidence
+- Project Progress
+
+### Repository Updates
+
+- Added 32 Retrieve Booking ID requests
+- Implemented reusable positive and negative scripts
+- Added execution evidence
+- Documented discovered API defects
+
+### Lessons Learned
+
+Sprint 3 focused on advanced GET request validation, query parameter testing, path parameter testing, schema validation, and identifying unexpected API behaviour during negative testing.
+
+### Sprint Result
+
+✅ Sprint 3 successfully completed.
+
 
 ---
 
@@ -333,3 +387,4 @@ Upcoming work includes
 | 1.0 | Initial version | Project progress tracking |
 | 2.0 | Sprint 1 completed | Redesigned project journal, updated roadmap, completed Sprint 1 documentation, added lessons learned and future milestones |
 | 3.0 | Sprint 2 completed | Added Authentication sprint, updated roadmap, progress tracking, acquired skills, execution statistics, documentation updates, repository changes, lessons learned and next milestones |
+| 4.0 | Sprint 3 completed | Added Retrieve Booking IDs sprint, updated roadmap, sprint log, overall progress and next milestones |
