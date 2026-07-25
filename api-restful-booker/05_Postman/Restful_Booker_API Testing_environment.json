@@ -1,0 +1,82 @@
+{
+	"id": "bc86b3c2-5385-414d-8ead-5fe86f46b6c2",
+	"name": "Restful Booker API Testing",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "username",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "password",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "bookingId",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "firstname",
+			"value": "",
+			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "lastname",
+			"value": "",
+			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "totalprice",
+			"value": "",
+			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "depositpaid",
+			"value": "",
+			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "checkin",
+			"value": "",
+			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "checkout",
+			"value": "",
+			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "additionalneeds",
+			"value": "",
+			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "default",
+			"enabled": false
+		}
+	],
+	"color": 120,
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2026-07-25T12:29:01.227Z",
+	"_postman_exported_using": "Postman/12.20.5"
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Sprint_09_End_to_End_API_Integration_Testing" tests="8" time="4.748">
+  <testsuite name="01_Health_Check_PING" id="c04065f2-301e-49a5-8104-71eef49f2e8f" timestamp="2026-07-25T14:07:22.274Z" tests="5" failures="0" errors="0" time="2.850">
+    <testcase name="Status code is 201" time="2.850" classname="01HealthCheckPing"/>
+    <testcase name="Response time is less than 5000 ms" time="2.850" classname="01HealthCheckPing"/>
+    <testcase name="Response body equals 'Created'" time="2.850" classname="01HealthCheckPing"/>
+    <testcase name="Response body is not empty" time="2.850" classname="01HealthCheckPing"/>
+    <testcase name="Health Check completed successfully" time="2.850" classname="01HealthCheckPing"/>
+  </testsuite>
+  <testsuite name="02_Authentication" id="d073e06c-db0a-49ce-92cd-5bbcebdce996" timestamp="2026-07-25T14:07:22.274Z" tests="5" failures="0" errors="0" time="0.274">
+    <testcase name="Status code is 200" time="0.274" classname="02Authentication"/>
+    <testcase name="Response time is less than 5000 ms" time="0.274" classname="02Authentication"/>
+    <testcase name="Response contains authentication token" time="0.274" classname="02Authentication"/>
+    <testcase name="Authentication token is not empty" time="0.274" classname="02Authentication"/>
+    <testcase name="Authentication token saved successfully" time="0.274" classname="02Authentication"/>
+  </testsuite>
+  <testsuite name="03_Create_Booking" id="01726628-2589-40f7-aa6f-b6e4fc186c87" timestamp="2026-07-25T14:07:22.274Z" tests="6" failures="0" errors="0" time="0.270">
+    <testcase name="Status code is 200" time="0.270" classname="03CreateBooking"/>
+    <testcase name="Response time is less than 5000 ms" time="0.270" classname="03CreateBooking"/>
+    <testcase name="Response contains booking ID" time="0.270" classname="03CreateBooking"/>
+    <testcase name="Booking ID is a positive number" time="0.270" classname="03CreateBooking"/>
+    <testcase name="Booking data matches request" time="0.270" classname="03CreateBooking"/>
+    <testcase name="Booking ID saved successfully" time="0.270" classname="03CreateBooking"/>
+  </testsuite>
+  <testsuite name="04_Get_Created_Booking" id="d72ae307-66aa-4745-bf0f-ca44c74d0615" timestamp="2026-07-25T14:07:22.274Z" tests="6" failures="0" errors="0" time="0.271">
+    <testcase name="Status code is 200" time="0.271" classname="04GetCreatedBooking"/>
+    <testcase name="Response time is less than 5000 ms" time="0.271" classname="04GetCreatedBooking"/>
+    <testcase name="Content-Type is application/json" time="0.271" classname="04GetCreatedBooking"/>
+    <testcase name="Booking ID is a valid positive number" time="0.271" classname="04GetCreatedBooking"/>
+    <testcase name="Booking data matches expected values" time="0.271" classname="04GetCreatedBooking"/>
+    <testcase name="Response contains required fields" time="0.271" classname="04GetCreatedBooking"/>
+  </testsuite>
+  <testsuite name="05_Update_Booking" id="556afdea-07af-422b-8003-592a19ed9750" timestamp="2026-07-25T14:07:22.274Z" tests="5" failures="0" errors="0" time="0.272">
+    <testcase name="Status code is 200" time="0.272" classname="05UpdateBooking"/>
+    <testcase name="Response time is less than 5000 ms" time="0.272" classname="05UpdateBooking"/>
+    <testcase name="Content-Type is application/json" time="0.272" classname="05UpdateBooking"/>
+    <testcase name="Updated booking data matches expected values" time="0.272" classname="05UpdateBooking"/>
+    <testcase name="Response contains required fields" time="0.272" classname="05UpdateBooking"/>
+  </testsuite>
+  <testsuite name="06_Partial_Update_Booking_(PATCH)" id="0791b64b-e633-4720-8328-1a06ee3396ae" timestamp="2026-07-25T14:07:22.274Z" tests="11" failures="0" errors="0" time="0.271">
+    <testcase name="Status code is 200" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="Response time is less than 5000 ms" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="Content-Type is application/json" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="First name updated successfully" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="Additional needs updated successfully" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="Last name remains unchanged" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="Total price remains unchanged" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="Deposit paid remains unchanged" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="Check-in remains unchanged" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="Check-out remains unchanged" time="0.271" classname="06PartialUpdateBookingPatch"/>
+    <testcase name="Response contains all required fields" time="0.271" classname="06PartialUpdateBookingPatch"/>
+  </testsuite>
+  <testsuite name="07_Delete_Booking" id="caa5df1e-0bfe-4e91-9abb-6557e0354b93" timestamp="2026-07-25T14:07:22.274Z" tests="5" failures="0" errors="0" time="0.272">
+    <testcase name="Status code is 201" time="0.272" classname="07DeleteBooking"/>
+    <testcase name="Response time is less than 5000 ms" time="0.272" classname="07DeleteBooking"/>
+    <testcase name="Response body equals 'Created'" time="0.272" classname="07DeleteBooking"/>
+    <testcase name="Response body is not empty" time="0.272" classname="07DeleteBooking"/>
+    <testcase name="Booking deleted successfully" time="0.272" classname="07DeleteBooking"/>
+  </testsuite>
+  <testsuite name="08_Verify_Booking_Deleted" id="f9139ca7-f772-44a1-9d85-6e736e57f69b" timestamp="2026-07-25T14:07:22.274Z" tests="5" failures="0" errors="0" time="0.268">
+    <testcase name="Status code is 404" time="0.268" classname="08VerifyBookingDeleted"/>
+    <testcase name="Response time is less than 5000 ms" time="0.268" classname="08VerifyBookingDeleted"/>
+    <testcase name="Deleted booking is no longer accessible" time="0.268" classname="08VerifyBookingDeleted"/>
+    <testcase name="Response body indicates resource not found" time="0.268" classname="08VerifyBookingDeleted"/>
+    <testcase name="End-to-End workflow completed successfully" time="0.268" classname="08VerifyBookingDeleted"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,3927 @@
+{
+  "collection": {
+    "_": {
+      "postman_id": "55cf423c-357d-4884-8aba-863fb9da85f4",
+      "exporter_id": "51997985",
+      "collection_link": "https://go.postman.co/collection/51997985-55cf423c-357d-4884-8aba-863fb9da85f4?source=collection_link"
+    },
+    "item": [
+      {
+        "id": "c04065f2-301e-49a5-8104-71eef49f2e8f",
+        "name": "01_Health_Check_PING",
+        "request": {
+          "description": {
+            "content": "# Request 01 – Health Check\n\n## Purpose\n\nVerify that the Restful Booker API is online and responding before executing the end-to-end workflow.\n\nThis request acts as a prerequisite for all subsequent requests in the collection.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Health Check |\n| Method | GET |\n| Endpoint | `/ping` |\n| Authentication | None |\n| Headers | None |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/ping\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n201 Created\n\n ```\n\n## Response Body\n\n``` text\nCreated\n\n ```\n\n## Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify the API is reachable.\n    \n- Verify the endpoint returns HTTP 201.\n    \n- Verify the response body equals \"Created\".\n    \n- Verify the response time is acceptable.\n    \n- Verify no unexpected server errors occur.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 201\n    \n- Response Time < 5000 ms\n    \n- Response Body = \"Created\"\n    \n\n---\n\n# Expected Result\n\nThe Health Check endpoint responds successfully, confirming that the API is available and ready for execution of the remaining end-to-end workflow.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "ping"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "2e720c92-37d0-436c-8076-ee6e2b32c3d9",
+              "type": "text/javascript",
+              "packages": {},
+              "exec": [
+                "// =====================================================\r",
+                "// Request 01 - Health Check\r",
+                "// Sprint 09 - End-to-End API Integration Testing\r",
+                "// =====================================================\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Status Code Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Status code is 201\", function () {\r",
+                "    pm.response.to.have.status(201);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Time Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Body Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response body equals 'Created'\", function () {\r",
+                "    pm.expect(pm.response.text()).to.eql(\"Created\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Content Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response body is not empty\", function () {\r",
+                "    pm.expect(pm.response.text()).to.not.be.empty;\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Workflow Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Health Check completed successfully\", function () {\r",
+                "    pm.expect(pm.response.code).to.eql(201);\r",
+                "});"
+              ],
+              "_lastExecutionId": "0b6c7bc9-dd00-4414-9926-1c46e51379f7"
+            }
+          }
+        ]
+      },
+      {
+        "id": "d073e06c-db0a-49ce-92cd-5bbcebdce996",
+        "name": "02_Authentication",
+        "request": {
+          "description": {
+            "content": "# Request 02 – Authentication\n\n## Purpose\n\nGenerate a valid authentication token that will be used to authorize all protected requests during the end-to-end workflow.\n\nThe authentication token is stored as a Postman collection variable and reused by subsequent requests requiring authorization.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Authentication |\n| Method | POST |\n| Endpoint | `/auth` |\n| Authentication | None |\n| Headers | Content-Type: application/json |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/auth\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"username\": \"{{username}}\",\n    \"password\": \"{{password}}\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"token\": \"abc123...\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify the response contains a token.\n    \n- Verify the token is not empty.\n    \n- Store the token in the collection variable `token`.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- Response contains token\n    \n- Token is not empty\n    \n- Save token to collection variables\n    \n\n---\n\n# Expected Result\n\nA valid authentication token is returned by the API and stored for use in all subsequent authenticated requests within the workflow.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "auth"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"username\": \"{{username}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "f8976172-72db-4adc-9036-4c0d94f2b78e",
+              "type": "text/javascript",
+              "packages": {},
+              "exec": [
+                "// =====================================================\r",
+                "// Request 02 - Authentication\r",
+                "// Sprint 09 - End-to-End API Integration Testing\r",
+                "// =====================================================\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Parse Response\r",
+                "// -----------------------------\r",
+                "const response = pm.response.json();\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Status Code Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Time Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Token Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response contains authentication token\", function () {\r",
+                "    pm.expect(response).to.have.property(\"token\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Token Value Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Authentication token is not empty\", function () {\r",
+                "    pm.expect(response.token).to.not.be.empty;\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Save Collection Variable\r",
+                "// -----------------------------\r",
+                "pm.collectionVariables.set(\"token\", response.token);\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Verify Collection Variable\r",
+                "// -----------------------------\r",
+                "pm.test(\"Authentication token saved successfully\", function () {\r",
+                "    pm.expect(pm.collectionVariables.get(\"token\")).to.eql(response.token);\r",
+                "});"
+              ],
+              "_lastExecutionId": "c85da099-f1e2-4133-a62f-90352496b9ac"
+            }
+          }
+        ]
+      },
+      {
+        "id": "01726628-2589-40f7-aa6f-b6e4fc186c87",
+        "name": "03_Create_Booking",
+        "request": {
+          "description": {
+            "content": "# Request 03 – Create Booking\n\n## Purpose\n\nCreate a new booking using valid booking details and verify that the booking is successfully created.\n\nThe generated **booking ID** is stored as a Postman collection variable and used throughout the remaining end-to-end workflow.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Create Booking |\n| Method | POST |\n| Endpoint | `/booking` |\n| Authentication | None |\n| Headers | Content-Type: application/json |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"firstname\": \"{{firstname}}\",\n    \"lastname\": \"{{lastname}}\",\n    \"totalprice\": {{totalprice}},\n    \"depositpaid\": {{depositpaid}},\n    \"bookingdates\": {\n        \"checkin\": \"{{checkin}}\",\n        \"checkout\": \"{{checkout}}\"\n    },\n    \"additionalneeds\": \"{{additionalneeds}}\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"bookingid\": 1234,\n    \"booking\": {\n        \"firstname\": \"John\",\n        \"lastname\": \"Smith\",\n        \"totalprice\": 150,\n        \"depositpaid\": true,\n        \"bookingdates\": {\n            \"checkin\": \"2026-08-01\",\n            \"checkout\": \"2026-08-05\"\n        },\n        \"additionalneeds\": \"Breakfast\"\n    }\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify booking creation succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify response contains a booking ID.\n    \n- Verify booking ID is valid.\n    \n- Verify booking data matches the submitted request.\n    \n- Store the booking ID in the collection variable `bookingid`.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- Response contains bookingid\n    \n- Booking ID is valid\n    \n- Booking data matches request\n    \n- Save bookingid to collection variables\n    \n\n---\n\n# Expected Result\n\nA new booking is successfully created, and the generated booking ID is stored for use in subsequent requests during the end-to-end workflow.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "booking"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\",\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{checkin}}\",\r\n        \"checkout\": \"{{checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "257190fe-d4d8-4b1e-a8a8-d789b0f48e5f",
+              "type": "text/javascript",
+              "packages": {},
+              "exec": [
+                "// =====================================================\r",
+                "// Request 03 - Create Booking\r",
+                "// Sprint 09 - End-to-End API Integration Testing\r",
+                "// =====================================================\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Parse Response\r",
+                "// -----------------------------\r",
+                "const response = pm.response.json();\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Status Code Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Time Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Booking ID Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response contains booking ID\", function () {\r",
+                "    pm.expect(response).to.have.property(\"bookingid\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Booking ID Value Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Booking ID is a positive number\", function () {\r",
+                "    pm.expect(response.bookingid).to.be.a(\"number\");\r",
+                "    pm.expect(response.bookingid).to.be.above(0);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Booking Data Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Booking data matches request\", function () {\r",
+                "    pm.expect(response.booking.firstname).to.eql(pm.collectionVariables.get(\"firstname\"));\r",
+                "    pm.expect(response.booking.lastname).to.eql(pm.collectionVariables.get(\"lastname\"));\r",
+                "    pm.expect(response.booking.totalprice).to.eql(Number(pm.collectionVariables.get(\"totalprice\")));\r",
+                "    pm.expect(response.booking.depositpaid).to.eql(pm.collectionVariables.get(\"depositpaid\") === \"true\");\r",
+                "    pm.expect(response.booking.bookingdates.checkin).to.eql(pm.collectionVariables.get(\"checkin\"));\r",
+                "    pm.expect(response.booking.bookingdates.checkout).to.eql(pm.collectionVariables.get(\"checkout\"));\r",
+                "    pm.expect(response.booking.additionalneeds).to.eql(pm.collectionVariables.get(\"additionalneeds\"));\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Save Booking ID\r",
+                "// -----------------------------\r",
+                "pm.collectionVariables.set(\"bookingid\", response.bookingid);\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Verify Collection Variable\r",
+                "// -----------------------------\r",
+                "pm.test(\"Booking ID saved successfully\", function () {\r",
+                "    pm.expect(Number(pm.collectionVariables.get(\"bookingid\"))).to.eql(response.bookingid);\r",
+                "});"
+              ],
+              "_lastExecutionId": "9205f6c4-5a23-4730-9e06-e80e37542a08"
+            }
+          }
+        ]
+      },
+      {
+        "id": "d72ae307-66aa-4745-bf0f-ca44c74d0615",
+        "name": "04_Get_Created_Booking",
+        "request": {
+          "description": {
+            "content": "# Request 04 – Get Created Booking\n\n## Purpose\n\nRetrieve the booking created in the previous request and verify that all booking information has been stored correctly.\n\nThe request uses the booking ID saved during the Create Booking request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Get Created Booking |\n| Method | GET |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | None |\n| Headers | None |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"firstname\": \"John\",\n    \"lastname\": \"Smith\",\n    \"totalprice\": 150,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2026-08-01\",\n        \"checkout\": \"2026-08-05\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify booking retrieval succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify the returned booking matches the created booking.\n    \n- Verify all booking fields contain the expected values.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- First Name\n    \n- Last Name\n    \n- Total Price\n    \n- Deposit Paid\n    \n- Check-in Date\n    \n- Check-out Date\n    \n- Additional Needs\n    \n\n---\n\n# Expected Result\n\nThe booking is successfully retrieved using the stored booking ID, and all returned booking details exactly match the data submitted during booking creation.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "booking",
+              "{{bookingid}}"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "8c6b728d-b63b-48f6-9e13-4ad7ee2d95cf",
+              "type": "text/javascript",
+              "packages": {},
+              "exec": [
+                "// -----------------------------\r",
+                "// Parse Response\r",
+                "// -----------------------------\r",
+                "const response = pm.response.json();\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Status Code Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Time Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Content-Type Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Content-Type is application/json\", function () {\r",
+                "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Booking ID Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Booking ID is a valid positive number\", function () {\r",
+                "    pm.expect(Number(pm.variables.get(\"bookingid\"))).to.be.above(0);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Validate Booking Data\r",
+                "// -----------------------------\r",
+                "pm.test(\"Booking data matches expected values\", function () {\r",
+                "    pm.expect(response.firstname).to.eql(pm.variables.get(\"firstname\"));\r",
+                "    pm.expect(response.lastname).to.eql(pm.variables.get(\"lastname\"));\r",
+                "    pm.expect(response.totalprice).to.eql(Number(pm.variables.get(\"totalprice\")));\r",
+                "    pm.expect(response.depositpaid).to.eql(pm.variables.get(\"depositpaid\") === \"true\");\r",
+                "    pm.expect(response.bookingdates.checkin).to.eql(pm.variables.get(\"checkin\"));\r",
+                "    pm.expect(response.bookingdates.checkout).to.eql(pm.variables.get(\"checkout\"));\r",
+                "    pm.expect(response.additionalneeds).to.eql(pm.variables.get(\"additionalneeds\"));\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Structure Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response contains required fields\", function () {\r",
+                "    pm.expect(response).to.have.property(\"firstname\");\r",
+                "    pm.expect(response).to.have.property(\"lastname\");\r",
+                "    pm.expect(response).to.have.property(\"totalprice\");\r",
+                "    pm.expect(response).to.have.property(\"depositpaid\");\r",
+                "    pm.expect(response).to.have.property(\"bookingdates\");\r",
+                "    pm.expect(response.bookingdates).to.have.property(\"checkin\");\r",
+                "    pm.expect(response.bookingdates).to.have.property(\"checkout\");\r",
+                "    pm.expect(response).to.have.property(\"additionalneeds\");\r",
+                "});"
+              ],
+              "_lastExecutionId": "69c2a6a7-3b99-4b73-be5f-c71b14b23720"
+            }
+          }
+        ]
+      },
+      {
+        "id": "556afdea-07af-422b-8003-592a19ed9750",
+        "name": "05_Update_Booking",
+        "request": {
+          "description": {
+            "content": "# Request 05 – Update Booking (PUT)\n\n## Purpose\n\nPerform a complete update of the existing booking using valid data and verify that all booking information is successfully replaced.\n\nThis request uses the booking ID generated during the Create Booking request and the authentication token generated during the Authentication request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Update Booking |\n| Method | PUT |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | Cookie Token |\n| Headers | Content-Type: application/json  <br>Cookie: token={{token}} |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n| Cookie | token={{token}} |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"firstname\": \"Michael\",\n    \"lastname\": \"Johnson\",\n    \"totalprice\": 250,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2026-09-10\",\n        \"checkout\": \"2026-09-20\"\n    },\n    \"additionalneeds\": \"Dinner\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"firstname\": \"Michael\",\n    \"lastname\": \"Johnson\",\n    \"totalprice\": 250,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2026-09-10\",\n        \"checkout\": \"2026-09-20\"\n    },\n    \"additionalneeds\": \"Dinner\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication is successful.\n    \n- Verify booking is updated successfully.\n    \n- Verify HTTP status code is 200.\n    \n- Verify all booking fields contain the updated values.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- First Name\n    \n- Last Name\n    \n- Total Price\n    \n- Deposit Paid\n    \n- Check-in Date\n    \n- Check-out Date\n    \n- Additional Needs\n    \n\n---\n\n# Expected Result\n\nThe booking is successfully updated, and every field reflects the new values provided in the request body.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "booking",
+              "{{bookingid}}"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Cookie",
+              "value": "token={{token}}"
+            }
+          ],
+          "method": "PUT",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"firstname\": \"{{update_firstname}}\",\r\n    \"lastname\": \"{{update_lastname}}\",\r\n    \"totalprice\": {{update_totalprice}},\r\n    \"depositpaid\": {{update_depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{update_checkin}}\",\r\n        \"checkout\": \"{{update_checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{update_additionalneeds}}\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "95152c7d-e255-4afe-823a-2cc5a4f05312",
+              "type": "text/javascript",
+              "packages": {},
+              "exec": [
+                "// -----------------------------\r",
+                "// Parse Response\r",
+                "// -----------------------------\r",
+                "let response = {};\r",
+                "\r",
+                "if (pm.response.code === 200) {\r",
+                "    response = pm.response.json();\r",
+                "}\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Status Code Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Time Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Content-Type Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Content-Type is application/json\", function () {\r",
+                "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Updated Booking Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Updated booking data matches expected values\", function () {\r",
+                "\r",
+                "    pm.expect(response.firstname).to.eql(\r",
+                "        pm.collectionVariables.get(\"update_firstname\")\r",
+                "    );\r",
+                "\r",
+                "    pm.expect(response.lastname).to.eql(\r",
+                "        pm.collectionVariables.get(\"update_lastname\")\r",
+                "    );\r",
+                "\r",
+                "    pm.expect(response.totalprice).to.eql(\r",
+                "        Number(pm.collectionVariables.get(\"update_totalprice\"))\r",
+                "    );\r",
+                "\r",
+                "    pm.expect(response.depositpaid).to.eql(\r",
+                "        pm.collectionVariables.get(\"update_depositpaid\") === \"true\"\r",
+                "    );\r",
+                "\r",
+                "    pm.expect(response.bookingdates.checkin).to.eql(\r",
+                "        pm.collectionVariables.get(\"update_checkin\")\r",
+                "    );\r",
+                "\r",
+                "    pm.expect(response.bookingdates.checkout).to.eql(\r",
+                "        pm.collectionVariables.get(\"update_checkout\")\r",
+                "    );\r",
+                "\r",
+                "    pm.expect(response.additionalneeds).to.eql(\r",
+                "        pm.collectionVariables.get(\"update_additionalneeds\")\r",
+                "    );\r",
+                "\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Structure Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response contains required fields\", function () {\r",
+                "\r",
+                "    pm.expect(response).to.have.property(\"firstname\");\r",
+                "    pm.expect(response).to.have.property(\"lastname\");\r",
+                "    pm.expect(response).to.have.property(\"totalprice\");\r",
+                "    pm.expect(response).to.have.property(\"depositpaid\");\r",
+                "    pm.expect(response).to.have.property(\"bookingdates\");\r",
+                "\r",
+                "    pm.expect(response.bookingdates).to.have.property(\"checkin\");\r",
+                "    pm.expect(response.bookingdates).to.have.property(\"checkout\");\r",
+                "\r",
+                "    pm.expect(response).to.have.property(\"additionalneeds\");\r",
+                "\r",
+                "});"
+              ],
+              "_lastExecutionId": "b8ed02f9-7e6d-4b12-812a-a9b8c40a23ad"
+            }
+          }
+        ]
+      },
+      {
+        "id": "0791b64b-e633-4720-8328-1a06ee3396ae",
+        "name": "06_Partial_Update_Booking_(PATCH)",
+        "request": {
+          "description": {
+            "content": "# Request 06 – Partial Update Booking (PATCH)\n\n## Purpose\n\nPerform a partial update of an existing booking and verify that only the specified fields are modified while all other booking information remains unchanged.\n\nThis request uses the booking ID generated during the Create Booking request and the authentication token generated during the Authentication request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Partial Update Booking |\n| Method | PATCH |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | Cookie Token |\n| Headers | Content-Type: application/json  <br>Cookie: token={{token}} |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n| Cookie | token={{token}} |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"firstname\": \"David\",\n    \"additionalneeds\": \"Late Checkout\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"firstname\": \"David\",\n    \"lastname\": \"Johnson\",\n    \"totalprice\": 250,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2026-09-10\",\n        \"checkout\": \"2026-09-20\"\n    },\n    \"additionalneeds\": \"Late Checkout\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication succeeds.\n    \n- Verify partial update succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify only the specified fields are updated.\n    \n- Verify unchanged fields retain their previous values.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- Updated First Name\n    \n- Updated Additional Needs\n    \n- Unchanged Last Name\n    \n- Unchanged Total Price\n    \n- Unchanged Deposit Paid\n    \n- Unchanged Check-in Date\n    \n- Unchanged Check-out Date\n    \n\n---\n\n# Expected Result\n\nThe specified fields are updated successfully, while all unspecified fields remain unchanged, confirming correct PATCH operation behavior.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "booking",
+              "{{bookingid}}"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Cookie",
+              "value": "token={{token}}"
+            }
+          ],
+          "method": "PATCH",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"firstname\": \"David\",\r\n    \"additionalneeds\": \"Late Checkout\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "b8429f6a-5521-4d7d-ae7b-559b892745ba",
+              "type": "text/javascript",
+              "packages": {},
+              "exec": [
+                "// -----------------------------\r",
+                "// Status Code Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Authentication Validation\r",
+                "// -----------------------------\r",
+                "if (pm.response.code !== 200) {\r",
+                "\r",
+                "    console.log(\"Request failed.\");\r",
+                "    console.log(\"Status:\", pm.response.code);\r",
+                "    console.log(\"Response:\", pm.response.text());\r",
+                "\r",
+                "    pm.test(\"Authentication or request failed\", function () {\r",
+                "        pm.expect.fail(\r",
+                "            \"Request failed with status \" +\r",
+                "            pm.response.code +\r",
+                "            \". Response: \" +\r",
+                "            pm.response.text()\r",
+                "        );\r",
+                "    });\r",
+                "\r",
+                "    return;\r",
+                "}\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Parse Response\r",
+                "// -----------------------------\r",
+                "const response = pm.response.json();\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Time Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Content-Type Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Content-Type is application/json\", function () {\r",
+                "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Updated Fields Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"First name updated successfully\", function () {\r",
+                "    pm.expect(response.firstname).to.eql(\"David\");\r",
+                "});\r",
+                "\r",
+                "pm.test(\"Additional needs updated successfully\", function () {\r",
+                "    pm.expect(response.additionalneeds).to.eql(\"Late Checkout\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Unchanged Fields Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Last name remains unchanged\", function () {\r",
+                "    pm.expect(response.lastname).to.eql(\"Michael\");\r",
+                "});\r",
+                "\r",
+                "pm.test(\"Total price remains unchanged\", function () {\r",
+                "    pm.expect(response.totalprice).to.eql(250);\r",
+                "});\r",
+                "\r",
+                "pm.test(\"Deposit paid remains unchanged\", function () {\r",
+                "    pm.expect(response.depositpaid).to.eql(false);\r",
+                "});\r",
+                "\r",
+                "pm.test(\"Check-in remains unchanged\", function () {\r",
+                "    pm.expect(response.bookingdates.checkin).to.eql(\"2026-09-10\");\r",
+                "});\r",
+                "\r",
+                "pm.test(\"Check-out remains unchanged\", function () {\r",
+                "    pm.expect(response.bookingdates.checkout).to.eql(\"2026-09-20\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Structure Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response contains all required fields\", function () {\r",
+                "\r",
+                "    pm.expect(response).to.have.property(\"firstname\");\r",
+                "    pm.expect(response).to.have.property(\"lastname\");\r",
+                "    pm.expect(response).to.have.property(\"totalprice\");\r",
+                "    pm.expect(response).to.have.property(\"depositpaid\");\r",
+                "    pm.expect(response).to.have.property(\"bookingdates\");\r",
+                "    pm.expect(response.bookingdates).to.have.property(\"checkin\");\r",
+                "    pm.expect(response.bookingdates).to.have.property(\"checkout\");\r",
+                "    pm.expect(response).to.have.property(\"additionalneeds\");\r",
+                "\r",
+                "});"
+              ],
+              "_lastExecutionId": "1e33420a-40eb-41d9-9b52-063eaf319338"
+            }
+          }
+        ]
+      },
+      {
+        "id": "caa5df1e-0bfe-4e91-9abb-6557e0354b93",
+        "name": "07_Delete_Booking",
+        "request": {
+          "description": {
+            "content": "# Request 07 – Delete Booking\n\n## Purpose\n\nDelete the existing booking created during the end-to-end workflow and verify that the booking is successfully removed from the system.\n\nThis request uses the booking ID generated during the Create Booking request and the authentication token generated during the Authentication request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Delete Booking |\n| Method | DELETE |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | Cookie Token |\n| Headers | Cookie: token={{token}} |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Cookie | token={{token}} |\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n201 Created\n\n ```\n\n## Response Body\n\n``` text\nCreated\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication succeeds.\n    \n- Verify booking deletion succeeds.\n    \n- Verify HTTP status code is 201.\n    \n- Verify response body equals \"Created\".\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 201\n    \n- Response Time < 5000 ms\n    \n- Response Body = \"Created\"\n    \n- Response Body is not empty\n    \n\n---\n\n# Expected Result\n\nThe booking is successfully deleted and is no longer available within the Restful Booker API.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "booking",
+              "{{bookingid}}"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Cookie",
+              "value": "token={{token}}"
+            }
+          ],
+          "method": "DELETE"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "b3a4cde5-e6a0-4fb1-8259-d599dedbdca6",
+              "type": "text/javascript",
+              "packages": {},
+              "exec": [
+                "// =====================================================\r",
+                "// Request 07 - Delete Booking\r",
+                "// Sprint 09 - End-to-End API Integration Testing\r",
+                "// =====================================================\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Status Code Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Status code is 201\", function () {\r",
+                "    pm.response.to.have.status(201);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Time Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Body Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response body equals 'Created'\", function () {\r",
+                "    pm.expect(pm.response.text()).to.eql(\"Created\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Body Not Empty\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response body is not empty\", function () {\r",
+                "    pm.expect(pm.response.text()).to.not.be.empty;\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Delete Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Booking deleted successfully\", function () {\r",
+                "    pm.expect(pm.response.code).to.eql(201);\r",
+                "});"
+              ],
+              "_lastExecutionId": "2dd6f5b9-3e85-4dc3-b814-f2d9ab7ecec9"
+            }
+          }
+        ]
+      },
+      {
+        "id": "f9139ca7-f772-44a1-9d85-6e736e57f69b",
+        "name": "08_Verify_Booking_Deleted",
+        "request": {
+          "description": {
+            "content": "# Request 08 – Verify Booking Deleted\n\n## Purpose\n\nVerify that the booking deleted in the previous request is no longer accessible by attempting to retrieve it using its booking ID.\n\nThis request confirms the successful completion of the resource lifecycle and validates that the API correctly returns a **404 Not Found** response for a deleted resource.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Verify Booking Deleted |\n| Method | GET |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | None |\n| Headers | None |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n404 Not Found\n\n ```\n\n## Response Body\n\n``` text\nNot Found\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify the deleted booking cannot be retrieved.\n    \n- Verify HTTP status code is 404.\n    \n- Verify the API correctly reports that the resource no longer exists.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 404\n    \n- Response Time < 5000 ms\n    \n- Resource no longer exists\n    \n\n---\n\n# Expected Result\n\nThe API returns **404 Not Found**, confirming that the booking has been permanently deleted and is no longer accessible.",
+            "type": "text/plain"
+          },
+          "url": {
+            "path": [
+              "booking",
+              "{{bookingid}}"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "c6e5cce5-e168-4102-9986-f72795351aa8",
+              "type": "text/javascript",
+              "packages": {},
+              "exec": [
+                "// =====================================================\r",
+                "// Request 08 - Verify Booking Deleted\r",
+                "// Sprint 09 - End-to-End API Integration Testing\r",
+                "// =====================================================\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Status Code Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Status code is 404\", function () {\r",
+                "    pm.response.to.have.status(404);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Time Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Resource Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Deleted booking is no longer accessible\", function () {\r",
+                "    pm.expect(pm.response.code).to.eql(404);\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Response Body Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"Response body indicates resource not found\", function () {\r",
+                "    pm.expect(pm.response.text().toLowerCase()).to.include(\"not\");\r",
+                "});\r",
+                "\r",
+                "// -----------------------------\r",
+                "// Workflow Validation\r",
+                "// -----------------------------\r",
+                "pm.test(\"End-to-End workflow completed successfully\", function () {\r",
+                "    pm.expect(pm.response.code).to.eql(404);\r",
+                "});"
+              ],
+              "_lastExecutionId": "15148d59-838f-4ba3-9623-24341874d9c1"
+            }
+          }
+        ]
+      }
+    ],
+    "event": [
+      {
+        "listen": "prerequest",
+        "script": {
+          "id": "41664579-04e6-46b4-9b1a-c29a3dc4fc6b",
+          "type": "text/javascript",
+          "packages": {},
+          "exec": [
+            ""
+          ],
+          "_lastExecutionId": "156142e5-8f1f-47be-a14e-c31dacc32492"
+        }
+      },
+      {
+        "listen": "test",
+        "script": {
+          "id": "c353adc1-ff3b-48d3-a4cd-10a2b3e6cabc",
+          "type": "text/javascript",
+          "packages": {},
+          "exec": [
+            ""
+          ],
+          "_lastExecutionId": "2143ece1-bf31-41b1-8def-9c2d4173074f"
+        }
+      }
+    ],
+    "variable": [
+      {
+        "type": "any",
+        "value": "https://restful-booker.herokuapp.com",
+        "key": "baseUrl"
+      },
+      {
+        "type": "any",
+        "value": "admin",
+        "key": "username"
+      },
+      {
+        "type": "any",
+        "value": "password123",
+        "key": "password"
+      },
+      {
+        "type": "any",
+        "value": "",
+        "key": "token"
+      },
+      {
+        "type": "any",
+        "value": "",
+        "key": "bookingid"
+      },
+      {
+        "type": "any",
+        "value": "John",
+        "key": "firstname"
+      },
+      {
+        "type": "any",
+        "value": "Smith",
+        "key": "lastname"
+      },
+      {
+        "type": "any",
+        "value": "150",
+        "key": "totalprice"
+      },
+      {
+        "type": "any",
+        "value": "true",
+        "key": "depositpaid"
+      },
+      {
+        "type": "any",
+        "value": "2026-08-01",
+        "key": "checkin"
+      },
+      {
+        "type": "any",
+        "value": "2026-08-05",
+        "key": "checkout"
+      },
+      {
+        "type": "any",
+        "value": "Breakfast",
+        "key": "additionalneeds"
+      },
+      {
+        "type": "any",
+        "value": "Michael",
+        "key": "update_firstname"
+      },
+      {
+        "type": "any",
+        "value": "Michael",
+        "key": "update_lastname"
+      },
+      {
+        "type": "any",
+        "value": "250",
+        "key": "update_totalprice"
+      },
+      {
+        "type": "any",
+        "value": "false",
+        "key": "update_depositpaid"
+      },
+      {
+        "type": "any",
+        "value": "2026-09-10",
+        "key": "update_checkin"
+      },
+      {
+        "type": "any",
+        "value": "2026-09-20",
+        "key": "update_checkout"
+      },
+      {
+        "type": "any",
+        "value": "Dinner",
+        "key": "update_additionalneeds"
+      }
+    ],
+    "info": {
+      "_postman_id": "55cf423c-357d-4884-8aba-863fb9da85f4",
+      "name": "Sprint_09_End_to_End_API_Integration_Testing",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "description": {
+        "content": "# Sprint 09 – End-to-End API Integration Testing\n\n## Sprint Goal\n\nThe goal of this sprint is to verify the complete booking lifecycle by executing an end-to-end integration workflow across multiple Restful Booker API endpoints.\n\nThis sprint focuses on validating API integration, authentication, request chaining, data consistency, CRUD operations, resource lifecycle management, workflow continuity, response validation, error handling, and ensuring that each API endpoint functions correctly as part of a complete business process.\n\n---\n\n# Collection Workflow\n\n## Plain Text\n\n``` text\nGET    /ping\n        ↓\nPOST   /auth\n        ↓\nPOST   /booking\n        ↓\nGET    /booking/{{bookingid}}\n        ↓\nPUT    /booking/{{bookingid}}\n        ↓\nPATCH  /booking/{{bookingid}}\n        ↓\nDELETE /booking/{{bookingid}}\n        ↓\nGET    /booking/{{bookingid}}\n\n ```\n\n---\n\n# Learning Objectives\n\nDuring this sprint I learned:\n\n- End-to-End API Testing\n    \n- API Integration Testing\n    \n- Complete CRUD Workflow Validation\n    \n- Authentication Testing\n    \n- Authorization Validation\n    \n- Resource Lifecycle Validation\n    \n- Data Consistency Validation\n    \n- Collection Variables\n    \n- Request Chaining\n    \n- REST API Status Code Validation\n    \n- Positive API Testing\n    \n- Negative API Testing\n    \n- Advanced JavaScript Assertions\n    \n- Collection Runner Execution\n    \n- Automated Test Validation\n    \n- Recording Test Execution Results\n    \n- API Response Validation\n    \n- Bug Reporting\n    \n- Using Git for Version Control\n    \n\n---\n\n# Collection Scope\n\n## APIs Covered\n\n``` text\nGET    /ping\nPOST   /auth\nPOST   /booking\nGET    /booking/{id}\nPUT    /booking/{id}\nPATCH  /booking/{id}\nDELETE /booking/{id}\nGET    /booking/{id}\n\n ```\n\n---\n\n# Workflow Validation\n\nThe collection validates the complete booking lifecycle by verifying:\n\n- API availability\n    \n- Authentication\n    \n- Booking creation\n    \n- Booking retrieval\n    \n- Complete booking update (PUT)\n    \n- Partial booking update (PATCH)\n    \n- Booking deletion\n    \n- Verification that the deleted booking no longer exists\n    \n- Request chaining using Collection Variables\n    \n- End-to-End workflow execution using Collection Runner\n    \n\n---\n\n# Test Scenarios\n\n- ✅ Verify complete booking lifecycle\n    \n- ✅ Verify authentication before protected operations\n    \n- ✅ Verify deleted booking cannot be retrieved\n    \n- ✅ Verify workflow data consistency\n    \n- ✅ Verify repeated workflow execution\n    \n- ✅ Verify CRUD operation sequence\n    \n- ✅ Verify request chaining using Collection Variables\n    \n- ✅ Verify end-to-end workflow execution\n    \n\n---\n\n# Collection Variables\n\n``` text\nusername\npassword\ntoken\nbookingid\nfirstname\nlastname\ntotalprice\ndepositpaid\ncheckin\ncheckout\nadditionalneeds\nupdate_firstname\nupdate_lastname\nupdate_totalprice\nupdate_depositpaid\nupdate_checkin\nupdate_checkout\nupdate_additionalneeds\npatch_firstname\npatch_additionalneeds\n\n ```\n\n---\n\n# Expected Deliverables\n\n- ✅ End-to-End Postman Collection\n    \n- ✅ Automated Postman Tests\n    \n- ✅ Collection Variables\n    \n- ✅ Request Chaining\n    \n- ✅ CRUD Workflow Validation\n    \n- ✅ Authentication Validation\n    \n- ✅ Resource Lifecycle Validation\n    \n- ✅ Data Consistency Validation\n    \n- ✅ Collection Runner Execution\n    \n- ✅ Test Execution Evidence\n    \n- ✅ Updated Project Documentation\n    \n- ✅ Git Commit\n    \n- ✅ GitHub Push\n    \n\n---\n\n# Sprint Status\n\n| Task | Status |\n| --- | --- |\n| Create Collection | ✅ Completed |\n| Configure Variables | ✅ Completed |\n| Build Workflow | ✅ Completed |\n| Configure Authentication | ✅ Completed |\n| Implement Request Chaining | ✅ Completed |\n| Write Postman Tests | ✅ Completed |\n| Execute End-to-End Workflow | ✅ Completed |\n| Validate CRUD Operations | ✅ Completed |\n| Validate Data Consistency | ✅ Completed |\n| Validate Authentication | ✅ Completed |\n| Validate Resource Lifecycle | ✅ Completed |\n| Validate Error Handling | ✅ Completed |\n| Capture Evidence | ✅ Completed |\n| Create Bug Reports | ✅ Completed (None Required) |\n| Update Documentation | ✅ Completed |\n| Git Commit | ✅ Completed |\n| GitHub Push | ✅ Completed |\n\n---\n\n# Execution Summary\n\n| Metric | Result |\n| --- | --- |\n| Workflow Scenarios | 8 |\n| Workflow Test Cases | 8 |\n| Requests Executed | 8 |\n| Requests Passed | 8 |\n| Requests Failed | 0 |\n| Blocked | 0 |\n| Total Assertions | 48 |\n| Assertions Passed | 48 |\n| Assertions Failed | 0 |\n| Pass Rate | **100%** |\n| Bugs Reported | 0 |\n\n---\n\n# Evidence\n\n``` text\n10_Test_Evidence/\n└── Sprint_09_End_to_End/\n    ├── 01_GET_Ping.png\n    ├── 02_POST_Auth.png\n    ├── 03_POST_Create_Booking.png\n    ├── 04_GET_Booking.png\n    ├── 05_PUT_Update_Booking.png\n    ├── 06_PATCH_Partial_Update.png\n    ├── 07_DELETE_Booking.png\n    ├── 08_GET_Deleted_Booking.png\n    └── 09_Run_Result.png\n\n ```\n\n---\n\n# Sprint Outcome\n\nThe complete Postman collection was successfully executed using **Collection Runner**, validating the entire booking lifecycle from authentication through resource deletion. All requests completed successfully in the correct sequence without manual intervention.\n\nThe workflow confirmed successful authentication, booking creation, retrieval, full update, partial update, deletion, and verification that the deleted resource returned **HTTP 404 Not Found**. Request chaining was implemented using Collection Variables, enabling seamless data sharing between requests throughout the workflow.\n\nA total of **8 requests** and **48 automated assertions** were executed with a **100% pass rate**. No unexpected API behavior, server-side errors, or functional defects were observed during execution.\n\n---\n\n# Notes\n\nSprint 09 represents the successful completion of the **Restful Booker API Testing Project** by integrating every previously tested endpoint into a single automated end-to-end workflow.\n\nUnlike previous sprints, which validated individual endpoints independently, this sprint demonstrates how multiple REST API endpoints interact as part of a complete business process. The workflow verifies API availability, authenticates the user, creates a booking, retrieves the created resource, performs both full and partial updates, deletes the booking, and confirms successful deletion by validating the expected **HTTP 404 Not Found** response.\n\nSpecial emphasis was placed on API integration, authentication, request chaining using Collection Variables, CRUD workflow validation, data consistency, automated JavaScript assertions, response validation, resource lifecycle management, Collection Runner execution, and professional documentation.\n\nSuccessful completion of Sprint 09 demonstrates the ability to design, execute, automate, validate, and document a complete API integration workflow following industry-standard QA and API testing practices using Postman.",
+        "type": "text/plain"
+      }
+    }
+  },
+  "environment": {
+    "id": "5e0f6dcb-eb60-4c2b-aa91-13f44e903ce4",
+    "values": []
+  },
+  "globals": {
+    "id": "2391114c-5e87-4734-9a56-630ac8351a0d",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 8,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 24,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 8,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 8,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 8,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 48,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 16,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 8,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 593.5,
+      "responseMin": 268,
+      "responseMax": 2850,
+      "responseSd": 852.8783617843753,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1784988442274,
+      "completed": 1784988447710
+    },
+    "executions": [
+      {
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 8,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "ce7d0ef3-f9d9-419f-8ed4-1f777dc19cc1",
+          "httpRequestId": "e47ef17a-9132-4aef-b97a-31e859eb2f03"
+        },
+        "item": {
+          "id": "c04065f2-301e-49a5-8104-71eef49f2e8f",
+          "name": "01_Health_Check_PING",
+          "request": {
+            "description": {
+              "content": "# Request 01 – Health Check\n\n## Purpose\n\nVerify that the Restful Booker API is online and responding before executing the end-to-end workflow.\n\nThis request acts as a prerequisite for all subsequent requests in the collection.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Health Check |\n| Method | GET |\n| Endpoint | `/ping` |\n| Authentication | None |\n| Headers | None |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/ping\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n201 Created\n\n ```\n\n## Response Body\n\n``` text\nCreated\n\n ```\n\n## Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify the API is reachable.\n    \n- Verify the endpoint returns HTTP 201.\n    \n- Verify the response body equals \"Created\".\n    \n- Verify the response time is acceptable.\n    \n- Verify no unexpected server errors occur.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 201\n    \n- Response Time < 5000 ms\n    \n- Response Body = \"Created\"\n    \n\n---\n\n# Expected Result\n\nThe Health Check endpoint responds successfully, confirming that the API is available and ready for execution of the remaining end-to-end workflow.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ping"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2e720c92-37d0-436c-8076-ee6e2b32c3d9",
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  "// =====================================================\r",
+                  "// Request 01 - Health Check\r",
+                  "// Sprint 09 - End-to-End API Integration Testing\r",
+                  "// =====================================================\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Status Code Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Status code is 201\", function () {\r",
+                  "    pm.response.to.have.status(201);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Time Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Body Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response body equals 'Created'\", function () {\r",
+                  "    pm.expect(pm.response.text()).to.eql(\"Created\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Content Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response body is not empty\", function () {\r",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Workflow Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Health Check completed successfully\", function () {\r",
+                  "    pm.expect(pm.response.code).to.eql(201);\r",
+                  "});"
+                ],
+                "_lastExecutionId": "0b6c7bc9-dd00-4414-9926-1c46e51379f7"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "# Request 01 – Health Check\n\n## Purpose\n\nVerify that the Restful Booker API is online and responding before executing the end-to-end workflow.\n\nThis request acts as a prerequisite for all subsequent requests in the collection.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Health Check |\n| Method | GET |\n| Endpoint | `/ping` |\n| Authentication | None |\n| Headers | None |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\nhttps://restful-booker.herokuapp.com/ping\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n201 Created\n\n ```\n\n## Response Body\n\n``` text\nCreated\n\n ```\n\n## Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify the API is reachable.\n    \n- Verify the endpoint returns HTTP 201.\n    \n- Verify the response body equals \"Created\".\n    \n- Verify the response time is acceptable.\n    \n- Verify no unexpected server errors occur.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 201\n    \n- Response Time < 5000 ms\n    \n- Response Body = \"Created\"\n    \n\n---\n\n# Expected Result\n\nThe Health Check endpoint responds successfully, confirming that the API is available and ready for execution of the remaining end-to-end workflow.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "ping"
+            ],
+            "host": [
+              "restful-booker",
+              "herokuapp",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "f03e9744-affa-4e26-bf0a-f26765143179",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "restful-booker.herokuapp.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "7d157dc3-5463-4839-a6c7-79aec76a2249",
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "7"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Jul 2026 14:07:24 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"7-rM9AyJuqT6iOan/xHh+AW+7K/T8\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=Bkzi4OZPKyBOOAjqr1mql8peTXrfpPpLxpxoj5xyBbE%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1784988444\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=Bkzi4OZPKyBOOAjqr1mql8peTXrfpPpLxpxoj5xyBbE%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1784988444\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              67,
+              114,
+              101,
+              97,
+              116,
+              101,
+              100
+            ]
+          },
+          "cookie": [],
+          "responseTime": 2850,
+          "responseSize": 7
+        },
+        "id": "c04065f2-301e-49a5-8104-71eef49f2e8f",
+        "assertions": [
+          {
+            "assertion": "Status code is 201",
+            "skipped": false
+          },
+          {
+            "assertion": "Response time is less than 5000 ms",
+            "skipped": false
+          },
+          {
+            "assertion": "Response body equals 'Created'",
+            "skipped": false
+          },
+          {
+            "assertion": "Response body is not empty",
+            "skipped": false
+          },
+          {
+            "assertion": "Health Check completed successfully",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "1d88e1cf-779f-4ec4-830e-b96c96461e3c",
+          "length": 8,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "4793fc9e-8e32-4f17-acb7-3906495d09b4"
+        },
+        "item": {
+          "id": "d073e06c-db0a-49ce-92cd-5bbcebdce996",
+          "name": "02_Authentication",
+          "request": {
+            "description": {
+              "content": "# Request 02 – Authentication\n\n## Purpose\n\nGenerate a valid authentication token that will be used to authorize all protected requests during the end-to-end workflow.\n\nThe authentication token is stored as a Postman collection variable and reused by subsequent requests requiring authorization.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Authentication |\n| Method | POST |\n| Endpoint | `/auth` |\n| Authentication | None |\n| Headers | Content-Type: application/json |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/auth\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"username\": \"{{username}}\",\n    \"password\": \"{{password}}\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"token\": \"abc123...\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify the response contains a token.\n    \n- Verify the token is not empty.\n    \n- Store the token in the collection variable `token`.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- Response contains token\n    \n- Token is not empty\n    \n- Save token to collection variables\n    \n\n---\n\n# Expected Result\n\nA valid authentication token is returned by the API and stored for use in all subsequent authenticated requests within the workflow.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "auth"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"{{username}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "f8976172-72db-4adc-9036-4c0d94f2b78e",
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  "// =====================================================\r",
+                  "// Request 02 - Authentication\r",
+                  "// Sprint 09 - End-to-End API Integration Testing\r",
+                  "// =====================================================\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Parse Response\r",
+                  "// -----------------------------\r",
+                  "const response = pm.response.json();\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Status Code Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Time Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Token Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response contains authentication token\", function () {\r",
+                  "    pm.expect(response).to.have.property(\"token\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Token Value Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Authentication token is not empty\", function () {\r",
+                  "    pm.expect(response.token).to.not.be.empty;\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Save Collection Variable\r",
+                  "// -----------------------------\r",
+                  "pm.collectionVariables.set(\"token\", response.token);\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Verify Collection Variable\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Authentication token saved successfully\", function () {\r",
+                  "    pm.expect(pm.collectionVariables.get(\"token\")).to.eql(response.token);\r",
+                  "});"
+                ],
+                "_lastExecutionId": "c85da099-f1e2-4133-a62f-90352496b9ac"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "# Request 02 – Authentication\n\n## Purpose\n\nGenerate a valid authentication token that will be used to authorize all protected requests during the end-to-end workflow.\n\nThe authentication token is stored as a Postman collection variable and reused by subsequent requests requiring authorization.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Authentication |\n| Method | POST |\n| Endpoint | `/auth` |\n| Authentication | None |\n| Headers | Content-Type: application/json |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\nhttps://restful-booker.herokuapp.com/auth\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"username\": \"admin\",\n    \"password\": \"password123\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"token\": \"abc123...\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify the response contains a token.\n    \n- Verify the token is not empty.\n    \n- Store the token in the collection variable `token`.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- Response contains token\n    \n- Token is not empty\n    \n- Save token to collection variables\n    \n\n---\n\n# Expected Result\n\nA valid authentication token is returned by the API and stored for use in all subsequent authenticated requests within the workflow.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "auth"
+            ],
+            "host": [
+              "restful-booker",
+              "herokuapp",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "cedb81f8-2597-4c3f-a9a2-05ea788651e7",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "restful-booker.herokuapp.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "61",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"password123\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "ed2b0483-41dd-430d-9d68-7eacdc906a56",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "27"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Jul 2026 14:07:25 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"1b-LDU63+gYF6lLmYK++5GTTKt93Ao\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=KD5i2iB%2B3dzDUqXoKP%2BhrmZNfkycKZp2y4Uh%2FGHfWYI%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1784988445\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=KD5i2iB%2B3dzDUqXoKP%2BhrmZNfkycKZp2y4Uh%2FGHfWYI%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1784988445\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              116,
+              111,
+              107,
+              101,
+              110,
+              34,
+              58,
+              34,
+              51,
+              99,
+              97,
+              49,
+              101,
+              52,
+              51,
+              51,
+              51,
+              51,
+              102,
+              99,
+              98,
+              57,
+              52,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 274,
+          "responseSize": 27
+        },
+        "id": "d073e06c-db0a-49ce-92cd-5bbcebdce996",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Response time is less than 5000 ms",
+            "skipped": false
+          },
+          {
+            "assertion": "Response contains authentication token",
+            "skipped": false
+          },
+          {
+            "assertion": "Authentication token is not empty",
+            "skipped": false
+          },
+          {
+            "assertion": "Authentication token saved successfully",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "c849ba7c-9662-428b-8009-286103c2080a",
+          "length": 8,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "8e83b42c-4897-460b-818e-ab770baa82de"
+        },
+        "item": {
+          "id": "01726628-2589-40f7-aa6f-b6e4fc186c87",
+          "name": "03_Create_Booking",
+          "request": {
+            "description": {
+              "content": "# Request 03 – Create Booking\n\n## Purpose\n\nCreate a new booking using valid booking details and verify that the booking is successfully created.\n\nThe generated **booking ID** is stored as a Postman collection variable and used throughout the remaining end-to-end workflow.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Create Booking |\n| Method | POST |\n| Endpoint | `/booking` |\n| Authentication | None |\n| Headers | Content-Type: application/json |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"firstname\": \"{{firstname}}\",\n    \"lastname\": \"{{lastname}}\",\n    \"totalprice\": {{totalprice}},\n    \"depositpaid\": {{depositpaid}},\n    \"bookingdates\": {\n        \"checkin\": \"{{checkin}}\",\n        \"checkout\": \"{{checkout}}\"\n    },\n    \"additionalneeds\": \"{{additionalneeds}}\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"bookingid\": 1234,\n    \"booking\": {\n        \"firstname\": \"John\",\n        \"lastname\": \"Smith\",\n        \"totalprice\": 150,\n        \"depositpaid\": true,\n        \"bookingdates\": {\n            \"checkin\": \"2026-08-01\",\n            \"checkout\": \"2026-08-05\"\n        },\n        \"additionalneeds\": \"Breakfast\"\n    }\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify booking creation succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify response contains a booking ID.\n    \n- Verify booking ID is valid.\n    \n- Verify booking data matches the submitted request.\n    \n- Store the booking ID in the collection variable `bookingid`.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- Response contains bookingid\n    \n- Booking ID is valid\n    \n- Booking data matches request\n    \n- Save bookingid to collection variables\n    \n\n---\n\n# Expected Result\n\nA new booking is successfully created, and the generated booking ID is stored for use in subsequent requests during the end-to-end workflow.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "booking"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\",\r\n    \"totalprice\": {{totalprice}},\r\n    \"depositpaid\": {{depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{checkin}}\",\r\n        \"checkout\": \"{{checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "257190fe-d4d8-4b1e-a8a8-d789b0f48e5f",
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  "// =====================================================\r",
+                  "// Request 03 - Create Booking\r",
+                  "// Sprint 09 - End-to-End API Integration Testing\r",
+                  "// =====================================================\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Parse Response\r",
+                  "// -----------------------------\r",
+                  "const response = pm.response.json();\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Status Code Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Time Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Booking ID Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response contains booking ID\", function () {\r",
+                  "    pm.expect(response).to.have.property(\"bookingid\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Booking ID Value Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Booking ID is a positive number\", function () {\r",
+                  "    pm.expect(response.bookingid).to.be.a(\"number\");\r",
+                  "    pm.expect(response.bookingid).to.be.above(0);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Booking Data Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Booking data matches request\", function () {\r",
+                  "    pm.expect(response.booking.firstname).to.eql(pm.collectionVariables.get(\"firstname\"));\r",
+                  "    pm.expect(response.booking.lastname).to.eql(pm.collectionVariables.get(\"lastname\"));\r",
+                  "    pm.expect(response.booking.totalprice).to.eql(Number(pm.collectionVariables.get(\"totalprice\")));\r",
+                  "    pm.expect(response.booking.depositpaid).to.eql(pm.collectionVariables.get(\"depositpaid\") === \"true\");\r",
+                  "    pm.expect(response.booking.bookingdates.checkin).to.eql(pm.collectionVariables.get(\"checkin\"));\r",
+                  "    pm.expect(response.booking.bookingdates.checkout).to.eql(pm.collectionVariables.get(\"checkout\"));\r",
+                  "    pm.expect(response.booking.additionalneeds).to.eql(pm.collectionVariables.get(\"additionalneeds\"));\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Save Booking ID\r",
+                  "// -----------------------------\r",
+                  "pm.collectionVariables.set(\"bookingid\", response.bookingid);\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Verify Collection Variable\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Booking ID saved successfully\", function () {\r",
+                  "    pm.expect(Number(pm.collectionVariables.get(\"bookingid\"))).to.eql(response.bookingid);\r",
+                  "});"
+                ],
+                "_lastExecutionId": "9205f6c4-5a23-4730-9e06-e80e37542a08"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "# Request 03 – Create Booking\n\n## Purpose\n\nCreate a new booking using valid booking details and verify that the booking is successfully created.\n\nThe generated **booking ID** is stored as a Postman collection variable and used throughout the remaining end-to-end workflow.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Create Booking |\n| Method | POST |\n| Endpoint | `/booking` |\n| Authentication | None |\n| Headers | Content-Type: application/json |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\nhttps://restful-booker.herokuapp.com/booking\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"firstname\": \"John\",\n    \"lastname\": \"Smith\",\n    \"totalprice\": 150,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2026-08-01\",\n        \"checkout\": \"2026-08-05\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"bookingid\": 1234,\n    \"booking\": {\n        \"firstname\": \"John\",\n        \"lastname\": \"Smith\",\n        \"totalprice\": 150,\n        \"depositpaid\": true,\n        \"bookingdates\": {\n            \"checkin\": \"2026-08-01\",\n            \"checkout\": \"2026-08-05\"\n        },\n        \"additionalneeds\": \"Breakfast\"\n    }\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify booking creation succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify response contains a booking ID.\n    \n- Verify booking ID is valid.\n    \n- Verify booking data matches the submitted request.\n    \n- Store the booking ID in the collection variable `bookingid`.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- Response contains bookingid\n    \n- Booking ID is valid\n    \n- Booking data matches request\n    \n- Save bookingid to collection variables\n    \n\n---\n\n# Expected Result\n\nA new booking is successfully created, and the generated booking ID is stored for use in subsequent requests during the end-to-end workflow.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "booking"
+            ],
+            "host": [
+              "restful-booker",
+              "herokuapp",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "6b30f56f-d951-41db-8f47-b12f81be8971",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "restful-booker.herokuapp.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "241",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"firstname\": \"John\",\r\n    \"lastname\": \"Smith\",\r\n    \"totalprice\": 150,\r\n    \"depositpaid\": true,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2026-08-01\",\r\n        \"checkout\": \"2026-08-05\"\r\n    },\r\n    \"additionalneeds\": \"Breakfast\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "80835e4c-3b3f-4c4f-a211-efc701b640b3",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "198"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Jul 2026 14:07:25 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"c6-woZbx1FNck9yUgbE7J+PpjTiaKs\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=KD5i2iB%2B3dzDUqXoKP%2BhrmZNfkycKZp2y4Uh%2FGHfWYI%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1784988445\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=KD5i2iB%2B3dzDUqXoKP%2BhrmZNfkycKZp2y4Uh%2FGHfWYI%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1784988445\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              98,
+              111,
+              111,
+              107,
+              105,
+              110,
+              103,
+              105,
+              100,
+              34,
+              58,
+              51,
+              51,
+              49,
+              56,
+              44,
+              34,
+              98,
+              111,
+              111,
+              107,
+              105,
+              110,
+              103,
+              34,
+              58,
+              123,
+              34,
+              102,
+              105,
+              114,
+              115,
+              116,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              74,
+              111,
+              104,
+              110,
+              34,
+              44,
+              34,
+              108,
+              97,
+              115,
+              116,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              83,
+              109,
+              105,
+              116,
+              104,
+              34,
+              44,
+              34,
+              116,
+              111,
+              116,
+              97,
+              108,
+              112,
+              114,
+              105,
+              99,
+              101,
+              34,
+              58,
+              49,
+              53,
+              48,
+              44,
+              34,
+              100,
+              101,
+              112,
+              111,
+              115,
+              105,
+              116,
+              112,
+              97,
+              105,
+              100,
+              34,
+              58,
+              116,
+              114,
+              117,
+              101,
+              44,
+              34,
+              98,
+              111,
+              111,
+              107,
+              105,
+              110,
+              103,
+              100,
+              97,
+              116,
+              101,
+              115,
+              34,
+              58,
+              123,
+              34,
+              99,
+              104,
+              101,
+              99,
+              107,
+              105,
+              110,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              56,
+              45,
+              48,
+              49,
+              34,
+              44,
+              34,
+              99,
+              104,
+              101,
+              99,
+              107,
+              111,
+              117,
+              116,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              56,
+              45,
+              48,
+              53,
+              34,
+              125,
+              44,
+              34,
+              97,
+              100,
+              100,
+              105,
+              116,
+              105,
+              111,
+              110,
+              97,
+              108,
+              110,
+              101,
+              101,
+              100,
+              115,
+              34,
+              58,
+              34,
+              66,
+              114,
+              101,
+              97,
+              107,
+              102,
+              97,
+              115,
+              116,
+              34,
+              125,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 270,
+          "responseSize": 198
+        },
+        "id": "01726628-2589-40f7-aa6f-b6e4fc186c87",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Response time is less than 5000 ms",
+            "skipped": false
+          },
+          {
+            "assertion": "Response contains booking ID",
+            "skipped": false
+          },
+          {
+            "assertion": "Booking ID is a positive number",
+            "skipped": false
+          },
+          {
+            "assertion": "Booking data matches request",
+            "skipped": false
+          },
+          {
+            "assertion": "Booking ID saved successfully",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "a86117b0-34e9-4d46-9e2f-bc00b381dcad",
+          "length": 8,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "f67eb37b-77e1-40d7-950b-ea1005322889"
+        },
+        "item": {
+          "id": "d72ae307-66aa-4745-bf0f-ca44c74d0615",
+          "name": "04_Get_Created_Booking",
+          "request": {
+            "description": {
+              "content": "# Request 04 – Get Created Booking\n\n## Purpose\n\nRetrieve the booking created in the previous request and verify that all booking information has been stored correctly.\n\nThe request uses the booking ID saved during the Create Booking request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Get Created Booking |\n| Method | GET |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | None |\n| Headers | None |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"firstname\": \"John\",\n    \"lastname\": \"Smith\",\n    \"totalprice\": 150,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2026-08-01\",\n        \"checkout\": \"2026-08-05\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify booking retrieval succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify the returned booking matches the created booking.\n    \n- Verify all booking fields contain the expected values.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- First Name\n    \n- Last Name\n    \n- Total Price\n    \n- Deposit Paid\n    \n- Check-in Date\n    \n- Check-out Date\n    \n- Additional Needs\n    \n\n---\n\n# Expected Result\n\nThe booking is successfully retrieved using the stored booking ID, and all returned booking details exactly match the data submitted during booking creation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "booking",
+                "{{bookingid}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "8c6b728d-b63b-48f6-9e13-4ad7ee2d95cf",
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  "// -----------------------------\r",
+                  "// Parse Response\r",
+                  "// -----------------------------\r",
+                  "const response = pm.response.json();\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Status Code Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Time Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Content-Type Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Content-Type is application/json\", function () {\r",
+                  "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Booking ID Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Booking ID is a valid positive number\", function () {\r",
+                  "    pm.expect(Number(pm.variables.get(\"bookingid\"))).to.be.above(0);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Validate Booking Data\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Booking data matches expected values\", function () {\r",
+                  "    pm.expect(response.firstname).to.eql(pm.variables.get(\"firstname\"));\r",
+                  "    pm.expect(response.lastname).to.eql(pm.variables.get(\"lastname\"));\r",
+                  "    pm.expect(response.totalprice).to.eql(Number(pm.variables.get(\"totalprice\")));\r",
+                  "    pm.expect(response.depositpaid).to.eql(pm.variables.get(\"depositpaid\") === \"true\");\r",
+                  "    pm.expect(response.bookingdates.checkin).to.eql(pm.variables.get(\"checkin\"));\r",
+                  "    pm.expect(response.bookingdates.checkout).to.eql(pm.variables.get(\"checkout\"));\r",
+                  "    pm.expect(response.additionalneeds).to.eql(pm.variables.get(\"additionalneeds\"));\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Structure Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response contains required fields\", function () {\r",
+                  "    pm.expect(response).to.have.property(\"firstname\");\r",
+                  "    pm.expect(response).to.have.property(\"lastname\");\r",
+                  "    pm.expect(response).to.have.property(\"totalprice\");\r",
+                  "    pm.expect(response).to.have.property(\"depositpaid\");\r",
+                  "    pm.expect(response).to.have.property(\"bookingdates\");\r",
+                  "    pm.expect(response.bookingdates).to.have.property(\"checkin\");\r",
+                  "    pm.expect(response.bookingdates).to.have.property(\"checkout\");\r",
+                  "    pm.expect(response).to.have.property(\"additionalneeds\");\r",
+                  "});"
+                ],
+                "_lastExecutionId": "69c2a6a7-3b99-4b73-be5f-c71b14b23720"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "# Request 04 – Get Created Booking\n\n## Purpose\n\nRetrieve the booking created in the previous request and verify that all booking information has been stored correctly.\n\nThe request uses the booking ID saved during the Create Booking request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Get Created Booking |\n| Method | GET |\n| Endpoint | `/booking/3318` |\n| Authentication | None |\n| Headers | None |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\nhttps://restful-booker.herokuapp.com/booking/3318\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"firstname\": \"John\",\n    \"lastname\": \"Smith\",\n    \"totalprice\": 150,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2026-08-01\",\n        \"checkout\": \"2026-08-05\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify booking retrieval succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify the returned booking matches the created booking.\n    \n- Verify all booking fields contain the expected values.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- First Name\n    \n- Last Name\n    \n- Total Price\n    \n- Deposit Paid\n    \n- Check-in Date\n    \n- Check-out Date\n    \n- Additional Needs\n    \n\n---\n\n# Expected Result\n\nThe booking is successfully retrieved using the stored booking ID, and all returned booking details exactly match the data submitted during booking creation.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "booking",
+              "3318"
+            ],
+            "host": [
+              "restful-booker",
+              "herokuapp",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "12978791-4177-4408-bcd7-2e3a2e78f4d3",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "restful-booker.herokuapp.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "b2f69280-3736-410f-a5a2-14509711165b",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "169"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Jul 2026 14:07:26 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"a9-SoO64wdqS6/VqlonMLb+TfIJxCo\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=yHfoNK5RsXajIjNw1wEeZcq5u8NbjhMH9mR0XZFg%2FLk%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1784988446\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=yHfoNK5RsXajIjNw1wEeZcq5u8NbjhMH9mR0XZFg%2FLk%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1784988446\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              102,
+              105,
+              114,
+              115,
+              116,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              74,
+              111,
+              104,
+              110,
+              34,
+              44,
+              34,
+              108,
+              97,
+              115,
+              116,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              83,
+              109,
+              105,
+              116,
+              104,
+              34,
+              44,
+              34,
+              116,
+              111,
+              116,
+              97,
+              108,
+              112,
+              114,
+              105,
+              99,
+              101,
+              34,
+              58,
+              49,
+              53,
+              48,
+              44,
+              34,
+              100,
+              101,
+              112,
+              111,
+              115,
+              105,
+              116,
+              112,
+              97,
+              105,
+              100,
+              34,
+              58,
+              116,
+              114,
+              117,
+              101,
+              44,
+              34,
+              98,
+              111,
+              111,
+              107,
+              105,
+              110,
+              103,
+              100,
+              97,
+              116,
+              101,
+              115,
+              34,
+              58,
+              123,
+              34,
+              99,
+              104,
+              101,
+              99,
+              107,
+              105,
+              110,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              56,
+              45,
+              48,
+              49,
+              34,
+              44,
+              34,
+              99,
+              104,
+              101,
+              99,
+              107,
+              111,
+              117,
+              116,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              56,
+              45,
+              48,
+              53,
+              34,
+              125,
+              44,
+              34,
+              97,
+              100,
+              100,
+              105,
+              116,
+              105,
+              111,
+              110,
+              97,
+              108,
+              110,
+              101,
+              101,
+              100,
+              115,
+              34,
+              58,
+              34,
+              66,
+              114,
+              101,
+              97,
+              107,
+              102,
+              97,
+              115,
+              116,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 271,
+          "responseSize": 169
+        },
+        "id": "d72ae307-66aa-4745-bf0f-ca44c74d0615",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Response time is less than 5000 ms",
+            "skipped": false
+          },
+          {
+            "assertion": "Content-Type is application/json",
+            "skipped": false
+          },
+          {
+            "assertion": "Booking ID is a valid positive number",
+            "skipped": false
+          },
+          {
+            "assertion": "Booking data matches expected values",
+            "skipped": false
+          },
+          {
+            "assertion": "Response contains required fields",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "f4ea5d66-973c-4921-a643-853b6ea176f7",
+          "length": 8,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "27904b71-a2a1-4814-bc77-b67d0b68b3c3"
+        },
+        "item": {
+          "id": "556afdea-07af-422b-8003-592a19ed9750",
+          "name": "05_Update_Booking",
+          "request": {
+            "description": {
+              "content": "# Request 05 – Update Booking (PUT)\n\n## Purpose\n\nPerform a complete update of the existing booking using valid data and verify that all booking information is successfully replaced.\n\nThis request uses the booking ID generated during the Create Booking request and the authentication token generated during the Authentication request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Update Booking |\n| Method | PUT |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | Cookie Token |\n| Headers | Content-Type: application/json  <br>Cookie: token={{token}} |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n| Cookie | token={{token}} |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"firstname\": \"Michael\",\n    \"lastname\": \"Johnson\",\n    \"totalprice\": 250,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2026-09-10\",\n        \"checkout\": \"2026-09-20\"\n    },\n    \"additionalneeds\": \"Dinner\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"firstname\": \"Michael\",\n    \"lastname\": \"Johnson\",\n    \"totalprice\": 250,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2026-09-10\",\n        \"checkout\": \"2026-09-20\"\n    },\n    \"additionalneeds\": \"Dinner\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication is successful.\n    \n- Verify booking is updated successfully.\n    \n- Verify HTTP status code is 200.\n    \n- Verify all booking fields contain the updated values.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- First Name\n    \n- Last Name\n    \n- Total Price\n    \n- Deposit Paid\n    \n- Check-in Date\n    \n- Check-out Date\n    \n- Additional Needs\n    \n\n---\n\n# Expected Result\n\nThe booking is successfully updated, and every field reflects the new values provided in the request body.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "booking",
+                "{{bookingid}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Cookie",
+                "value": "token={{token}}"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstname\": \"{{update_firstname}}\",\r\n    \"lastname\": \"{{update_lastname}}\",\r\n    \"totalprice\": {{update_totalprice}},\r\n    \"depositpaid\": {{update_depositpaid}},\r\n    \"bookingdates\": {\r\n        \"checkin\": \"{{update_checkin}}\",\r\n        \"checkout\": \"{{update_checkout}}\"\r\n    },\r\n    \"additionalneeds\": \"{{update_additionalneeds}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "95152c7d-e255-4afe-823a-2cc5a4f05312",
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  "// -----------------------------\r",
+                  "// Parse Response\r",
+                  "// -----------------------------\r",
+                  "let response = {};\r",
+                  "\r",
+                  "if (pm.response.code === 200) {\r",
+                  "    response = pm.response.json();\r",
+                  "}\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Status Code Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Time Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Content-Type Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Content-Type is application/json\", function () {\r",
+                  "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Updated Booking Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Updated booking data matches expected values\", function () {\r",
+                  "\r",
+                  "    pm.expect(response.firstname).to.eql(\r",
+                  "        pm.collectionVariables.get(\"update_firstname\")\r",
+                  "    );\r",
+                  "\r",
+                  "    pm.expect(response.lastname).to.eql(\r",
+                  "        pm.collectionVariables.get(\"update_lastname\")\r",
+                  "    );\r",
+                  "\r",
+                  "    pm.expect(response.totalprice).to.eql(\r",
+                  "        Number(pm.collectionVariables.get(\"update_totalprice\"))\r",
+                  "    );\r",
+                  "\r",
+                  "    pm.expect(response.depositpaid).to.eql(\r",
+                  "        pm.collectionVariables.get(\"update_depositpaid\") === \"true\"\r",
+                  "    );\r",
+                  "\r",
+                  "    pm.expect(response.bookingdates.checkin).to.eql(\r",
+                  "        pm.collectionVariables.get(\"update_checkin\")\r",
+                  "    );\r",
+                  "\r",
+                  "    pm.expect(response.bookingdates.checkout).to.eql(\r",
+                  "        pm.collectionVariables.get(\"update_checkout\")\r",
+                  "    );\r",
+                  "\r",
+                  "    pm.expect(response.additionalneeds).to.eql(\r",
+                  "        pm.collectionVariables.get(\"update_additionalneeds\")\r",
+                  "    );\r",
+                  "\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Structure Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response contains required fields\", function () {\r",
+                  "\r",
+                  "    pm.expect(response).to.have.property(\"firstname\");\r",
+                  "    pm.expect(response).to.have.property(\"lastname\");\r",
+                  "    pm.expect(response).to.have.property(\"totalprice\");\r",
+                  "    pm.expect(response).to.have.property(\"depositpaid\");\r",
+                  "    pm.expect(response).to.have.property(\"bookingdates\");\r",
+                  "\r",
+                  "    pm.expect(response.bookingdates).to.have.property(\"checkin\");\r",
+                  "    pm.expect(response.bookingdates).to.have.property(\"checkout\");\r",
+                  "\r",
+                  "    pm.expect(response).to.have.property(\"additionalneeds\");\r",
+                  "\r",
+                  "});"
+                ],
+                "_lastExecutionId": "b8ed02f9-7e6d-4b12-812a-a9b8c40a23ad"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "# Request 05 – Update Booking (PUT)\n\n## Purpose\n\nPerform a complete update of the existing booking using valid data and verify that all booking information is successfully replaced.\n\nThis request uses the booking ID generated during the Create Booking request and the authentication token generated during the Authentication request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Update Booking |\n| Method | PUT |\n| Endpoint | `/booking/3318` |\n| Authentication | Cookie Token |\n| Headers | Content-Type: application/json  <br>Cookie: token=3ca1e43333fcb94 |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\nhttps://restful-booker.herokuapp.com/booking/3318\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n| Cookie | token=3ca1e43333fcb94 |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"firstname\": \"Michael\",\n    \"lastname\": \"Johnson\",\n    \"totalprice\": 250,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2026-09-10\",\n        \"checkout\": \"2026-09-20\"\n    },\n    \"additionalneeds\": \"Dinner\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"firstname\": \"Michael\",\n    \"lastname\": \"Johnson\",\n    \"totalprice\": 250,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2026-09-10\",\n        \"checkout\": \"2026-09-20\"\n    },\n    \"additionalneeds\": \"Dinner\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication is successful.\n    \n- Verify booking is updated successfully.\n    \n- Verify HTTP status code is 200.\n    \n- Verify all booking fields contain the updated values.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- First Name\n    \n- Last Name\n    \n- Total Price\n    \n- Deposit Paid\n    \n- Check-in Date\n    \n- Check-out Date\n    \n- Additional Needs\n    \n\n---\n\n# Expected Result\n\nThe booking is successfully updated, and every field reflects the new values provided in the request body.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "booking",
+              "3318"
+            ],
+            "host": [
+              "restful-booker",
+              "herokuapp",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Cookie",
+              "value": "token=3ca1e43333fcb94",
+              "system": true
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "4acdc7f8-e29f-4d8d-a27a-c3267ab4a468",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "restful-booker.herokuapp.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "244",
+              "system": true
+            }
+          ],
+          "method": "PUT",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"firstname\": \"Michael\",\r\n    \"lastname\": \"Michael\",\r\n    \"totalprice\": 250,\r\n    \"depositpaid\": false,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2026-09-10\",\r\n        \"checkout\": \"2026-09-20\"\r\n    },\r\n    \"additionalneeds\": \"Dinner\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "9fd52127-2a78-4b7e-b41d-849ed98f4902",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "172"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Jul 2026 14:07:26 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"ac-PWhxQazYVKhR7pBkyi3xus/23fs\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=yHfoNK5RsXajIjNw1wEeZcq5u8NbjhMH9mR0XZFg%2FLk%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1784988446\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=yHfoNK5RsXajIjNw1wEeZcq5u8NbjhMH9mR0XZFg%2FLk%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1784988446\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              102,
+              105,
+              114,
+              115,
+              116,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              77,
+              105,
+              99,
+              104,
+              97,
+              101,
+              108,
+              34,
+              44,
+              34,
+              108,
+              97,
+              115,
+              116,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              77,
+              105,
+              99,
+              104,
+              97,
+              101,
+              108,
+              34,
+              44,
+              34,
+              116,
+              111,
+              116,
+              97,
+              108,
+              112,
+              114,
+              105,
+              99,
+              101,
+              34,
+              58,
+              50,
+              53,
+              48,
+              44,
+              34,
+              100,
+              101,
+              112,
+              111,
+              115,
+              105,
+              116,
+              112,
+              97,
+              105,
+              100,
+              34,
+              58,
+              102,
+              97,
+              108,
+              115,
+              101,
+              44,
+              34,
+              98,
+              111,
+              111,
+              107,
+              105,
+              110,
+              103,
+              100,
+              97,
+              116,
+              101,
+              115,
+              34,
+              58,
+              123,
+              34,
+              99,
+              104,
+              101,
+              99,
+              107,
+              105,
+              110,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              57,
+              45,
+              49,
+              48,
+              34,
+              44,
+              34,
+              99,
+              104,
+              101,
+              99,
+              107,
+              111,
+              117,
+              116,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              57,
+              45,
+              50,
+              48,
+              34,
+              125,
+              44,
+              34,
+              97,
+              100,
+              100,
+              105,
+              116,
+              105,
+              111,
+              110,
+              97,
+              108,
+              110,
+              101,
+              101,
+              100,
+              115,
+              34,
+              58,
+              34,
+              68,
+              105,
+              110,
+              110,
+              101,
+              114,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 272,
+          "responseSize": 172
+        },
+        "id": "556afdea-07af-422b-8003-592a19ed9750",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Response time is less than 5000 ms",
+            "skipped": false
+          },
+          {
+            "assertion": "Content-Type is application/json",
+            "skipped": false
+          },
+          {
+            "assertion": "Updated booking data matches expected values",
+            "skipped": false
+          },
+          {
+            "assertion": "Response contains required fields",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "74788a67-ea8a-4270-8acf-67e6ac3f6898",
+          "length": 8,
+          "cycles": 1,
+          "position": 5,
+          "iteration": 0,
+          "httpRequestId": "dc16b808-16d1-42e8-b71d-9a24c432bb70"
+        },
+        "item": {
+          "id": "0791b64b-e633-4720-8328-1a06ee3396ae",
+          "name": "06_Partial_Update_Booking_(PATCH)",
+          "request": {
+            "description": {
+              "content": "# Request 06 – Partial Update Booking (PATCH)\n\n## Purpose\n\nPerform a partial update of an existing booking and verify that only the specified fields are modified while all other booking information remains unchanged.\n\nThis request uses the booking ID generated during the Create Booking request and the authentication token generated during the Authentication request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Partial Update Booking |\n| Method | PATCH |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | Cookie Token |\n| Headers | Content-Type: application/json  <br>Cookie: token={{token}} |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n| Cookie | token={{token}} |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"firstname\": \"David\",\n    \"additionalneeds\": \"Late Checkout\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"firstname\": \"David\",\n    \"lastname\": \"Johnson\",\n    \"totalprice\": 250,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2026-09-10\",\n        \"checkout\": \"2026-09-20\"\n    },\n    \"additionalneeds\": \"Late Checkout\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication succeeds.\n    \n- Verify partial update succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify only the specified fields are updated.\n    \n- Verify unchanged fields retain their previous values.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- Updated First Name\n    \n- Updated Additional Needs\n    \n- Unchanged Last Name\n    \n- Unchanged Total Price\n    \n- Unchanged Deposit Paid\n    \n- Unchanged Check-in Date\n    \n- Unchanged Check-out Date\n    \n\n---\n\n# Expected Result\n\nThe specified fields are updated successfully, while all unspecified fields remain unchanged, confirming correct PATCH operation behavior.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "booking",
+                "{{bookingid}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Cookie",
+                "value": "token={{token}}"
+              }
+            ],
+            "method": "PATCH",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstname\": \"David\",\r\n    \"additionalneeds\": \"Late Checkout\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "b8429f6a-5521-4d7d-ae7b-559b892745ba",
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  "// -----------------------------\r",
+                  "// Status Code Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Authentication Validation\r",
+                  "// -----------------------------\r",
+                  "if (pm.response.code !== 200) {\r",
+                  "\r",
+                  "    console.log(\"Request failed.\");\r",
+                  "    console.log(\"Status:\", pm.response.code);\r",
+                  "    console.log(\"Response:\", pm.response.text());\r",
+                  "\r",
+                  "    pm.test(\"Authentication or request failed\", function () {\r",
+                  "        pm.expect.fail(\r",
+                  "            \"Request failed with status \" +\r",
+                  "            pm.response.code +\r",
+                  "            \". Response: \" +\r",
+                  "            pm.response.text()\r",
+                  "        );\r",
+                  "    });\r",
+                  "\r",
+                  "    return;\r",
+                  "}\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Parse Response\r",
+                  "// -----------------------------\r",
+                  "const response = pm.response.json();\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Time Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Content-Type Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Content-Type is application/json\", function () {\r",
+                  "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Updated Fields Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"First name updated successfully\", function () {\r",
+                  "    pm.expect(response.firstname).to.eql(\"David\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Additional needs updated successfully\", function () {\r",
+                  "    pm.expect(response.additionalneeds).to.eql(\"Late Checkout\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Unchanged Fields Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Last name remains unchanged\", function () {\r",
+                  "    pm.expect(response.lastname).to.eql(\"Michael\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Total price remains unchanged\", function () {\r",
+                  "    pm.expect(response.totalprice).to.eql(250);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Deposit paid remains unchanged\", function () {\r",
+                  "    pm.expect(response.depositpaid).to.eql(false);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Check-in remains unchanged\", function () {\r",
+                  "    pm.expect(response.bookingdates.checkin).to.eql(\"2026-09-10\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Check-out remains unchanged\", function () {\r",
+                  "    pm.expect(response.bookingdates.checkout).to.eql(\"2026-09-20\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Structure Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response contains all required fields\", function () {\r",
+                  "\r",
+                  "    pm.expect(response).to.have.property(\"firstname\");\r",
+                  "    pm.expect(response).to.have.property(\"lastname\");\r",
+                  "    pm.expect(response).to.have.property(\"totalprice\");\r",
+                  "    pm.expect(response).to.have.property(\"depositpaid\");\r",
+                  "    pm.expect(response).to.have.property(\"bookingdates\");\r",
+                  "    pm.expect(response.bookingdates).to.have.property(\"checkin\");\r",
+                  "    pm.expect(response.bookingdates).to.have.property(\"checkout\");\r",
+                  "    pm.expect(response).to.have.property(\"additionalneeds\");\r",
+                  "\r",
+                  "});"
+                ],
+                "_lastExecutionId": "1e33420a-40eb-41d9-9b52-063eaf319338"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "# Request 06 – Partial Update Booking (PATCH)\n\n## Purpose\n\nPerform a partial update of an existing booking and verify that only the specified fields are modified while all other booking information remains unchanged.\n\nThis request uses the booking ID generated during the Create Booking request and the authentication token generated during the Authentication request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Partial Update Booking |\n| Method | PATCH |\n| Endpoint | `/booking/3318` |\n| Authentication | Cookie Token |\n| Headers | Content-Type: application/json  <br>Cookie: token=3ca1e43333fcb94 |\n| Request Body | JSON |\n\n---\n\n# Full URL\n\n``` text\nhttps://restful-booker.herokuapp.com/booking/3318\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Content-Type | application/json |\n| Cookie | token=3ca1e43333fcb94 |\n\n---\n\n# Request Body\n\n``` json\n{\n    \"firstname\": \"David\",\n    \"additionalneeds\": \"Late Checkout\"\n}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n200 OK\n\n ```\n\n## Response Body\n\n``` json\n{\n    \"firstname\": \"David\",\n    \"lastname\": \"Johnson\",\n    \"totalprice\": 250,\n    \"depositpaid\": false,\n    \"bookingdates\": {\n        \"checkin\": \"2026-09-10\",\n        \"checkout\": \"2026-09-20\"\n    },\n    \"additionalneeds\": \"Late Checkout\"\n}\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication succeeds.\n    \n- Verify partial update succeeds.\n    \n- Verify HTTP status code is 200.\n    \n- Verify only the specified fields are updated.\n    \n- Verify unchanged fields retain their previous values.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 200\n    \n- Response Time < 5000 ms\n    \n- Updated First Name\n    \n- Updated Additional Needs\n    \n- Unchanged Last Name\n    \n- Unchanged Total Price\n    \n- Unchanged Deposit Paid\n    \n- Unchanged Check-in Date\n    \n- Unchanged Check-out Date\n    \n\n---\n\n# Expected Result\n\nThe specified fields are updated successfully, while all unspecified fields remain unchanged, confirming correct PATCH operation behavior.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "booking",
+              "3318"
+            ],
+            "host": [
+              "restful-booker",
+              "herokuapp",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Cookie",
+              "value": "token=3ca1e43333fcb94",
+              "system": true
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "dc6a5912-1f1c-4e05-9ad5-ffaa65b4dd7b",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "restful-booker.herokuapp.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "71",
+              "system": true
+            }
+          ],
+          "method": "PATCH",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"firstname\": \"David\",\r\n    \"additionalneeds\": \"Late Checkout\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "31296484-4113-4713-b162-ea0805f5a766",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "177"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Jul 2026 14:07:26 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"b1-V4cxqo+S0rMBHMNctcgWtY5TV9A\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=yHfoNK5RsXajIjNw1wEeZcq5u8NbjhMH9mR0XZFg%2FLk%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1784988446\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=yHfoNK5RsXajIjNw1wEeZcq5u8NbjhMH9mR0XZFg%2FLk%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1784988446\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              102,
+              105,
+              114,
+              115,
+              116,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              68,
+              97,
+              118,
+              105,
+              100,
+              34,
+              44,
+              34,
+              108,
+              97,
+              115,
+              116,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              77,
+              105,
+              99,
+              104,
+              97,
+              101,
+              108,
+              34,
+              44,
+              34,
+              116,
+              111,
+              116,
+              97,
+              108,
+              112,
+              114,
+              105,
+              99,
+              101,
+              34,
+              58,
+              50,
+              53,
+              48,
+              44,
+              34,
+              100,
+              101,
+              112,
+              111,
+              115,
+              105,
+              116,
+              112,
+              97,
+              105,
+              100,
+              34,
+              58,
+              102,
+              97,
+              108,
+              115,
+              101,
+              44,
+              34,
+              98,
+              111,
+              111,
+              107,
+              105,
+              110,
+              103,
+              100,
+              97,
+              116,
+              101,
+              115,
+              34,
+              58,
+              123,
+              34,
+              99,
+              104,
+              101,
+              99,
+              107,
+              105,
+              110,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              57,
+              45,
+              49,
+              48,
+              34,
+              44,
+              34,
+              99,
+              104,
+              101,
+              99,
+              107,
+              111,
+              117,
+              116,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              57,
+              45,
+              50,
+              48,
+              34,
+              125,
+              44,
+              34,
+              97,
+              100,
+              100,
+              105,
+              116,
+              105,
+              111,
+              110,
+              97,
+              108,
+              110,
+              101,
+              101,
+              100,
+              115,
+              34,
+              58,
+              34,
+              76,
+              97,
+              116,
+              101,
+              32,
+              67,
+              104,
+              101,
+              99,
+              107,
+              111,
+              117,
+              116,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 271,
+          "responseSize": 177
+        },
+        "id": "0791b64b-e633-4720-8328-1a06ee3396ae",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Response time is less than 5000 ms",
+            "skipped": false
+          },
+          {
+            "assertion": "Content-Type is application/json",
+            "skipped": false
+          },
+          {
+            "assertion": "First name updated successfully",
+            "skipped": false
+          },
+          {
+            "assertion": "Additional needs updated successfully",
+            "skipped": false
+          },
+          {
+            "assertion": "Last name remains unchanged",
+            "skipped": false
+          },
+          {
+            "assertion": "Total price remains unchanged",
+            "skipped": false
+          },
+          {
+            "assertion": "Deposit paid remains unchanged",
+            "skipped": false
+          },
+          {
+            "assertion": "Check-in remains unchanged",
+            "skipped": false
+          },
+          {
+            "assertion": "Check-out remains unchanged",
+            "skipped": false
+          },
+          {
+            "assertion": "Response contains all required fields",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "f8019c33-d42b-4561-a432-4610118fb089",
+          "length": 8,
+          "cycles": 1,
+          "position": 6,
+          "iteration": 0,
+          "httpRequestId": "542a68cb-f818-4e82-8b6c-2c729cc582ed"
+        },
+        "item": {
+          "id": "caa5df1e-0bfe-4e91-9abb-6557e0354b93",
+          "name": "07_Delete_Booking",
+          "request": {
+            "description": {
+              "content": "# Request 07 – Delete Booking\n\n## Purpose\n\nDelete the existing booking created during the end-to-end workflow and verify that the booking is successfully removed from the system.\n\nThis request uses the booking ID generated during the Create Booking request and the authentication token generated during the Authentication request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Delete Booking |\n| Method | DELETE |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | Cookie Token |\n| Headers | Cookie: token={{token}} |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Cookie | token={{token}} |\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n201 Created\n\n ```\n\n## Response Body\n\n``` text\nCreated\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication succeeds.\n    \n- Verify booking deletion succeeds.\n    \n- Verify HTTP status code is 201.\n    \n- Verify response body equals \"Created\".\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 201\n    \n- Response Time < 5000 ms\n    \n- Response Body = \"Created\"\n    \n- Response Body is not empty\n    \n\n---\n\n# Expected Result\n\nThe booking is successfully deleted and is no longer available within the Restful Booker API.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "booking",
+                "{{bookingid}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "token={{token}}"
+              }
+            ],
+            "method": "DELETE"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "b3a4cde5-e6a0-4fb1-8259-d599dedbdca6",
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  "// =====================================================\r",
+                  "// Request 07 - Delete Booking\r",
+                  "// Sprint 09 - End-to-End API Integration Testing\r",
+                  "// =====================================================\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Status Code Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Status code is 201\", function () {\r",
+                  "    pm.response.to.have.status(201);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Time Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Body Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response body equals 'Created'\", function () {\r",
+                  "    pm.expect(pm.response.text()).to.eql(\"Created\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Body Not Empty\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response body is not empty\", function () {\r",
+                  "    pm.expect(pm.response.text()).to.not.be.empty;\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Delete Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Booking deleted successfully\", function () {\r",
+                  "    pm.expect(pm.response.code).to.eql(201);\r",
+                  "});"
+                ],
+                "_lastExecutionId": "2dd6f5b9-3e85-4dc3-b814-f2d9ab7ecec9"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "# Request 07 – Delete Booking\n\n## Purpose\n\nDelete the existing booking created during the end-to-end workflow and verify that the booking is successfully removed from the system.\n\nThis request uses the booking ID generated during the Create Booking request and the authentication token generated during the Authentication request.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Delete Booking |\n| Method | DELETE |\n| Endpoint | `/booking/3318` |\n| Authentication | Cookie Token |\n| Headers | Cookie: token=3ca1e43333fcb94 |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\nhttps://restful-booker.herokuapp.com/booking/3318\n\n ```\n\n---\n\n# Headers\n\n| Key | Value |\n| --- | --- |\n| Cookie | token=3ca1e43333fcb94 |\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n201 Created\n\n ```\n\n## Response Body\n\n``` text\nCreated\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify authentication succeeds.\n    \n- Verify booking deletion succeeds.\n    \n- Verify HTTP status code is 201.\n    \n- Verify response body equals \"Created\".\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 201\n    \n- Response Time < 5000 ms\n    \n- Response Body = \"Created\"\n    \n- Response Body is not empty\n    \n\n---\n\n# Expected Result\n\nThe booking is successfully deleted and is no longer available within the Restful Booker API.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "booking",
+              "3318"
+            ],
+            "host": [
+              "restful-booker",
+              "herokuapp",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Cookie",
+              "value": "token=3ca1e43333fcb94",
+              "system": true
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "aa567600-d16f-452d-94b5-36569aba66e3",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "restful-booker.herokuapp.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "DELETE"
+        },
+        "response": {
+          "id": "51080076-8b53-4bb6-8117-10be3965692e",
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "7"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Jul 2026 14:07:27 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"7-rM9AyJuqT6iOan/xHh+AW+7K/T8\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=fu%2BxD%2Bj0f771FaJrpu7zPb3eaRLvwnHlN%2BYx3OgPKgM%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1784988447\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=fu%2BxD%2Bj0f771FaJrpu7zPb3eaRLvwnHlN%2BYx3OgPKgM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1784988447\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              67,
+              114,
+              101,
+              97,
+              116,
+              101,
+              100
+            ]
+          },
+          "cookie": [],
+          "responseTime": 272,
+          "responseSize": 7
+        },
+        "id": "caa5df1e-0bfe-4e91-9abb-6557e0354b93",
+        "assertions": [
+          {
+            "assertion": "Status code is 201",
+            "skipped": false
+          },
+          {
+            "assertion": "Response time is less than 5000 ms",
+            "skipped": false
+          },
+          {
+            "assertion": "Response body equals 'Created'",
+            "skipped": false
+          },
+          {
+            "assertion": "Response body is not empty",
+            "skipped": false
+          },
+          {
+            "assertion": "Booking deleted successfully",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "f463f9b2-3901-49f0-ad8a-1db51ab0bea6",
+          "length": 8,
+          "cycles": 1,
+          "position": 7,
+          "iteration": 0,
+          "httpRequestId": "e230b76b-f929-4630-8906-90495d01230f"
+        },
+        "item": {
+          "id": "f9139ca7-f772-44a1-9d85-6e736e57f69b",
+          "name": "08_Verify_Booking_Deleted",
+          "request": {
+            "description": {
+              "content": "# Request 08 – Verify Booking Deleted\n\n## Purpose\n\nVerify that the booking deleted in the previous request is no longer accessible by attempting to retrieve it using its booking ID.\n\nThis request confirms the successful completion of the resource lifecycle and validates that the API correctly returns a **404 Not Found** response for a deleted resource.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Verify Booking Deleted |\n| Method | GET |\n| Endpoint | `/booking/{{bookingid}}` |\n| Authentication | None |\n| Headers | None |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\n{{baseUrl}}/booking/{{bookingid}}\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n404 Not Found\n\n ```\n\n## Response Body\n\n``` text\nNot Found\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify the deleted booking cannot be retrieved.\n    \n- Verify HTTP status code is 404.\n    \n- Verify the API correctly reports that the resource no longer exists.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 404\n    \n- Response Time < 5000 ms\n    \n- Resource no longer exists\n    \n\n---\n\n# Expected Result\n\nThe API returns **404 Not Found**, confirming that the booking has been permanently deleted and is no longer accessible.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "booking",
+                "{{bookingid}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "c6e5cce5-e168-4102-9986-f72795351aa8",
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [
+                  "// =====================================================\r",
+                  "// Request 08 - Verify Booking Deleted\r",
+                  "// Sprint 09 - End-to-End API Integration Testing\r",
+                  "// =====================================================\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Status Code Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Status code is 404\", function () {\r",
+                  "    pm.response.to.have.status(404);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Time Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response time is less than 5000 ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Resource Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Deleted booking is no longer accessible\", function () {\r",
+                  "    pm.expect(pm.response.code).to.eql(404);\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Response Body Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"Response body indicates resource not found\", function () {\r",
+                  "    pm.expect(pm.response.text().toLowerCase()).to.include(\"not\");\r",
+                  "});\r",
+                  "\r",
+                  "// -----------------------------\r",
+                  "// Workflow Validation\r",
+                  "// -----------------------------\r",
+                  "pm.test(\"End-to-End workflow completed successfully\", function () {\r",
+                  "    pm.expect(pm.response.code).to.eql(404);\r",
+                  "});"
+                ],
+                "_lastExecutionId": "15148d59-838f-4ba3-9623-24341874d9c1"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "# Request 08 – Verify Booking Deleted\n\n## Purpose\n\nVerify that the booking deleted in the previous request is no longer accessible by attempting to retrieve it using its booking ID.\n\nThis request confirms the successful completion of the resource lifecycle and validates that the API correctly returns a **404 Not Found** response for a deleted resource.\n\n---\n\n# Request Configuration\n\n| Property | Value |\n| --- | --- |\n| Request Name | Verify Booking Deleted |\n| Method | GET |\n| Endpoint | `/booking/3318` |\n| Authentication | None |\n| Headers | None |\n| Request Body | None |\n\n---\n\n# Full URL\n\n``` text\nhttps://restful-booker.herokuapp.com/booking/3318\n\n ```\n\n---\n\n# Expected Response\n\n## Status Code\n\n``` text\n404 Not Found\n\n ```\n\n## Response Body\n\n``` text\nNot Found\n\n ```\n\n---\n\n# Response Time\n\n``` text\nLess than 5000 ms\n\n ```\n\n---\n\n# Validation Objectives\n\n- Verify the deleted booking cannot be retrieved.\n    \n- Verify HTTP status code is 404.\n    \n- Verify the API correctly reports that the resource no longer exists.\n    \n- Verify response time is acceptable.\n    \n\n---\n\n# Postman Tests\n\nValidate:\n\n- Status Code = 404\n    \n- Response Time < 5000 ms\n    \n- Resource no longer exists\n    \n\n---\n\n# Expected Result\n\nThe API returns **404 Not Found**, confirming that the booking has been permanently deleted and is no longer accessible.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "booking",
+              "3318"
+            ],
+            "host": [
+              "restful-booker",
+              "herokuapp",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "94f5c2fe-d33d-4b3d-bcec-e3a91f6cb5f7",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "restful-booker.herokuapp.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "09d2e7c6-e5cf-47df-860c-812f1f7e1c48",
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "9"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 25 Jul 2026 14:07:27 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=fu%2BxD%2Bj0f771FaJrpu7zPb3eaRLvwnHlN%2BYx3OgPKgM%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1784988447\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=fu%2BxD%2Bj0f771FaJrpu7zPb3eaRLvwnHlN%2BYx3OgPKgM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1784988447\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              78,
+              111,
+              116,
+              32,
+              70,
+              111,
+              117,
+              110,
+              100
+            ]
+          },
+          "cookie": [],
+          "responseTime": 268,
+          "responseSize": 9
+        },
+        "id": "f9139ca7-f772-44a1-9d85-6e736e57f69b",
+        "assertions": [
+          {
+            "assertion": "Status code is 404",
+            "skipped": false
+          },
+          {
+            "assertion": "Response time is less than 5000 ms",
+            "skipped": false
+          },
+          {
+            "assertion": "Deleted booking is no longer accessible",
+            "skipped": false
+          },
+          {
+            "assertion": "Response body indicates resource not found",
+            "skipped": false
+          },
+          {
+            "assertion": "End-to-End workflow completed successfully",
+            "skipped": false
+          }
+        ]
+      }
+    ],
+    "transfers": {
+      "responseTotal": 766
+    },
+    "failures": [],
+    "error": null
+  }
+}

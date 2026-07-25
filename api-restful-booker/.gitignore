@@ -1,0 +1,17 @@
+# Node.js dependencies
+05_Postman/node_modules/
+
+# Generated reports
+05_Postman/HTML_Report/
+
+# npm logs
+npm-debug.log*
+
+# Environment files
+.env
+
+# Windows
+Thumbs.db
+
+# macOS
+.DS_Store
