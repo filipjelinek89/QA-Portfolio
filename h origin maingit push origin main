@@ -1,0 +1,43 @@
+[33mcommit 5e2b3b1051cc1169a666d49c8f3458b14aa18ca0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Filip Jelínek <filip.jelinek89@gmail.com>
+Date:   Sat Aug 1 10:13:21 2026 +0200
+
+    Add Playwright ParaBank Automation Sprint 1
+
+A	Playwright-ParaBank-Automation/.github/workflows/playwright.yml
+A	Playwright-ParaBank-Automation/.gitignore
+A	Playwright-ParaBank-Automation/ISSUE_TEMPLATE/PULL_REQUEST_TEMPLATE.md
+A	Playwright-ParaBank-Automation/README.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/01_Project_Overview.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/02_Framework_Architecture.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/03_Automation_Strategy.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/04_Test_Case_Mapping.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/05_Coding_Standards.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/06_Naming_Convention.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/07_Test_Data_Strategy.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/08_Page_Object_Model.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/09_Project_Roadmap.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/10_Changelog.md
+A	Playwright-ParaBank-Automation/docs/01_Project_Documentation/11_Automation_Framework_Standards.md
+A	Playwright-ParaBank-Automation/docs/03_Project_Planning/01_Project_Backlog.md
+A	Playwright-ParaBank-Automation/docs/03_Project_Planning/02_Project_Journey.md
+A	Playwright-ParaBank-Automation/docs/05_Test_Execution/Username_Boundary_Investigation.md
+A	Playwright-ParaBank-Automation/package-lock.json
+A	Playwright-ParaBank-Automation/package.json
+A	Playwright-ParaBank-Automation/pages/BasePage.ts
+A	Playwright-ParaBank-Automation/pages/RegistrationPage.ts
+A	Playwright-ParaBank-Automation/playwright.config.ts
+A	Playwright-ParaBank-Automation/test-data/factories/RegistrationDataFactory.ts
+A	Playwright-ParaBank-Automation/test-data/generators/TestDataGenerator.ts
+A	Playwright-ParaBank-Automation/test-data/models/RegistrationData.ts
+A	Playwright-ParaBank-Automation/test-data/users/RegistrationUsers.ts
+A	Playwright-ParaBank-Automation/tests/investigation/Find_Username_Boundary.spec.ts
+A	Playwright-ParaBank-Automation/tests/registration/TC001_successful_user_registration.spec.ts
+A	Playwright-ParaBank-Automation/tests/registration/TC002_Registration_With_Required_Fields_Only.spec.ts
+A	Playwright-ParaBank-Automation/tests/registration/TC003_registration_with_empty_required_fields.spec.ts
+A	Playwright-ParaBank-Automation/tests/registration/TC004_registration_with_an_existing_username.spec.ts
+A	Playwright-ParaBank-Automation/tests/registration/TC005_password_confirmation_validation.spec.ts
+A	Playwright-ParaBank-Automation/tests/registration/TC006_Username_Length_Boundary_Validation.spec.ts
+A	Playwright-ParaBank-Automation/tests/registration/TC007_special_characters_validation.spec.ts
+A	Playwright-ParaBank-Automation/tests/registration/TC008_registration_with_alphabetic_zip_code.spec.ts
+A	Playwright-ParaBank-Automation/tsconfig.json

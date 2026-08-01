@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test } from '../../fixtures/base';
 
 import { RegistrationPage } from '../../pages/RegistrationPage';
 import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';

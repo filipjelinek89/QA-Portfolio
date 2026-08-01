@@ -11,6 +11,56 @@
 Professional API Testing portfolio demonstrating Manual API Testing, Postman Automation, Newman CLI, and GitHub Actions CI/CD.
 
 ---
+# 📊 CI/CD Reports
+
+Every workflow execution automatically runs the complete API automation suite using **GitHub Actions** and **Newman**.
+
+Generated reports:
+
+| Report | Description |
+|---------|-------------|
+| 📄 HTML Report | Human-readable execution report with request details, assertions, and execution statistics. |
+| 📄 JSON Report | Machine-readable report suitable for integrations and automated processing. |
+| 📄 JUnit XML Report | Standard CI/CD test report compatible with build and reporting tools. |
+
+## View the Latest Reports
+
+After every successful workflow execution, the reports are available as downloadable **GitHub Actions Artifacts**.
+
+### Steps
+
+1. Open the **Actions** tab.
+2. Select the latest **Newman API Tests** workflow.
+3. Scroll to the **Artifacts** section.
+4. Download the desired report.
+
+➡️ **GitHub Actions**
+
+https://github.com/filipjelinek89/QA-Portfolio/actions/workflows/newman.yml
+
+---
+
+### Generated Artifacts
+
+- ✅ HTML Report
+- ✅ JSON Report
+- ✅ JUnit Report
+
+---
+
+### Automation Features
+
+- ✅ Automatic execution on every push to `main`
+- ✅ Automatic execution on Pull Requests
+- ✅ Manual execution using **Run workflow**
+- ✅ JavaScript Assertions
+- ✅ HTML Report Generation
+- ✅ JSON Report Generation
+- ✅ JUnit XML Report Generation
+- ✅ Artifact Upload
+- ✅ GitHub Actions CI/CD
+
+---
 
 ## Project Overview
 
@@ -437,14 +487,18 @@ Current automation workflow:
 
 ---
 
-# Future Improvements
+## 🚀 CI/CD Status
 
-Planned future enhancements:
+This project uses GitHub Actions and Newman to automatically execute API tests.
 
-- Additional negative test scenarios
-- Expanded JSON Schema coverage
-- Performance-focused API checks
-- Integration into a larger QA portfolio
+**Features**
+
+- ✅ Automatic execution on every push
+- ✅ Manual workflow execution
+- ✅ HTML, JSON and JUnit reports
+- ✅ JavaScript assertions
+- ✅ Artifact upload
+- ✅ Live GitHub Actions status badge
 
 ---
 

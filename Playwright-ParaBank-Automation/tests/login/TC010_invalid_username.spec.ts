@@ -1,9 +1,11 @@
 import { test } from '../../fixtures/base';
 
 import { RegistrationPage } from '../../pages/RegistrationPage';
+import { LoginPage } from '../../pages/LoginPage';
+
 import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';
 
-test('TC002 -  Registration With Required Fields Only.spec', async ({ page }) => {
+test('TC010 - Invalid Username', async ({ page }) => {
 
     // ==========================================
     // Arrange
@@ -11,7 +13,10 @@ test('TC002 -  Registration With Required Fields Only.spec', async ({ page }) =>
 
     const registrationPage = new RegistrationPage(page);
 
-    const user = RegistrationDataFactory.createUserWithRequiredFieldsOnly();
+    const loginPage = new LoginPage(page);
+
+    const user =
+        RegistrationDataFactory.createValidUser();
 
     // ==========================================
     // Act
@@ -21,10 +26,17 @@ test('TC002 -  Registration With Required Fields Only.spec', async ({ page }) =>
 
     await registrationPage.registerUser(user);
 
+    await registrationPage.clickLogout();
+
+    await loginPage.login(
+        'InvalidUsername123',
+        user.password
+    );
+
     // ==========================================
     // Assert
     // ==========================================
 
-    await registrationPage.verifyRegistrationSuccess(user);
+    await loginPage.verifyLoginError();
 
 });

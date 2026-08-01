@@ -1,353 +1,433 @@
-# Filip Jelinek – Junior QA Engineer Portfolio
+# 🎯 Filip Jelinek – QA Portfolio
+
+<div align="center">
+
+**Junior QA Engineer | Manual Testing | API Testing | Test Automation**
+
+[![Newman API Tests](https://github.com/filipjelinek89/QA-Portfolio/actions/workflows/newman.yml/badge.svg)](https://github.com/filipjelinek89/QA-Portfolio/actions/runs/30203038813)
+![Postman](https://img.shields.io/badge/Postman-API_Testing-FF6C37?logo=postman&logoColor=white)
+![Newman](https://img.shields.io/badge/Newman-Automation-25D366)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?logo=githubactions&logoColor=white)
+
+[Portfolio](#-portfolio-highlights) • [Projects](#-projects) • [Skills](#-skills--tools) • [Contact](#-contact)
+
+![GitHub followers](https://img.shields.io/github/followers/filipjelinek89?style=social)
+![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)
+![GitHub](https://img.shields.io/badge/GitHub-QA%20Portfolio-blue?logo=github)
+
+
+QA Portfolio lite version 
+
+https://filipjelinek89.github.io/
+
+</div>
 
 ---
 
-# In-page Navigation
+## 👋 Who I Am
 
-- 👨‍💻 [About me](#%E2%80%8D-about-me)
-- 📄 [CV](#-cv)
-- 🛠️ [Skills](#%EF%B8%8F-skills)
-- 📂 [Portfolio Projects](#-portfolio-projects)
-- 🧪 [Test Cases](#-test-cases)
-- 🐞 [Bug Reports](#-bug-reports)
-- 🔌 [API Testing](#-api-testing--postman-collection)
-- 🗄️ [SQL Practice *(Planned)*](#-sql-practice)
-- 🤖 [Automation (Playwright) *(Planned)*](#-playwright-automation)
-- 🎓 [Certificates](#-certificates)
-- 📫 [Contact](#-contact)
+I'm Filip Jelinek, a passionate Junior QA Engineer transitioning from industrial quality assurance and project management into software testing. With a background in precision-driven environments and experience as a PADI Diving Instructor, I bring **discipline, attention to detail, and systematic problem-solving** to every testing challenge.
+
+**What drives me:** Exploring systems, finding defects, and delivering professional QA documentation.
+
+**Currently seeking:** Junior Manual QA, QA Automation, or QA Internship roles (Remote, Worldwide)
+
+📧 [filip.jelinek89@gmail.com](mailto:filip.jelinek89@gmail.com) | 💼 [LinkedIn](https://www.linkedin.com/in/filip-jelinek-a6143b342) | 🐙 [GitHub](https://github.com/filipjelinek89)
 
 ---
 
-# 👨‍💻 About me
+## 📊 Portfolio Highlights
 
-Hello! I'm Filip, an aspiring Junior QA Engineer with a professional background in industrial quality assurance, engineering project management, and safety-critical operations.
+<div align="center">
 
-For many years, I worked in quality-focused engineering roles where precision, process compliance, documentation, and attention to detail were essential. Later, as a Project Manager, I coordinated engineering projects while ensuring that quality standards, timelines, and customer requirements were consistently met.
+| Metric | Value |
+|--------|-------|
+| **Test Cases Created** | 112+ |
+| **Defects Documented** | 25 |
+| **Completed Projects** | 3 |
+| **API Assertions** | 48+ |
+| **Pass Rate (Avg)** | ~70% |
 
-Today, I work as a PADI Diving Instructor, a profession where safety, risk assessment, structured procedures, and clear communication are fundamental. Every dive requires careful planning, disciplined execution, and continuous evaluation—qualities that naturally align with software quality assurance.
+</div>
 
-My passion for problem-solving and continuous improvement inspired me to transition into software testing. I enjoy exploring applications, identifying defects, analyzing system behavior, and documenting issues in a clear and reproducible way.
+### ✨ Key Achievements
 
-This portfolio represents my learning journey and demonstrates my commitment to developing practical QA skills through structured testing projects and continuous learning.
-
-I am currently seeking a Junior QA Engineer or Junior Manual QA position where I can contribute my quality-focused mindset while continuing to develop my technical testing skills within a professional software development team.
-
----
-
-# 📄 CV
-[View my CV](CV/Filip_Jelinek_CV.pdf)
-
----
-
-# 🛠️ Skills
-
-## Manual Testing
-- Functional Testing
-- Regression Testing
-- Exploratory Testing
-- Smoke Testing
-- User Interface (UI) Testing
-- Cross-Browser Testing
-- Basic Mobile Testing (Android)
-
-## Test Documentation
-- Test Planning
-- Test Case Design
-- Test Scenarios
-- Bug Reporting
-- Test Execution
-- Test Summary Reports
-
-## QA Methodologies
-- Software Development Life Cycle (SDLC)
-- Software Testing Life Cycle (STLC)
-- Defect Life Cycle
-- Risk-Based Testing
-- Agile Fundamentals
-
-## Tools & Technologies
-- Git & GitHub
-- Postman
-- Jira
-- Trello
-- Chrome DevTools
-- Visual Studio Code
-
-## Technical Skills
-- SQL (Basic)
-- HTML & CSS (Basic)
-- JavaScript (Learning)
-- Playwright (Learning)
-
-## Professional Skills
-- Analytical Thinking
-- Attention to Detail
-- Problem Solving
-- Process-Oriented Mindset
-- Clear Documentation
-- Communication
-- Time Management
-- Team Collaboration
+✅ **Complete manual testing projects** with test plans, test cases, bug reports, and evidence  
+✅ **Professional API testing** using Postman with JavaScript assertions and request chaining  
+✅ **CI/CD automation** with GitHub Actions and Newman for automated test execution  
+✅ **Industry-standard documentation** including test plans, RTM, and exploratory reports  
+✅ **18+ professional certifications** in QA, testing, and Agile methodologies  
 
 ---
 
-# 📂 Portfolio Projects
-## 🛒 SauceDemo – E-commerce Website Testing
+## 📂 Projects
 
-A complete manual testing project focused on an e-commerce application.
+### 🛒 SauceDemo E-Commerce Testing
 
-🟢 COMPLETED
-- 42 test cases executed
-- 15 defects documented
+**Status:** ✅ **COMPLETE** | **Type:** Manual Functional Testing
 
-## Project includes:
+A comprehensive manual testing portfolio for an e-commerce web application demonstrating end-to-end QA workflow.
 
-- Test Plan
-- Requirements Analysis
-- Test Scenarios
-- 42 Executed Test Cases
-- 15 Bug Reports
-- Test Execution Report
-- Test Summary Report
-- Test Data
-- Screenshots / Evidence
-- Traceability Matrix
+**Key Metrics:**
+- 42 Test Cases across 6 feature areas
+- 9 Critical/High Priority Defects
+- 78% Pass Rate
+- Full test documentation suite
 
-## Skills demonstrated:
+**Coverage:**
+- User Login (7 test cases)
+- Product Inventory (6 test cases)
+- Product Details (4 test cases)
+- Shopping Cart (8 test cases)
+- Checkout Process (10 test cases)
+- Navigation & Session (7 test cases)
 
-- Functional Testing
-- Regression Testing
-- UI Testing
-- Bug Reporting
+**Deliverables:**
+✅ Test Plan | ✅ Requirements Analysis | ✅ Test Scenarios | ✅ Test Cases | ✅ Bug Reports | ✅ Test Execution Report | ✅ Test Summary | ✅ Traceability Matrix
 
-➡️ **[View Project](https://github.com/filipjelinek89/QA-Portfolio/tree/main/qa-saucedemo/qa-saucedemo-README.md)**
+**Testing Types:**
+Functional Testing • Negative Testing • Boundary Testing • Exploratory Testing • UI Testing
 
-## 🏦 ParaBank – Online Banking Testing
+**Application:** https://www.saucedemo.com/
 
-Manual testing of a banking application covering user registration, login, account management, and money transfers.
-
-🟢 COMPLETED
-- 70 test cases executed
-- 16 defects documented
-
-## Project includes:
-
-- Test Plan
-- Exploratory Testing
-- 70 Executed Test Cases
-- 16 Bug Reports
-- REST API Testing
-- Test Execution Report
-- Test Summary Report
-- Screenshots / Evidence
-- Bug Reproduction Videos
-
-## Skills demonstrated:
-
-- Functional Testing
-- Exploratory Testing
-- Boundary Value Analysis
-- API Testing
-
-➡️ **[View Project](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/qa-parabank-README.md)**
+📍 **[View SauceDemo Project →](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/qa-saucedemo-README.md)**
 
 ---
 
-# 🔌 API Testing Projects
+### 🏦 ParaBank Online Banking Testing
 
-Practical API testing projects focused on REST API validation, request and response analysis, Postman workflows, automated assertions, negative testing, and structured API test documentation.
+**Status:** ✅ **COMPLETE** | **Type:** Manual + API Testing
 
-## 🏦 ParaBank – API Testing Online Banking
+A complete banking application testing project including functional, exploratory, and REST API testing.
 
-## Project includes:
+**Key Metrics:**
+- 70 Test Cases across 9 feature areas
+- 16 Documented Defects
+- 77% Pass Rate
+- Full API testing suite
 
-- REST API Requests
-- Collections
-- Environment Variables
+**Coverage:**
+- User Registration (8 test cases)
+- Login & Authentication (8 test cases)
+- Account Management (7 test cases)
+- Fund Transfers (10 test cases)
+- Bill Payment (9 test cases)
+- Loan Requests (7 test cases)
+- Navigation & Session (6 test cases)
+- Validation & Security (8 test cases)
+
+**Deliverables:**
+✅ Test Plan | ✅ Exploratory Testing | ✅ Test Cases | ✅ Bug Reports | ✅ API Testing | ✅ Test Execution | ✅ Screenshots | ✅ Video Evidence
+
+**Testing Types:**
+Functional Testing • Exploratory Testing • Negative Testing • Boundary Value Analysis • API Testing • Security Testing
+
+**Application:** https://parabank.parasoft.com/
+
+📍 **[View ParaBank Project →](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/qa-parabank-README.md)**
+
+---
+
+### 🏨 Restful Booker API Testing & Automation
+
+**Status:** ✅ **COMPLETE** | **Type:** API Testing + Test Automation + CI/CD
+
+A production-quality API testing project with advanced Postman automation, Newman CLI, and GitHub Actions CI/CD pipeline.
+
+**Key Features:**
+- 153+ API Test Cases designed
+- 48+ JavaScript Assertions
+- 8 API Endpoints fully covered
+- Automated CRUD workflow testing
+- Dynamic request chaining
+- JSON Schema validation
+- Multi-format report generation
+
+**Automation Capabilities:**
+- ✅ Automatic execution on push & pull requests
+- ✅ Manual workflow execution available
+- ✅ HTML, JSON & JUnit XML reports
+- ✅ GitHub Actions CI/CD integration
+- ✅ JavaScript assertions & validation
+- ✅ Artifact upload & storage
+
+**Current Results:**
+- 0 Failed Assertions
+- 8 API Endpoints
+- 48+ Automated Checks
+- 100% Success Rate
+
+**Technology Stack:**
+Postman • JavaScript • JSON • Newman • GitHub Actions • Node.js
+
+**Testing Scope:**
+- Authentication & Authorization
+- CRUD Operations (Create, Read, Update, Delete)
+- Request Validation
 - Response Validation
+- Error Handling
+- End-to-End Workflows
+- Negative Testing
+- Boundary Testing
 
-➡️ **[View API Testing ParaBank](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/05_API_Testing.md)** 
+📍 **[View API Project →](https://github.com/filipjelinek89/QA-Portfolio/blob/main/api-restful-booker/README.md)**
 
-
-## 🏨 API Testing – Restful Booker
-
-An API testing portfolio project focused on designing and executing a structured REST API testing workflow using **Postman** and the **Restful Booker API**.
-
-### Current project status:
-
-🟡 IN PROGRESS
-- 153 API test cases designed
-- Postman implementation in progress
-
-### Completed:
-
-* API requirements analysis
-* Endpoint inventory and API contract analysis
-* API test plan and test strategy
-* 86 high-level API test scenarios
-* 153 detailed API test cases
-* Positive, negative, and boundary test design
-* Authentication and authorization test design
-* CRUD workflow test coverage
-* End-to-end API workflow design
-* Test execution and defect reporting structure
-
-### Next implementation stages:
-
-* Postman collection implementation
-* Environment and dynamic variable configuration
-* Automated JavaScript assertions
-* Request chaining using runtime booking IDs and authentication tokens
-* JSON Schema validation
-* API test execution and defect reporting
-* Newman CLI execution
-* GitHub Actions CI/CD integration
-
-➡️ **[View Restful Booker API Testing Project](https://github.com/filipjelinek89/QA-Portfolio/blob/main/api-restful-booker/api-restful-booker-README.md)** *(In progress)*
+🔗 **[View Test Reports & Artifacts →](https://github.com/filipjelinek89/QA-Portfolio/actions/workflows/newman.yml)**
 
 ---
 
-## 💾 SQL Practice *(Planned)*
+## 🛠️ Skills & Tools
 
-A collection of SQL exercises demonstrating database querying and data validation.
+### Manual Testing
+- **Techniques:** Functional Testing, Regression Testing, Exploratory Testing, Smoke Testing, UI Testing
+- **Test Design:** Boundary Value Analysis, Equivalence Partitioning, Negative Testing
+- **Domain:** E-commerce, Banking, API Testing
 
-## Project includes:
+### API Testing
+- **Tools:** Postman, REST APIs
+- **Skills:** Request/Response Validation, JSON Validation, Authentication Testing, CRUD Testing, Request Chaining, JSON Schema Validation
 
-- SELECT Queries
-- JOIN Operations
-- GROUP BY
-- Aggregate Functions
-- Filtering & Sorting
+### Test Automation
+- **Tools:** Postman, Newman CLI
+- **Languages:** JavaScript (Assertions)
+- **CI/CD:** GitHub Actions
+- **Capabilities:** Automated Test Execution, Multi-Format Report Generation
 
-🔗 **View SQL Practice** *(Planned)*
+### Test Documentation
+- **Competencies:** Test Planning, Test Case Design, Requirements Analysis, Bug Reporting, Test Execution Reports, Requirements Traceability Matrix
+- **Tools:** Markdown, Excel, Git
 
----
+### Technical Skills
+- **Languages:** SQL (Basic), HTML/CSS (Basic), JavaScript (Learning)
+- **Version Control:** Git, GitHub
+- **Platforms:** Windows, Chrome, DevTools
+- **IDEs:** Visual Studio Code
 
-## 🤖 Playwright Automation *(Planned)*
+### QA Methodologies
+- **Frameworks:** SDLC, STLC, Defect Lifecycle, Agile, Scrum
+- **Approaches:** Risk-Based Testing, Behavior-Driven Development (BDD)
 
-Automation testing exercises created while learning Playwright.
-
-## Project includes:
-
-- Login Tests
-- Assertions
-- Locators
-- Page Object Model (later)
-- Test Execution
-
-🔗 **View Playwright Automation** *(Planned)*
-
----
-
-# 🧪 Test Cases
-
-This section contains examples of structured manual test cases created for different web applications. Each project demonstrates a systematic testing approach, including preconditions, test steps, expected results, and execution status.
-
-### Featured Test Case Collections
-
-#### 🛒 SauceDemo
-- Login
-- Logout
-- Shopping Cart
-- Checkout
-- Product Sorting
-
-🔗 **[View Test Cases](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/04_Test_Cases.md)**
-
-
-#### 🏦 ParaBank
-- User Registration
-- Login
-- Account Overview
-- Open New Account
-- Transfer Funds
-- Bill Payment
-- Request Loan
-- Navigation & Logout
-- Validation & Negative Testing
-
-🔗 **[View Test Cases](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/03_Test_Cases.md)**
+### Professional Skills
+✓ Attention to Detail | ✓ Analytical Thinking | ✓ Problem-Solving | ✓ Documentation | ✓ Communication | ✓ Time Management | ✓ Team Collaboration
 
 ---
 
-# 🐞 Bug Reports
+## 📚 Certifications & Learning
 
-This section contains bug reports created during manual functional testing of the SauceDemo web application. Each report documents a real defect discovered during testing and includes reproduction steps, severity, priority, expected and actual results, and supporting evidence.
+### Professional Certificates
+- ✅ **Software Testing Fundamentals** – LinkedIn Learning
+- ✅ **API Testing Foundations** – LinkedIn Learning  
+- ✅ **Atlassian Certificate of Completion** – Atlassian Learning
 
-## Featured Bug Categories
+### Completed Learning Path (18+ Courses)
+- ✅ API Testing Foundations
+- ✅ Software Testing Fundamentals (Test Planning, Techniques, Preparation)
+- ✅ Atlassian Agile Project Management Professional Certificate
+- ✅ Agile Foundations, Scrum, Agile Testing
+- ✅ Programming Foundations: Software Testing/QA
+- ✅ TestMu AI Software Testing Professional Certificate
+- ✅ Plus 8+ additional advanced courses
 
-🛒 **SauceDemo**
-
-- Inventory
-- Product Details
-- Shopping Cart
-- Checkout
-- Navigation
-
-🔗 **[View Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-saucedemo/05_Bug_Reports.md)**
-
-🏦 **ParaBank**
-
-- User Registration
-- Login
-- Open New Account
-- Transfer Funds
-- Bill Payment
-
-🔗 **[View Bug Reports](https://github.com/filipjelinek89/QA-Portfolio/blob/main/qa-parabank/04_Bug_Reports.md)**
+📖 **[View Full Learning Journey →](https://www.linkedin.com/in/filip-jelinek-a6143b342/)**
 
 ---
 
-## 🎓 Certificates
+## 📁 Repository Structure
 
-This section contains professional certifications and completed courses that support my continuous learning in Quality Assurance, software testing, and related IT technologies.
-
-The certifications complement the practical projects presented in this portfolio and demonstrate my commitment to developing industry-relevant skills.
-
-### Current Certificates
-
-| Certificate | Certificate |
-|-------------|----------|
-| Software Testing Fundamentals | [Certificate](https://www.linkedin.com/learning/certificates/9d0b3a4670d8666bd45787a4b312e31a2aae10bc9f7a66b36a162a72cd3bb3e7)
-| API Testing Foundations | [Certificate](https://www.linkedin.com/learning/certificates/6c9d50836da2f6931206f2218ff7727843f670425328706824b133016c62361a)
-| Atlassian Certificate of Completion | [Certificate](https://www.linkedin.com/learning/certificates/62247d766c26f59cbcc743cbc54e16a03830feeedb0a72fe73f39c0fa08f672f)
-
-### Learning history [inLearning](https://www.linkedin.com/learning)
-
-|Course|Status|
-|-------------|----------|
-| API Testing Foundations | Complete 
-|Software Testing Foundations: Test Planning | Complete 
-| Understanding Manual Testing | Complete 
-| Software Testing Foundations: Test Techniques | Complete 
-| TestMu AI Software Testing Professional Certificate | Complete 
-| Programming Foundations: Software Testing/QA | Complete 
-| Atlassian Agile Project Management Professional Certificate | Complete 
-| Mistakes to Avoid in Agile Project Management | Complete 
-| Agile Project Management with Jira Cloud: 3 Advanced Topics | Complete 
-| Agile Project Management with Jira Cloud: 2 Lean and Agile Processes | Complete 
-| Agile Project Management with Jira Cloud: 1 Projects, Boards, and Issues | Complete 
-| Scrum: The Basics | Complete 
-| Agile Foundations | Complete 
-| Agile Testing | Complete 
-| Software Testing Tips Weekly | Complete 
-| Software Testing Foundations: Test Preparation | Complete 
-| Predict questions, prepare answers | Complete 
+```
+QA-Portfolio/
+│
+├── README.md (this file)
+├── .github/workflows/
+│   └── newman.yml (GitHub Actions CI/CD)
+│
+├── qa-saucedemo/
+│   ├── 01_Test_Plan.md
+│   ├── 02_Requirements_Analysis.md
+│   ├── 03_Test_Scenarios.md
+│   ├── 04_Test_Cases.md
+│   ├── 05_Bug_Reports.md
+│   ├── 06_Test_Execution.md
+│   ├── 07_Test_Summary.md
+│   ├── 08_Test_Data.md
+│   ├── 09_Screenshots/
+│   ├── 10_Traceability_Matrix.md
+│   └── qa-saucedemo-README.md
+│
+├── qa-parabank/
+│   ├── 01_Test_Plan.md
+│   ├── 02_Exploratory_Testing.md
+│   ├── 03_Test_Cases.md
+│   ├── 04_Bug_Reports.md
+│   ├── 05_API_Testing.md
+│   ├── 06_Test_Execution.md
+│   ├── 07_Test_Summary.md
+│   ├── 08_Screenshots/
+│   ├── 09_Video/
+│   └── qa-parabank-README.md
+│
+├── api-restful-booker/
+│   ├── 01_Project_Documentation/
+│   ├── 02_API_Analysis/
+│   ├── 03_Test_Scenarios/
+│   ├── 04_Test_Cases/
+│   ├── 05_Postman/
+│   ├── 06_Test_Execution/
+│   ├── 07_Bug_Reports/
+│   ├── 08_JSON_Schema/
+│   ├── 09_Newman/
+│   ├── 10_Test_Evidence/
+│   ├── 11_CI_CD/
+│   ├── 12_Project_Progress/
+│   └── README.md
+│
+└── CV/
+    └── Filip_Jelinek_CV.pdf
+```
 
 ---
 
-## 📫 Contact
+## 🚀 CI/CD & Automation
 
-Thank you for taking the time to review my QA Portfolio.
+This portfolio features a complete GitHub Actions CI/CD pipeline that automatically executes API tests.
 
-I'm actively seeking **remote Junior Manual QA Tester opportunities**, internships, and freelance software testing projects. I welcome opportunities to connect with recruiters, QA professionals, and development teams.
+### How It Works
 
-Feel free to reach out:
+1. **Automatic Triggers:** Tests run on every push, pull request, and manual execution
+2. **Test Execution:** Newman CLI runs the Postman collection with all assertions
+3. **Report Generation:** HTML, JSON, and JUnit XML reports are created
+4. **Artifact Storage:** Reports are uploaded and available for download
 
-- 📧 **Email:** filip.jelinek89@gmail.com
-- 💼 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/filip-jelinek-a6143b342)
-- 🐙 **GitHub:** [GitHub](https://github.com/filipjelinek89)
+### View Test Results
 
-Based in Indonesia • Available for remote opportunities worldwide
+👉 **[Latest API Test Reports & Artifacts](https://github.com/filipjelinek89/QA-Portfolio/actions/workflows/newman.yml)**
 
-I appreciate your feedback and would be happy to discuss my projects or future collaboration.
+### Run Tests Locally
+
+```bash
+# Install Newman
+npm install -g newman
+
+# Execute API tests
+newman run api-restful-booker/05_Postman/RestfulBooker.postman_collection.json \
+  -r cli,json,junit,htmlextra \
+  --reporter-json-export reports/newman-report.json \
+  --reporter-junit-export reports/newman-report.xml \
+  --reporter-htmlextra-export reports/newman-report.html
+```
+
+---
+
+## 📈 Testing Metrics
+
+### Manual Testing Summary
+
+| Project | Test Cases | Defects | Pass Rate | Status |
+|---------|-----------|---------|-----------|--------|
+| **SauceDemo** | 42 | 9 | 78% | ✅ Complete |
+| **ParaBank** | 70 | 16 | 77% | ✅ Complete |
+| **TOTAL** | **112** | **25** | **~77%** | ✅ |
+
+### API Testing Summary
+
+| Metric | Value |
+|--------|-------|
+| **Test Cases** | 153+ |
+| **Automated Assertions** | 48+ |
+| **API Endpoints** | 8 |
+| **Pass Rate** | 100% |
+| **Status** | ✅ Complete |
+
+---
+
+## 🎯 How to Use This Portfolio
+
+### For Recruiters & Hiring Managers
+
+1. Start with this README for an overview
+2. Click on any project to explore detailed documentation
+3. Review the automated API test reports in GitHub Actions
+4. Check individual project READMEs for comprehensive details
+
+### For QA Professionals
+
+1. **Test Templates:** Review test cases in qa-saucedemo and qa-parabank
+2. **API Testing:** Study the Postman automation patterns in api-restful-booker
+3. **Documentation Standards:** Use test plans and bug reports as templates
+4. **CI/CD Setup:** Reference the Newman and GitHub Actions configuration
+
+### For Learning
+
+1. Start with any project's Test Plan document
+2. Review numbered test case documents for structure
+3. Study bug reports for professional defect documentation
+4. Explore API testing for Postman automation patterns
+
+---
+
+## 🏷️ Repository Topics
+
+This repository is tagged with the following topics for discoverability:
+
+`qa-testing` • `postman` • `api-testing` • `test-automation` • `github-actions` • `newman` • `quality-assurance` • `manual-testing` • `software-testing` • `qa-portfolio`
+
+**View on GitHub:** https://github.com/filipjelynek89/QA-Portfolio
+
+---
+
+## 🔮 Future Roadmap
+
+### Planned Projects
+- [ ] **SQL Practice** – Database queries, joins, and aggregations
+- [ ] **Playwright Automation** – Web UI automation with test framework
+- [ ] **Performance Testing** – Load and response time analysis
+- [ ] **Security Testing** – OWASP vulnerability scanning basics
+- [ ] **Mobile Testing** – iOS/Android functional testing documentation
+- [ ] **GraphQL API Testing** – Modern API testing approaches
+
+### Portfolio Enhancements
+- [ ] Add interactive test dashboards
+- [ ] Create video walkthroughs
+- [ ] Expand accessibility (WCAG) testing
+- [ ] Develop test automation framework documentation
+- [ ] Add performance benchmark tracking
+
+---
+
+## 💡 Key Takeaways
+
+This portfolio demonstrates:
+
+✅ **Professional QA mindset** – Systematic approach to testing  
+✅ **Industry-standard documentation** – Professional test plans, cases, and reports  
+✅ **Technical depth** – API testing, automation, and CI/CD  
+✅ **Continuous learning** – 18+ completed certifications  
+✅ **Attention to detail** – Comprehensive test coverage and defect analysis  
+✅ **Real-world applications** – Testing actual web and API applications  
+
+---
+
+## 📞 Contact & Connect
+
+I'd love to discuss testing strategies, share my work, or explore opportunities!
+
+| Contact Method | Link |
+|---|---|
+| 📧 **Email** | [filip.jelinek89@gmail.com](mailto:filip.jelinek89@gmail.com) |
+| 💼 **LinkedIn** | [Filip Jelinek](https://www.linkedin.com/in/filip-jelinek-a6143b342) |
+| 🐙 **GitHub** | [filipjelinek89](https://github.com/filipjelinek89/) |
+| 📄 **CV** | [Download PDF](./CV/Filip_Jelinek_CV.pdf) |
+
+**Location:** Indonesia | **Availability:** Remote Worldwide | **Open to:** Full-time, Contract, Internship
+
+---
+
+<div align="center">
+
+### ⭐ If this portfolio interests you, please consider giving it a star!
+
+Built with passion for quality assurance 🔍✅
+
+**Last Updated:** July 2026 | **Created by:** Filip Jelinek
+
+</div>
