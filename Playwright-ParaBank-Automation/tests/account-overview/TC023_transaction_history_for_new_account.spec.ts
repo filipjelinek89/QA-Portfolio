@@ -2,11 +2,12 @@ import { test } from '../../fixtures/base';
 
 import { RegistrationPage } from '../../pages/RegistrationPage';
 import { LoginPage } from '../../pages/LoginPage';
+import { OpenNewAccountPage } from '../../pages/OpenNewAccountPage';
 import { AccountOverviewPage } from '../../pages/AccountOverviewPage';
 
 import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';
 
-test('TC021 - Verify User Session Persists After Page Refresh', async ({ page }) => {
+test('TC023 - Verify Transaction History for Newly Created Account', async ({ page }) => {
 
     // ==========================================
     // Arrange
@@ -15,6 +16,8 @@ test('TC021 - Verify User Session Persists After Page Refresh', async ({ page })
     const registrationPage = new RegistrationPage(page);
 
     const loginPage = new LoginPage(page);
+
+    const openNewAccountPage = new OpenNewAccountPage(page);
 
     const accountOverviewPage = new AccountOverviewPage(page);
 
@@ -35,12 +38,18 @@ test('TC021 - Verify User Session Persists After Page Refresh', async ({ page })
         user.password
     );
 
-    await accountOverviewPage.refreshPage();
+    await openNewAccountPage.navigateToOpenNewAccountPage();
+
+    await openNewAccountPage.openNewCheckingAccount();
+
+    await openNewAccountPage.verifyAccountCreated();
+
+    await openNewAccountPage.openNewCreatedAccount();
 
     // ==========================================
     // Assert
     // ==========================================
 
-    await accountOverviewPage.verifyAccountOverviewPage();
+    await accountOverviewPage.verifyTransactionHistory();
 
 });

@@ -6,14 +6,16 @@ import { AccountOverviewPage } from '../../pages/AccountOverviewPage';
 
 import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';
 
-test('TC019 - Verify Account Information Is Displayed', async ({ page }) => {
+test('TC020 - Verify Transaction History Is Displayed', async ({ page }) => {
 
     // ==========================================
     // Arrange
     // ==========================================
 
     const registrationPage = new RegistrationPage(page);
+
     const loginPage = new LoginPage(page);
+
     const accountOverviewPage = new AccountOverviewPage(page);
 
     const user = RegistrationDataFactory.createValidUser();
@@ -33,10 +35,12 @@ test('TC019 - Verify Account Information Is Displayed', async ({ page }) => {
         user.password
     );
 
+    await accountOverviewPage.openFirstAccount();
+
     // ==========================================
     // Assert
     // ==========================================
 
-    await accountOverviewPage.verifyAccountInformation();
+    await accountOverviewPage.verifyTransactionHistory();
 
 });

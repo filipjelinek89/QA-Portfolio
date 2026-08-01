@@ -2,11 +2,11 @@ import { test } from '../../fixtures/base';
 
 import { RegistrationPage } from '../../pages/RegistrationPage';
 import { LoginPage } from '../../pages/LoginPage';
-import { AccountOverviewPage } from '../../pages/AccountOverviewPage';
+import { OpenNewAccountPage } from '../../pages/OpenNewAccountPage';
 
 import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';
 
-test('TC020 - Verify Navigation to Account Details Page', async ({ page }) => {
+test('TC022 - Verify Open New Account Page Is Displayed', async ({ page }) => {
 
     // ==========================================
     // Arrange
@@ -16,7 +16,7 @@ test('TC020 - Verify Navigation to Account Details Page', async ({ page }) => {
 
     const loginPage = new LoginPage(page);
 
-    const accountOverviewPage = new AccountOverviewPage(page);
+    const openNewAccountPage = new OpenNewAccountPage(page);
 
     const user = RegistrationDataFactory.createValidUser();
 
@@ -35,12 +35,12 @@ test('TC020 - Verify Navigation to Account Details Page', async ({ page }) => {
         user.password
     );
 
-    await accountOverviewPage.openFirstAccount();
+    await openNewAccountPage.navigateToOpenNewAccountPage();
 
     // ==========================================
     // Assert
     // ==========================================
 
-    await accountOverviewPage.verifyAccountDetailsPage();
+    await openNewAccountPage.verifyOpenNewAccountPage();
 
 });

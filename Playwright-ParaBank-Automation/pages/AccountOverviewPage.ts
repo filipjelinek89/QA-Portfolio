@@ -26,6 +26,9 @@ export class AccountOverviewPage extends BasePage {
     private readonly firstAccountLink =
         this.page.locator('a[href*="activity.htm?id="]').first();
 
+    private readonly accountLinks =
+        this.page.locator('a[href*="activity.htm?id="]');
+
     private readonly logoutLink =
         this.page.getByRole('link', { name: 'Log Out' });
 
@@ -37,6 +40,21 @@ export class AccountOverviewPage extends BasePage {
 
     private readonly accountDetailsTitle =
         this.page.getByRole('heading', { name: 'Account Details' });
+
+    private readonly accountActivityTitle =
+        this.page.getByRole('heading', { name: 'Account Activity' });
+
+    private readonly activityPeriodDropdown =
+        this.page.locator('#month');
+
+    private readonly transactionTypeDropdown =
+        this.page.locator('#transactionType');
+
+    private readonly goButton =
+        this.page.locator('input[value="Go"]');
+
+    private readonly accountTable =
+        this.page.locator('#accountTable');
 
     // ==========================================
     // Verification Methods
@@ -62,12 +80,6 @@ export class AccountOverviewPage extends BasePage {
 
     }
 
-    public async verifyAtLeastOneAccountExists(): Promise<void> {
-
-        await expect(this.firstAccountLink).toBeVisible();
-
-    }
-
     public async verifyAccountInformation(): Promise<void> {
 
         await expect(this.firstAccountLink).toBeVisible();
@@ -86,6 +98,38 @@ export class AccountOverviewPage extends BasePage {
 
     }
 
+    public async verifyTransactionHistory(): Promise<void> {
+
+        await expect(this.accountActivityTitle).toBeVisible();
+
+        await expect(this.activityPeriodDropdown).toBeVisible();
+
+        await expect(this.transactionTypeDropdown).toBeVisible();
+
+        await expect(this.goButton).toBeVisible();
+
+    }
+
+    public async verifyMultipleAccountsAreDisplayed(): Promise<void> {
+
+        // Wait until the table is rendered
+        await expect(this.accountTable).toBeVisible();
+
+        // Wait until account links appear
+        await expect(async () => {
+
+            const accountCount = await this.accountLinks.count();
+
+            console.log(`Number of accounts: ${accountCount}`);
+
+            expect(accountCount).toBeGreaterThan(1);
+
+        }).toPass({
+            timeout: 10000
+        });
+
+    }
+
     // ==========================================
     // Actions
     // ==========================================
@@ -101,5 +145,19 @@ export class AccountOverviewPage extends BasePage {
         await this.page.reload();
 
     }
-    
+
+    // ==========================================
+    // Navigation
+    // ==========================================
+
+    public async navigateToAccountOverviewPage(): Promise<void> {
+
+        await this.page.goto('/parabank/overview.htm');
+
+        await expect(this.accountsOverviewTitle).toBeVisible();
+
+        await expect(this.accountTable).toBeVisible();
+
+    }
+
 }

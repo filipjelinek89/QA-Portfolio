@@ -24,7 +24,7 @@ export class LoginPage extends BasePage {
 
     private readonly loginErrorMessage =
         this.page.getByText(
-            'An internal error has occurred and has been logged.' );
+            'The username and password could not be verified.' );
 
     private readonly emptyCredentialsError =
         this.page.getByText(
