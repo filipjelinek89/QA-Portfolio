@@ -1,11 +1,12 @@
 import { test } from '../../fixtures/base';
 
-import { RegistrationPage } from '../../pages/RegistrationPage';
 import { LoginPage } from '../../pages/LoginPage';
+import { AccountOverviewPage } from '../../pages/AccountOverviewPage';
+import { RegistrationPage } from '../../pages/RegistrationPage';
 
 import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';
 
-test('TC010 - Invalid Username', async ({ page }) => {
+test('TC017 - Verify Account Overview Page After Successful Login', async ({ page }) => {
 
     // ==========================================
     // Arrange
@@ -15,8 +16,9 @@ test('TC010 - Invalid Username', async ({ page }) => {
 
     const loginPage = new LoginPage(page);
 
-    const user =
-        RegistrationDataFactory.createValidUser();
+    const accountOverviewPage = new AccountOverviewPage(page);
+
+    const user = RegistrationDataFactory.createValidUser();
 
     // ==========================================
     // Act
@@ -26,17 +28,17 @@ test('TC010 - Invalid Username', async ({ page }) => {
 
     await registrationPage.registerUser(user);
 
-    await registrationPage.clickLogout();
+    await loginPage.logout();
 
     await loginPage.login(
         user.username,
-        'InvalidPassword123'
+        user.password
     );
 
     // ==========================================
     // Assert
     // ==========================================
 
-    await loginPage.verifyLoginError();
+    await accountOverviewPage.verifyAccountOverviewPage();
 
 });

@@ -1,23 +1,35 @@
 import { test, expect } from '../../fixtures/base';
 
+import { RegistrationPage } from '../../pages/RegistrationPage';
 import { LoginPage } from '../../pages/LoginPage';
 
-test('TC012 - Invalid Username and Password', async ({ page }) => {
+import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';
+
+test('TC011 Invalid password', async ({ page }) => {
 
     // ==========================================
     // Arrange
     // ==========================================
 
+    const registrationPage = new RegistrationPage(page);
+
     const loginPage = new LoginPage(page);
+
+    const user =
+        RegistrationDataFactory.createValidUser();
 
     // ==========================================
     // Act
     // ==========================================
 
-    await loginPage.navigateToLoginPage();
+    await registrationPage.navigateToRegistrationPage();
+
+    await registrationPage.registerUser(user);
+
+    await registrationPage.clickLogout();
 
     await loginPage.login(
-        'InvalidUsername123',
+        user.username,
         'InvalidPassword123'
     );
 

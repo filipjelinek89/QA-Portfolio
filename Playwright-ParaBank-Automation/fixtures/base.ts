@@ -1,12 +1,16 @@
 import { test as base, expect } from '@playwright/test';
 
-export const test = base;
+export const test = base.extend({
 
-test.beforeEach(async ({ page }) => {
+    page: async ({ page }, use) => {
 
-    console.log('Waiting 3 seconds before test...');
+        console.log('⏳ Waiting 3 seconds before test...');
 
-    await page.waitForTimeout(3000);
+        await page.waitForTimeout(3000);
+
+        await use(page);
+
+    }
 
 });
 

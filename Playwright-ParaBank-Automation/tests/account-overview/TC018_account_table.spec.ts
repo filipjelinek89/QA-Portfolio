@@ -1,15 +1,20 @@
-import { test, expect } from '../../fixtures/base';
+import { test } from '../../fixtures/base';
 
 import { RegistrationPage } from '../../pages/RegistrationPage';
+import { LoginPage } from '../../pages/LoginPage';
+import { AccountOverviewPage } from '../../pages/AccountOverviewPage';
+
 import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';
 
-test('TC001 - Verify Successful User Registration', async ({ page }) => {
+test('TC018 - Verify Account Overview Table Structure', async ({ page }) => {
 
     // ==========================================
     // Arrange
     // ==========================================
 
     const registrationPage = new RegistrationPage(page);
+    const loginPage = new LoginPage(page);
+    const accountOverviewPage = new AccountOverviewPage(page);
 
     const user = RegistrationDataFactory.createValidUser();
 
@@ -18,13 +23,19 @@ test('TC001 - Verify Successful User Registration', async ({ page }) => {
     // ==========================================
 
     await registrationPage.navigateToRegistrationPage();
-
     await registrationPage.registerUser(user);
+
+    await loginPage.logout();
+
+    await loginPage.login(
+        user.username,
+        user.password
+    );
 
     // ==========================================
     // Assert
     // ==========================================
 
-    await registrationPage.verifyRegistrationSuccess(user);
+    await accountOverviewPage.verifyAccountTable();
 
 });
