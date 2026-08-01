@@ -1,25 +1,30 @@
 import { RegistrationData } from '../models/RegistrationData';
 
-export const validUser: RegistrationData = {
+export class RegistrationUsers {
 
-    firstName: 'Filip',
+    public static readonly standardUser: RegistrationData = {
 
-    lastName: 'Jelinek',
+        firstName: 'Filip',
 
-    address: {
-        street: 'Main Street 15',
-        city: 'Prague',
-        state: 'Prague',
-        zipCode: '11000'
-    },
+        lastName: 'Jelinek',
 
-    phone: '123456789',
+        address: {
+            street: 'Main Street 15',
+            city: 'Prague',
+            state: 'Prague',
+            zipCode: '11000'
+        },
 
-    ssn: '987654321',
+        phone: '123456789',
 
-    username: 'filip123',
+        ssn: '987654321',
 
-    password: 'Password123',
+        username: 'filip123',
 
-    confirmPassword: 'Password123'
-};
+        password: 'Password123',
+
+        confirmPassword: 'Password123'
+
+    };
+
+}

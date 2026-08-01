@@ -125,3 +125,15 @@ Manual test cases remain the source of truth and are mapped to automated Playwri
 ---
 
 Educational and portfolio project.
+
+## Known Limitations
+
+This project uses the public ParaBank demo application.
+
+After a large number of automated requests, Cloudflare may temporarily return:
+
+- Error 1015 – You are being rate limited
+
+This is an environment limitation imposed by the public demo website and is not related to the Playwright automation framework.
+
+The recommended solution is to wait until the temporary rate limit expires before continuing test execution.
