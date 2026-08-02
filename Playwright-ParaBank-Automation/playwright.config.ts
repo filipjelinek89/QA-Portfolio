@@ -11,14 +11,16 @@ const proxy =
     : undefined;
 
 export default defineConfig({
+
   testDir: './tests',
 
   fullyParallel: false,
+
   workers: 1,
 
   forbidOnly: !!process.env.CI,
 
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 2 : 1,
 
   reporter: [
     ['list'],
@@ -26,17 +28,23 @@ export default defineConfig({
   ],
 
   use: {
+
     baseURL: 'https://parabank.parasoft.com/parabank/',
 
     headless: false,
 
     proxy,
 
+    navigationTimeout: 60000,
+
+    actionTimeout: 15000,
+
     trace: 'on-first-retry',
 
     screenshot: 'only-on-failure',
 
     video: 'retain-on-failure',
+
   },
 
   projects: [
@@ -48,4 +56,5 @@ export default defineConfig({
       },
     },
   ],
+
 });

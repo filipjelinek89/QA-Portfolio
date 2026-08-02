@@ -1,128 +1,194 @@
-import { test, expect } from '../../fixtures/base';
+import { test } from '../../fixtures/base';
 
 import { RegistrationPage } from '../../pages/RegistrationPage';
 import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';
 
-test('TC003 - Registration with Empty Required Fields', async ({ page }) => {
+// ==========================================
+// TC003 - First Name Required
+// ==========================================
 
-    // ==========================================
-    // Arrange
-    // ==========================================
+test('TC003 - Registration Without First Name', async ({ page }) => {
 
     const registrationPage = new RegistrationPage(page);
 
-    // ==========================================
-    // Act & Assert
-    // ==========================================
+    const user =
+        RegistrationDataFactory.createUserWithoutFirstName();
 
-    await test.step('Verify Empty First Name', async () => {
+    await registrationPage.navigateToRegistrationPage();
 
-        const user = RegistrationDataFactory.createUserWithoutFirstName();
+    await registrationPage.registerUser(user);
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+    await registrationPage.verifyFirstNameRequired();
 
-        await registrationPage.verifyFirstNameRequired();
+});
 
-    });
+// ==========================================
+// TC004 - Last Name Required
+// ==========================================
 
-    await test.step('Verify Empty Last Name', async () => {
+test('TC004 - Registration Without Last Name', async ({ page }) => {
 
-        const user = RegistrationDataFactory.createUserWithoutLastName();
+    const registrationPage = new RegistrationPage(page);
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+    const user =
+        RegistrationDataFactory.createUserWithoutLastName();
 
-        await registrationPage.verifyLastNameRequired();
+    await registrationPage.navigateToRegistrationPage();
 
-    });
+    await registrationPage.registerUser(user);
 
-    await test.step('Verify Empty Street', async () => {
+    await registrationPage.verifyLastNameRequired();
 
-        const user = RegistrationDataFactory.createUserWithoutStreet();
+});
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+// ==========================================
+// TC005 - Street Required
+// ==========================================
 
-        await registrationPage.verifyAddressRequired();
+test('TC005 - Registration Without Street', async ({ page }) => {
 
-    });
+    const registrationPage = new RegistrationPage(page);
 
-    await test.step('Verify Empty City', async () => {
+    const user =
+        RegistrationDataFactory.createUserWithoutStreet();
 
-        const user = RegistrationDataFactory.createUserWithoutCity();
+    await registrationPage.navigateToRegistrationPage();
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+    await registrationPage.registerUser(user);
 
-        await registrationPage.verifyCityRequired();
+    await registrationPage.verifyAddressRequired();
 
-    });
+});
 
-    await test.step('Verify Empty State', async () => {
+// ==========================================
+// TC006 - City Required
+// ==========================================
 
-        const user = RegistrationDataFactory.createUserWithoutState();
+test('TC006 - Registration Without City', async ({ page }) => {
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+    const registrationPage = new RegistrationPage(page);
 
-        await registrationPage.verifyStateRequired();
+    const user =
+        RegistrationDataFactory.createUserWithoutCity();
 
-    });
+    await registrationPage.navigateToRegistrationPage();
 
-    await test.step('Verify Empty Zip Code', async () => {
+    await registrationPage.registerUser(user);
 
-        const user = RegistrationDataFactory.createUserWithoutZipCode();
+    await registrationPage.verifyCityRequired();
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+});
 
-        await registrationPage.verifyZipCodeRequired();
+// ==========================================
+// TC007 - State Required
+// ==========================================
 
-    });
+test('TC007 - Registration Without State', async ({ page }) => {
 
-    await test.step('Verify Empty SSN', async () => {
+    const registrationPage = new RegistrationPage(page);
 
-        const user = RegistrationDataFactory.createUserWithoutSSN();
+    const user =
+        RegistrationDataFactory.createUserWithoutState();
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+    await registrationPage.navigateToRegistrationPage();
 
-        await registrationPage.verifySSNRequired();
+    await registrationPage.registerUser(user);
 
-    });
+    await registrationPage.verifyStateRequired();
 
-    await test.step('Verify Empty Username', async () => {
+});
 
-        const user = RegistrationDataFactory.createUserWithoutUsername();
+// ==========================================
+// TC008 - Zip Code Required
+// ==========================================
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+test('TC008 - Registration Without Zip Code', async ({ page }) => {
 
-        await registrationPage.verifyUsernameRequired();
+    const registrationPage = new RegistrationPage(page);
 
-    });
+    const user =
+        RegistrationDataFactory.createUserWithoutZipCode();
 
-    await test.step('Verify Empty Password', async () => {
+    await registrationPage.navigateToRegistrationPage();
 
-        const user = RegistrationDataFactory.createUserWithoutPassword();
+    await registrationPage.registerUser(user);
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+    await registrationPage.verifyZipCodeRequired();
 
-        await registrationPage.verifyPasswordRequired();
+});
 
-    });
+// ==========================================
+// TC009 - SSN Required
+// ==========================================
 
-    await test.step('Verify Empty Confirm Password', async () => {
+test('TC009 - Registration Without SSN', async ({ page }) => {
 
-        const user = RegistrationDataFactory.createUserWithoutConfirmPassword();
+    const registrationPage = new RegistrationPage(page);
 
-        await registrationPage.navigateToRegistrationPage();
-        await registrationPage.registerUser(user);
+    const user =
+        RegistrationDataFactory.createUserWithoutSSN();
 
-        await registrationPage.verifyConfirmPasswordRequired();
+    await registrationPage.navigateToRegistrationPage();
 
-    });
+    await registrationPage.registerUser(user);
+
+    await registrationPage.verifySSNRequired();
+
+});
+
+// ==========================================
+// TC010 - Username Required
+// ==========================================
+
+test('TC010 - Registration Without Username', async ({ page }) => {
+
+    const registrationPage = new RegistrationPage(page);
+
+    const user =
+        RegistrationDataFactory.createUserWithoutUsername();
+
+    await registrationPage.navigateToRegistrationPage();
+
+    await registrationPage.registerUser(user);
+
+    await registrationPage.verifyUsernameRequired();
+
+});
+
+// ==========================================
+// TC011 - Password Required
+// ==========================================
+
+test('TC011 - Registration Without Password', async ({ page }) => {
+
+    const registrationPage = new RegistrationPage(page);
+
+    const user =
+        RegistrationDataFactory.createUserWithoutPassword();
+
+    await registrationPage.navigateToRegistrationPage();
+
+    await registrationPage.registerUser(user);
+
+    await registrationPage.verifyPasswordRequired();
+
+});
+
+// ==========================================
+// TC012 - Confirm Password Required
+// ==========================================
+
+test('TC012 - Registration Without Confirm Password', async ({ page }) => {
+
+    const registrationPage = new RegistrationPage(page);
+
+    const user =
+        RegistrationDataFactory.createUserWithoutConfirmPassword();
+
+    await registrationPage.navigateToRegistrationPage();
+
+    await registrationPage.registerUser(user);
+
+    await registrationPage.verifyConfirmPasswordRequired();
 
 });

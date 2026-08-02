@@ -13,7 +13,11 @@ export class BasePage {
     // ==========================================
 
     public async goto(url: string): Promise<void> {
-        await this.page.goto(url);
+
+        await this.page.goto(url, {
+            waitUntil: 'domcontentloaded'
+        });
+
     }
 
     public async waitForPageLoad(): Promise<void> {

@@ -20,7 +20,9 @@ export class LoginPage extends BasePage {
         this.page.getByRole('link', { name: 'Log Out' });
 
     private readonly accountsOverviewTitle =
-        this.page.getByRole('heading', { name: 'Accounts Overview' });
+        this.page.getByRole('heading', {
+            name: 'Accounts Overview'
+        });
 
     private readonly loginErrorMessage =
         this.page.locator('#rightPanel p.error');
@@ -83,6 +85,16 @@ export class LoginPage extends BasePage {
         password: string
     ): Promise<void> {
 
+        // If user is already logged in, log out first
+        if (await this.logoutLink.isVisible()) {
+
+            await this.logout();
+
+        }
+
+        // Always start from the login page
+        await this.navigateToLoginPage();
+
         await this.fillUsername(username);
 
         await this.fillPassword(password);
@@ -93,13 +105,11 @@ export class LoginPage extends BasePage {
 
     public async logout(): Promise<void> {
 
-        if (await this.logoutLink.isVisible()) {
+        await expect(this.logoutLink).toBeVisible();
 
-            await this.logoutLink.click();
+        await this.logoutLink.click();
 
-            await expect(this.loginButton).toBeVisible();
-
-        }
+        await expect(this.loginButton).toBeVisible();
 
     }
 
