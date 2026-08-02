@@ -108,6 +108,12 @@ export class OpenNewAccountPage extends BasePage {
 
     }
 
+    public async selectFundingAccount(accountNumber: string): Promise<void> {
+
+        await this.existingAccountDropdown.selectOption(accountNumber);
+
+    }
+
     // ==========================================
     // Verification Methods
     // ==========================================
@@ -131,6 +137,16 @@ export class OpenNewAccountPage extends BasePage {
         await expect(this.accountOpenedMessage).toBeVisible();
 
         await expect(this.newAccountLink).toBeVisible();
+
+    }
+
+    // ==========================================
+    // Helper
+    // ==========================================
+
+    public async getNewAccountNumber(): Promise<string> {
+
+        return (await this.newAccountLink.textContent())!.trim();
 
     }
 

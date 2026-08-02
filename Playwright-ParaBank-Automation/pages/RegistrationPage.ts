@@ -181,7 +181,15 @@ export class RegistrationPage extends BasePage {
     }
 
     public async clickLogout(): Promise<void> {
+
         await this.logoutLink.click();
+
+        await expect(this.page).toHaveURL(/index\.htm/);
+
+        await expect(
+            this.page.getByRole('button', { name: 'Log In' })
+        ).toBeVisible();
+
     }
 
     // ==========================================

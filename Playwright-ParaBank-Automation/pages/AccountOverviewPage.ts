@@ -35,6 +35,10 @@ export class AccountOverviewPage extends BasePage {
     private readonly firstAccountBalance =
         this.page.locator('#accountTable tbody tr').first().locator('td').nth(1);
 
+    // NEW
+    private readonly secondAccountBalance =
+        this.page.locator('#accountTable tbody tr').nth(1).locator('td').nth(1);
+
     private readonly firstAvailableAmount =
         this.page.locator('#accountTable tbody tr').first().locator('td').nth(2);
 
@@ -112,10 +116,8 @@ export class AccountOverviewPage extends BasePage {
 
     public async verifyMultipleAccountsAreDisplayed(): Promise<void> {
 
-        // Wait until the table is rendered
         await expect(this.accountTable).toBeVisible();
 
-        // Wait until account links appear
         await expect(async () => {
 
             const accountCount = await this.accountLinks.count();
@@ -157,6 +159,56 @@ export class AccountOverviewPage extends BasePage {
         await expect(this.accountsOverviewTitle).toBeVisible();
 
         await expect(this.accountTable).toBeVisible();
+
+    }
+
+    // ==========================================
+    // Helper
+    // ==========================================
+
+    public async verifyAccountExists(accountNumber: string): Promise<void> {
+
+        await expect(
+            this.page.getByRole('link', { name: accountNumber })
+        ).toBeVisible();
+
+    }
+
+    public async verifyAccountBalance(expectedBalance: string): Promise<void> {
+
+        await expect(this.page.locator('#balance')).toHaveText(expectedBalance);
+
+    }
+
+    public async getFirstAccountBalance(): Promise<string> {
+
+        const balance =
+            await this.firstAccountBalance.textContent();
+
+        return balance
+            ?.replace('$', '')
+            .replace(',', '')
+            .trim() ?? '0';
+
+    }
+
+    // NEW
+    public async getSecondAccountBalance(): Promise<string> {
+
+        const balance =
+            await this.secondAccountBalance.textContent();
+
+        return balance
+            ?.replace('$', '')
+            .replace(',', '')
+            .trim() ?? '0';
+
+    }
+
+    // NEW
+    public parseBalance(balance: string): number {
+
+        return parseFloat(balance);
 
     }
 

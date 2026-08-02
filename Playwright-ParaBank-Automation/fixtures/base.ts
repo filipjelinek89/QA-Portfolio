@@ -6,6 +6,8 @@ export const test = base.extend({
 
         console.log('⏳ Waiting 3 seconds before test...');
 
+        await page.context().clearCookies();
+
         await page.waitForTimeout(3000);
 
         await use(page);

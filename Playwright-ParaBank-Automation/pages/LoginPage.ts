@@ -23,14 +23,13 @@ export class LoginPage extends BasePage {
         this.page.getByRole('heading', { name: 'Accounts Overview' });
 
     private readonly loginErrorMessage =
-        this.page.getByText(
-            'The username and password could not be verified.' );
+        this.page.locator('#rightPanel p.error');
 
     private readonly emptyCredentialsError =
         this.page.getByText(
-            'Please enter a username and password.' );
-            
-    
+            'Please enter a username and password.'
+        );
+
     // ==========================================
     // Constructor
     // ==========================================
@@ -46,6 +45,8 @@ export class LoginPage extends BasePage {
     public async navigateToLoginPage(): Promise<void> {
 
         await this.goto('/parabank/index.htm');
+
+        await expect(this.loginButton).toBeVisible();
 
     }
 
@@ -71,6 +72,8 @@ export class LoginPage extends BasePage {
 
     public async clickLogin(): Promise<void> {
 
+        await expect(this.loginButton).toBeVisible();
+
         await this.loginButton.click();
 
     }
@@ -90,7 +93,13 @@ export class LoginPage extends BasePage {
 
     public async logout(): Promise<void> {
 
-        await this.logoutLink.click();
+        if (await this.logoutLink.isVisible()) {
+
+            await this.logoutLink.click();
+
+            await expect(this.loginButton).toBeVisible();
+
+        }
 
     }
 
@@ -100,19 +109,7 @@ export class LoginPage extends BasePage {
 
     public async verifySuccessfulLogin(): Promise<void> {
 
-        await this.verifyLogoutButton();
-
-        await this.verifyAccountsOverview();
-
-    }
-
-    public async verifyLogoutButton(): Promise<void> {
-
         await expect(this.logoutLink).toBeVisible();
-
-    }
-
-    public async verifyAccountsOverview(): Promise<void> {
 
         await expect(this.accountsOverviewTitle).toBeVisible();
 
@@ -122,11 +119,17 @@ export class LoginPage extends BasePage {
 
         await expect(this.loginErrorMessage).toBeVisible();
 
+        await expect(this.loginErrorMessage).toContainText(
+            /The username and password could not be verified|An internal error has occurred/i
+        );
+
     }
 
     public async verifyLoggedOut(): Promise<void> {
 
         await expect(this.loginButton).toBeVisible();
+
+        await expect(this.logoutLink).toBeHidden();
 
     }
 

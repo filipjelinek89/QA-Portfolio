@@ -1,12 +1,12 @@
 import { test } from '../../fixtures/base';
 
 import { RegistrationPage } from '../../pages/RegistrationPage';
-import { LoginPage } from '../../pages/LoginPage';
 import { OpenNewAccountPage } from '../../pages/OpenNewAccountPage';
+import { TransferFundsPage } from '../../pages/TransferFundsPage';
 
 import { RegistrationDataFactory } from '../../test-data/factories/RegistrationDataFactory';
 
-test('TC022 - Verify Open New Account Page Is Displayed', async ({ page }) => {
+test('TC034 - Transfer with Negative Amount', async ({ page }) => {
 
     // ==========================================
     // Arrange
@@ -14,11 +14,12 @@ test('TC022 - Verify Open New Account Page Is Displayed', async ({ page }) => {
 
     const registrationPage = new RegistrationPage(page);
 
-    const loginPage = new LoginPage(page);
-
     const openNewAccountPage = new OpenNewAccountPage(page);
 
-    const user = RegistrationDataFactory.createValidUser();
+    const transferFundsPage = new TransferFundsPage(page);
+
+    const user =
+        RegistrationDataFactory.createValidUser();
 
     // ==========================================
     // Act
@@ -28,19 +29,22 @@ test('TC022 - Verify Open New Account Page Is Displayed', async ({ page }) => {
 
     await registrationPage.registerUser(user);
 
-    await loginPage.logout();
-
-    await loginPage.login(
-        user.username,
-        user.password
-    );
+    await registrationPage.verifyRegistrationSuccess(user);
 
     await openNewAccountPage.navigateToOpenNewAccountPage();
+
+    await openNewAccountPage.openNewSavingsAccount();
+
+    await openNewAccountPage.verifyAccountCreated();
+
+    await transferFundsPage.navigateToTransferFundsPage();
+
+    await transferFundsPage.transferFunds('-100');
 
     // ==========================================
     // Assert
     // ==========================================
 
-    await openNewAccountPage.verifyOpenNewAccountPage();
+    await transferFundsPage.verifyTransferRejected();
 
 });

@@ -1,4 +1,14 @@
+import 'dotenv/config';
 import { defineConfig, devices } from '@playwright/test';
+
+const proxy =
+  process.env.USE_PROXY === 'true'
+    ? {
+        server: process.env.PROXY_SERVER!,
+        username: process.env.PROXY_USERNAME!,
+        password: process.env.PROXY_PASSWORD!,
+      }
+    : undefined;
 
 export default defineConfig({
   testDir: './tests',
@@ -20,12 +30,13 @@ export default defineConfig({
 
     headless: false,
 
+    proxy,
+
     trace: 'on-first-retry',
 
     screenshot: 'only-on-failure',
 
     video: 'retain-on-failure',
-    
   },
 
   projects: [
